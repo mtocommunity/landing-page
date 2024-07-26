@@ -1,13 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { MTOTransparentBackground } from "../assets";
 ---
 
 <Layout title="ManyToOne Community">
-  <main class="flex justify-center items-center">
-    <h1
-      class="text-black hover:text-gray-600 transition-colors text-6xl font-bold"
-    >
-      MTO community
-    </h1>
+  <main class="flex justify-center items-center h-screen bg-mto_gray">
+    <div class="flex flex-col text-white relative">
+      <div class="flex flex-col items-center">
+        <MTOTransparentBackground className="w-64" />
+        <h1 class="text-2xl font-bold">ManyToOne</h1>
+        <h2>Community</h2>
+      </div>
+
+      <div
+        class="bg-mto_gray absolute rounded-full w-64 aspect-square opacity-20"
+      >
+      </div>
+      <div
+        class="bg-mto_red absolute rounded-full w-96 aspect-square -top-48 -left-[30rem] blur-[5rem]"
+      >
+      </div>
+      <div
+        class="bg-mto_blue absolute rounded-full w-96 aspect-square top-48 left-[18rem] blur-[5rem]"
+      >
+      </div>
+    </div>
   </main>
 </Layout>
