@@ -7,6 +7,7 @@ export default {
         mto_gray: "#101B37",
         mto_red: "#E41476",
         mto_blue: "#02C8ED",
+        mto_dark_gray: "#05090C",
       },
     },
   },
