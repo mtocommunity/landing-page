@@ -10,6 +10,7 @@ export default {
         mto_blue: "#02C8ED",
         mto_blue_light: "#4BD5F1",
         mto_dark_gray: "#05090C",
+        discord_blurple: "#5865F2",
       },
     },
   },

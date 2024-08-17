@@ -1,25 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { MTOTransparentBackground } from "../assets";
-
-import Social from "../components/general/molecule/social";
-import TeamsCloud from "../components/general/molecule/teams_cloud";
+import Home from "../components/landing/organism/home/index.astro";
 ---
 
 <Layout title="ManyToOne Community">
-  <main
-    class="flex justify-center items-center h-screen bg-mto_dark_gray w-screen"
-  >
-    <div class="flex flex-col text-white relative">
-      <div class="flex flex-col items-center">
-        <MTOTransparentBackground className="w-64" />
-        <h1 class="text-2xl font-bold">ManyToOne</h1>
-        <h2 class="flex">Community</h2>
-        <Social />
-        <div class="w-1/2">
-          <TeamsCloud client:load />
-        </div>
-      </div>
-    </div>
+  <main class="flex w-vw bg-mto_dark_gray overflow-x-hidden">
+    <Home />
   </main>
 </Layout>

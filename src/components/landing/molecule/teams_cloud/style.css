@@ -1,5 +1,5 @@
 .cloud-icon {
-  @apply w-1/2 aspect-square bg-[rgba(255,255,255,0.05)] text-[150%] rounded-full flex absolute justify-center items-center border-white border-dashed border-2 cursor-pointer;
+  @apply absolute w-1/2 aspect-square bg-[rgba(255,255,255,0.05)] text-[150%] rounded-full flex justify-center items-center border-white border-dashed border-2 cursor-pointer;
 }
 
 .cloud-icon span {
@@ -8,11 +8,11 @@
 }
 
 .cloud-icon:hover {
-  @apply bg-[rgba(255,255,255,0.2)];
+  @apply bg-[rgba(255,255,255,0.15)];
 }
 
 .cloud-icon:hover span {
-  @apply flex absolute -top-8 text-sm w-40 justify-center;
+  @apply flex absolute -top-8 text-sm text-nowrap justify-center;
 }
 
 @keyframes popUp {
