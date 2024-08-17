@@ -22,8 +22,12 @@ function TeamsCloud() {
       const y = radius * Math.sin(angle);
 
       // Set position
-      icon.style.left = `calc(50% + ${x}px - ${icon.clientWidth / 2}px)`;
-      icon.style.top = `calc(50% + ${y}px - ${icon.clientHeight / 2}px)`;
+      (icon as HTMLElement).style.left = `calc(50% + ${x}px - ${
+        icon.clientWidth / 2
+      }px)`;
+      (icon as HTMLElement).style.top = `calc(50% + ${y}px - ${
+        icon.clientHeight / 2
+      }px)`;
     });
 
     const animationDuration = 1000 * 120;
