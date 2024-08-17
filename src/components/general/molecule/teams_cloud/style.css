@@ -1,5 +1,5 @@
 .cloud-icon {
-  @apply w-20 h-20 bg-[rgba(255,255,255,0.05)] text-3xl rounded-full flex absolute justify-center items-center border-white border-dashed border-2 cursor-pointer;
+  @apply w-1/2 aspect-square bg-[rgba(255,255,255,0.05)] text-[150%] rounded-full flex absolute justify-center items-center border-white border-dashed border-2 cursor-pointer;
 }
 
 .cloud-icon span {

@@ -16,7 +16,7 @@ function TeamsCloud() {
     const cloudIcon = document.querySelectorAll(".cloud-icon");
     cloudIcon.forEach((icon, index) => {
       // Position in a circle
-      const radius = 175;
+      const radius = icon.clientWidth * 2;
       const angle = (index * Math.PI * 2) / cloudIcon.length;
       const x = radius * Math.cos(angle);
       const y = radius * Math.sin(angle);
