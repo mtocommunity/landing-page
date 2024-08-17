@@ -17,6 +17,10 @@
   @apply text-black;
 }
 
+.nav {
+  @apply text-mto_blue;
+}
+
 .primary:hover {
   background-position: right;
 }
@@ -27,4 +31,8 @@
 
 .link:hover {
   @apply opacity-80;
+}
+
+.nav:hover {
+  @apply text-mto_blue_light;
 }

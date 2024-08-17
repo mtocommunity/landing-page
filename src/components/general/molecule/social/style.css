@@ -1,0 +1,7 @@
+.icon {
+  @apply w-5 aspect-square opacity-80 transition-colors;
+}
+
+.icon:hover {
+  @apply opacity-100;
+}
