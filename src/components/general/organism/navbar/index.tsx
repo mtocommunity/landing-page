@@ -6,7 +6,7 @@ import { MTOTransparentBackground } from "../../../../assets";
 import "./style.css";
 
 function NavBar() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const handleToggle = () => {
     setToggle(!toggle);
