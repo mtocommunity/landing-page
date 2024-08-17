@@ -1,4 +1,6 @@
 ---
+import Button from "../components/general/attoms/button";
+import { ButtonType } from "../components/general/attoms/button/types";
 import Footer from "../components/general/footer.astro";
 
 interface Props {
@@ -23,6 +25,9 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
+    <Button type={ButtonType.PRIMARY}>Únete ahora</Button>
+    <Button type={ButtonType.SECONDARY}>Más información</Button>
+    <Button type={ButtonType.LINK}>Contacto</Button>
     <Footer />
   </body>
 </html>

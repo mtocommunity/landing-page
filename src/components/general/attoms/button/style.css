@@ -1,0 +1,30 @@
+.button {
+  @apply transition-all cursor-pointer;
+}
+
+.primary {
+  background: linear-gradient(to right, #e41476, #e41476, #ec458d);
+  background-size: 200% auto;
+  background-position: left;
+  @apply px-5 py-3 text-white font-semibold;
+}
+
+.secondary {
+  @apply bg-white text-black font-semibold px-4 py-3;
+}
+
+.link {
+  @apply text-black;
+}
+
+.primary:hover {
+  background-position: right;
+}
+
+.secondary:hover {
+  @apply bg-gray-100;
+}
+
+.link:hover {
+  @apply opacity-80;
+}
