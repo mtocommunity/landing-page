@@ -1,0 +1,52 @@
+#bg-box {
+  height: 40vh;
+  width: 200vw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  transform-origin: center center;
+  transform: rotate(60deg);
+  top: 15%;
+  left: -40%;
+  z-index: -10;
+}
+
+#bg-gray {
+  content: "";
+  width: 33%;
+  height: 100%;
+  @apply bg-mto_gray;
+  top: 0;
+  left: 0;
+  filter: blur(4rem);
+}
+
+#bg-red {
+  content: "";
+  width: 20%;
+  height: 100%;
+  @apply bg-mto_red;
+  top: 50%;
+  left: 33%;
+  filter: blur(5rem);
+  z-index: -10;
+}
+
+#bg-blue {
+  content: "";
+  width: 20%;
+  height: 100%;
+  @apply bg-mto_blue;
+  top: 100%;
+  right: 0;
+  filter: blur(5rem);
+  z-index: -20;
+}
+
+@media (min-width: 768px) {
+  #bg-box {
+    transform: rotate(30deg) translateX(-43%) translateY(-25%);
+    top: 50%;
+    left: 33%;
+  }
+}
