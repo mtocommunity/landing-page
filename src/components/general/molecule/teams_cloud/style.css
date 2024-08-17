@@ -1,0 +1,27 @@
+.cloud-icon {
+  @apply w-20 h-20 bg-[rgba(255,255,255,0.05)] text-3xl rounded-full flex absolute justify-center items-center border-white border-dashed border-2 cursor-pointer;
+}
+
+.cloud-icon span {
+  @apply hidden;
+  animation: popUp 0.2s ease-in-out;
+}
+
+.cloud-icon:hover {
+  @apply bg-[rgba(255,255,255,0.2)];
+}
+
+.cloud-icon:hover span {
+  @apply flex absolute -top-8 text-sm w-40 justify-center;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
