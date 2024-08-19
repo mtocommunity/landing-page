@@ -53,23 +53,23 @@ function TeamsCloud() {
   return (
     <div className="flex justify-center items-center w-full aspect-square relative cloud rounded-full">
       <MTOTransparentBackground className="cloud-center" />
-      <a className="cloud-icon">
+      <a className="cloud-icon" href="/team/dev">
         <span>Dev-Team</span>
         <FontAwesomeIcon icon={faLaptopCode} />
       </a>
-      <a className="cloud-icon">
+      <a className="cloud-icon" href="/team/net">
         <span>Net-Team</span>
         <FontAwesomeIcon icon={faNetworkWired} />
       </a>
-      <a className="cloud-icon">
+      <a className="cloud-icon" href="/team/os">
         <span>OS-Team</span>
         <FontAwesomeIcon icon={faLinux} />
       </a>
-      <a className="cloud-icon">
+      <a className="cloud-icon" href="/team/sec">
         <span>Security-Team</span>
         <FontAwesomeIcon icon={faRedhat} />
       </a>
-      <a className="cloud-icon">
+      <a className="cloud-icon" href="/team/iot">
         <span>IoT-Team</span>
         <FontAwesomeIcon icon={faRobot} />
       </a>

@@ -19,19 +19,19 @@ function NavBar() {
           !toggle ? "bg-mto_gray" : "bg-transparent"
         } lg:bg-transparent`}
       >
-        <div className="h-full aspect-square">
+        <a className="h-full aspect-square" href="/">
           <MTOTransparentBackground />
-        </div>
+        </a>
         <div className="text-white lg:hidden" onClick={handleToggle}>
           <FontAwesomeIcon icon={faBars} />
         </div>
         <nav className="hidden lg:flex nav-desktop">
           {/* Nav Desktop */}
-          <a href="#home">Home</a>
-          <a href="#home">About us</a>
-          <a href="#home">Events</a>
-          <a href="#home">News</a>
-          <a href="#home">Contact us</a>
+          <a href="/#home">Home</a>
+          <a href="/#home">About us</a>
+          <a href="/#home">Events</a>
+          <a href="/#home">News</a>
+          <a href="/#home">Contact us</a>
         </nav>
       </header>
       <div
@@ -40,11 +40,11 @@ function NavBar() {
         }`}
       >
         {/* Mobile nav */}
-        <a href="#home">Home</a>
-        <a href="#home">About us</a>
-        <a href="#home">Events</a>
-        <a href="#home">News</a>
-        <a href="#home">Contact us</a>
+        <a href="/#home">Home</a>
+        <a href="/#home">About us</a>
+        <a href="/#home">Events</a>
+        <a href="/#home">News</a>
+        <a href="/#home">Contact us</a>
       </div>
     </>
   );
