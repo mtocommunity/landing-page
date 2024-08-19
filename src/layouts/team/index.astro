@@ -1,14 +1,14 @@
 ---
+import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../../components/general/footer.astro";
 import NavBar from "../../components/general/organism/navbar";
 
-import "./style.css";
-
 interface Props {
-  title: string;
+  teamName: string;
+  teamIcon: IconDefinition;
 }
 
-const { title } = Astro.props;
+const { teamName, teamIcon } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +20,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>{title}</title>
+    <title>{teamName} - MTO Community</title>
     <!-- Basic meta -->
     <meta
       name="description"
@@ -35,7 +35,7 @@ const { title } = Astro.props;
     <!-- Twitter meta -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://mtocommunity.com/" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={teamName} />
     <meta
       name="twitter:description"
       content="La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo"
@@ -44,11 +44,6 @@ const { title } = Astro.props;
   </head>
   <body class="bg-mto_dark_gray w-full">
     <div class="w-auto overflow-x-hidden">
-      <div id="bg-box" class="">
-        <div id="bg-gray"></div>
-        <div id="bg-red"></div>
-        <div id="bg-blue"></div>
-      </div>
       <NavBar client:load />
       <slot />
       <Footer />

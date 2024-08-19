@@ -1,14 +1,12 @@
 #bg-box {
-  height: 40vh;
-  width: 200vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   position: absolute;
   transform-origin: center center;
-  transform: rotate(60deg);
-  top: 15%;
-  left: -40%;
-  z-index: -10;
+  /* transform: rotate(60deg); */
+  z-index: -100;
 }
 
 #bg-gray {
@@ -19,6 +17,7 @@
   top: 0;
   left: 0;
   filter: blur(4rem);
+  position: fixed;
 }
 
 #bg-red {
@@ -30,6 +29,7 @@
   left: 33%;
   filter: blur(5rem);
   z-index: -10;
+  position: fixed;
 }
 
 #bg-blue {
@@ -41,12 +41,13 @@
   right: 0;
   filter: blur(5rem);
   z-index: -20;
+  position: fixed;
 }
 
 @media (min-width: 768px) {
-  #bg-box {
+  /* #bg-box {
     transform: rotate(30deg) translateX(-43%) translateY(-25%);
     top: 50%;
     left: 33%;
-  }
+  } */
 }
