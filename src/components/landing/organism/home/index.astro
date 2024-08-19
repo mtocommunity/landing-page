@@ -15,13 +15,13 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
     class="flex h-full justify-center lg:justify-between lg:px-60 lg:items-center"
   >
     <div
-      class="flex flex-col items-center justify-between text-white lg:justify-center"
+      class="flex flex-col items-center justify-between text-white lg:justify-center lg:gap-2"
     >
       <div class="flex flex-col gap-2">
-        <h1 class="text-3xl font-bold">ManyToOne</h1>
-        <p>
-          La <span class="text-mto_red font-bold">NUEVA</span> comunidad tecnológica<br
-          />de Ingeniería de Sistemas de la UTP Chiclayo.
+        <h1 class="text-3xl font-bold lg:text-4xl">ManyToOne</h1>
+        <p class="2xl:text-lg">
+          La <span class="text-mto_red font-bold xl:text-xl">NUEVA</span> comunidad
+          tecnológica<br />de Ingeniería de Sistemas de la UTP Chiclayo.
         </p>
       </div>
       <div class="w-1/2 lg:hidden">
@@ -32,13 +32,15 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
         <Button type={ButtonType.SECONDARY}>Más información</Button>
       </div>
     </div>
-    <div class="hidden lg:flex h-52 aspect-square text-white items-center">
+    <div
+      class="hidden lg:flex h-40 2xl:h-52 aspect-square text-white items-center"
+    >
       <TeamsCloud client:load />
     </div>
   </div>
   <div class="hidden lg:flex justify-between">
     <!-- Social / discord -->
-    <dir class="w-[30%] text-white pl-60 text-3xl">
+    <dir class="w-[40%] text-white pl-60 text-3xl 2xl:w-[30%]">
       <Social />
     </dir>
     <a
