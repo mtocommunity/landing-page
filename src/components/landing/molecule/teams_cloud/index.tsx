@@ -11,25 +11,31 @@ import anime from "animejs";
 import "./style.css";
 import { useEffect } from "react";
 
+function positionInCircle() {
+  const cloudIcon = document.querySelectorAll(".cloud-icon");
+
+  cloudIcon.forEach((icon, index) => {
+    // Set position in a circle
+    const radius = icon.clientWidth * 2;
+    const angle = (index * Math.PI * 2) / 5;
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+
+    // Set position
+    (icon as HTMLElement).style.left = `calc(50% + ${x}px - ${
+      icon.clientWidth / 2
+    }px)`;
+    (icon as HTMLElement).style.top = `calc(50% + ${y}px - ${
+      icon.clientHeight / 2
+    }px)`;
+  });
+}
+
 function TeamsCloud() {
   useEffect(() => {
-    const cloudIcon = document.querySelectorAll(".cloud-icon");
+    window.addEventListener("resize", positionInCircle);
 
-    cloudIcon.forEach((icon, index) => {
-      // Position in a circle
-      const radius = icon.clientWidth * 2;
-      const angle = (index * Math.PI * 2) / 5; // 5 icons
-      const x = radius * Math.cos(angle);
-      const y = radius * Math.sin(angle);
-
-      // Set position
-      (icon as HTMLElement).style.left = `calc(50% + ${x}px - ${
-        icon.clientWidth / 2
-      }px)`;
-      (icon as HTMLElement).style.top = `calc(50% + ${y}px - ${
-        icon.clientHeight / 2
-      }px)`;
-    });
+    positionInCircle();
 
     const animationDuration = 1000 * 120;
 
