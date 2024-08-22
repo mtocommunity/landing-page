@@ -28,10 +28,10 @@ function NavBar() {
         <nav className="hidden lg:flex nav-desktop">
           {/* Nav Desktop */}
           <a href="/#home">Home</a>
-          <a href="/#home">About us</a>
-          <a href="/#home">Events</a>
-          <a href="/#home">News</a>
-          <a href="/#home">Contact us</a>
+          <a href="/#about-us">About us</a>
+          <a href="/#teams">Teams</a>
+          <a href="/#events">Events</a>
+          <a href="/#contactus">Contact us</a>
         </nav>
       </header>
       <div
@@ -41,10 +41,10 @@ function NavBar() {
       >
         {/* Mobile nav */}
         <a href="/#home">Home</a>
-        <a href="/#home">About us</a>
-        <a href="/#home">Events</a>
-        <a href="/#home">News</a>
-        <a href="/#home">Contact us</a>
+        <a href="/#about-us">About us</a>
+        <a href="/#teams">Teams</a>
+        <a href="/#events">Events</a>
+        <a href="/#contactus">Contact us</a>
       </div>
     </>
   );
