@@ -12,6 +12,10 @@ export default {
         mto_dark_gray: "#05090C",
         discord_blurple: "#5865F2",
       },
+      fontFamily: {
+        sans: ["Lemon Milk"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
     },
   },
   plugins: [],
