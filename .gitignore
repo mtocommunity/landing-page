@@ -25,6 +25,5 @@ pnpm-debug.log*
 
 # package manager cache
 .pnpm-store/
-package-lock.json
 yarn.lock
 bun.lockb
