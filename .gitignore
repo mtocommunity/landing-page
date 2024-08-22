@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# package manager cache
+.pnpm-store/
+package-lock.json
+yarn.lock
+bun.lockb
