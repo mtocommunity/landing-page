@@ -1,29 +1,29 @@
 ---
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faLinux } from "@fortawesome/free-brands-svg-icons";
 import Layout from "../../layouts/team/index.astro";
 import { wave } from "../../assets/svgs";
 
 import TeamIcon from "../../components/general/molecule/team-icon";
 ---
 
-<Layout teamName="IoT-Team" teamIcon={faRobot}>
+<Layout teamName="OS-Team" teamIcon={faLinux}>
   <div
     class="flex flex-col bg-gradient-to-t from-mto_red to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
   >
     <div
       class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto"
     >
-      <TeamIcon icon={faRobot} />
+      <TeamIcon icon={faLinux} />
       <h2 class="text-white text-2xl lg:text-4xl font-semibold text-center">
-        IoT Team
+        OS Team
       </h2>
     </div>
-    <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg text-pretty">
-      Aquí, transformamos la curiosidad en innovación, explorando el fascinante
-      mundo del Internet de las Cosas. Creamos prototipos que no solo son
-      útiles, sino también divertidos, llevando la tecnología al siguiente
-      nivel. Únete a nosotros y descubre cómo los objetos cotidianos pueden
-      cobrar vida en un mundo interconectado.
+    <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg">
+      Aquí, exploramos el fascinante mundo de los sistemas operativos, desde su
+      arquitectura hasta su personalización. Nos dedicamos a desentrañar cómo
+      funcionan, optimizarlos y crear entornos que maximicen su rendimiento.
+      Únete a nosotros y descubre el poder de los sistemas operativos mientras
+      llevas tus habilidades al siguiente nivel.
     </div>
   </div>
   <div class="bg-mto_red">

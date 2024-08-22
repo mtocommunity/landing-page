@@ -1,0 +1,12 @@
+.team-border-rotate {
+  animation: team-border-rotate 45s linear infinite;
+}
+
+@keyframes team-border-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

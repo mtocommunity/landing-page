@@ -71,7 +71,7 @@ function TeamsCloud() {
         <span>OS-Team</span>
         <FontAwesomeIcon icon={faLinux} />
       </a>
-      <a className="cloud-icon" href="/team/sec">
+      <a className="cloud-icon" href="/team/security">
         <span>Security-Team</span>
         <FontAwesomeIcon icon={faRedhat} />
       </a>
