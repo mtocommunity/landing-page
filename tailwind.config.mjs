@@ -13,8 +13,9 @@ export default {
         discord_blurple: "#5865F2",
       },
       fontFamily: {
-        sans: ["Lemon Milk"],
-        mono: ["JetBrains Mono", "monospace"],
+        main_sans: ["Lemon Milk", "sans"],
+        secondary_sans: ["Arial", "sans"],
+        main_mono: ["JetBrains Mono", "monospace"],
       },
     },
   },
