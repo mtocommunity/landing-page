@@ -12,7 +12,7 @@
 }
 
 .nav-desktop a:hover {
-  @apply relative text-white;
+  @apply relative text-white shadow-2xl shadow-white;
 }
 
 .nav-desktop a:hover::before {
