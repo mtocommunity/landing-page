@@ -4,7 +4,7 @@
 }
 
 .nav-desktop {
-  @apply h-3/4 text-white bg-gray-400 backdrop-filter backdrop-blur-none bg-opacity-15 rounded-sm;
+  @apply h-3/4 text-gray-300;
 }
 
 .nav-desktop a {
@@ -12,7 +12,22 @@
 }
 
 .nav-desktop a:hover {
-  @apply bg-gray-400 bg-opacity-10;
+  @apply relative text-white;
+}
+
+.nav-desktop a:hover::before {
+  content: "";
+  @apply h-[.2rem] w-[calc(100%-2.5rem)] bg-white absolute bottom-1 left-[1.25rem];
+  animation: sliceIn 0.2s ease-in-out;
+}
+
+@keyframes sliceIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100%-2.5rem);
+  }
 }
 
 @keyframes dropDown {

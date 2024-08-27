@@ -17,9 +17,9 @@ function NavBar() {
       <header
         className={`flex justify-between items-center h-14 sticky top-0 px-4 transition-colors z-50 ${
           !toggle ? "bg-mto_gray" : "bg-transparent"
-        } lg:bg-transparent`}
+        } lg:bg-transparent lg:w-[95%] lg:mx-auto lg:top-6`}
       >
-        <a className="h-full aspect-square" href="/">
+        <a className="h-full lg:h-[150%] aspect-square" href="/">
           <MTOTransparentBackground />
         </a>
         <div className="text-white lg:hidden" onClick={handleToggle}>
