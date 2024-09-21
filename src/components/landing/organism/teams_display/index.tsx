@@ -54,7 +54,7 @@ function TeamsDisplay() {
         image={landing_sec}
         extended={focus === 3}
         onClick={() => handleOnClick(3)}
-        link="/team/sec"
+        link="/team/security"
       />
       <TeamCard
         title="IoT Team"

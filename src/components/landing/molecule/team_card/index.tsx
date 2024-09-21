@@ -62,7 +62,7 @@ function TeamCard({
         </div>
       </div>
       <div
-        className={`flex flex-col items-center py-4 justify-between h-full bg-mto_dark_gray lg:absolute lg:bottom-16 lg:h-64 lg:transition-opacity lg:duration-500 ${
+        className={`flex flex-col items-center py-4 justify-between h-full bg-mto_dark_gray lg:absolute lg:bottom-16 lg:h-64 lg:transition-opacity lg:duration-500 lg:pb-0 ${
           extended ? "lg:opacity-100" : "lg:opacity-0"
         }`}
       >
