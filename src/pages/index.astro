@@ -4,11 +4,13 @@ import Home from "../components/landing/organism/home/index.astro";
 import AboutUs from "../components/landing/organism/aboutus/index.astro";
 
 import "../styles.css";
+import TeamsDisplay from "../components/landing/organism/teams_display";
 ---
 
 <Layout title="ManyToOne Community">
   <main class="flex flex-col w-vw overflow-x-hidden">
     <Home />
     <AboutUs />
+    <TeamsDisplay client:load />
   </main>
 </Layout>

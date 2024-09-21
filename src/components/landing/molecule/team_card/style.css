@@ -1,0 +1,30 @@
+.team-card {
+  transition: width 0.5s cubic-bezier(0.87, 0, 0.07, 1),
+    max-height 0.5s cubic-bezier(0.87, 0, 0.07, 1);
+  max-height: 100px;
+  height: 518px;
+
+  @apply w-full flex flex-col relative text-white overflow-hidden md:max-h-[150px] lg:max-h-screen lg:h-fit;
+}
+
+.team-card-extend {
+  @apply lg:w-[250%] max-h-[518px] lg:max-h-screen lg:h-fit;
+}
+
+.team-card-img {
+  @apply object-cover object-top w-full md:max-h-[300px] lg:h-96 xl:max-h-[400px];
+
+  object-position: 0 0;
+
+  @media (min-width: 768px) {
+    object-position: 0 -60px;
+  }
+
+  @media (min-width: 1024px) {
+    object-position: 50% 0;
+  }
+
+  @media (min-width: 1280px) {
+    object-position: 50% 50%;
+  }
+}
