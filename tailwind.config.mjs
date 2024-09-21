@@ -14,6 +14,7 @@ export default {
         mto_blue_dark: "#2094AA",
         mto_dark_gray: "#05090C",
         discord_blurple: "#5865F2",
+        card_simple: "#0A0909",
       },
       fontFamily: {
         main_sans: ["Lemon Milk", "sans"],

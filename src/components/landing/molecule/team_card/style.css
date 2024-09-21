@@ -11,6 +11,10 @@
   @apply lg:w-[250%] max-h-[518px] lg:max-h-screen lg:h-fit;
 }
 
+.team-card-shadow {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .team-card-img {
   @apply object-cover object-top w-full md:max-h-[300px] lg:h-96 xl:max-h-[400px];
 

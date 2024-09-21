@@ -1,9 +1,5 @@
 import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
-  faAdjust,
-  faHashtag,
-  faICursor,
-  faInfo,
   faMinus,
   faPlus,
   faSlash,
@@ -35,7 +31,7 @@ function TeamCard({
   link,
 }: TeamCardProps) {
   return (
-    <div className={`team-card ${extended ? "team-card-extend" : ""}`}>
+    <div className={`team-card ${extended ? "team-card-extend" : ""} team-card-shadow`}>
       <div className="flex-1 relative cursor-pointer" onClick={onClick}>
         <div className="w-full">
           <img src={image} alt={image} className={`team-card-img`} />
@@ -55,7 +51,7 @@ function TeamCard({
           </div>
           <FontAwesomeIcon
             icon={extended ? faMinus : faPlus}
-            className={`transition-all p-2 border-white border rounded-full text-sm duration-500 mt-4 lg:w-8 lg:h-8 lg:mb-4 ${
+            className={`transition-all p-2 border-white border rounded-full text-sm duration-500 mt-4 lg:w-4 lg:h-4 lg:mb-4 ${
               extended ? "bg-white text-black z-20" : ""
             }`}
           />

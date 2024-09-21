@@ -21,8 +21,9 @@ function TeamsDisplay() {
   return (
     <div className="flex flex-col w-full lg:flex-row">
       <TeamCard
-        title="Dev Team"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam, sed etiam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="Dev-Team"
+        description="Nuestro equipo de desarrollo se enfoca en el desarrollo web y de software. 
+                    Aquí puedes aprender sobre programación, frameworks modernos, y buenas prácticas de desarrollo."
         icon={faLaptopCode}
         image={landing_sec}
         extended={focus === 0}
@@ -30,8 +31,9 @@ function TeamsDisplay() {
         link="/team/dev"
       />
       <TeamCard
-        title="Net Team"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam, sed etiam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="Net-Team"
+        description="El equipo de redes se centra en todo lo relacionado con redes y comunicaciones. 
+                    Trabajan en la configuración y gestión de redes, así como en la resolución de problemas de conectividad."
         icon={faNetworkWired}
         image={landing_iot}
         extended={focus === 1}
@@ -39,8 +41,9 @@ function TeamsDisplay() {
         link="/team/net"
       />
       <TeamCard
-        title="OS Team"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam, sed etiam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="OS-Team"
+        description="Este equipo está dedicado a sistemas operativos y administración de sistemas. 
+                    Se especializan en el manejo de diferentes sistemas operativos, su configuración y administración."
         icon={faLinux}
         image={landing_os}
         extended={focus === 2}
@@ -48,8 +51,9 @@ function TeamsDisplay() {
         link="/team/os"
       />
       <TeamCard
-        title="Sec Team"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam, sed etiam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="Sec-Team"
+        description="Nuestro equipo de ciberseguridad trabaja en la protección de sistemas y datos contra amenazas y ataques. 
+                    Aquí aprenderás sobre seguridad informática, análisis de vulnerabilidades y mejores prácticas de protección."
         icon={faRedhat}
         image={landing_sec}
         extended={focus === 3}
@@ -57,8 +61,8 @@ function TeamsDisplay() {
         link="/team/security"
       />
       <TeamCard
-        title="IoT Team"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, sed etiam, sed etiam. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="IoT-Team"
+        description="El equipo de Internet de las Cosas se encarga de gestionar proyectos de robótica, los cuales son interactivos, creativos e innovadores."
         icon={faRobot}
         image={landing_iot}
         extended={focus === 4}
