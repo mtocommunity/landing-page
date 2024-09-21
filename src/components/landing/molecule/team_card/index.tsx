@@ -41,7 +41,7 @@ function TeamCard({
           <img src={image} alt={image} className={`team-card-img`} />
         </div>
         <div
-          className={`absolute top-0 w-full h-full lg:h-auto flex justify-between px-4 transition-colors duration-500 ${
+          className={`absolute top-0 w-full h-full flex justify-between px-4 transition-colors duration-500 ${
             extended ? "bg-none" : "bg-black bg-opacity-50"
           } lg:relative lg:flex-col lg:h-80 lg:items-center`}
         >
@@ -55,8 +55,8 @@ function TeamCard({
           </div>
           <FontAwesomeIcon
             icon={extended ? faMinus : faPlus}
-            className={`transition-all p-2 border-white border rounded-full text-sm duration-500 mt-4 lg:w-8 lg:h-8 lg:mb-4 ${
-              extended ? "bg-white text-black z-20" : ""
+            className={`transition-all p-2 border-white border rounded-full text-sm duration-500 mt-4 lg:w-4 lg:h-4 lg:mb-4 z-20 ${
+              extended ? "bg-white text-black" : ""
             }`}
           />
         </div>
