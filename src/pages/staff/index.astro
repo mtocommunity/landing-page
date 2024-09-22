@@ -3,25 +3,28 @@ import LeaderCard from "../../components/landing/molecule/leader_card"
 import Layout from "../../layouts/staff/index.astro"
 ---
 <Layout title="Staff">
-  <main class="min-h-screen py-10 lg:py-16 text-white text-center">
-    <h2 class="text-3xl lg:text-5xl font-bold mb-6">Nuestro equipo</h2>
-    <p class="max-w-xs lg:max-w-4xl mx-auto text-lg mb-10 py-3">
+  <div class="bg-gradient-to-t from-mto_red to-mto_dark_gray">
+  <main class=" min-h-screen py-10 lg:py-16 text-white text-center">
+    <h2 class="text-3xl md:text-3xl lg:text-5xl font-bold mb-6">Nuestro equipo</h2>
+    <p class="max-w-xs sm:max-w-3xl lg:max-w-4xl mx-auto text-lg mb-10 py-3">
       Nuestra comunidad está dirigida por un grupo de estudiantes comprometidos con el crecimiento y el aprendizaje colectivo. Cada uno aporta su experiencia y pasión en distintas áreas tecnológicas, asegurando que cada miembro tenga una experiencia de aprendizaje enriquecedora.
     </p>
 
-    <!-- Sección de las LeaderCards -->
     <section class="py-0 text-white text-center">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
         <!-- community leaders -->
         <LeaderCard photo="/ruta/jorge.jpg" name="Jorge Contreras" role="Líder de la Comunidad" link="https://github.com/jorgitooCoDe" />
         <LeaderCard photo="/ruta/luis.jpg" name="Luis Bazán" role="Líder de la Comunidad" link="https://github.com/luisBazanDev" />
         <LeaderCard photo="/ruta/junior.jpg" name="Junior Delgado" role="Líder de la Comunidad" link="https://github.com/aarondfv" />
         <LeaderCard photo="/ruta/alejandro.jpg" name="Alejandro Sánchez" role="Líder de Desarrollo" link="" />
-        <!-- Nuevas LeaderCards -->
+        <!-- teams Leader -->
         <LeaderCard photo="/ruta.jpg" name="?" role="Líder del Dev-Team" link="https://github.com/marialopez" />
         <LeaderCard photo="/ruta.jpg" name="?" role="Líder del Net-Team" link="https://github.com/pedromartinez" />
+        <LeaderCard photo="/ruta.jpg" name="?" role="Líder del OS-Team" link="https://github.com/anagarcia" />
+        <LeaderCard photo="/ruta.jpg" name="?" role="Líder del Security-Team" link="https://github.com/pedromartinez" />
         <LeaderCard photo="/ruta.jpg" name="?" role="Líder del IoT-Team" link="https://github.com/anagarcia" />
       </div>
     </section>
   </main>
+</div>
 </Layout>
