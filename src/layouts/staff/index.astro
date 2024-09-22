@@ -1,7 +1,6 @@
 ---
 import Footer from "../../components/general/footer.astro";
 import NavBar from "../../components/general/organism/navbar";
-import "./style.css";
 ---
 
 <!doctype html>
@@ -24,6 +23,7 @@ import "./style.css";
       </div>
       <NavBar client:load />
       <slot />
+      <Footer
     </div>
   </body>
 </html>
