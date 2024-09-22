@@ -1,0 +1,29 @@
+---
+import Footer from "../../components/general/footer.astro";
+import NavBar from "../../components/general/organism/navbar";
+import "./style.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Staff</title>
+  </head>
+  <body class="bg-mto_dark_gray w-full">
+    <div class="w-auto">
+      <div id="bg-box" class="">
+        <div id="bg-gray"></div>
+        <div id="bg-red"></div>
+        <div id="bg-blue"></div>
+      </div>
+      <NavBar client:load />
+      <slot />
+    </div>
+  </body>
+</html>

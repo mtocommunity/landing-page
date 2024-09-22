@@ -31,6 +31,7 @@ function NavBar() {
           <a href="/#about-us">About us</a>
           <a href="/#teams">Teams</a>
           <a href="/#events">Events</a>
+          <a href="/staff">Staff</a>
           <a href="/#contactus">Contact us</a>
         </nav>
       </header>
@@ -44,6 +45,7 @@ function NavBar() {
         <a href="/#about-us">About us</a>
         <a href="/#teams">Teams</a>
         <a href="/#events">Events</a>
+        <a href="/#staff">Staff</a>
         <a href="/#contactus">Contact us</a>
       </div>
     </>
