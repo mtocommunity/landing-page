@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css'
+import React from "react";
+import "./style.css";
 
 interface LeaderCardProps {
   photo: string;
@@ -9,24 +9,20 @@ interface LeaderCardProps {
 }
 
 const LeaderCard: React.FC<LeaderCardProps> = ({ photo, name, role, link }) => {
-  if (!photo || !name || !role || !link) {
-    console.error("Error: Missing required properties");
-    return null; 
-  }
-
   return (
-    <a 
-      href={link} 
+    <a
+      href={link}
       className="block w-2/3 md:w-2/3 lg:w-2/3 rounded-md overflow-hidden 
                     text-center transform transition-transform duration-300 
-                    hover:scale-105 team-card-shadow">
-      <img src={photo} className="w-full h-80 object-cover"/>
+                    hover:scale-105 team-card-shadow"
+    >
+      <img src={photo} className="w-full h-80 object-cover" />
       <div className="p-4 bg-mto_gray text-white">
         <h3 className="text-xl font-semibold mb-1">{name}</h3>
         <p className="text-gray-400 text-sm">{role}</p>
       </div>
     </a>
   );
-}
+};
 
 export default LeaderCard;
