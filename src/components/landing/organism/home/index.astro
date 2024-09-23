@@ -30,8 +30,13 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
         <TeamsCloud client:load />
       </div>
       <div class="flex justify-between w-full">
-        <Button type={ButtonType.PRIMARY}>Únete ahora</Button>
-        <Button type={ButtonType.SECONDARY}>Más información</Button>
+        <Button
+          type={ButtonType.PRIMARY}
+          link="https://discord.mtocommunity.com/">Únete ahora</Button
+        >
+        <Button type={ButtonType.SECONDARY} link="#about-us"
+          >Más información</Button
+        >
       </div>
     </div>
     <div
@@ -46,8 +51,8 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
       <Social />
     </dir>
     <a
-      class="bg-discord_blurple text-white flex gap-2 p-3 opacity-95 transition-opacity hover:opacity-100 h-20"
-      href=""
+      class="bg-gradient-to-r from-mto_gray_light to-discord_blurple text-white flex gap-2 p-3 opacity-90 transition-opacity duration-300 hover:opacity-100 h-20 rounded-lg mr-16"
+      href="https://discord.mtocommunity.com/"
     >
       <!-- Discord -->
       <div class="text-4xl flex items-center">
