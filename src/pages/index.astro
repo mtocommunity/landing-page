@@ -3,6 +3,7 @@ import Layout from "../layouts/landing/index.astro";
 import Home from "../components/landing/organism/home/index.astro";
 import AboutUs from "../components/landing/organism/aboutus/index.astro";
 import TeamsDisplay from "../components/landing/organism/teams_display";
+import ContactUs from "../components/landing/organism/contact_us/index.astro";
 
 import "../styles.css";
 import "./style.css";
@@ -18,5 +19,6 @@ import "./style.css";
     <Home />
     <AboutUs />
     <TeamsDisplay client:load />
+    <ContactUs />
   </main>
 </Layout>

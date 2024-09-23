@@ -25,7 +25,7 @@ function TeamsDisplay() {
   };
 
   return (
-    <div className="flex flex-col w-full lg:flex-row">
+    <div className="flex flex-col w-full lg:flex-row" id="teams">
       <TeamCard
         title="Dev-Team"
         description="Nuestro equipo de desarrollo se enfoca en el desarrollo web y de software. 
