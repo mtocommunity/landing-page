@@ -1,5 +1,6 @@
 ---
 import Footer from "../../components/general/footer.astro";
+import NavBar from "../../components/general/organism/navbar";
 
 type Props = {
   title: string;
@@ -42,8 +43,9 @@ const {title, description, path} = Astro.props
     />
     <meta name="twitter:image" content="/android-chrome-512x512.png" />
   </head>
-  <body class="bg-mto_dark_gray w-full">
+  <body class="bg-mto_gray w-full">
     <div class="w-auto">
+      <NavBar client:load />
       <slot />
       <Footer />
     </div>
