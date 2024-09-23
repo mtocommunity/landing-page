@@ -6,12 +6,11 @@ type Props = {
   title: string;
   description: string;
   path: string;
-}
+};
 
-const {title, description, path} = Astro.props
+const { title, description, path } = Astro.props;
 
 import "../../styles.css";
-
 ---
 
 <!doctype html>
@@ -25,10 +24,7 @@ import "../../styles.css";
     <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
     <!-- Basic meta -->
-    <meta
-      name="description"
-      content={description}
-    />
+    <meta name="description" content={description} />
     <meta name="author" content="ManyToOne Community" />
     <meta
       name="keywords"
@@ -37,18 +33,15 @@ import "../../styles.css";
     <meta name="generator" content={Astro.generator} />
     <!-- Twitter meta -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content={"https://mtocommunity.com/"+path} />
+    <meta name="twitter:url" content={"https://mtocommunity.com/" + path} />
     <meta name="twitter:title" content={title} />
-    <meta
-      name="twitter:description"
-      content={description}
-    />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="/android-chrome-512x512.png" />
   </head>
   <body class="bg-mto_gray w-full">
     <div class="w-auto">
       <slot />
-      <Footer />
+      <Footer simplify />
     </div>
   </body>
 </html>
