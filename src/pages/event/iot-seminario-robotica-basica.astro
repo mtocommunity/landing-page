@@ -36,12 +36,186 @@ const props ={
     </main>
 
     <!-- Agenda -->
-    <div id="agenda" class="min-h-screen">
-      <p class="text-2xl">Agenda</p>
-    </div>
+    <section 
+            class="min-h-screen agenda-container bg-gradient-to-t from-mto_red to-mto_gray pt-16 pb-16"
+        >
+        <h1 
+            class="text-center text-white text-5xl font-bold mb-12"
+        >
+            Agenda
+        </h1>
+
+        <!-- Día 1 -->
+        <div 
+            class="day-section mb-8"
+        >
+            <div 
+                class="flex items-center space-x-4 ml-4 max-w-xs"
+            >
+                <h2 
+                    class="text-white text-3xl font-semibold"
+                >
+                    Día 1
+                </h2>
+                <hr 
+                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
+                >
+            </div>
+
+        <p 
+            class="text-white mb-6 mt-1 m-4 opacity-80"
+        >
+            Vie 27 de Septiembre
+        </p>
+            <Description 
+                className="bg-gray-200"
+            >
+                <ul 
+                    class="list-disc list-inside"
+                >
+                    <li>
+                        IoT.
+                    </li>
+                    <li>
+                        Componentes básicos de electrónica con Arduino (Arduino Uno, protoboard, cables, resistencia, LEDs, sensores, etc).
+                    </li>
+                    <li>
+                        Arduino IDE.
+                    </li>
+                    <li>
+                        Principios de programación en Arduino IDE.
+                    </li>
+                </ul>
+            </Description>
+        </div>
+
+        <!-- Día 2 -->
+        <div 
+            class="day-section mb-8"
+        >
+            <div 
+                class="flex items-center space-x-4 ml-4 max-w-xs"
+            >
+                <h2 
+                    class="text-white text-3xl font-semibold"
+                >
+                    Día 2
+                </h2>
+                <hr 
+                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
+                >
+            </div>
+    
+        <p 
+            class="text-white mb-6 mt-1 m-4 opacity-80"
+        >
+            Vie 04 de Octubre
+        </p>
+            <Description 
+                className="bg-gray-200"
+            >
+                <ul 
+                    class="list-disc list-inside"
+                >
+                    <li>
+                        Repaso del seminario 1.
+                    </li>
+                    <li>
+                        Ejercicios prácticos.
+                    </li>
+                    <li>
+                        Conexión y programación con Arduino de LEDs, sensores, pulsadores y potenciómetros.
+                    </li>
+                </ul>
+            </Description>
+        </div>
+
+        <!-- Día 3 -->
+        <div 
+            class="day-section mb-8"
+        >
+            <div 
+                class="flex items-center space-x-4 ml-4 max-w-xs"
+            >
+                <h2 
+                    class="text-white text-3xl font-semibold"
+                >
+                    Día 3
+                </h2>
+                <hr 
+                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
+                >
+            </div>
+        
+            <p 
+                class="text-white mb-6 mt-1 m-4 opacity-80"
+            >
+                Vie 11 de Octubre
+            </p>
+            <Description 
+                className="bg-gray-200"
+            >
+                <ul 
+                    class="list-disc list-inside"
+                >
+                    <li>
+                        Repaso del Seminario 2.
+                    </li>
+                    <li>
+                        Ejercicios prácticos.
+                    </li>
+                    <li>
+                        Conexión y programación de Arduino con componentes como servomotores y muchos más.
+                    </li>
+                </ul>
+            </Description>
+        </div>
+
+        <!-- Día 4 -->
+        <div 
+            class="day-section mb-8"
+        >
+            <div 
+                class="flex items-center space-x-4 ml-4 max-w-xs"
+            >
+                <h2 
+                    class="text-white text-3xl font-semibold"
+                >
+                    Día 4
+                </h2>
+                <hr 
+                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
+                >
+            </div>
+        
+            <p 
+                class="text-white mb-6 mt-1 m-4 opacity-80"
+            >
+                Vie 18 de Octubre
+            </p>
+            <Description 
+                className="bg-gray-200"
+            >
+                <ul 
+                    class="list-disc list-inside"
+                >
+                    <li>
+                        Repaso del Seminario 3.
+                    </li>
+                    <li>
+                        Ejercicios prácticos.
+                    </li>
+                    <li>
+                        <span class="font-bold">Ejercicio Reto:</span> Diseño y construcción de un robot usando electrónica con Arduino y componentes aprendidos durante el resto de seminarios.
+                    </li>
+                </ul>
+            </Description>
+        </div>
+    </section>
     <!-- Ponentes-->
     <div id="ponentes" class="min-h-screen">
 
     </div>
+
   </div>
 </Layout>
