@@ -31,7 +31,7 @@ function CustomNavBar({ children, fixed, full }: Props) {
           <MTOTransparentBackground className="h-full lg:h-[150%] aspect-square" />
           {full && (
             <span className="font-main_sans flex items-center font-semibold">
-              Many To One
+              MTO Community
             </span>
           )}
         </a>

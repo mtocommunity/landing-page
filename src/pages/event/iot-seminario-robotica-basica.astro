@@ -5,217 +5,186 @@ import { ButtonType } from "../../components/general/attoms/button/types";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
 import Description from "../../components/general/molecule/description";
+import { wave2 } from "../../assets/svgs";
 
-const props ={
-    title: "IoT Events",
-    description: "Eventos de IoT en la comunidad de ManyToOne",
-    path:"events/iot-seminario-robotica-basica"
-}
+const props = {
+  title: "IoT Events",
+  description: "Eventos de IoT en la comunidad de ManyToOne",
+  path: "events/iot-seminario-robotica-basica",
+};
 ---
 
 <Layout {...props}>
   <div class="text-white">
     <CustomNavBar fixed full client:load>
-      <a href="#agenda" >Agenda</a>
+      <a href="#agenda">Agenda</a>
       <a href="#ponentes">Ponentes</a>
     </CustomNavBar>
 
     <!-- Principal -->
-    <main id="home" class="min-h-screen relative flex items-center justify-center">
-      <img src={landing_iot} alt={landing_iot} class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden">
-      <div class="absolute top-0 w-full h-full from-mto_blue to-mto_gray bg-gradient-to-b -z-10 opacity-80"></div>
+    <main
+      id="home"
+      class="min-h-screen relative flex items-center justify-center"
+    >
+      <img
+        src={landing_iot}
+        alt={landing_iot}
+        class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden"
+      />
+      <div
+        class="absolute top-0 w-full h-full from-mto_blue to-mto_gray bg-gradient-to-b -z-10 opacity-80"
+      >
+      </div>
       <div class="flex flex-col gap-32 items-center">
         <div class="w-3/4">
-          <h1 class="text-2xl font-bold text-center">Seminario de robótica básica</h1>
-          <p class="text-sm text-center">Sé parte de uno de los eventos a cargo del equipo de IoT, aquí aprenderás los fundamentos de Robótica, con arduino.</p>
+          <h1 class="text-2xl font-bold text-center">
+            Seminario de robótica básica
+          </h1>
+          <p class="text-sm text-center">
+            Sé parte de uno de los eventos a cargo del equipo de IoT, aquí
+            aprenderás los fundamentos de Robótica, con arduino.
+          </p>
         </div>
-        <Button type={ButtonType.PRIMARY} className="w-2/3" link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link">
+        <Button
+          type={ButtonType.PRIMARY}
+          className="w-2/3"
+          link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link"
+        >
           Inscríbete
         </Button>
       </div>
     </main>
 
     <!-- Agenda -->
-    <section 
-            class="min-h-screen agenda-container bg-gradient-to-t from-mto_red to-mto_gray pt-16 pb-16"
-        >
-        <h1 
-            class="text-center text-white text-5xl font-bold mb-12"
-        >
-            Agenda
-        </h1>
+    <section
+      class="min-h-screen agenda-container bg-gradient-to-t from-mto_red to-mto_dark_gray pt-16"
+      id="agenda"
+    >
+      <h2 class="text-center text-white text-5xl font-bold mb-12">Agenda</h2>
 
-        <!-- Día 1 -->
-        <div 
-            class="day-section mb-8"
-        >
-            <div 
-                class="flex items-center space-x-4 ml-4 max-w-xs"
-            >
-                <h2 
-                    class="text-white text-3xl font-semibold"
-                >
-                    Día 1
-                </h2>
-                <hr 
-                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                >
-            </div>
+      <!-- Día 1 -->
+      <div class="day-section mb-8">
+        <div class="flex items-center gap-4 mx-4">
+          <h3 class="text-white text-3xl font-semibold">Día 1</h3>
+          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
+        </div>
 
-        <p 
-            class="text-white mb-6 mt-1 m-4 opacity-80"
-        >
-            Vie 27 de Septiembre
+        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
+          Vie 27 de Septiembre
         </p>
-            <Description 
-                className="bg-gray-200"
-            >
-                <ul 
-                    class="list-disc list-inside"
-                >
-                    <li>
-                        IoT.
-                    </li>
-                    <li>
-                        Componentes básicos de electrónica con Arduino (Arduino Uno, protoboard, cables, resistencia, LEDs, sensores, etc).
-                    </li>
-                    <li>
-                        Arduino IDE.
-                    </li>
-                    <li>
-                        Principios de programación en Arduino IDE.
-                    </li>
-                </ul>
-            </Description>
+        <Description className="bg-gray-200">
+          <ul class="list-disc list-inside flex flex-col gap-3">
+            <li>Introdución a IoT.</li>
+            <li>Componentes básicos de electrónica con Arduino.</li>
+            <li>Arduino IDE.</li>
+            <li>Principios de programación en Arduino IDE.</li>
+          </ul>
+        </Description>
+      </div>
+
+      <!-- Día 2 -->
+      <div class="day-section mb-8">
+        <div class="flex items-center gap-4 mx-4">
+          <h3 class="text-white text-3xl font-semibold">Día 2</h3>
+          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
         </div>
 
-        <!-- Día 2 -->
-        <div 
-            class="day-section mb-8"
-        >
-            <div 
-                class="flex items-center space-x-4 ml-4 max-w-xs"
-            >
-                <h2 
-                    class="text-white text-3xl font-semibold"
-                >
-                    Día 2
-                </h2>
-                <hr 
-                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                >
-            </div>
-    
-        <p 
-            class="text-white mb-6 mt-1 m-4 opacity-80"
-        >
-            Vie 04 de Octubre
+        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
+          Vie 04 de Octubre
         </p>
-            <Description 
-                className="bg-gray-200"
-            >
-                <ul 
-                    class="list-disc list-inside"
-                >
-                    <li>
-                        Repaso del seminario 1.
-                    </li>
-                    <li>
-                        Ejercicios prácticos.
-                    </li>
-                    <li>
-                        Conexión y programación con Arduino de LEDs, sensores, pulsadores y potenciómetros.
-                    </li>
-                </ul>
-            </Description>
+        <Description className="bg-gray-200">
+          <ul class="list-disc list-inside flex flex-col gap-3">
+            <li>Ejercicios prácticos.</li>
+            <li>Conexión y programación con Arduino.</li>
+          </ul>
+        </Description>
+      </div>
+
+      <!-- Día 3 -->
+      <div class="day-section mb-8">
+        <div class="flex items-center gap-4 mx-4">
+          <h3 class="text-white text-3xl font-semibold">Día 3</h3>
+          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
         </div>
 
-        <!-- Día 3 -->
-        <div 
-            class="day-section mb-8"
-        >
-            <div 
-                class="flex items-center space-x-4 ml-4 max-w-xs"
-            >
-                <h2 
-                    class="text-white text-3xl font-semibold"
-                >
-                    Día 3
-                </h2>
-                <hr 
-                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                >
-            </div>
-        
-            <p 
-                class="text-white mb-6 mt-1 m-4 opacity-80"
-            >
-                Vie 11 de Octubre
-            </p>
-            <Description 
-                className="bg-gray-200"
-            >
-                <ul 
-                    class="list-disc list-inside"
-                >
-                    <li>
-                        Repaso del Seminario 2.
-                    </li>
-                    <li>
-                        Ejercicios prácticos.
-                    </li>
-                    <li>
-                        Conexión y programación de Arduino con componentes como servomotores y muchos más.
-                    </li>
-                </ul>
-            </Description>
+        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
+          Vie 11 de Octubre
+        </p>
+        <Description className="bg-gray-200">
+          <ul class="list-disc list-inside flex flex-col gap-3">
+            <li>Repaso del Seminario 2.</li>
+            <li>Ejercicios prácticos.</li>
+            <li>Conexión y programación de servomotores con Arduino.</li>
+          </ul>
+        </Description>
+      </div>
+
+      <!-- Día 4 -->
+      <div class="day-section mb-8">
+        <div class="flex items-center gap-4 mx-4">
+          <h3 class="text-white text-3xl font-semibold">Día 4</h3>
+          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
         </div>
 
-        <!-- Día 4 -->
-        <div 
-            class="day-section mb-8"
-        >
-            <div 
-                class="flex items-center space-x-4 ml-4 max-w-xs"
-            >
-                <h2 
-                    class="text-white text-3xl font-semibold"
-                >
-                    Día 4
-                </h2>
-                <hr 
-                    class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                >
-            </div>
-        
-            <p 
-                class="text-white mb-6 mt-1 m-4 opacity-80"
-            >
-                Vie 18 de Octubre
-            </p>
-            <Description 
-                className="bg-gray-200"
-            >
-                <ul 
-                    class="list-disc list-inside"
-                >
-                    <li>
-                        Repaso del Seminario 3.
-                    </li>
-                    <li>
-                        Ejercicios prácticos.
-                    </li>
-                    <li>
-                        <span class="font-bold">Ejercicio Reto:</span> Diseño y construcción de un robot usando electrónica con Arduino y componentes aprendidos durante el resto de seminarios.
-                    </li>
-                </ul>
-            </Description>
-        </div>
+        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
+          Vie 18 de Octubre
+        </p>
+        <Description className="bg-gray-200">
+          <ul class="list-disc list-inside flex flex-col gap-3">
+            <li>Repaso del Seminario 3.</li>
+            <li>Ejercicios prácticos.</li>
+            <li>
+              <span class="font-bold">Ejercicio Reto:</span> Diseño y construcción
+              de un robot usando electrónica con Arduino y componentes aprendidos
+              durante el resto de seminarios.
+            </li>
+          </ul>
+        </Description>
+      </div>
+      <img
+        src={wave2.src}
+        alt={wave2.src}
+        class="w-full object-cover object-bottom"
+      />
     </section>
     <!-- Ponentes-->
-    <div id="ponentes" class="min-h-screen">
-
+    <div id="ponentes" class="bg-white pt-0">
+      <img
+        src={wave2.src}
+        alt={wave2.src}
+        class="w-full object-cover object-bottom rotate-180"
+      />
+      <div class="flex flex-col items-center gap-16">
+        <h2 class="text-5xl text-mto_gray font-bold">Ponentes</h2>
+        <div class="flex flex-col items-center">
+          <!-- Ponentes -->
+          <div class="w-2/3 relative flex flex-col items-center">
+            <img
+              src="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+              alt="staff-eliana-cajusol.jpg"
+              class="rounded-full aspect-square object-cover w-2/3"
+            />
+            <div
+              class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
+            >
+              <h3 class="text-xl font-bold">Eliana Cajuzol</h3>
+              <p class="text-sm">Líder de IoT Team</p>
+            </div>
+          </div>
+        </div><div class="w-2/3 relative flex flex-col items-center">
+          <img
+            src="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
+            alt="staff-jaime-lopez.jpg"
+            class="rounded-full aspect-square object-cover w-2/3"
+          />
+          <div
+            class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
+          >
+            <h3 class="text-xl font-bold">Jaime López</h3>
+            <p class="text-sm">Líder de IoT Team</p>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 </Layout>
