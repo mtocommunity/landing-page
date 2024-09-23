@@ -25,22 +25,23 @@ import Layout from "../../layouts/landing/index.astro";
           Líderes de la Comunidad
         </p>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 justify-items-center mb-10"
+          class="flex flex-wrap justify-center gap-8 px-8 justify-items-center lg:gap-16 mb-10"
         >
           <LeaderCard
-            photo="/ruta/jorge.jpg"
+            photo="https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg"
             name="Jorge Contreras"
             role="Líder de la Comunidad"
             link="https://github.com/jorgitooCoDe"
           />
           <LeaderCard
-            photo="/ruta/luis.jpg"
+            photo="https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg"
             name="Luis Bazán"
             role="Líder de la Comunidad"
             link="https://github.com/luisBazanDev"
           />
           <LeaderCard
-            photo="/ruta/junior.jpg"
+            photo={"https://cdn.mtocommunity.com/staff-nn.jpg" ??
+              "https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"}
             name="Junior Delgado"
             role="Líder de la Comunidad"
             link="https://github.com/aarondfv"
@@ -48,59 +49,96 @@ import Layout from "../../layouts/landing/index.astro";
         </div>
 
         <!-- Teams leaders -->
-        <p class="text-xl md:text-2xl lg:text-3xl lg:p-8 mb-6 font-main_sans">
+        <p
+          class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
+        >
           Líderes de Equipos
         </p>
         <div
-          class="lg:py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"
+          class="lg:py-6 flex flex-wrap gap-16 px-8 justify-items-center justify-center lg:gap-32 xl:gap-48"
         >
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
             name="Juan Romero"
             role="Líder del Dev-Team"
-            link="https://github.com/marialopez"
+            link="https://linktr.ee/IngSystemCix"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
             name="Víctor Tuñoque"
             role="Líder del Dev-Team"
-            link="https://github.com/pedromartinez"
+            link="http://linkedin.com/in/víctor-vladimir-tuñoque-morante-6a89072a2"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
             name="Abner Cubas"
             role="Líder del Net-Team"
-            link="https://github.com/anagarcia"
+            link="http://www.linkedin.com/in/abner-cubas-parra-176a7329a"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
             name="Briggitte Martinez"
             role="Líder del Net-Team"
-            link="https://github.com/pedromartinez"
+            link="http://www.linkedin.com/in/briggitte-martinez-isi"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-nn.jpg"
             name="Diego Bazán"
             role="Líder del OS-Team"
-            link="https://github.com/anagarcia"
+            link="/staff"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-nn.jpg"
             name="Junior Delgado"
             role="Líder del Security-Team"
-            link="https://github.com/anagarcia"
+            link="/staff"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
             name="Eliana Cajusol"
             role="Líder del IoT-Team"
-            link="https://github.com/anagarcia"
+            link="https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b"
           />
           <LeaderCard
-            photo="/ruta.jpg"
+            photo="https://cdn.mtocommunity.com/staff-nn.jpg"
             name="Jaime López"
             role="Líder del IoT-Team"
-            link="https://github.com/anagarcia"
+            link="/staff"
+          />
+        </div>
+
+        <!-- Teams leaders -->
+        <p
+          class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
+        >
+          Social Media Team
+        </p>
+        <div
+          class="lg:py-6 flex flex-wrap gap-16 px-8 justify-items-center justify-center lg:gap-32 xl:gap-48"
+        >
+          <LeaderCard
+            photo="https://cdn.mtocommunity.com/staff-matamitas.jpg"
+            name="Cristhoper Cueva"
+            role="Líder de SMT"
+            link="https://www.instagram.com/matamitas25/"
+          />
+          <LeaderCard
+            photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+            name="Eliana Cajusol"
+            role="Guionistas & Realización"
+            link="https://www.instagram.com/naomi_cajusol/"
+          />
+          <LeaderCard
+            photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
+            name="Briggitte Martinez"
+            role="Imagen y Voz"
+            link="https://www.instagram.com/briggittemar_v"
+          />
+          <LeaderCard
+            photo="https://cdn.mtocommunity.com/staff-nn.jpg"
+            name="Moisés Ruiz"
+            role="CM de X"
+            link="/staff"
           />
         </div>
       </section>
