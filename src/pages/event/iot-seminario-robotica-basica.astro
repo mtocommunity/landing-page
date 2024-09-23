@@ -6,6 +6,9 @@ import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
 import Description from "../../components/general/molecule/description";
 import { wave2 } from "../../assets/svgs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {} from "@fortawesome/free-brands-svg-icons";
+import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 const props = {
   title: "IoT Events",
@@ -47,23 +50,26 @@ const props = {
         </div>
         <Button
           type={ButtonType.PRIMARY}
-          className="w-2/3"
+          className="w-2/3 flex gap-2 justify-center items-center"
           link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link"
         >
-          Inscríbete
+          <FontAwesomeIcon icon={faClipboardCheck} className="w-3" />
+          <span>Inscríbete ahora</span>
         </Button>
       </div>
     </main>
 
     <!-- Agenda -->
     <section
-      class="min-h-screen agenda-container bg-gradient-to-t from-mto_red to-mto_dark_gray pt-16"
+      class="min-h-screen agenda-container bg-gradient-to-t from-mto_red to-mto_dark_gray pt-16 flex flex-col xl:items-center"
       id="agenda"
     >
-      <h2 class="text-center text-white text-5xl font-bold mb-12">Agenda</h2>
+      <h2 class="text-center text-white text-5xl font-bold mb-12 xl:w-2/3">
+        Agenda
+      </h2>
 
       <!-- Día 1 -->
-      <div class="day-section mb-8">
+      <div class="day-section mb-8 xl:w-2/3">
         <div class="flex items-center gap-4 mx-4">
           <h3 class="text-white text-3xl font-semibold">Día 1</h3>
           <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
@@ -83,7 +89,7 @@ const props = {
       </div>
 
       <!-- Día 2 -->
-      <div class="day-section mb-8">
+      <div class="day-section mb-8 xl:w-2/3">
         <div class="flex items-center gap-4 mx-4">
           <h3 class="text-white text-3xl font-semibold">Día 2</h3>
           <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
@@ -101,7 +107,7 @@ const props = {
       </div>
 
       <!-- Día 3 -->
-      <div class="day-section mb-8">
+      <div class="day-section mb-8 xl:w-2/3">
         <div class="flex items-center gap-4 mx-4">
           <h3 class="text-white text-3xl font-semibold">Día 3</h3>
           <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
@@ -120,7 +126,7 @@ const props = {
       </div>
 
       <!-- Día 4 -->
-      <div class="day-section mb-8">
+      <div class="day-section mb-8 xl:w-2/3">
         <div class="flex items-center gap-4 mx-4">
           <h3 class="text-white text-3xl font-semibold">Día 4</h3>
           <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
@@ -135,8 +141,7 @@ const props = {
             <li>Ejercicios prácticos.</li>
             <li>
               <span class="font-bold">Ejercicio Reto:</span> Diseño y construcción
-              de un robot usando electrónica con Arduino y componentes aprendidos
-              durante el resto de seminarios.
+              de un robot.
             </li>
           </ul>
         </Description>
@@ -144,7 +149,7 @@ const props = {
       <img
         src={wave2.src}
         alt={wave2.src}
-        class="w-full object-cover object-center aspect-[10/1]"
+        class="w-full object-cover object-center aspect-[5/1] xl:aspect-[10/1]"
       />
     </section>
     <!-- Ponentes-->
@@ -152,11 +157,11 @@ const props = {
       <img
         src={wave2.src}
         alt={wave2.src}
-        class="w-full object-cover object-center aspect-[10/1] rotate-180"
+        class="w-full object-cover object-center rotate-180 aspect-[5/1] xl:aspect-[10/1]"
       />
       <div class="flex flex-col items-center gap-16">
         <h2 class="text-5xl text-mto_gray font-bold">Ponentes</h2>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center xl:flex-row xl:gap-8 pb-32">
           <!-- Ponentes -->
           <div class="w-2/3 relative flex flex-col items-center">
             <img
