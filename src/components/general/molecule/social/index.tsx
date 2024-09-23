@@ -6,6 +6,7 @@ import {
   faTwitch,
   faTiktok,
   faXTwitter,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -50,6 +51,13 @@ function Social() {
       </a>
       <a href="https://x.com/mtocommunity" className="icon" target="_blank">
         <FontAwesomeIcon icon={faXTwitter} />
+      </a>
+      <a
+        href="https://github.com/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={faGithub} />
       </a>
     </div>
   );
