@@ -1,0 +1,40 @@
+.nav-mobile {
+  animation: dropDown 0.2s ease-in-out;
+  height: 33dvh;
+}
+
+.nav-desktop {
+  @apply h-3/4 text-gray-300;
+}
+
+.nav-desktop a {
+  @apply px-5 h-full flex items-center transition-colors;
+}
+
+.nav-desktop a:hover {
+  @apply relative text-white drop-shadow-md shadow-white;
+}
+
+.nav-desktop a:hover::before {
+  content: "";
+  @apply h-[.2rem] w-[calc(100%-2.5rem)] bg-white absolute bottom-1 left-[1.25rem];
+  animation: sliceIn 0.2s ease-in-out;
+}
+
+@keyframes sliceIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100%-2.5rem);
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 33dvh;
+  }
+}

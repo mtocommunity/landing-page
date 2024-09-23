@@ -1,4 +1,8 @@
 ---
+import { landing_iot } from "../../assets";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
 import Description from "../../components/general/molecule/description";
 
@@ -10,153 +14,34 @@ const props ={
 ---
 
 <Layout {...props}>
-    <div class="text-white">
-        <!-- Principal -->
-        <main id="home" class="min-h-screen">
-            
-        </main>
-         <!-- Agenda -->
-         <section 
-            class="agenda-container bg-gradient-to-t from-mto_red to-mto_gray"
-        >
-            <h1 
-                class="text-center text-white text-5xl font-bold mb-12"
-            >
-                Agenda
-            </h1>
-    
-            <!-- Día 1 -->
-            <div 
-                class="day-section mb-8"
-            >
-                <div 
-                    class="flex items-center space-x-4 ml-4 max-w-xs"
-                >
-                    <h2 
-                        class="text-white text-3xl font-semibold"
-                    >
-                        Día 1
-                    </h2>
-                    <hr 
-                        class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                    >
-                </div>
-            
-                <p 
-                    class="text-white mb-6 mt-1 m-4 opacity-80"
-                >
-                    Vie 27 de Setiembre
-                </p>
-                <Description 
-                    className="bg-gray-200"
-                >
-                    <ul 
-                        class="list-disc list-inside"
-                    >
-                        <li>
-                            IoT.
-                        </li>
-                        <li>
-                            Ejercicios prácticos.
-                        </li>
-                        <li>
-                            Arduino IDE.
-                        </li>
-                        <li>
-                            Principios de programación en Arduino IDE.
-                        </li>
-                    </ul>
-                </Description>
-            </div>
-    
-            <!-- Día 2 -->
-            <div 
-                class="day-section mb-8"
-            >
-                <div 
-                    class="flex items-center space-x-4 ml-4 max-w-xs"
-                >
-                    <h2 
-                        class="text-white text-3xl font-semibold"
-                    >
-                        Día 2
-                    </h2>
-                    <hr 
-                        class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                    >
-                </div>
-            
-                <p 
-                    class="text-white mb-6 mt-3 m-4 opacity-80"
-                >
-                    Vie 04 de Octubre
-                </p>
-                <Description 
-                    className="bg-gray-200"
-                >
-                    <ul 
-                        class="list-disc list-inside"
-                    >
-                        <li>
-                            Repaso del seminario 1.
-                        </li>
-                        <li>
-                            Ejercicios prácticos.
-                        </li>
-                        <li>
-                            Conexión y programación con Arduino de LEDs, Sensores, pulsadores y potenciómetros.
-                        </li>
-                    </ul>
-                </Description>
-            </div>
+  <div class="text-white">
+    <CustomNavBar fixed full client:load>
+      <a href="#agenda" >Agenda</a>
+      <a href="#ponentes">Ponentes</a>
+    </CustomNavBar>
 
-            <!-- Día 3 -->
-            <div 
-                class="day-section mb-8"
-            >
-                <div 
-                    class="flex items-center space-x-4 ml-4 max-w-xs"
-                >
-                    <h2 
-                        class="text-white text-3xl font-semibold"
-                    >
-                        Día 1
-                    </h2>
-                    <hr 
-                        class="flex-grow border-t-2 border-white opacity-80 mr-3"
-                    >
-                </div>
-            
-                <p 
-                    class="text-white mb-6 mt-1 m-4 opacity-80"
-                >
-                    Vie 27 de Setiembre
-                </p>
-                <Description 
-                    className="bg-gray-200"
-                >
-                    <ul 
-                        class="list-disc list-inside"
-                    >
-                        <li>
-                            IoT.
-                        </li>
-                        <li>
-                            Ejercicios prácticos.
-                        </li>
-                        <li>
-                            Arduino IDE.
-                        </li>
-                        <li>
-                            Principios de programación en Arduino IDE.
-                        </li>
-                    </ul>
-                </Description>
-            </div>
-        </section>
-        <!-- Ponentes-->
-        <div id="ponentes" class="min-h-screen">
-
+    <!-- Principal -->
+    <main id="home" class="min-h-screen relative flex items-center justify-center">
+      <img src={landing_iot} alt={landing_iot} class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden">
+      <div class="absolute top-0 w-full h-full from-mto_blue to-mto_gray bg-gradient-to-b -z-10 opacity-80"></div>
+      <div class="flex flex-col gap-32 items-center">
+        <div class="w-3/4">
+          <h1 class="text-2xl font-bold text-center">Seminario de robótica básica</h1>
+          <p class="text-sm text-center">Sé parte de uno de los eventos a cargo del equipo de IoT, aquí aprenderás los fundamentos de Robótica, con arduino.</p>
         </div>
+        <Button type={ButtonType.PRIMARY} className="w-2/3" link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link">
+          Inscríbete
+        </Button>
+      </div>
+    </main>
+
+    <!-- Agenda -->
+    <div id="agenda" class="min-h-screen">
+      <p class="text-2xl">Agenda</p>
     </div>
+    <!-- Ponentes-->
+    <div id="ponentes" class="min-h-screen">
+
+    </div>
+  </div>
 </Layout>
