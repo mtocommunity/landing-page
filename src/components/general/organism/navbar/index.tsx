@@ -30,9 +30,9 @@ function NavBar() {
           <a href="/#home">Home</a>
           <a href="/#about-us">About us</a>
           <a href="/#teams">Teams</a>
-          <a href="/#events">Events</a>
-          <a href="/staff">Staff</a>
+          {/*<a href="/#events">Events</a>*/}
           <a href="/#contactus">Contact us</a>
+          <a href="/staff">Staff</a>
         </nav>
       </header>
       <div
@@ -44,9 +44,9 @@ function NavBar() {
         <a href="/#home">Home</a>
         <a href="/#about-us">About us</a>
         <a href="/#teams">Teams</a>
-        <a href="/#events">Events</a>
-        <a href="/#staff">Staff</a>
+        {/*<a href="/#events">Events</a>*/}
         <a href="/#contactus">Contact us</a>
+        <a href="/staff">Staff</a>
       </div>
     </>
   );
