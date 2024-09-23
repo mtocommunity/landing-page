@@ -2,7 +2,7 @@
 import Footer from "../../components/general/footer.astro";
 import NavBar from "../../components/general/organism/navbar";
 
-import "./style.css";
+import "../../styles.css";
 
 interface Props {
   title: string;
@@ -44,11 +44,6 @@ const { title } = Astro.props;
   </head>
   <body class="bg-mto_dark_gray w-full">
     <div class="w-auto">
-      <div id="bg-box" class="">
-        <div id="bg-gray"></div>
-        <div id="bg-red"></div>
-        <div id="bg-blue"></div>
-      </div>
       <NavBar client:load />
       <slot />
       <Footer />

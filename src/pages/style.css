@@ -1,0 +1,46 @@
+#bg-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: blur(5rem);
+  z-index: -30;
+}
+
+#bg-gray {
+  content: "";
+  width: 23%;
+  height: 50%;
+  @apply bg-mto_gray;
+  top: 0;
+  left: 5%;
+  position: fixed;
+}
+
+#bg-red {
+  content: "";
+  width: 48%;
+  height: 60%;
+  @apply bg-mto_red;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24%;
+  z-index: -10;
+  position: fixed;
+}
+
+#bg-blue {
+  content: "";
+  width: 23%;
+  height: 50%;
+  @apply bg-mto_blue;
+  bottom: 0;
+  right: 5%;
+  z-index: -20;
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  #bg-box {
+    filter: blur(9.5rem);
+  }
+}

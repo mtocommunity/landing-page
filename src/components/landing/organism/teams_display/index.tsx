@@ -1,7 +1,13 @@
 import React from "react";
 import TeamCard from "../../molecule/team_card";
 
-import { landing_iot, landing_os, landing_sec } from "../../../../assets";
+import {
+  landing_dev,
+  landing_iot,
+  landing_net,
+  landing_os,
+  landing_sec,
+} from "../../../../assets";
 import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
 import {
   faCode,
@@ -25,7 +31,7 @@ function TeamsDisplay() {
         description="Nuestro equipo de desarrollo se enfoca en el desarrollo web y de software. 
                     Aquí puedes aprender sobre programación, frameworks modernos, y buenas prácticas de desarrollo."
         icon={faLaptopCode}
-        image={landing_sec}
+        image={landing_dev}
         extended={focus === 0}
         onClick={() => handleOnClick(0)}
         link="/team/dev"
@@ -35,7 +41,7 @@ function TeamsDisplay() {
         description="El equipo de redes se centra en todo lo relacionado con redes y comunicaciones. 
                     Trabajan en la configuración y gestión de redes, así como en la resolución de problemas de conectividad."
         icon={faNetworkWired}
-        image={landing_iot}
+        image={landing_net}
         extended={focus === 1}
         onClick={() => handleOnClick(1)}
         link="/team/net"
