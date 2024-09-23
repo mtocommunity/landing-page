@@ -1,4 +1,8 @@
 ---
+import { landing_iot } from "../../assets";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
 
 const props ={
@@ -9,18 +13,34 @@ const props ={
 ---
 
 <Layout {...props}>
-    <div class="bg-gradient-to-t from-mto_red to-mto_gray text-white">
-        <!-- Principal -->
-        <main id="home" class="min-h-screen">
-            
-        </main>
-         <!-- Agenda -->
-        <div id="agenda" class="min-h-screen">
-            <p class="text-2xl">Agenda</p>
-        </div>
-        <!-- Ponentes-->
-        <div id="ponentes" class="min-h-screen">
+  <div class="text-white">
+    <CustomNavBar fixed full client:load>
+      <a href="#agenda" >Agenda</a>
+      <a href="#ponentes">Ponentes</a>
+    </CustomNavBar>
 
+    <!-- Principal -->
+    <main id="home" class="min-h-screen relative flex items-center justify-center">
+      <img src={landing_iot} alt={landing_iot} class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden">
+      <div class="absolute top-0 w-full h-full from-mto_blue to-mto_gray bg-gradient-to-b -z-10 opacity-80"></div>
+      <div class="flex flex-col gap-32 items-center">
+        <div class="w-3/4">
+          <h1 class="text-2xl font-bold text-center">Seminario de robótica básica</h1>
+          <p class="text-sm text-center">Sé parte de uno de los eventos a cargo del equipo de IoT, aquí aprenderás los fundamentos de Robótica, con arduino.</p>
         </div>
+        <Button type={ButtonType.PRIMARY} className="w-2/3" link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link">
+          Inscríbete
+        </Button>
+      </div>
+    </main>
+
+    <!-- Agenda -->
+    <div id="agenda" class="min-h-screen">
+      <p class="text-2xl">Agenda</p>
     </div>
+    <!-- Ponentes-->
+    <div id="ponentes" class="min-h-screen">
+
+    </div>
+  </div>
 </Layout>
