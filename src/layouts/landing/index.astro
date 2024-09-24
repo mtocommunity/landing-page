@@ -1,5 +1,6 @@
 ---
 import Footer from "../../components/general/footer.astro";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
 import NavBar from "../../components/general/organism/navbar";
 
 import "../../styles.css";
@@ -43,8 +44,15 @@ const { title } = Astro.props;
     <meta name="twitter:image" content="/android-chrome-512x512.png" />
   </head>
   <body class="bg-mto_dark_gray w-full">
-    <div class="w-auto">
-      <NavBar client:load />
+    <div class="w-auto pt-14">
+      <CustomNavBar fixed client:load>
+        <a href="/#home">Home</a>
+        <a href="/#about-us">About us</a>
+        <a href="/#teams">Teams</a>
+        {/*<a href="/#events">Events</a>*/}
+        <a href="/#contactus">Contact us</a>
+        <a href="/staff">Staff</a>
+      </CustomNavBar>
       <slot />
       <Footer />
     </div>

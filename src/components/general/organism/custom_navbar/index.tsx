@@ -11,7 +11,7 @@ type Props = {
   full?: boolean;
 };
 
-function CustomNavBar({ children, fixed, full }: Props) {
+function CustomNavBar({ children, fixed = false, full }: Props) {
   const [toggle, setToggle] = useState(true);
 
   const handleToggle = () => {
@@ -23,9 +23,7 @@ function CustomNavBar({ children, fixed, full }: Props) {
       <header
         className={`flex justify-between items-center w-full h-14${
           fixed ? " fixed" : null
-        } top-0 px-4 transition-colors z-50 ${
-          !toggle ? "bg-mto_gray" : "bg-transparent"
-        } lg:bg-transparent lg:w-[95%] lg:mx-auto lg:top-6`}
+        } top-0 px-4 transition-colors z-50 lg:bg-transparent lg:w-[95%] lg:mx-auto lg:top-6`}
       >
         <a className="h-full flex items-centers" href="/">
           <MTOTransparentBackground className="h-full lg:h-[150%] aspect-square" />
@@ -41,8 +39,8 @@ function CustomNavBar({ children, fixed, full }: Props) {
         <nav className="hidden lg:flex nav-desktop">{children}</nav>
       </header>
       <div
-        className={`nav-mobile fixed w-full top-14 bg-mto_gray text-mto_blue_light z-20 flex-col items-center justify-between py-4 text-xl lg:hidden ${
-          toggle ? "hidden" : "flex"
+        className={`nav-mobile flex fixed w-full bg-mto_gray text-mto_blue_light z-20 flex-col items-center justify-between text-xl lg:hidden ${
+          !toggle ? "active" : ""
         }`}
       >
         {children}
