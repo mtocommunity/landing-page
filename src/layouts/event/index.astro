@@ -1,5 +1,5 @@
 ---
-import Footer from "../../components/general/footer.astro";
+import Footer from "../../components/general/organism/footer";
 import NavBar from "../../components/general/organism/navbar";
 
 type Props = {
@@ -41,7 +41,7 @@ import "../../styles.css";
   <body class="bg-mto_gray w-full">
     <div class="w-auto">
       <slot />
-      <Footer simplify />
+      <Footer />
     </div>
   </body>
 </html>
