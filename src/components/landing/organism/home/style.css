@@ -1,0 +1,33 @@
+.right-animation {
+  animation: right-animation 1s ease-in-out infinite;
+  padding-right: 10px;
+}
+
+.action-button {
+  background: linear-gradient(
+    to right,
+    rgba(16, 27, 55, 1) 0%,
+    rgba(228, 20, 118, 1) 100%,
+    rgba(236, 69, 141, 1) 200%
+  );
+  @apply text-white;
+  background-position: left;
+  background-size: 200% auto;
+  transition: background-position 0.3s;
+}
+
+.action-button:hover {
+  background-position-x: right;
+}
+
+@keyframes right-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

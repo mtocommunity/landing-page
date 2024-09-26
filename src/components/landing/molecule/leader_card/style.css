@@ -1,3 +1,23 @@
 .team-card-shadow {
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(
+    45deg,
+    #101b37 0%,
+    #02c8ed 53%,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: 350% auto;
+  background-position: right;
+  transition: all 500ms ease;
+  @apply m-1;
+}
+
+.team-card-shadow:hover {
+  box-shadow: none;
+  background-position: left;
+
+  transform: rotate3d(1, 1, 1, 180deg);
+
+  @apply p-1 m-0 scale-100;
 }
