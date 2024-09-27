@@ -8,7 +8,7 @@ import Description from "../../components/general/molecule/description";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {} from "@fortawesome/free-brands-svg-icons";
-import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
+import { faClipboardCheck, faClock } from "@fortawesome/free-solid-svg-icons";
 
 const props = {
   title: "IoT Events",
@@ -50,12 +50,11 @@ const props = {
           </p>
         </div>
         <Button
-          type={ButtonType.PRIMARY}
+          type={ButtonType.DISABLED }
           className="w-2/3 flex gap-2 justify-center items-center"
-          link="https://docs.google.com/forms/d/e/1FAIpQLScF3UBmG771VxNH3hQJ4VnV2H9tPCmxCtOxu4VLqK4lsGxD2w/viewform?usp=sf_link"
         >
-          <FontAwesomeIcon icon={faClipboardCheck} className="w-3" />
-          <span>Inscríbete ahora</span>
+          <FontAwesomeIcon icon={faClock} className="w-4" />
+          <span>Inscripciones cerradas</span>
         </Button>
       </div>
     </main>
