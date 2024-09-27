@@ -3,4 +3,5 @@ export enum ButtonType {
   SECONDARY,
   LINK,
   NAV,
+  DISABLED,
 }

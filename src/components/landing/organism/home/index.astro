@@ -4,12 +4,9 @@ import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Social from "../../../general/molecule/social";
 import TeamsCloud from "../../molecule/teams_cloud";
-import {
-  faArrowRight,
-  faClipboardCheck,
-} from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 ---
 
 <div
@@ -55,7 +52,7 @@ import "./style.css";
     <dir class="w-1/2 text-white pl-60 text-3xl xl:w-2/5">
       <Social />
     </dir>
-    <!-- <a
+    <a
       class="bg-gradient-to-r from-mto_gray_light to-discord_blurple text-white flex gap-2 p-3 opacity-90 transition-opacity duration-300 hover:opacity-100 h-20 rounded-lg mr-16"
       href="https://discord.mtocommunity.com/"
     >
@@ -65,21 +62,6 @@ import "./style.css";
       <div class="flex flex-col font-bold">
         <p>Únete a nuestro</p>
         <p>Servidor de discord</p>
-      </div>
-    </a> -->
-    <a
-      class="flex gap-2 items-center p-3 opacity-90 transition-opacity duration-300 hover:opacity-100 h-20 rounded-lg mr-16 action-button"
-      href="/event/iot-seminario-robotica-basica"
-    >
-      <div class="text-4xl flex items-center">
-        <FontAwesomeIcon icon={faClipboardCheck} className="w-6" />
-      </div>
-      <div class="flex flex-col font-bold text-sm">
-        <p>Incríbete al primer evento</p>
-        <p>Robótica Básica!</p>
-      </div>
-      <div class="text-4xl flex items-center right-animation">
-        <FontAwesomeIcon icon={faArrowRight} className="w-6" />
       </div>
     </a>
   </div>
