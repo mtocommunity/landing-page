@@ -4,7 +4,7 @@ import Button from "../../components/general/attoms/button";
 import { ButtonType } from "../../components/general/attoms/button/types";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
-import Description from "../../components/general/molecule/description";
+import Daycard from "../../components/events/molecule/day_card";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {} from "@fortawesome/free-brands-svg-icons";
@@ -69,83 +69,53 @@ const props = {
       </h2>
 
       <!-- Día 1 -->
-      <div class="day-section mb-8 xl:w-2/3">
-        <div class="flex items-center gap-4 mx-4">
-          <h3 class="text-white text-3xl font-semibold">Día 1</h3>
-          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
-        </div>
-
-        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
-          Vie 27 de Setiembre
-        </p>
-        <Description className="bg-gray-200">
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li>Introdución a IoT.</li>
-            <li>Componentes básicos de electrónica con Arduino.</li>
-            <li>Arduino IDE.</li>
-            <li>Principios de programación en Arduino IDE.</li>
-          </ul>
-        </Description>
-      </div>
+      <Daycard
+        className="bg-gray-200"
+        title="Día 1"
+        date="Viernes 27 de Septiembre"
+        items={[
+          "Introducción a IoT.",
+          "Componentes básicos de electrónica con Arduino",
+          "Arduino IDE.",
+          "Principios de programación con Arduino IDE.",
+        ]}
+      />
 
       <!-- Día 2 -->
-      <div class="day-section mb-8 xl:w-2/3">
-        <div class="flex items-center gap-4 mx-4">
-          <h3 class="text-white text-3xl font-semibold">Día 2</h3>
-          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
-        </div>
-
-        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
-          Vie 04 de Octubre
-        </p>
-        <Description className="bg-gray-200">
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li>Ejercicios prácticos.</li>
-            <li>Conexión y programación con Arduino.</li>
-          </ul>
-        </Description>
-      </div>
+      <Daycard
+        className="bg-gray-200"
+        title="Día 2"
+        date="Viernes 04 de Octubre"
+        items={[
+          "Ejercicios prácticos.",
+          "Conexión y programación con Arduino.",
+        ]}
+      />
 
       <!-- Día 3 -->
-      <div class="day-section mb-8 xl:w-2/3">
-        <div class="flex items-center gap-4 mx-4">
-          <h3 class="text-white text-3xl font-semibold">Día 3</h3>
-          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
-        </div>
-
-        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
-          Vie 18 de Octubre
-        </p>
-        <Description className="bg-gray-200">
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li>Repaso del Seminario 2.</li>
-            <li>Ejercicios prácticos.</li>
-            <li>Conexión y programación de servomotores con Arduino.</li>
-          </ul>
-        </Description>
-      </div>
+      <Daycard
+        className="bg-gray-200"
+        title="Día 3"
+        date="Viernes 18 de Octubre"
+        items={[
+          "Repaso del Seminario 2.",
+          "Ejercicios prácticos.",
+          "Conexión y programación de servomotores con Arduino.",
+        ]}
+      />
 
       <!-- Día 4 -->
-      <div class="day-section mb-8 xl:w-2/3">
-        <div class="flex items-center gap-4 mx-4">
-          <h3 class="text-white text-3xl font-semibold">Día 4</h3>
-          <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
-        </div>
+      <Daycard
+        className="bg-gray-200"
+        title="Día 4"
+        date="Viernes 25 de Octubre"
+        items={[
+          "Repaso del Seminario 3.",
+          "Ejercicios prácticos.",
+          "<span class='font-bold'>Ejercicio Reto:</span> Diseño y construcción de un robot.",
+        ]}
+      />
 
-        <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
-          Vie 25 de Octubre
-        </p>
-        <Description className="bg-gray-200">
-          <ul class="list-disc list-inside flex flex-col gap-3">
-            <li>Repaso del Seminario 3.</li>
-            <li>Ejercicios prácticos.</li>
-            <li>
-              <span class="font-bold">Ejercicio Reto:</span> Diseño y construcción
-              de un robot.
-            </li>
-          </ul>
-        </Description>
-      </div>
       <img
         src={wave2.src}
         alt={wave2.src}
