@@ -119,14 +119,16 @@ const Footer: React.FC = () => {
             Legal
           </span>
           <a
-            href="/#terms"
+            href="https://cdn.mtocommunity.com/legal/TOS.pdf"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             Terms
           </a>
           <a
-            href="/#privacy"
+            href="https://cdn.mtocommunity.com/legal/Privacy.pdf"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             Privacy
           </a>
