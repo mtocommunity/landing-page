@@ -1,0 +1,23 @@
+---
+type Props = {
+  avatarUrl: string;
+  name: string;
+  role: string;
+};
+
+const { avatarUrl, name, role } = Astro.props;
+---
+
+<div class="w-2/3 relative flex flex-col items-center">
+  <img
+    src={avatarUrl}
+    alt={avatarUrl.split("/").pop()}
+    class="rounded-full aspect-square object-cover w-2/3"
+  />
+  <div
+    class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
+  >
+    <h3 class="text-xl font-bold">{name}</h3>
+    <p class="text-sm">{role}</p>
+  </div>
+</div>

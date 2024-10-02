@@ -1,0 +1,29 @@
+---
+import { formatDate } from "../../../utils";
+
+import type { EventAgendaDay } from "../../../types";
+
+interface Props {
+  className?: string;
+  agendaDay: EventAgendaDay;
+}
+
+const { className, agendaDay } = Astro.props;
+---
+
+<div class="day-section mb-8 xl:w-2/3">
+  <div class="flex items-center gap-4 mx-4">
+    <h3 class="text-white text-3xl font-semibold">{agendaDay.title}</h3>
+    <hr class="flex-grow border-t-2 border-white opacity-80 mr-3" />
+  </div>
+  <p class="text-white mb-6 mt-1 m-4 opacity-70 text-sm">
+    {formatDate(agendaDay.date)}
+  </p>
+  <div
+    class={`bg-black bg-opacity-10 p-4 shadow-lg rounded-lg m-4 ${className}`}
+  >
+    <ul class="list-disc list-inside flex flex-col gap-3">
+      {agendaDay.items.map((item) => <li set:html={item} />)}
+    </ul>
+  </div>
+</div>

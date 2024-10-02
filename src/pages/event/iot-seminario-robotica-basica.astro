@@ -1,14 +1,55 @@
 ---
-import { landing_iot } from "../../assets";
-import Button from "../../components/general/attoms/button";
-import { ButtonType } from "../../components/general/attoms/button/types";
-import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Layout from "../../layouts/event/index.astro";
-import Daycard from "../../components/events/molecule/day_card";
+import Button from "../../components/general/attoms/button";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+import Agenda from "../../components/events/organism/Agenda.astro";
+import Speaker from "../../components/events/molecule/Speaker.astro";
+
+import { landing_iot } from "../../assets";
+import { ButtonType } from "../../components/general/attoms/button/types";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from "@fortawesome/free-brands-svg-icons";
-import { faClipboardCheck, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+
+import type { EventAgenda } from "../../types";
+
+const agenda: EventAgenda = {
+  days: [
+    {
+      title: "Día 1",
+      date: new Date("2024-09-27 GMT-0500"),
+      items: [
+        "Introducción a IoT.",
+        "Componentes básicos de electrónica con Arduino",
+        "Arduino IDE.",
+        "Principios de programación con Arduino IDE.",
+      ],
+    },
+    {
+      title: "Día 2",
+      date: new Date("2024-10-04 GMT-0500"),
+      items: ["Ejercicios prácticos.", "Conexión y programación con Arduino."],
+    },
+    {
+      title: "Día 3",
+      date: new Date("2024-10-18 GMT-0500"),
+      items: [
+        "Repaso del Seminario 2.",
+        "Ejercicios prácticos.",
+        "Conexión y programación de servomotores con Arduino.",
+      ],
+    },
+    {
+      title: "Día 4",
+      date: new Date("2024-10-25 GMT-0500"),
+      items: [
+        "Repaso del Seminario 3.",
+        "Ejercicios prácticos.",
+        "<span class='font-bold'>Ejercicio Reto:</span> Diseño y construcción de un robot.",
+      ],
+    },
+  ],
+};
 
 const props = {
   title: "IoT Events",
@@ -68,53 +109,7 @@ const props = {
         Agenda
       </h2>
 
-      <!-- Día 1 -->
-      <Daycard
-        className="bg-gray-200"
-        title="Día 1"
-        date="Viernes 27 de Septiembre"
-        items={[
-          "Introducción a IoT.",
-          "Componentes básicos de electrónica con Arduino",
-          "Arduino IDE.",
-          "Principios de programación con Arduino IDE.",
-        ]}
-      />
-
-      <!-- Día 2 -->
-      <Daycard
-        className="bg-gray-200"
-        title="Día 2"
-        date="Viernes 04 de Octubre"
-        items={[
-          "Ejercicios prácticos.",
-          "Conexión y programación con Arduino.",
-        ]}
-      />
-
-      <!-- Día 3 -->
-      <Daycard
-        className="bg-gray-200"
-        title="Día 3"
-        date="Viernes 18 de Octubre"
-        items={[
-          "Repaso del Seminario 2.",
-          "Ejercicios prácticos.",
-          "Conexión y programación de servomotores con Arduino.",
-        ]}
-      />
-
-      <!-- Día 4 -->
-      <Daycard
-        className="bg-gray-200"
-        title="Día 4"
-        date="Viernes 25 de Octubre"
-        items={[
-          "Repaso del Seminario 3.",
-          "Ejercicios prácticos.",
-          "<span class='font-bold'>Ejercicio Reto:</span> Diseño y construcción de un robot.",
-        ]}
-      />
+      <Agenda agenda={agenda} className="bg-slate-300" />
 
       <img
         src={wave2.src}
@@ -133,32 +128,17 @@ const props = {
         <h2 class="text-5xl text-mto_gray font-bold">Ponentes</h2>
         <div class="flex flex-col items-center xl:flex-row xl:gap-8 pb-32">
           <!-- Ponentes -->
-          <div class="w-2/3 relative flex flex-col items-center">
-            <img
-              src="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
-              alt="staff-eliana-cajusol.jpg"
-              class="rounded-full aspect-square object-cover w-2/3"
-            />
-            <div
-              class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
-            >
-              <h3 class="text-xl font-bold">Eliana Cajusol</h3>
-              <p class="text-sm">Líder de IoT Team</p>
-            </div>
-          </div>
-          <div class="w-2/3 relative flex flex-col items-center">
-            <img
-              src="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
-              alt="staff-jaime-lopez.jpg"
-              class="rounded-full aspect-square object-cover w-2/3"
-            />
-            <div
-              class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
-            >
-              <h3 class="text-xl font-bold">Jaime López</h3>
-              <p class="text-sm">Líder de IoT Team</p>
-            </div>
-          </div>
+
+          <Speaker
+            avatarUrl="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+            name="Eliana Cajusol"
+            role="Líder de IoT Team"
+          />
+          <Speaker
+            avatarUrl="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
+            name="Jaime López"
+            role="Líder de IoT Team"
+          />
         </div>
       </div>
     </div>
