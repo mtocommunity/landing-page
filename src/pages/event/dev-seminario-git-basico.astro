@@ -9,7 +9,7 @@ import { landing_dev } from "../../assets";
 import { ButtonType } from "../../components/general/attoms/button/types";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClipboardCheck, faClock } from "@fortawesome/free-solid-svg-icons";
 
 import type { EventAgenda } from "../../types";
 
@@ -18,22 +18,26 @@ const agenda: EventAgenda = {
     {
       title: "Día 1",
       date: new Date("2024-10-09 GMT-0500"),
-      items: [],
+      items: [
+        "Introducción a la Gestión de Versiones",
+        "¿Qué es Git?",
+        "Instalación y Configuración",
+        "Primeros Pasos con Git",
+        "Ejercicio Práctico",
+        "Preguntas y Respuestas",
+      ],
     },
     {
       title: "Día 2",
       date: new Date("2024-10-16 GMT-0500"),
-      items: [],
-    },
-    {
-      title: "Día 3",
-      date: new Date("2024-10-23 GMT-0500"),
-      items: [],
-    },
-    {
-      title: "Día 4",
-      date: new Date("2024-10-30 GMT-0500"),
-      items: [],
+      items: [
+        "Introducción a GitHub",
+        "Colaboración en Proyectos",
+        "Ramas en Git",
+        "Ejercicio Práctico",
+        "Conclusiones y Recursos Adicionales",
+        "Cierre del Seminario",
+      ],
     },
   ],
 };
@@ -73,17 +77,17 @@ const props = {
             Seminario Fundamentos de Git
           </h1>
           <p class="text-sm text-center">
-            En este seminario, se espera que los estudiantes adquieran los
-            conocimientos necesarios para utilizar Git desde cero en la gestión
-            de sus proyectos.
+            En este seminario, obtendrás los conocimientos necesarios para
+            utilizar Git desde cero y aplicarlo en la gestión de tus proyectos.
           </p>
         </div>
         <Button
-          type={ButtonType.DISABLED}
+          type={ButtonType.PRIMARY}
           className="w-2/3 flex gap-2 justify-center items-center"
+          link="https://devf1.mtocommunity.com/"
         >
-          <FontAwesomeIcon icon={faClock} className="w-4" />
-          <span>Inscripciones próximamente</span>
+          <FontAwesomeIcon icon={faClipboardCheck} className="w-3" />
+          <span>Inscríbete</span>
         </Button>
       </div>
     </main>
