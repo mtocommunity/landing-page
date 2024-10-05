@@ -4,9 +4,31 @@ import Layout from "../../layouts/team/index.astro";
 import { wave } from "../../assets/svgs";
 
 import TeamIcon from "../../components/general/molecule/team-icon";
+import { TeamLayout } from "../../types";
+
+const teamProps: TeamLayout = {
+  name: "Dev Team",
+  teamIcon: faLaptopCode,
+  description: `Bienvenidos al DevTeam, el espacio donde la tecnología y la creatividad se unen para transformar el mundo digital. Desarrollamos aplicaciones, construimos experiencias web y, sobre todo, creamos un futuro lleno de posibilidades. Únete a nosotros y forma parte de un equipo que no solo programa, sino que también innova.`,
+  projects: [],
+  events: [],
+  leaders: [
+    {
+      imageUrl: "https://cdn.mtocommunity.com/staff-juan-romero.jpg",
+      name: "Juan Romero",
+      role: "Líder de Dev-Team",
+      link: "https://linktr.ee/IngSystemCix",
+    },
+    {
+      imageUrl: "https://cdn.mtocommunity.com/staff-victor-tunoque.png",
+      name: "Víctor Tuñoque",
+      role: "Líder de Dev-Team",
+    },
+  ],
+};
 ---
 
-<Layout teamName="Dev-Team" teamIcon={faLaptopCode}>
+<Layout team={teamProps}>
   <div
     class="flex flex-col bg-gradient-to-t from-mto_gray to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
   >
