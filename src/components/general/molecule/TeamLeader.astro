@@ -1,0 +1,23 @@
+---
+import { TeamLeader as TeamLeaderType } from "../../../types";
+
+type Props = {
+  teamLeader: TeamLeaderType;
+};
+
+const { imageUrl, name, role, link } = Astro.props.teamLeader;
+---
+
+<a class="w-2/3 relative flex flex-col items-center" href={link}>
+  <img
+    src={imageUrl}
+    alt={imageUrl.split("/").pop()}
+    class="rounded-full aspect-square object-cover w-2/3"
+  />
+  <div
+    class="bg-mto_red text-white relative -top-3 w-full h-12 flex flex-col items-center justify-center"
+  >
+    <h3 class="text-base font-bold">{name}</h3>
+    <p class="text-xs">{role}</p>
+  </div>
+</a>

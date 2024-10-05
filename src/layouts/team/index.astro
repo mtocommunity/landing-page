@@ -1,14 +1,21 @@
 ---
-import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../../components/general/organism/footer";
-import NavBar from "../../components/general/organism/navbar";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+import { TeamLayout } from "../../types";
+import TeamLeader from "../../components/general/molecule/TeamLeader.astro";
 
 interface Props {
-  teamName: string;
-  teamIcon: IconDefinition;
+  team: TeamLayout;
 }
 
-const { teamName, teamIcon } = Astro.props;
+const {
+  name,
+  teamIcon,
+  description,
+  events = [],
+  projects = [],
+  leaders = [],
+} = Astro.props.team;
 ---
 
 <!doctype html>
@@ -21,7 +28,7 @@ const { teamName, teamIcon } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/font/fonts.css" />
-    <title>{teamName} - MTO Community</title>
+    <title>{name} - MTO Community</title>
     <!-- Basic meta -->
     <meta
       name="description"
@@ -30,13 +37,13 @@ const { teamName, teamIcon } = Astro.props;
     <meta name="author" content="ManyToOne Community" />
     <meta
       name="keywords"
-      content="ManyToOne, UTP, Chiclayo, Ingeniería de Sistemas"
+      content="many to one, UTP, Chiclayo, Ingeniería de Sistemas, MTO, Comunidad"
     />
     <meta name="generator" content={Astro.generator} />
     <!-- Twitter meta -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://mtocommunity.com/" />
-    <meta name="twitter:title" content={teamName} />
+    <meta name="twitter:title" content={name} />
     <meta
       name="twitter:description"
       content="La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo"
@@ -45,8 +52,37 @@ const { teamName, teamIcon } = Astro.props;
   </head>
   <body class="bg-mto_dark_gray w-full">
     <div class="w-auto overflow-x-hidden">
-      <NavBar client:load />
+      <CustomNavBar fixed client:load>
+        <a href="/">Home</a>
+        {projects.length > 0 && <a href="#projects">Projects</a>}
+        {events.length > 0 && <a href="#events">Events</a>}
+        <a href="#leaders">Líderes</a>
+      </CustomNavBar>
       <slot />
+      <div>
+        <!-- Home -->
+      </div>
+      <div>
+        <!-- Projects -->
+      </div>
+      <div>
+        <!-- Events -->
+      </div>
+      <div
+        class="w-full min-h-dvh bg-gradient-to-b from-mto_gray to-mto_dark_gray h-auto py-24 flex flex-col text-white items-center justify-center gap-8"
+        id="leaders"
+      >
+        <div class="text-3xl font-bold lg:text-4xl xl:text-5xl">Líderes</div>
+        <div class="w-3/4 text-center md:w-2/3 lg:w-1/2 lg:text-lg xl:text-xl">
+          Somos quienes estamos a cargo del equipo y de guiarte en este camino
+          hacia el aprendizaje colaborativo
+        </div>
+        <div
+          class="flex flex-col items-center gap-8 w-full md:flex-row md:px-16 lg:w-3/4 xl:gap-16"
+        >
+          {leaders.map((leader) => <TeamLeader teamLeader={leader} />)}
+        </div>
+      </div>
       <Footer />
     </div>
   </body>
