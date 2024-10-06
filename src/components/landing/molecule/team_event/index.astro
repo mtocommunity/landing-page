@@ -10,9 +10,9 @@ interface Props {
 const { event, opacity = 100 } = Astro.props;
 ---
 
-<div class="flex items-center group">
+<div class="flex w-4/5 items-center group md:w-2/3 xl:w-1/2">
   <div
-    class="hidden rounded-full aspect-square w-24 bg-mto_gray_light md:flex lg:w-48 my-8"
+    class="hidden rounded-full aspect-square w-24 bg-mto_gray_light md:flex lg:w-48 my-8 outline outline-mto_gray_light group-hover:outline-mto_blue_dark transition-all"
   >
     <img
       src={event.imageUrl}
@@ -22,30 +22,38 @@ const { event, opacity = 100 } = Astro.props;
   <div
     class={`flex items-center relative opacity-${opacity} hover:opacity-100`}
   >
-    <div class="w-12 h-[.2rem] bg-mto_gray hidden md:flex">
+    <div
+      class="w-12 h-[.2rem] bg-mto_gray_light hidden transition-colors md:flex xl:w-16 group-hover:bg-mto_blue_dark"
+    >
       <!-- Horizontal -->
     </div>
-    <div class="w-3 aspect-square bg-white rounded-full absolute -right-1">
+    <div
+      class="w-3 aspect-square bg-yellow-900 rounded-full absolute -right-1 group-hover:bg-mto_blue_dark"
+    >
       <div
-        class="absolute w-5 aspect-square border border-white rounded-full -left-1 -top-1 hidden md:block"
+        class="absolute w-5 aspect-square border border-yellow-900 rounded-full -left-1 -top-1 hidden md:block group-hover:border-mto_blue_dark xl:w-7 xl:-left-2 xl:-top-2"
       >
         <!-- Border 1 -->
       </div>
       <div
-        class="absolute w-7 aspect-square outline outline-1 outline-white rounded-full -left-2 -top-2 scale-0 group-hover:scale-100 transition-transform duration-300"
+        class="absolute w-7 aspect-square outline outline-1 outline-mto_blue_dark rounded-full -left-2 -top-2 scale-0 group-hover:scale-100 transition-transform duration-300 xl:w-11 xl:-left-4 xl:-top-4"
       >
-        <!-- Border 1 -->
+        <!-- Border 2 -->
       </div>
     </div>
-    <div class="h-72 w-[.2rem] bg-mto_gray">
+    <div class="h-72 w-[.2rem] bg-mto_gray_light">
       <!-- Vertical -->
     </div>
   </div>
-  <div class="flex flex-col ml-8 py-8 md:ml-16 lg:ml-32">
-    <span class="text-yellow-600 group-hover:text-mto_blue text-sm">
+  <div class="flex flex-col ml-8 py-8 md:ml-16 lg:ml-32 w-full">
+    <span class="text-yellow-900 group-hover:text-mto_blue_dark text-sm">
       {event.date !== null ? formatDate2(event.date) : "Upcoming"}
     </span>
-    <h3 class="text-xl font-bold">{event.name}</h3>
-    <p class="text-pretty text-sm">{event.description}</p>
+    <h3
+      class="text-xl font-bold transition-colors text-black group-hover:text-mto_blue_dark xl:text-2xl"
+    >
+      {event.name}
+    </h3>
+    <p class="text-pretty text-sm xl:text-base">{event.description}</p>
   </div>
 </div>
