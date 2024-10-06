@@ -1,38 +1,64 @@
 ---
 import { faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../layouts/team/index.astro";
-import { wave } from "../../assets/svgs";
+import { TeamLayout } from "../../types";
 
-import TeamIcon from "../../components/general/molecule/team-icon";
----
-
-<Layout teamName="Net-Team" teamIcon={faNetworkWired}>
-  <div
-    class="flex flex-col bg-gradient-to-t from-mto_red to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
-  >
-    <div
-      class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto"
-    >
-      <TeamIcon icon={faNetworkWired} />
-      <h2 class="text-white text-2xl lg:text-4xl font-semibold text-center">
-        Net Team
-      </h2>
-    </div>
-    <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg">
-      Somos un equipo apasionado por el mundo de las redes y la comunicación de
+const teamProps: TeamLayout = {
+  name: "Net-Team",
+  teamIcon: faNetworkWired,
+  description: `Somos un equipo apasionado por el mundo de las redes y la comunicación de
       datos. Exploramos, diseñamos y gestionamos redes que potencian la
       colaboración y el aprendizaje dentro de nuestra comunidad. Únete a
       nosotros y ayuda a construir la infraestructura que conecta nuestro
-      futuro.
-    </div>
-  </div>
-  <div class="bg-mto_red">
-    <!-- Wave -->
-    <img src={wave.src} alt="wave" />
-  </div>
-  <div class="flex flex-col items-center bg-white py-3 px-6">
-    <h3 class="text-2xl font-semibold">Projects</h3>
+      futuro.`,
+  projects: [],
+  events: [
+    {
+      date: new Date("2021-10-10"),
+      name: "Evento 1",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus. Donec ut nunc. Nulla facilisi. Nullam auctor, nunc nec ultricies.",
+      link: "./#",
+      imageUrl: "",
+    },
+    {
+      date: new Date("2021-10-10"),
+      name: "Evento 1",
+      description: "Descripción del evento 1",
+      link: "./#",
+      imageUrl: "",
+    },
+    {
+      date: new Date("2021-10-10"),
+      name: "Evento 1",
+      description: "Descripción del evento 1",
+      link: "./#",
+      imageUrl: "",
+    },
+    {
+      date: new Date("2021-10-10"),
+      name: "Evento 1",
+      description: "Descripción del evento 1",
+      link: "./#",
+      imageUrl: "",
+    },
+  ],
+  leaders: [
+    {
+      imageUrl:
+        "https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg",
+      name: "Briggitte Martinez",
+      role: "Líder de Net-Team",
+      link: "http://www.linkedin.com/in/briggitte-martinez-isi",
+    },
+    {
+      imageUrl: "https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg",
+      name: "Abner Cubas",
+      role: "Líder de Net-Team",
+      link: "http://www.linkedin.com/in/abner-cubas-parra-176a7329a",
+    },
+  ],
+};
+---
 
-    <!-- Projects -->
-  </div>
-</Layout>
+<Layout team={teamProps} />
