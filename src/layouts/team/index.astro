@@ -1,8 +1,12 @@
 ---
 import Footer from "../../components/general/organism/footer";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
-import { TeamLayout } from "../../types";
 import TeamLeader from "../../components/general/molecule/TeamLeader.astro";
+import TeamEvent from "../../components/landing/molecule/team_event/index.astro";
+
+import { TeamLayout } from "../../types";
+
+import { wave2 } from "../../assets/svgs";
 
 interface Props {
   team: TeamLayout;
@@ -65,8 +69,15 @@ const {
       <div>
         <!-- Projects -->
       </div>
-      <div>
+      <div
+        class="flex flex-col bg-gradient-to-b from-mto_red_light to-mto_red_dark items-center min-h-96 justify-between pt-16 text-white"
+      >
         <!-- Events -->
+        <h3 class="text-3xl border-b-2 pb-1 text-center w-3/4 mb-8">
+          Últimos eventos
+        </h3>
+        {events.map((event) => <TeamEvent event={event} />)}
+        <img src={wave2.src} alt="wave" class="fill-mto_red" />
       </div>
       <div
         class="w-full min-h-dvh bg-gradient-to-b from-mto_gray to-mto_dark_gray h-auto py-24 flex flex-col text-white items-center justify-center gap-8"

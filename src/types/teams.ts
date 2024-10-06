@@ -12,7 +12,9 @@ export enum TeamType {
 export type TeamEvent = {
   date: Date | null;
   name: string;
-  description?: string;
+  description: string;
+  link?: string;
+  imageUrl?: string;
 };
 
 export type TeamLeader = {
