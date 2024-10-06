@@ -3,10 +3,12 @@ import Footer from "../../components/general/organism/footer";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import TeamLeader from "../../components/general/molecule/TeamLeader.astro";
 import TeamEvent from "../../components/landing/molecule/team_event/index.astro";
-
-import { TeamLayout } from "../../types";
-
+import { wave } from "../../assets/svgs";
 import { wave2 } from "../../assets/svgs";
+import { TeamLayout } from "../../types";
+import TeamIcon from "../../components/general/molecule/team-icon";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
 
 interface Props {
   team: TeamLayout;
@@ -63,11 +65,38 @@ const {
         <a href="#leaders">Líderes</a>
       </CustomNavBar>
       <slot />
-      <div>
-        <!-- Home -->
+      <!-- Home -->
+      <div
+        class="flex flex-col bg-gradient-to-t from-mto_gray to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
+      >
+        <div
+          class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto lg:order-2"
+        >
+          <TeamIcon icon={teamIcon} />
+        </div>
+        <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg">
+          <h2
+            class="text-white text-2xl lg:text-4xl font-semibold text-center mb-6"
+          >
+            {name}
+          </h2>
+          <div class="text-center">
+            {description}
+          </div>
+          <div class="flex justify-center lg:mt-7">
+            <Button type={ButtonType.PRIMARY} link="#"> Únete ahora </Button>
+          </div>
+        </div>
       </div>
-      <div>
-        <!-- Projects -->
+
+      <!-- Wave -->
+      <div class="bg-mto_gray">
+        <img src={wave.src} alt="wave" />
+      </div>
+
+      <!-- Projects -->
+      <div class="flex flex-col items-center bg-white py-3 px-6">
+        <h3 class="text-2xl font-semibold">Projects</h3>
       </div>
       <div
         class="flex flex-col bg-gradient-to-b from-white to-gray-400 items-center min-h-96 justify-between pt-16 text-mto_gray"
@@ -88,7 +117,7 @@ const {
         <div class="text-3xl font-bold lg:text-4xl xl:text-5xl">Líderes</div>
         <div class="w-3/4 text-center md:w-2/3 lg:w-1/2 lg:text-lg xl:text-xl">
           Somos quienes estamos a cargo del equipo y de guiarte en este camino
-          hacia el aprendizaje colaborativo
+          hacia el aprendizaje colaborativo.
         </div>
         <div
           class="flex flex-col items-center gap-8 w-full md:flex-row md:px-16 lg:w-3/4 xl:gap-16"
