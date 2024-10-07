@@ -2,7 +2,6 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  filter: blur(5rem);
   z-index: -30;
 }
 
@@ -13,7 +12,9 @@
   @apply bg-mto_gray;
   top: 0;
   left: 5%;
-  position: fixed;
+  z-index: -13;
+  position: absolute;
+  filter: blur(5rem);
 }
 
 #bg-red {
@@ -25,7 +26,8 @@
   transform: translateY(-50%);
   left: 24%;
   z-index: -10;
-  position: fixed;
+  position: absolute;
+  filter: blur(5rem);
 }
 
 #bg-blue {
@@ -35,8 +37,9 @@
   @apply bg-mto_blue;
   bottom: 0;
   right: 5%;
-  z-index: -20;
-  position: fixed;
+  z-index: -12;
+  position: absolute;
+  filter: blur(5rem);
 }
 
 @media (min-width: 768px) {
