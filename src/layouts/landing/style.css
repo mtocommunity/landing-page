@@ -3,6 +3,7 @@
   width: 100%;
   position: absolute;
   z-index: -30;
+  filter: blur(5rem);
 }
 
 #bg-gray {
@@ -13,8 +14,7 @@
   top: 0;
   left: 5%;
   z-index: -13;
-  position: absolute;
-  filter: blur(5rem);
+  position: sticky;
 }
 
 #bg-red {
@@ -26,8 +26,7 @@
   transform: translateY(-50%);
   left: 24%;
   z-index: -10;
-  position: absolute;
-  filter: blur(5rem);
+  position: sticky;
 }
 
 #bg-blue {
