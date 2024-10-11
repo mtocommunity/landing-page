@@ -47,12 +47,20 @@ function TeamsCloud() {
       easing: "linear",
       loop: true,
     });
+
     anime({
       targets: ".cloud",
       rotate: 360,
       duration: animationDuration,
       easing: "linear",
       loop: true,
+    });
+
+    anime({
+      targets: ".cloud-icon",
+      scale: 1,
+      duration: 1000 * 2,
+      easing: "linear",
     });
   }, []);
 
