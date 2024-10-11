@@ -1,5 +1,7 @@
 .cloud-icon {
   @apply absolute w-1/2 aspect-square bg-[rgba(255,255,255,0.05)] text-[150%] rounded-full flex justify-center items-center border-white border-dashed border-2 cursor-pointer;
+
+  animation: popIn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .cloud-icon span {
@@ -13,6 +15,20 @@
 
 .cloud-icon:hover span {
   @apply flex absolute -top-8 text-sm text-nowrap justify-center;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes popUp {
