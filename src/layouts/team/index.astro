@@ -1,14 +1,27 @@
 ---
-import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../../components/general/organism/footer";
-import NavBar from "../../components/general/organism/navbar";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+import TeamLeader from "../../components/general/molecule/TeamLeader.astro";
+import TeamEvent from "../../components/landing/molecule/team_event/index.astro";
+import { wave } from "../../assets/svgs";
+import { wave2 } from "../../assets/svgs";
+import { TeamLayout } from "../../types";
+import TeamIcon from "../../components/general/molecule/team-icon";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
 
 interface Props {
-  teamName: string;
-  teamIcon: IconDefinition;
+  team: TeamLayout;
 }
 
-const { teamName, teamIcon } = Astro.props;
+const {
+  name,
+  teamIcon,
+  description,
+  events = [],
+  projects = [],
+  leaders = [],
+} = Astro.props.team;
 ---
 
 <!doctype html>
@@ -21,7 +34,7 @@ const { teamName, teamIcon } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/font/fonts.css" />
-    <title>{teamName} - MTO Community</title>
+    <title>{name} - MTO Community</title>
     <!-- Basic meta -->
     <meta
       name="description"
@@ -30,13 +43,13 @@ const { teamName, teamIcon } = Astro.props;
     <meta name="author" content="ManyToOne Community" />
     <meta
       name="keywords"
-      content="ManyToOne, UTP, Chiclayo, Ingeniería de Sistemas"
+      content="many to one, UTP, Chiclayo, Ingeniería de Sistemas, MTO, Comunidad"
     />
     <meta name="generator" content={Astro.generator} />
     <!-- Twitter meta -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://mtocommunity.com/" />
-    <meta name="twitter:title" content={teamName} />
+    <meta name="twitter:title" content={name} />
     <meta
       name="twitter:description"
       content="La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo"
@@ -45,8 +58,73 @@ const { teamName, teamIcon } = Astro.props;
   </head>
   <body class="bg-mto_dark_gray w-full">
     <div class="w-auto overflow-x-hidden">
-      <NavBar client:load />
+      <CustomNavBar fixed client:load>
+        <a href="/">Home</a>
+        {projects.length > 0 && <a href="#projects">Projects</a>}
+        {events.length > 0 && <a href="#events">Events</a>}
+        <a href="#leaders">Líderes</a>
+      </CustomNavBar>
       <slot />
+      <!-- Home -->
+      <div
+        class="flex flex-col bg-gradient-to-t from-mto_gray to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
+      >
+        <div
+          class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto lg:order-2"
+        >
+          <TeamIcon icon={teamIcon} />
+        </div>
+        <div class="text-white px-6 lg:pr-12 lg:w-2/4 lg:text-lg">
+          <h2
+            class="text-white text-4xl lg:text-5xl font-semibold text-center mb-10 lg:mb-16"
+          >
+            {name}
+          </h2>
+          <div class="text-center text-xl text-mto_grey mt-6">
+            {description}
+          </div>
+          <div class="flex justify-center mt-14 lg:mt-12">
+            <Button type={ButtonType.PRIMARY} link="#"> Únete ahora </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave -->
+      <div class="bg-mto_gray">
+        <img src={wave.src} alt="wave" />
+      </div>
+
+      <!-- Projects -->
+      <div class="flex flex-col items-center bg-white py-3 px-6">
+        <h3 class="text-2xl font-semibold">Projects</h3>
+      </div>
+      <div
+        class="flex flex-col bg-gradient-to-b from-white to-gray-400 items-center min-h-96 justify-between pt-16 text-mto_gray"
+      >
+        <!-- Events -->
+        <h3
+          class="text-3xl border-b-2 border-black pb-1 text-center w-3/4 mb-8 font-bold lg:w-2/3 xl:w-1/2"
+        >
+          Últimos eventos
+        </h3>
+        {events.map((event) => <TeamEvent event={event} />)}
+        <img src={wave2.src} alt="wave" />
+      </div>
+      <div
+        class="w-full min-h-dvh bg-gradient-to-b from-mto_gray to-mto_dark_gray h-auto py-24 flex flex-col text-white items-center justify-center gap-8"
+        id="leaders"
+      >
+        <div class="text-3xl font-bold lg:text-4xl xl:text-5xl">Líderes</div>
+        <div class="w-3/4 text-center md:w-2/3 lg:w-1/2 lg:text-lg xl:text-xl">
+          Somos quienes estamos a cargo del equipo y de guiarte en este camino
+          hacia el aprendizaje colaborativo.
+        </div>
+        <div
+          class="flex flex-col items-center gap-8 w-full md:flex-row md:px-16 lg:w-3/4 xl:gap-16"
+        >
+          {leaders.map((leader) => <TeamLeader teamLeader={leader} />)}
+        </div>
+      </div>
       <Footer />
     </div>
   </body>
