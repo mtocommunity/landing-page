@@ -13,7 +13,6 @@ export default {
         mto_blue_light: "#4BD5F1",
         mto_blue_dark: "#2094AA",
         mto_dark_gray: "#05090C",
-        mto_grey: "#CDCDCD",
         discord_blurple: "#5865F2",
         card_simple: "#0A0909",
       },
