@@ -1,62 +1,38 @@
 ---
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../layouts/team/index.astro";
-import { TeamLayout } from "../../types";
+import { wave } from "../../assets/svgs";
 
-const teamProps: TeamLayout = {
-  name: "IoT-Team",
-  teamIcon: faRobot,
-  description: `Aquí, transformamos la curiosidad en innovación, explorando el fascinante
+import TeamIcon from "../../components/general/molecule/team-icon";
+---
+
+<Layout teamName="IoT-Team" teamIcon={faRobot}>
+  <div
+    class="flex flex-col bg-gradient-to-t from-mto_red to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
+  >
+    <div
+      class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto"
+    >
+      <TeamIcon icon={faRobot} />
+      <h2 class="text-white text-2xl lg:text-4xl font-semibold text-center">
+        IoT Team
+      </h2>
+    </div>
+    <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg text-pretty">
+      Aquí, transformamos la curiosidad en innovación, explorando el fascinante
       mundo del Internet de las Cosas. Creamos prototipos que no solo son
       útiles, sino también divertidos, llevando la tecnología al siguiente
       nivel. Únete a nosotros y descubre cómo los objetos cotidianos pueden
-      cobrar vida en un mundo interconectado.`,
-  projects: [],
-  events: [
-    {
-      date: new Date("2021-10-10"),
-      name: "Evento 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus. Donec ut nunc. Nulla facilisi. Nullam auctor, nunc nec ultricies.",
-      link: "./#",
-      imageUrl: "",
-    },
-    {
-      date: new Date("2021-10-10"),
-      name: "Evento 1",
-      description: "Descripción del evento 1",
-      link: "./#",
-      imageUrl: "",
-    },
-    {
-      date: new Date("2021-10-10"),
-      name: "Evento 1",
-      description: "Descripción del evento 1",
-      link: "./#",
-      imageUrl: "",
-    },
-    {
-      date: new Date("2021-10-10"),
-      name: "Evento 1",
-      description: "Descripción del evento 1",
-      link: "./#",
-      imageUrl: "",
-    },
-  ],
-  leaders: [
-    {
-      imageUrl: "https://cdn.mtocommunity.com/staff-jaime-lopez.jpg",
-      name: "Jaime López",
-      role: "Líder de IoT-Team",
-    },
-    {
-      imageUrl: "https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg",
-      name: "Eliana Cajusol",
-      role: "Líder de IoT-Team",
-      link: "https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b",
-    },
-  ],
-};
----
+      cobrar vida en un mundo interconectado.
+    </div>
+  </div>
+  <div class="bg-mto_red">
+    <!-- Wave -->
+    <img src={wave.src} alt="wave" />
+  </div>
+  <div class="flex flex-col items-center bg-white py-3 px-6">
+    <h3 class="text-2xl font-semibold">Projects</h3>
 
-<Layout team={teamProps} />
+    <!-- Projects -->
+  </div>
+</Layout>
