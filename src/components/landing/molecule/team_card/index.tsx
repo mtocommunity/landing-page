@@ -1,10 +1,5 @@
 import type { IconProp } from "@fortawesome/fontawesome-svg-core";
-import {
-  faMinus,
-  faPlus,
-  faSlash,
-  faTerminal,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faPlus, faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./style.css";
@@ -31,7 +26,9 @@ function TeamCard({
   link,
 }: TeamCardProps) {
   return (
-    <div className={`team-card ${extended ? "team-card-extend" : ""} team-card-shadow`}>
+    <div
+      className={`team-card ${extended ? "team-card-extend" : ""} team-card-shadow`}
+    >
       <div className="flex-1 relative cursor-pointer" onClick={onClick}>
         <div className="w-full">
           <img src={image} alt={image} className={`team-card-img`} />

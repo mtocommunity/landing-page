@@ -10,8 +10,6 @@ import {
 } from "../../../../assets";
 import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
 import {
-  faCode,
-  faComputer,
   faLaptopCode,
   faNetworkWired,
   faRobot,
