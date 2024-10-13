@@ -1,38 +1,31 @@
 ---
 import { faRedhat } from "@fortawesome/free-brands-svg-icons";
 import Layout from "../../layouts/team/index.astro";
-import { wave } from "../../assets/svgs";
+import { TeamLayout } from "../../types";
 
-import TeamIcon from "../../components/general/molecule/team-icon";
+const teamProps: TeamLayout = {
+  name: "Security-Team",
+  teamIcon: faRedhat,
+  description: `Sumérgete en el apasionante mundo de la ciberseguridad. Aquí, convertirás tu interés por la seguridad informática en habilidades prácticas a través de proyectos de hacking ético y competencias desafiantes. Únete a nosotros y forma parte de una comunidad que trabaja por un mundo digital más seguro.`,
+  projects: [],
+  events: [
+    {
+      date: null,
+      name: "Upcomming event",
+      description: "---",
+      link: "./#",
+      imageUrl: "",
+    },
+  ],
+  leaders: [
+    {
+      imageUrl: "https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg",
+      name: "Junior Delgado",
+      role: "Líder de Security-Team",
+      link: "https://github.com/aarondfv",
+    },
+  ],
+};
 ---
 
-<Layout teamName="Security-Team" teamIcon={faRedhat}>
-  <div
-    class="flex flex-col bg-gradient-to-t from-mto_red to-mto_dark_gray min-h-[calc(100dvh-5rem)] justify-center gap-10 lg:flex-row lg:items-center lg:gap-20"
-  >
-    <div
-      class="flex flex-col w-full justify-center items-center gap-4 lg:w-auto"
-    >
-      <TeamIcon icon={faRedhat} />
-      <h2 class="text-white text-2xl lg:text-4xl font-semibold text-center">
-        Security Team
-      </h2>
-    </div>
-    <div class="text-white px-6 lg:pr-12 lg:w-1/3 lg:text-lg">
-      Sumérgete en el apasionante mundo de la ciberseguridad. Aquí, convertirás
-      tu interés por la seguridad informática en habilidades prácticas a través
-      de proyectos de hacking ético y competencias desafiantes. Únete a nosotros
-      y forma parte de una comunidad que trabaja por un mundo digital más
-      seguro.
-    </div>
-  </div>
-  <div class="bg-mto_red">
-    <!-- Wave -->
-    <img src={wave.src} alt="wave" />
-  </div>
-  <div class="flex flex-col items-center bg-white py-3 px-6">
-    <h3 class="text-2xl font-semibold">Projects</h3>
-
-    <!-- Projects -->
-  </div>
-</Layout>
+<Layout team={teamProps} />
