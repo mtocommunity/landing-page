@@ -1,6 +1,8 @@
 ---
 import { TeamEvent } from "../../../../types";
 import { formatDate2 } from "../../../../utils";
+import Button from "../../../general/attoms/button";
+import { ButtonType } from "../../../general/attoms/button/types";
 
 interface Props {
   event: TeamEvent;
@@ -55,5 +57,16 @@ const { event, opacity = 100 } = Astro.props;
       {event.name}
     </h3>
     <p class="text-pretty text-sm xl:text-base">{event.description}</p>
+    {
+      event.link && (
+        <Button
+          type={ButtonType.PRIMARY}
+          className="w-1/2 mt-4"
+          link={event.link}
+        >
+          Leer más
+        </Button>
+      )
+    }
   </div>
 </div>
