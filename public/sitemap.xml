@@ -1,52 +1,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://mtocommunity.com/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/staff/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/team/dev/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/team/net/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/team/os/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/team/security/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/team/iot/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/event/dev-seminario-git-basico/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/event/net-seminario-redes-cableadas/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://mtocommunity.com/event/iot-seminario-robotica-basica/</loc>
-    <lastmod>2024-10-18T01:31:42+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 </urlset>
