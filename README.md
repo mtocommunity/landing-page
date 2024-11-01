@@ -6,7 +6,7 @@ A lading page of the ManyToOne Community
 
 ## Tech Stack
 
-![client](https://skillicons.dev/icons?i=astro,react,tailwindcss,markdown,github)
+![client](https://skillicons.dev/icons?i=astro,react,tailwindcss,markdown,github,cloudflare)
 
 ## Screenshots
 
