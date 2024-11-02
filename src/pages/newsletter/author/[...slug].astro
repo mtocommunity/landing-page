@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import NewsletterLayout from "../../../layouts/newsletter/index.astro";
+
+export async function getStaticPaths() {
+  const authorsCollection = await getCollection("author");
+  return authorsCollection.map((author) => ({
+    params: { slug: author.data.username },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+
+const authorNewsletter = await getCollection("newsletter", (post) =>
+  post.data.authors.map((x) => x.id).includes(author.id)
+);
+---
+
+<NewsletterLayout
+  author={{ name: author.data.name }}
+  meta={{
+    image: author.data.avatar,
+    title: author.data.name,
+    description: author.data.bio,
+    keywords: ["Author", "Autor", author.data.username, author.data.name],
+  }}
+>
+  <div
+    class="bg-gradient-to-b from-mto_dark_gray to-mto_blue_dark min-h-screen text-white"
+  >
+    <h1 class="absolute top-1/2 left-10">{author.data.name}</h1>
+    {authorNewsletter.map((post) => JSON.stringify(post))}
+  </div>
+</NewsletterLayout>
