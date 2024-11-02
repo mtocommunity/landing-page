@@ -1,0 +1,80 @@
+---
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+
+interface Props {
+  meta: {
+    title?: string;
+    keywords?: string[];
+    url?: string;
+    description?: string;
+    image?: string;
+  };
+  author: {
+    name?: string;
+  };
+}
+
+const { meta, author } = Astro.props;
+
+if (!meta.title) {
+  meta.title = "ManyToOne Community";
+}
+
+if (!meta.keywords) {
+  meta.keywords =
+    "many to one, UTP, Chiclayo, Ingeniería de Sistemas, MTO, Comunidad".split(
+      ", "
+    );
+}
+
+if (!meta.url) {
+  meta.url = "https://mtocommunity.com/";
+}
+
+if (!meta.description) {
+  meta.description =
+    "La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo";
+}
+
+if (!meta.image) {
+  meta.image = "/android-chrome-512x512.png";
+}
+
+if (!author.name) {
+  author.name = "ManyToOne Community";
+}
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/font/fonts.css" />
+    <title>{meta.title}</title>
+    <!-- Basic meta -->
+    <meta name="description" content={meta.description} />
+    <meta name="author" content={author.name} />
+    <meta name="keywords" content={meta.keywords.join(", ")} />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Twitter meta -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={meta.url} />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content={meta.image} />
+  </head>
+  <body class="w-full">
+    <div class="w-auto overflow-x-hidden">
+      <CustomNavBar fixed client:load>
+        <a href="/">Home</a>
+        <a href="/newsletter">Newsletter</a>
+      </CustomNavBar>
+      <slot />
+    </div>
+  </body>
+</html>
