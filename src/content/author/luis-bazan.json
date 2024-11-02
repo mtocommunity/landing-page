@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../.astro/collections/authors.schema.json",
+  "username": "luisbazandev",
+  "name": "Luis Bazán",
+  "avatar": "https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg",
+  "bio": "Líder de la comunidad",
+  "links": [
+    {
+      "title": "github",
+      "url": "https://github.com/luisBazanDev"
+    }
+  ]
+}
