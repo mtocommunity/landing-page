@@ -23,3 +23,19 @@ export function formatDate2(date: Date): string {
   const [day, month, year] = format.split(" ");
   return `${day} ${month.charAt(0).toUpperCase() + month.slice(1)} ${year}`;
 }
+
+export function formatDate3(date: Date): string {
+  // 01 de Nov. De 2021
+  const options: Intl.DateTimeFormatOptions = {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: "America/Lima",
+  };
+
+  const format = new Intl.DateTimeFormat("es-ES", options).format(date);
+
+  const [day, month, year] = format.split(" ");
+
+  return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)}. de ${year}`;
+}

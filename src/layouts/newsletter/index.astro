@@ -1,5 +1,7 @@
 ---
 import CustomNavBar from "../../components/general/organism/custom_navbar";
+import Footer from "../../components/general/organism/footer";
+import "../../styles.css";
 
 interface Props {
   meta: {
@@ -75,6 +77,7 @@ if (!author.name) {
         <a href="/newsletter">Newsletter</a>
       </CustomNavBar>
       <slot />
+      <Footer />
     </div>
   </body>
 </html>
