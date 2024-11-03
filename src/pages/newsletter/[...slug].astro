@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import NewsletterLayout from "../../layouts/newsletter/index.astro";
+import { calculateReadingTime, formatDate3 } from "../../utils";
 
 export async function getStaticPaths() {
   const newsletterCollection = await getCollection("newsletter");
@@ -16,6 +17,10 @@ const authorsCollection = await getCollection("author");
 const authors = newsletter.data.authors.map((author) =>
   authorsCollection.find((x) => x.id === author.id)
 );
+
+const readingTime = calculateReadingTime(newsletter.body);
+
+const { Content } = await newsletter.render();
 ---
 
 <NewsletterLayout
@@ -26,14 +31,55 @@ const authors = newsletter.data.authors.map((author) =>
     image: newsletter.data.thumbnail,
     title: newsletter.data.title,
     description: newsletter.data.description,
-    keywords: ["Author", "Autor", ...newsletter.data.tags],
+    keywords: [
+      "many to one community",
+      "newsletter",
+      ...newsletter.data.tags,
+      authors.map((x) => x?.data.name).join(", "),
+    ],
   }}
 >
   <div
-    class="bg-gradient-to-b from-mto_dark_gray to-mto_blue_dark min-h-screen text-white"
+    class="bg-gradient-to-b from-mto_dark_gray to-mto_blue_dark min-h-screen text-white pt-[20dvh] flex flex-col items-center"
   >
-    <h1 class="absolute top-1/2 left-10">{newsletter.data.title}</h1>
-    <p>{JSON.stringify(newsletter.data)}</p>
-    <p>{JSON.stringify(authors)}</p>
+    <div class="flex flex-col gap-3 max-w-screen-md">
+      <div class="flex gap-2 text-gray-400 items-center text-sm">
+        <span>{formatDate3(newsletter.data.date).toUpperCase()}</span>
+        <div class="w-[6px] h-[6px] rounded-full bg-gray-400"></div>
+        <span>{readingTime.toUpperCase()}</span>
+      </div>
+      <h1 class="text-4xl text-center font-main_mono font-bold">
+        {newsletter.data.title}
+      </h1>
+    </div>
+
+    <div
+      class="mt-[10dvh] px-3 text-base text-justify markdown max-w-screen-md"
+    >
+      <!-- Content -->
+      <Content />
+    </div>
+
+    <div class="mt-[20dvh] mb-[20dvh]">
+      <!-- Authors -->
+      <h3 class="text-lg mb-2">Escrito por:</h3>
+
+      {
+        authors.map((author) => (
+          <a
+            class="w-24 flex flex-col lg:w-36"
+            href={`/newsletter/author/${author?.data.username}`}
+          >
+            <img
+              src={author?.data.avatar}
+              class="rounded-full aspect-square object-cover"
+            />
+            <span class="bg-mto_red text-white p-2 relative -top-8 justify-center items-center flex">
+              {author?.data.name}
+            </span>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </NewsletterLayout>
