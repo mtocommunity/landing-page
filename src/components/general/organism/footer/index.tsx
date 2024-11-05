@@ -30,25 +30,25 @@ const Footer: React.FC = () => {
             Home
           </a>
           <a
-            href="/#home"
+            href="/#about-us"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             About Us
           </a>
           <a
-            href="/#home"
+            href="/#contactus"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
-            Events
+            Contact Us
           </a>
           <a
-            href="/#home"
+            href="/#teams"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Teams
           </a>
           <a
-            href="/#home"
+            href="/staff"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Staff
