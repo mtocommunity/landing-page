@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import NewsletterLayout from "../../../layouts/newsletter/index.astro";
+import DecoratedLink from "../../../components/general/molecule/decorated-link/index.astro";
+import { calculateReadingTime, formatDate3 } from "../../../utils";
+
+export async function getStaticPaths() {
+  const authorsCollection = await getCollection("author");
+  return authorsCollection.map((author) => ({
+    params: { slug: author.data.username },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+
+const authorNewsletter = (
+  await getCollection("newsletter", (post) =>
+    post.data.authors.map((x) => x.id).includes(author.id)
+  )
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<NewsletterLayout
+  author={{ name: author.data.name }}
+  meta={{
+    image: author.data.avatar,
+    title: author.data.name,
+    description: author.data.bio,
+    keywords: ["Author", "Autor", author.data.username, author.data.name],
+    type: "profile",
+  }}
+>
+  <div
+    class="bg-gradient-to-b from-mto_dark_gray to-mto_blue_dark min-h-screen text-white"
+  >
+    <div class="max-w-screen-md px-4 pt-[10dvh] mx-auto">
+      <div class="flex flex-col items-center gap-8 mb-16">
+        <div class="flex flex-col items-center">
+          <img
+            src={author.data.avatar}
+            alt={author.data.name}
+            class="object-cover w-2/5 rounded-full aspect-square"
+          />
+          <h1 class="text-xl">{author.data.name}</h1>
+          <h3 class="text-sm text-gray-600">@{author.data.username}</h3>
+        </div>
+        <div class="text-justify text-gray-400">{author.data.bio}</div>
+        <div class="flex flex-wrap gap-3">
+          {
+            author.data.links.map((social) => (
+              <DecoratedLink type={social.title} href={social.url} />
+            ))
+          }
+        </div>
+      </div>
+      <div>
+        <!-- Lastest posts -->
+        {
+          authorNewsletter.map((post) => (
+            <a
+              class="flex justify-between gap-3 items-center"
+              href={`/newsletter/${post.slug}`}
+            >
+              <span class="font-main_sans text-mto_red text-sm">
+                {formatDate3(post.data.date).slice(0, 9)}
+              </span>
+              <h4 class="text-nowrap w-auto flex-1 truncate">
+                {post.data.title}
+              </h4>
+              <span class="text-gray-300">
+                {calculateReadingTime(post.body)}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</NewsletterLayout>
