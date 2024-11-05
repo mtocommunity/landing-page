@@ -67,7 +67,7 @@ const { Content } = await newsletter.render();
       {
         authors.map((author) => (
           <a
-            class="w-24 flex flex-col lg:w-36"
+            class="w-24 flex flex-col lg:w-36 select-none"
             href={`/newsletter/author/${author?.data.username}`}
           >
             <img
