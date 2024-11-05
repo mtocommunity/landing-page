@@ -24,35 +24,35 @@ const Footer: React.FC = () => {
             Explora
           </span>
           <Button
-            type={ButtonType.NAV}
+            type={ButtonType.LINK}
             link="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Home
           </Button>
           <Button
-            type={ButtonType.NAV}
+            type={ButtonType.LINK}
             link="/#about-us"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             About Us
           </Button>
           <Button
-            type={ButtonType.NAV}
+            type={ButtonType.LINK}
             link="/#events"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Events
           </Button>
           <Button
-            type={ButtonType.NAV}
+            type={ButtonType.LINK}
             link="/#teams"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Teams
           </Button>
           <Button
-            type={ButtonType.NAV}
+            type={ButtonType.LINK}
             link="/staff"
             className="text-white opacity-50 hover:text-mto_red_light transition-colors"
           >
