@@ -13,6 +13,9 @@ import { useEffect } from "react";
 
 function positionInCircle() {
   const cloudIcon = document.querySelectorAll(".cloud-icon");
+  for (let icon of document.querySelectorAll(".cloud-icon")) {
+    icon.classList.remove("hidden");
+  }
 
   cloudIcon.forEach((icon, index) => {
     // Set position in a circle
@@ -62,12 +65,6 @@ function TeamsCloud() {
       duration: 1000 * 2,
       easing: "linear",
     });
-  }, []);
-
-  useEffect(() => {
-    for (let icon of document.querySelectorAll(".cloud-icon")) {
-      icon.classList.remove("hidden");
-    }
   }, []);
 
   return (
