@@ -37,6 +37,8 @@ const { Content } = await newsletter.render();
       ...newsletter.data.tags,
       authors.map((x) => x?.data.name).join(", "),
     ],
+    url: `https://mtocommunity.com/newsletter/${newsletter.id.replace(".mdx", "")}`,
+    type: "article",
   }}
 >
   <div
