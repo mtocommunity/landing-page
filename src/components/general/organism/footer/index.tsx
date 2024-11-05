@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
             contact@mtocommunity.com
           </a>
           <a
-            href="https://wa.me/935766085"
+            href="https://wa.me/51935766085"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             +51 935 766 085
