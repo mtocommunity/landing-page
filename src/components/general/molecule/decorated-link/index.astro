@@ -1,0 +1,75 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faFacebookF,
+  faGithub,
+  faInstagram,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
+import "./style.css";
+
+type Props = {
+  href: string;
+  type:
+    | "linkedin"
+    | "facebook"
+    | "github"
+    | "instagram"
+    | "x"
+    | "youtube"
+    | "link"
+    | string;
+  other_tab?: boolean;
+};
+
+const { href, type, other_tab = true } = Astro.props;
+
+let icon = faLink;
+let background = "black";
+let color = "white"; // white or black
+
+switch (type) {
+  case "facebook":
+    icon = faFacebookF;
+    background = "#1877F2";
+    break;
+
+  case "github":
+    icon = faGithub;
+    background = "#000000";
+    break;
+
+  case "instagram":
+    icon = faInstagram;
+    background = "#E1306C";
+    break;
+
+  case "linkedin":
+    icon = faLinkedin;
+    background = "#0077B5";
+    break;
+
+  case "x":
+    icon = faXTwitter;
+    background = "#000000";
+    break;
+
+  case "youtube":
+    icon = faYoutube;
+    background = "#FF0000";
+    break;
+}
+---
+
+<a
+  href={href}
+  target={other_tab ? "_blank" : "_self"}
+  class={`px-2 py-1 flex gap-2 brand-${type} items-center w-min`}
+>
+  <FontAwesomeIcon icon={icon} className="w-4" />
+  <span>{type[0].toUpperCase() + type.slice(1).toLowerCase()}</span>
+</a>

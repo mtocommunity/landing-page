@@ -1,0 +1,31 @@
+---
+title: Comparacion entre Vercel y Cloudflare Pages
+description: Te cuento la historia de cómo elegimos entre Vercel y Cloudflare Pages para alojar nuestro sitio web de la comunidad.
+date: 2024-11-05T05:00:00.000Z
+tags: [mto]
+authors: [luis-bazan]
+---
+
+Hace unas semanas, tuvimos un intercambio de opiniones en el equipo de desarrollo sobre cuál servicio de hosting de sitios web era el mejor para este proyecto. Hasta ahora, estábamos usando GitHub Pages para alojar la landing, ya que era muy fácil de integrar y, para empezar, no estaba mal, ya que en principio solo queríamos manejar archivos estáticos. Sin embargo, a medida que avanzamos con el proyecto y con la comunidad, nos dimos cuenta de que necesitábamos migrar a otro host, porque requeriríamos utilizar SSR (Server Side Rendering) para algunas funcionalidades futuras que planeamos integrar.
+
+Entonces, llegamos a la encrucijada que seguramente en algún momento les pasará o ya les pasó: "¿Cuál será el mejor?", "¿Cuál es el más barato?", "¿Cuál es el más rápido?", "¿Cuál es el más escalable?". La respuesta a estas preguntas no es sencilla, ya que depende de muchos factores, como el presupuesto, la complejidad del proyecto, la cantidad de visitas que esperamos, la cantidad de recursos que necesitamos, etc.
+
+Después de descartar muchas opciones, nos quedamos con dos alternativas: [Vercel](https://vercel.com/) o [Cloudflare Pages](https://pages.cloudflare.com/). Ambas eran excelentes opciones que cumplían con nuestros requisitos.
+
+## Vercel
+
+Vercel es una de las plataformas unificadas en la nube más recientes y acogidas en el mundo de JavaScript. Y con justa razón: por un bajo costo, ofrece un servicio de calidad y con una facilidad de uso increíble. Además, cuenta con integración con Next.js, uno de los frameworks más populares en el ecosistema de React, y facilita la integración con repositorios de código como GitHub y GitLab, permitiendo un despliegue continuo.
+
+Para nosotros, era una opción muy atractiva, ya que veíamos que, por un bajo costo, nos ofrecía muchas ventajas que nos interesaban, como el SSR, la facilidad de uso y la integración con GitHub. Además, ofrecía un plan gratuito que nos permitía probar el servicio sin tener que pagar nada, y para la demanda actual del sitio era más que suficiente para nuestras necesidades.
+
+## Cloudflare Pages
+
+Cloudflare Pages es uno de los servicios de hosting web y despliegue de aplicaciones frontend más competentes, respaldado por el gigante Cloudflare, que según algunas fuentes maneja aproximadamente el 15% del tráfico web de todo el mundo. También ofrece integración con Cloudflare Workers, lo cual nos permitiría hacer muchas cosas interesantes en el futuro.
+
+Para nosotros, era una opción muy atractiva, ya que ya teníamos nuestra [CDN](https://www.cloudflare.com/es-es/learning/cdn/what-is-a-cdn/) en Cloudflare, lo que nos permitiría centralizar todo en un solo lugar. Además, ofrecía un plan gratuito que nos permitía probar el servicio sin tener que pagar nada, y para la demanda actual del sitio era más que suficiente para nuestras necesidades.
+
+## Nuestra decisión
+
+Al final, nos decidimos por Cloudflare Pages debido a su facilidad de uso y su integración con Cloudflare Workers, lo cual nos permitiría implementar muchas funcionalidades interesantes en el futuro. Además, nuestra CDN ya estaba en Cloudflare con su servicio [R2](https://www.cloudflare.com/es-es/developer-platform/products/r2/) lo que también tuvo una participación importante en la decisión.
+
+Cloudflare Pages también nos ofrece un entorno de desarrollo mucho más cómodo, ya que crea automáticamente un subdominio para cada rama de nuestro repositorio de GitHub. Esto nos permite tener un entorno de desarrollo para cada rama sin preocuparnos por cómo y dónde se despliega.
