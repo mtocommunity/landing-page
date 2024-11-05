@@ -23,41 +23,36 @@ const Footer: React.FC = () => {
           <span className="text-white font-semibold px-3 py-1 relative before:content-[''] border-mto_red border-b-2 md:border-b-0 md:pb-3 md:border-l-2 mb-3 select-none">
             Explora
           </span>
-          <Button
-            type={ButtonType.LINK}
-            link="/#home"
+          <a
+            href="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Home
-          </Button>
-          <Button
-            type={ButtonType.LINK}
-            link="/#about-us"
+          </a>
+          <a
+            href="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             About Us
-          </Button>
-          <Button
-            type={ButtonType.LINK}
-            link="/#events"
+          </a>
+          <a
+            href="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Events
-          </Button>
-          <Button
-            type={ButtonType.LINK}
-            link="/#teams"
+          </a>
+          <a
+            href="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Teams
-          </Button>
-          <Button
-            type={ButtonType.LINK}
-            link="/staff"
-            className="text-white opacity-50 hover:text-mto_red_light transition-colors"
+          </a>
+          <a
+            href="/#home"
+            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Staff
-          </Button>
+          </a>
         </div>
 
         <div className="flex flex-col text-white items-center md:items-start">
