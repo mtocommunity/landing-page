@@ -1,0 +1,148 @@
+---
+import Layout from "../../layouts/event/index.astro";
+import Button from "../../components/general/attoms/button";
+import TextBorder from "../../components/events/molecule/textBorder/index.astro";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+import Agenda from "../../components/events/organism/Agenda.astro";
+import Speaker from "../../components/events/molecule/Speaker.astro";
+
+import { landing_net } from "../../assets";
+import { ButtonType } from "../../components/general/attoms/button/types";
+import { wave2 } from "../../assets/svgs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboardCheck, faClock } from "@fortawesome/free-solid-svg-icons";
+import { MTOTransparentBackground } from "../../assets";
+
+import type { EventAgenda } from "../../types";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+
+const agenda: EventAgenda = {
+  days: [
+    {
+      title: "Agenda",
+      date: new Date("2024-11-29 GMT-0500"),
+      items: ["...", "...", "...", "..."],
+    },
+  ],
+};
+
+const props = {
+  title: "NetTeam seminario Introducción a las Redes Cableadas",
+  description:
+    "Sé parte de uno de los eventos a cargo del equipo de Net, aquí aprenderás los fundamentos de las redes cableadas.",
+  path: "events/net-seminario-redes-cableadas",
+};
+---
+
+<Layout {...props}>
+  <div class="text-white">
+    <CustomNavBar fixed full client:load>
+      <a href="#what-is">¿Qué es?</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#agenda">Agenda</a>
+    </CustomNavBar>
+
+    <!-- Principal -->
+    <main
+      id="home"
+      class="min-h-screen relative flex items-center justify-center bg-slate-200"
+    >
+      <div class="flex flex-col items-center">
+        <h2 class="flex font-main_sans items-center font-bold text-black">
+          <span class="text-5xl">E</span>
+          <FontAwesomeIcon icon={faXTwitter} className="text-5xl w-10" />
+          <span class="text-5xl">PO</span>
+        </h2>
+        <div
+          class="relative text-mto_purple text-5xl font-main_sans font-bold z-10"
+        >
+          <h2>FERIA</h2>
+          <TextBorder
+            title="FERIA"
+            color="purple"
+            className="text-transparent top-0 absolute scale-125"
+          />
+        </div>
+        <h3 class="text-black font-main_sans font-bold text-5xl">2024</h3>
+      </div>
+      <div class="absolute w-full h-full top-0 overflow-hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-0 left-0 w-full"
+          viewBox="0 0 100 50"
+        >
+          <polygon points="0,0 0,50 100,0" style="fill:#000"></polygon>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute bottom-0 left-0 w-full"
+          viewBox="0 0 100 50"
+        >
+          <polygon points="0,50 100,50 100,0" style="fill:#000"></polygon>
+        </svg>
+        <svg
+          viewBox="0 0 100 80"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[20vh] -left-8 h-[12vh] rotate-[-30deg]"
+        >
+          <polygon points="0,0 100,0 50,80" style="fill:#E41476"></polygon>
+        </svg>
+        <svg
+          viewBox="0 0 100 80"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[25vh] -right-10 h-[15vh] rotate-[45deg]"
+        >
+          <polygon points="0,0 100,0 50,80" style="fill:#02C8ED"></polygon>
+        </svg>
+        <svg
+          viewBox="0 0 100 80"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[23vh] right-7 h-[10vh] rotate-[0deg]"
+        >
+          <polygon points="0,0 100,0 50,80" style="fill:#101B37"></polygon>
+        </svg>
+        <svg
+          viewBox="0 0 100 80"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[25vh] -right-10 h-[15vh] rotate-[45deg]"
+        >
+          <polygon points="0,0 100,0 50,80" style="fill:#02C8ED"></polygon>
+        </svg>
+        <svg
+          viewBox="0 0 100 80"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute top-[23vh] right-7 h-[10vh] rotate-[0deg]"
+        >
+          <polygon points="0,0 100,0 50,80" style="fill:#101B37"></polygon>
+        </svg>
+
+        <div class="absolute bottom-5 right-5 flex gap-4 h-[5vh] items-center">
+          <MTOTransparentBackground className="h-full scale-125" />
+          <span class="font-sans select-none">X</span>
+          <img
+            src="https://cdn.mtocommunity.com/utp/utp-logo.svg"
+            class="h-full"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- Agenda -->
+    <section
+      class="agenda-container bg-gradient-to-t from-mto_blue_dark to-mto_dark_gray pt-16 flex flex-col xl:items-center"
+      id="agenda"
+    >
+      <h2 class="text-center text-white text-5xl font-bold mb-12 xl:w-2/3">
+        Agenda
+      </h2>
+
+      <Agenda agenda={agenda} className="bg-slate-300" />
+
+      <img
+        src={wave2.src}
+        alt={wave2.src}
+        class="w-full object-cover object-center aspect-[5/1] xl:aspect-[10/1]"
+      />
+    </section>
+  </div>
+</Layout>
