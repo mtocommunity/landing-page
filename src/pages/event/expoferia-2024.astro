@@ -34,104 +34,38 @@ const props = {
 <Layout {...props}>
   <div class="text-white">
     <CustomNavBar fixed full client:load>
-      <a href="#what-is">¿Qué es?</a>
+      <a href="#what-is">Sobre la Expoferia</a>
       <a href="#projects">Proyectos</a>
       <a href="#agenda">Agenda</a>
+      <a href="#expositores">Expositores</a>
     </CustomNavBar>
 
     <!-- Principal -->
     <main
       id="home"
-      class="min-h-screen relative flex items-center justify-center bg-slate-200"
+      class="min-h-screen relative flex items-center justify-center bg-slate-200 from-mto_dark_gray to-mto_red_dark bg-gradient-to-b"
     >
       <div class="flex flex-col items-center">
         <h2 class="flex font-main_sans items-center font-bold text-black">
-          <span class="text-5xl">E</span>
-          <FontAwesomeIcon icon={faXTwitter} className="text-5xl w-10" />
-          <span class="text-5xl">PO</span>
+          <span class="text-5xl text-white">E</span>
+          <FontAwesomeIcon
+            icon={faXTwitter}
+            className="text-5xl w-10 text-white"
+          />
+          <span class="text-5xl text-white">PO</span>
         </h2>
         <div
-          class="relative text-mto_purple text-5xl font-main_sans font-bold z-10"
+          class="relative text-mto_red text-5xl font-main_sans font-bold z-10"
         >
           <h2>FERIA</h2>
           <TextBorder
             title="FERIA"
-            color="purple"
+            color="red"
             className="text-transparent top-0 absolute scale-125"
           />
         </div>
-        <h3 class="text-black font-main_sans font-bold text-5xl">2024</h3>
-      </div>
-      <div class="absolute w-full h-full top-0 overflow-hidden">
-        <!-- Mobile -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-0 left-0 w-full lg:hidden"
-          viewBox="0 0 100 50"
-        >
-          <polygon points="0,0 0,50 100,0" style="fill:#000"></polygon>
-        </svg>
-        <!-- Desktop -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-0 left-0 w-full hidden lg:flex"
-          viewBox="0 0 100 20"
-        >
-          <polygon points="0,0 0,20 100,5 100,0" style="fill:#000"></polygon>
-        </svg>
-        <!-- Mobile -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute bottom-0 left-0 w-full lg:hidden"
-          viewBox="0 0 100 50"
-        >
-          <polygon points="0,50 100,50 100,0" style="fill:#000"></polygon>
-        </svg>
-        <!-- Desktop -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute bottom-0 left-0 w-full hidden lg:flex"
-          viewBox="0 0 100 20"
-        >
-          <polygon points="0,20 100,20 100,0" style="fill:#000"></polygon>
-        </svg>
-        <svg
-          viewBox="0 0 100 80"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-[20vh] -left-8 h-[12vh] rotate-[-30deg]"
-        >
-          <polygon points="0,0 100,0 50,80" style="fill:#E41476"></polygon>
-        </svg>
-        <svg
-          viewBox="0 0 100 80"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-[25vh] -right-10 h-[15vh] rotate-[45deg]"
-        >
-          <polygon points="0,0 100,0 50,80" style="fill:#02C8ED"></polygon>
-        </svg>
-        <svg
-          viewBox="0 0 100 80"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-[23vh] right-7 h-[10vh] rotate-[0deg]"
-        >
-          <polygon points="0,0 100,0 50,80" style="fill:#101B37"></polygon>
-        </svg>
-        <svg
-          viewBox="0 0 100 80"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-[25vh] -right-10 h-[15vh] rotate-[45deg]"
-        >
-          <polygon points="0,0 100,0 50,80" style="fill:#02C8ED"></polygon>
-        </svg>
-        <svg
-          viewBox="0 0 100 80"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-[23vh] right-7 h-[10vh] rotate-[0deg]"
-        >
-          <polygon points="0,0 100,0 50,80" style="fill:#101B37"></polygon>
-        </svg>
-
-        <div class="absolute bottom-5 right-5 flex gap-4 h-[5vh] items-center">
+        <h3 class="font-main_sans font-bold text-5xl text-white mb-16">2024</h3>
+        <div class="flex gap-4 h-[5vh] items-center mt-4">
           <MTOTransparentBackground className="h-full scale-125" />
           <span class="font-sans select-none">X</span>
           <img
@@ -139,6 +73,9 @@ const props = {
             class="h-full"
           />
         </div>
+      </div>
+      <div class="absolute w-full h-full top-0 overflow-hidden">
+        <!-- Mobile -->
       </div>
     </main>
 
