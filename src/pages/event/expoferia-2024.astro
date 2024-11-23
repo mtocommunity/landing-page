@@ -1,17 +1,14 @@
 ---
 import Layout from "../../layouts/event/index.astro";
-import Button from "../../components/general/attoms/button";
-import TextBorder from "../../components/events/molecule/textBorder/index.astro";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Agenda from "../../components/events/organism/Agenda.astro";
 import Speaker from "../../components/events/molecule/Speaker.astro";
 
-import { wave2 } from "../../assets/svgs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MTOTransparentBackground } from "../../assets";
 
 import type { EventAgenda } from "../../types";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const agenda: EventAgenda = {
   days: [
@@ -43,58 +40,48 @@ const props = {
     <!-- Principal -->
     <main
       id="home"
-      class="min-h-screen relative flex items-center justify-center bg-slate-200 from-mto_dark_gray to-mto_red_dark bg-gradient-to-b"
+      class="min-h-screen relative flex items-center justify-center"
     >
+      <div id="bg-box" class="">
+        <div id="bg-red"></div>
+      </div>
       <div class="flex flex-col items-center">
-        <h2 class="flex font-main_sans items-center font-bold text-black">
-          <span class="text-5xl text-white">E</span>
-          <FontAwesomeIcon
-            icon={faXTwitter}
-            className="text-5xl w-10 text-white"
-          />
-          <span class="text-5xl text-white">PO</span>
+        <h2 class="font-main_sans text-5xl font-bold text-white mb-6">
+          EXPOFERIA
         </h2>
-        <div
-          class="relative text-mto_red text-5xl font-main_sans font-bold z-10"
-        >
-          <h2>FERIA</h2>
-          <TextBorder
-            title="FERIA"
-            color="red"
-            className="text-transparent top-0 absolute scale-125"
-          />
-        </div>
-        <h3 class="font-main_sans font-bold text-5xl text-white mb-16">2024</h3>
+        <h3 class="font-main_sans font-bold text-5xl text-mto_red_dark mb-16">
+          2024
+        </h3>
         <div class="flex gap-4 h-[5vh] items-center mt-4">
           <MTOTransparentBackground className="h-full scale-125" />
-          <span class="font-sans select-none">X</span>
+          <span class="text-2xl font-main_sans mr-7 ml-5">X</span>
           <img
             src="https://cdn.mtocommunity.com/utp/utp-logo.svg"
             class="h-full"
           />
         </div>
-      </div>
-      <div class="absolute w-full h-full top-0 overflow-hidden">
-        <!-- Mobile -->
+        <svg
+          class="absolute bottom-16 w-72 h-36 text-mto_red_dark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 84 72"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 24l30 24 30-24"></path>
+        </svg>
       </div>
     </main>
-
-    <!-- Agenda -->
-    <section
-      class="agenda-container bg-gradient-to-t from-mto_blue_dark to-mto_dark_gray pt-16 flex flex-col xl:items-center"
-      id="agenda"
-    >
-      <h2 class="text-center text-white text-5xl font-bold mb-12 xl:w-2/3">
-        Agenda
-      </h2>
-
-      <Agenda agenda={agenda} className="bg-slate-300" />
-
-      <img
-        src={wave2.src}
-        alt={wave2.src}
-        class="w-full object-cover object-center aspect-[5/1] xl:aspect-[10/1]"
-      />
+    <section id="about" class="min-h-screen">
+      <div id="bg-box" class="">
+        <div id="bg-red2"></div>
+        <div id="bg-blue2"></div>
+      </div>
+      <div class="flex flex-col items-center">
+        <h2></h2>
+      </div>
     </section>
   </div>
 </Layout>
