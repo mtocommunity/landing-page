@@ -25,6 +25,9 @@ export default {
         secondary_sans: ["Arial", "sans"],
         main_mono: ["JetBrains Mono", "monospace"],
       },
+      boxShadow: {
+        'custom-cyan': '4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)',
+      },
     },
   },
   plugins: [],
