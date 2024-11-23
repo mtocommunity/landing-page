@@ -3,29 +3,75 @@ import Layout from "../../layouts/event/index.astro";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Agenda from "../../components/events/organism/Agenda.astro";
 import Speaker from "../../components/events/molecule/Speaker.astro";
+import TeamEvent from "../../components/landing/molecule/team_event/index.astro";
 
 import { MTOTransparentBackground } from "../../assets";
 
 import type { EventAgenda } from "../../types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
-const agenda: EventAgenda = {
-  days: [
-    {
-      title: "Agenda",
-      date: new Date("2024-11-29 GMT-0500"),
-      items: ["...", "...", "...", "..."],
-    },
-  ],
-};
+import Carousel from "../../components/events/molecule/Carousel/index.astro";
+import ProjectCard from "../../components/events/molecule/project/index.astro";
 
 const props = {
   title: "Expoferia 2024",
-  description:
-    "Sé parte de uno de los eventos a cargo del equipo de Net, aquí aprenderás los fundamentos de las redes cableadas.",
+  description: "Página de la expoferia 2024 de la UTP",
   path: "events/expoferia-2024",
 };
+
+const projects = [
+  {
+    id: 1,
+    image: "https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg",
+    title: "Programando un Humano",
+    description:
+      "Consiste en darle instrucciones a una persona para que realice tareas específicas",
+    technologies: [
+      "Algoritmos",
+      "Lógica Computacional",
+      "Programación Desconectada",
+    ],
+    presenters: ["Daniel Mendoza", "Ismael Sanchez"],
+  },
+  {
+    id: 2,
+    image: "/path/to/image2.jpg",
+    title: "Rock Paper Scissors",
+    description: "Una mano robótica que juega piedra, papel o tijera",
+    technologies: ["Arduino", "Python"],
+    presenters: [
+      "Jaime López",
+      "Jaris Alday",
+      "Juan Alvites",
+      "Julián Acosta",
+      "Ian Terrones",
+      "Bruss Yncio",
+    ],
+  },
+  {
+    id: 3,
+    image: "/path/to/image2.jpg",
+    title: "Wireless Jukebox",
+    description:
+      "Consiste en construir un tocadiscos con tecnología RFID para identificar y reproducir canciones",
+    technologies: ["Arduino", "Node.js", "REST API"],
+    presenters: [
+      "Jaime López",
+      "Jaris Alday",
+      "Juan Alvites",
+      "Julián Acosta",
+      "Ian Terrones",
+      "Bruss Yncio",
+    ],
+  },
+  {
+    id: 4,
+    image: "/path/to/image2.jpg",
+    title: "Arquitectura Many To One",
+    description:
+      "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente. ",
+    technologies: ["Arduino", "Node.js", "REST API"],
+    presenters: ["Luis Ventura"],
+  },
+];
 ---
 
 <Layout {...props}>
@@ -74,14 +120,72 @@ const props = {
         </svg>
       </div>
     </main>
-    <section id="about" class="min-h-screen">
-      <div id="bg-box" class="">
+    <section
+      id="about"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
+    >
+      <div id="bg-box" class="relative w-full h-full">
         <div id="bg-red2"></div>
         <div id="bg-blue2"></div>
       </div>
-      <div class="flex flex-col items-center">
-        <h2></h2>
+      <div class="flex flex-col items-center px-8 space-y-6">
+        <h2 class="text-2xl mb-6 font-main_sans">SOBRE LA EXPOFERIA</h2>
+        <p class="text-sm mb-4 leading-normal">
+          La Expoferia UTP-Chiclayo 2024 es un espacio único donde estudiantes,
+          profesionales y emprendedores pueden conectarse, compartir
+          conocimientos y disfrutar de experiencias innovadoras. Este año, el
+          evento se realiza en colaboración con
+          <span
+            class="font-main_sans font-bold bg-clip-text text-transparent bg-gradient-to-r from-mto_red_light via-mto_red_light to-mto_gray_light"
+          >
+            MANY
+          </span>
+          <span
+            class="font-main_sans font-bold bg-clip-text text-transparent bg-gradient-to-r from-mto_gray_light via-mto_gray_light to-mto_blue"
+          >
+            TO
+          </span>
+          <span
+            class="font-main_sans font-bold bg-clip-text text-transparent bg-gradient-to-r from-mto_gray_light via-mto_blue to-mto_blue_dark"
+          >
+            ONE
+          </span>, una comunidad de estudiantes de la UTP apasionados por la
+          tecnología, que desarrollan proyectos en áreas como robótica,
+          programación, redes y mucho más.
+        </p>
+        <p class="text-sm">
+          Entre las actividades destacadas de esta edición, encontrarás:
+        </p>
       </div>
+      <div></div>
+    </section>
+    <section
+      class="min-h-screen flex flex-col items-center justify-start text-center"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl mb-8 font-main_sans">Proyectos</h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center justify-items-center"
+        >
+          {
+            projects.map((project, index) => (
+              <ProjectCard
+                id={`project-${index}`}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                presenters={project.presenters}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <section
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
+    >
     </section>
   </div>
 </Layout>

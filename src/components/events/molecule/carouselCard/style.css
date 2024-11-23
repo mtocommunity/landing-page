@@ -1,0 +1,29 @@
+.carousel-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.carousel-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: -1;
+  border-radius: 10px;
+}
