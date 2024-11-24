@@ -28,6 +28,9 @@ export default {
       boxShadow: {
         'custom-cyan': '4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)',
       },
+      borderColor: {
+        'gradient': 'linear-gradient(to right, #EC458D, #4BD5F1)',
+      },
     },
   },
   plugins: [],
