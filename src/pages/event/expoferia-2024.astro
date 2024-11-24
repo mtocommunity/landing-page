@@ -1,15 +1,10 @@
 ---
 import Layout from "../../layouts/event/index.astro";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
-import Agenda from "../../components/events/organism/Agenda.astro";
-import Speaker from "../../components/events/molecule/Speaker.astro";
 import Schedule from "../../components/events/molecule/schedule/index.astro";
-
 import { MTOTransparentBackground } from "../../assets";
-
-import type { EventAgenda } from "../../types";
-import Carousel from "../../components/events/molecule/Carousel/index.astro";
 import ProjectCard from "../../components/events/molecule/project/index.astro";
+import Exhibitor from "../../components/events/molecule/exhibitor/index.astro";
 
 const props = {
   title: "Expoferia 2024",
@@ -120,6 +115,7 @@ const projects = [
         </svg>
       </div>
     </main>
+    <!-- About -->
     <section
       id="about"
       class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
@@ -159,6 +155,7 @@ const projects = [
       </div>
       <div></div>
     </section>
+    <!-- Projects -->
     <section
       id="projects"
       class="min-h-screen flex flex-col items-center justify-start text-center"
@@ -184,6 +181,7 @@ const projects = [
         </div>
       </div>
     </section>
+    <!-- Schedule -->
     <section
       id="schedule"
       class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
@@ -242,6 +240,49 @@ const projects = [
             imageUrl: "https://cdn.mtocommunity.com/landing-security-team.webp",
           }}
         />
+      </div>
+    </section>
+    <!-- Exhibitors -->
+    <section
+      id="exhibitors"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
+    >
+      <div id="bg-box" class="relative w-full h-full">
+        <div id="bg-red2"></div>
+        <div id="bg-blue2"></div>
+      </div>
+      <div class="flex flex-col items-center px-8 space-y-6">
+        <h2 class="text-2xl mb-8 font-main_sans">EXPOSITORES</h2>
+        <div class="grid grid-cols-2 gap-16">
+          <Exhibitor
+            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+            name="John Doe"
+            linkedin="https://linkedin.com/in/johndoe"
+            instagram="https://instagram.com/johndoe"
+            github="https://github.com/johndoe"
+          />
+          <Exhibitor
+            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+            name="John Doe"
+            linkedin="https://linkedin.com/in/johndoe"
+            instagram="https://instagram.com/johndoe"
+            github="https://github.com/johndoe"
+          />
+          <Exhibitor
+            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+            name="John Doe"
+            linkedin="https://linkedin.com/in/johndoe"
+            instagram="https://instagram.com/johndoe"
+            github="https://github.com/johndoe"
+          />
+          <Exhibitor
+            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+            name="John Doe"
+            linkedin="https://linkedin.com/in/johndoe"
+            instagram="https://instagram.com/johndoe"
+            github="https://github.com/johndoe"
+          />
+        </div>
       </div>
     </section>
   </div>

@@ -1,0 +1,54 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faInstagram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+
+interface Props {
+  photo: string;
+  name: string;
+  linkedin?: string;
+  instagram?: string;
+  github?: string;
+}
+
+const { photo, name, linkedin, instagram, github } = Astro.props;
+---
+
+<div class="flex flex-col items-center">
+  <div class="w-24 h-24 rounded-full overflow-hidden">
+    <img src={photo} alt={name} class="w-full h-full object-cover" />
+  </div>
+  <h3 class="mt-4 text-xl font-bold">{name}</h3>
+  <div class="flex mt-2 space-x-4">
+    {
+      linkedin && (
+        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            className="text-blue-600 w-6 h-6"
+          />
+        </a>
+      )
+    }
+    {
+      instagram && (
+        <a href={instagram} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="text-pink-600 w-6 h-6"
+          />
+        </a>
+      )
+    }
+    {
+      github && (
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} className="text-gray-800 w-6 h-6" />
+        </a>
+      )
+    }
+  </div>
+</div>
