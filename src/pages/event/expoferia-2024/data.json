@@ -1,0 +1,255 @@
+{
+  "props": {
+    "title": "Expoferia 2024",
+    "description": "Página de la expoferia 2024 de la UTP",
+    "path": "events/expoferia-2024"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "image": "https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg",
+      "title": "Programando un Humano",
+      "description": "Consiste en darle instrucciones a una persona para que realice tareas específicas",
+      "technologies": [
+        "Algoritmos",
+        "Lógica Computacional",
+        "Programación Desconectada"
+      ],
+      "presenters": [
+        "Daniel Mendoza",
+        "Ismael Sanchez"
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/path/to/image2.jpg",
+      "title": "Rock Paper Scissors",
+      "description": "Una mano robótica que juega piedra, papel o tijera",
+      "technologies": [
+        "Arduino",
+        "Python"
+      ],
+      "presenters": [
+        "Jaime López",
+        "Jaris Alday",
+        "Juan Alvites",
+        "Julián Acosta",
+        "Ian Terrones",
+        "Bruss Yncio"
+      ]
+    },
+    {
+      "id": 3,
+      "image": "/path/to/image2.jpg",
+      "title": "Wireless Jukebox",
+      "description": "Consiste en construir un tocadiscos con tecnología RFID para identificar y reproducir canciones",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Jaime López",
+        "Jaris Alday",
+        "Juan Alvites",
+        "Julián Acosta",
+        "Ian Terrones",
+        "Bruss Yncio"
+      ]
+    },
+    {
+      "id": 4,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 5,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 6,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 7,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 8,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 9,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 10,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 11,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    },
+    {
+      "id": 12,
+      "image": "/path/to/image2.jpg",
+      "title": "Arquitectura Many To One",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "technologies": [
+        "Arduino",
+        "Node.js",
+        "REST API"
+      ],
+      "presenters": [
+        "Luis Ventura"
+      ]
+    }
+  ],
+  "exhibitors": [
+    {
+      "photo": "https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg",
+      "name": "Jorge Conteras",
+      "linkedin": "https://www.linkedin.com/in/jorgito-contreras/",
+      "instagram": "https://www.instagram.com/jrg_code/",
+      "github": "https://github.com/jorgitooCoDe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg",
+      "name": "Luis Bazán",
+      "linkedin": "https://www.linkedin.com/in/luisbazandev/",
+      "instagram": "https://www.instagram.com/luis.brios/",
+      "github": "https://github.com/luisBazanDev"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg",
+      "name": "Junior Delgado",
+      "linkedin": "https://www.linkedin.com/in/aarondfv/",
+      "instagram": "https://www.instagram.com/stf_aaron/",
+      "github": "https://github.com/aarondfv"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg",
+      "name": "John Doe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    }
+  ],
+  "schedules": [
+    {
+      "date": {
+        "start": "2024-11-25T09:00:00Z",
+        "end": "2024-11-25T13:00:00Z"
+      },
+      "name": "Proyectos Expoferia 2024",
+      "description": "Todos los proyectos de la expoferia estarán disponibles en este horario, brindando la oportunidad de explorar, interacturar y conocer en detalle cada propuesta. ¡No te lo pierdas!",
+      "imageUrl": "https://cdn.mtocommunity.com/landing-security-team.webp"
+    },
+    {
+      "date": {
+        "start": "2024-11-25T09:30:00Z",
+        "end": "2024-11-25T10:30:00Z"
+      },
+      "name": "Trivia Técnica",
+      "description": "Pon a prueba tus conocimientos en sistemas e ingeniería con preguntas técnicas diseñadas para desafiarte. ¡Compite con otros asistentes y demuestra quién sabe más!",
+      "imageUrl": "https://cdn.mtocommunity.com/landing-security-team.webp"
+    },
+    {
+      "date": {
+        "start": "2024-11-25T10:45:00Z",
+        "end": "2024-11-25T11:45:00Z"
+      },
+      "name": "Ruleta de la Suerte",
+      "description": "Gira la ruleta y enfrenta el reto que te toque: desde preguntas de cultura general hasta acertijos y premios. ¡La suerte decidirá tu destino!",
+      "imageUrl": "https://cdn.mtocommunity.com/landing-security-team.webp"
+    },
+    {
+      "date": {
+        "start": "2024-11-25T12:00:00Z",
+        "end": "2024-11-25T13:00:00Z"
+      },
+      "name": "Torneo de Pac-Man",
+      "description": "Demuestra tus habilidades en el clásico Pac-Man. Compite por el mejor puntaje y conviértete en el campeón del torneo. ¡Diversión garantizada para todos!",
+      "imageUrl": "https://cdn.mtocommunity.com/landing-security-team.webp"
+    }
+  ]
+}

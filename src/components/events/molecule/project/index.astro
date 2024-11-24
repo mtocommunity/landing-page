@@ -17,7 +17,7 @@ const { image, title, description, technologies, presenters, id } = Astro.props;
     class="card relative w-full h-full cursor-pointer shadow-custom-cyan rounded-md border-mto_blue_light"
   >
     <div id={`card-inner-${id}`} class="card-inner relative w-full h-full">
-      <!-- Cara Frontal -->
+      <!-- Front face -->
       <div
         class="front absolute w-full h-full bg-mto_dark_gray rounded-lg p-4 flex flex-col items-center"
       >
@@ -30,7 +30,7 @@ const { image, title, description, technologies, presenters, id } = Astro.props;
         <p class="text-gray-700">{description}</p>
       </div>
 
-      <!-- Cara Posterior -->
+      <!-- Back face -->
       <div
         class="back absolute w-full h-full rounded-lg p-4 flex flex-col text-left pl-8"
       >
