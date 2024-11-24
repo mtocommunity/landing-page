@@ -1,0 +1,132 @@
+---
+const cards = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/150",
+    title: "Card 1 Title",
+    description: "Card 1 Description",
+  },
+  {
+    id: 2,
+    image: "https://via.placeholder.com/150",
+    title: "Card 2 Title",
+    description: "Card 2 Description",
+  },
+  {
+    id: 3,
+    image: "https://via.placeholder.com/150",
+    title: "Card 3 Title",
+    description: "Card 3 Description",
+  },
+];
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector<HTMLElement>(".slider-container");
+    if (!container) return;
+
+    function updateCardPositions() {
+      const cards = document.querySelectorAll<HTMLElement>(".slider-card");
+      cards.forEach((card, index) => {
+        if (index === 0) {
+          card.setAttribute("data-position", "left");
+        } else if (index === 1) {
+          card.setAttribute("data-position", "center");
+        } else if (index === 2) {
+          card.setAttribute("data-position", "right");
+        }
+      });
+    }
+
+    function rotateCards(direction: "left" | "right") {
+      if (!container) return;
+
+      const cards = document.querySelectorAll<HTMLElement>(".slider-card");
+      const cardsArray = Array.from(cards);
+
+      if (direction === "left") {
+        const card = cardsArray[0];
+        if (card.parentNode) {
+          card.parentNode.removeChild(card);
+          container.appendChild(card);
+        }
+      } else if (direction === "right") {
+        const card = cardsArray[cardsArray.length - 1];
+        if (card.parentNode) {
+          card.parentNode.removeChild(card);
+          container.insertBefore(card, cardsArray[0]);
+        }
+      }
+
+      requestAnimationFrame(() => {
+        updateCardPositions();
+      });
+    }
+
+    container.addEventListener("click", (event: Event) => {
+      const target = event.target as HTMLElement;
+      const clickedCard = target.closest<HTMLElement>(".slider-card");
+      if (!clickedCard) return;
+
+      const position = clickedCard.getAttribute("data-position");
+      if (position === "left") {
+        rotateCards("right");
+      } else if (position === "right") {
+        rotateCards("left");
+      }
+    });
+
+    updateCardPositions();
+  });
+</script>
+
+<div
+  class="slider-container flex gap-5 perspective-1000 min-h-screen flex-row items-center justify-center text-center mt-40"
+>
+  {
+    cards.map((card) => (
+      <div
+        class="slider-card w-44 h-80 rounded-lg shadow-lg transition-all duration-300 ease-in-out cursor-pointer text-center"
+        id={`card-${card.id}`}
+      >
+        <img
+          src={card.image}
+          alt={`Card ${card.id} Image`}
+          class="w-full rounded-t-lg"
+        />
+        <h3 class="mt-2">{card.title}</h3>
+        <p class="text-sm">{card.description}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    perspective: 1000px; /* Add this line */
+  }
+  .slider-card {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .slider-card[data-position="left"] {
+    transform: translateX(-50%) scale(0.8) rotateZ(-10deg);
+    z-index: 1;
+  }
+
+  .slider-card[data-position="center"] {
+    transform: translateX(0) scale(1.2) rotateY(0deg);
+    z-index: 10;
+  }
+
+  .slider-card[data-position="right"] {
+    transform: translateX(50%) scale(0.8) rotateZ(10deg);
+    z-index: 1;
+  }
+</style>
