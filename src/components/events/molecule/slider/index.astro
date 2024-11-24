@@ -82,7 +82,7 @@ const cards = [
 </script>
 
 <div
-  class="slider-container flex gap-5 perspective-1000 min-h-screen flex-row items-center justify-center text-center mt-40"
+  class="slider-container flex gap-5 perspective-1000 flex-row items-center justify-center text-center mt-24"
 >
   {
     cards.map((card) => (
@@ -116,7 +116,7 @@ const cards = [
   }
 
   .slider-card[data-position="left"] {
-    transform: translateX(-50%) scale(0.8) rotateZ(-10deg);
+    transform: translateX(-50%) scale(0.8) rotateZ(-15deg);
     z-index: 1;
   }
 
@@ -126,7 +126,7 @@ const cards = [
   }
 
   .slider-card[data-position="right"] {
-    transform: translateX(50%) scale(0.8) rotateZ(10deg);
+    transform: translateX(50%) scale(0.8) rotateZ(15deg);
     z-index: 1;
   }
 </style>
