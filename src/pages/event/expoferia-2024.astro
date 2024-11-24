@@ -5,6 +5,7 @@ import Schedule from "../../components/events/molecule/schedule/index.astro";
 import { MTOTransparentBackground } from "../../assets";
 import ProjectCard from "../../components/events/molecule/project/index.astro";
 import Exhibitor from "../../components/events/molecule/exhibitor/index.astro";
+import Slider from "../../components/events/molecule/slider/index.astro";
 
 const props = {
   title: "Expoferia 2024",
@@ -152,6 +153,9 @@ const projects = [
         <p class="text-sm">
           Entre las actividades destacadas de esta edición, encontrarás:
         </p>
+        <div>
+          <Slider />
+        </div>
       </div>
       <div></div>
     </section>
