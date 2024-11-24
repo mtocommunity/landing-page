@@ -71,7 +71,7 @@ const projects = [
 ---
 
 <Layout {...props}>
-  <div class="text-white">
+  <div class="text-white overflow-x-hidden">
     <CustomNavBar fixed full client:load>
       <a href="#about">Sobre la Expoferia</a>
       <a href="#projects">Proyectos</a>
@@ -82,12 +82,12 @@ const projects = [
     <!-- Principal -->
     <main
       id="home"
-      class="min-h-screen relative flex items-center justify-center"
+      class="min-h-screen relative flex items-center justify-center overflow-x-hidden"
     >
-      <div id="bg-box" class="">
-        <div id="bg-red"></div>
+      <div id="bg-box" class="w-full">
+        <div id="bg-red" class="w-full"></div>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center w-full">
         <h2 class="font-main_sans text-5xl font-bold text-white mb-6">
           EXPOFERIA
         </h2>
@@ -116,17 +116,17 @@ const projects = [
         </svg>
       </div>
     </main>
-    <!-- About -->
+
     <!-- About -->
     <section
       id="about"
-      class="min-h-screen flex flex-col items-center justify-start text-center mt-20"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-20 overflow-x-hidden"
     >
       <div id="bg-box" class="relative w-full h-full">
-        <div id="bg-red2"></div>
-        <div id="bg-blue2"></div>
+        <div id="bg-red2" class="w-full"></div>
+        <div id="bg-blue2" class="w-full"></div>
       </div>
-      <div class="flex flex-col items-center px-8 space-y-2">
+      <div class="flex flex-col items-center px-8 space-y-2 w-full">
         <h2 class="text-2xl mb-8 font-main_sans">SOBRE LA EXPOFERIA</h2>
         <p class="text-sm mb-4 leading-normal">
           La Expoferia UTP-Chiclayo 2024 es un espacio único donde estudiantes,
@@ -162,13 +162,13 @@ const projects = [
     <!-- Projects -->
     <section
       id="projects"
-      class="min-h-screen flex flex-col items-center justify-start text-center"
+      class="min-h-screen flex flex-col items-center justify-start text-center overflow-x-hidden"
     >
       <div class="container mx-auto px-4">
         <h2 class="text-3xl mb-8 font-main_sans">Proyectos</h2>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center justify-items-center"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center justify-items-center w-full"
         >
           {
             projects.map((project, index) => (
@@ -188,10 +188,10 @@ const projects = [
     <!-- Schedule -->
     <section
       id="schedule"
-      class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40 overflow-x-hidden"
     >
-      <div id="bg-box" class="">
-        <div id="bg-red"></div>
+      <div id="bg-box" class="w-full">
+        <div id="bg-red" class="w-full"></div>
       </div>
       <div class="container mx-auto px-4">
         <h2 class="text-3xl mb-8 font-main_sans">Cronograma</h2>
@@ -249,15 +249,15 @@ const projects = [
     <!-- Exhibitors -->
     <section
       id="exhibitors"
-      class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40 overflow-x-hidden"
     >
       <div id="bg-box" class="relative w-full h-full">
-        <div id="bg-red2"></div>
-        <div id="bg-blue2"></div>
+        <div id="bg-red2" class="w-full"></div>
+        <div id="bg-blue2" class="w-full"></div>
       </div>
-      <div class="flex flex-col items-center px-8 space-y-6">
+      <div class="flex flex-col items-center px-8 space-y-6 w-full">
         <h2 class="text-2xl mb-8 font-main_sans">EXPOSITORES</h2>
-        <div class="grid grid-cols-2 gap-16">
+        <div class="grid grid-cols-2 gap-16 w-full">
           <Exhibitor
             photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
             name="John Doe"
