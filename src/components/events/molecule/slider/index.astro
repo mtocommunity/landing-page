@@ -2,21 +2,24 @@
 const cards = [
   {
     id: 1,
-    image: "https://via.placeholder.com/150",
-    title: "Card 1 Title",
-    description: "Card 1 Description",
+    image: "https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg",
+    title: "Trivia Técnica",
+    description:
+      "Pon a prueba tus conocimientos y demuestra tu habilidad resolviendo preguntas sobre temas de Ingeniería de Sistemas",
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/150",
-    title: "Card 2 Title",
-    description: "Card 2 Description",
+    image: "https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg",
+    title: "Torneo de Pac-man",
+    description:
+      "Compiten con otros participantes y demuestran quién tiene la mejor estrategia",
   },
   {
     id: 3,
-    image: "https://via.placeholder.com/150",
-    title: "Card 3 Title",
-    description: "Card 3 Description",
+    image: "https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg",
+    title: "Ruleta de la Suerte",
+    description:
+      "Gira la ruleta y enfrenta el reto que te toque: desde preguntas de cultura general hasta acertijos y premios",
   },
 ];
 ---
@@ -87,16 +90,21 @@ const cards = [
   {
     cards.map((card) => (
       <div
-        class="slider-card w-44 h-80 rounded-lg shadow-lg transition-all duration-300 ease-in-out cursor-pointer text-center"
+        class="slider-card w-64 h-80 relative rounded-2xl border-2 border-transparent transition-all duration-300 ease-in-out cursor-pointer text-center p-3"
         id={`card-${card.id}`}
       >
-        <img
-          src={card.image}
-          alt={`Card ${card.id} Image`}
-          class="w-full rounded-t-lg"
-        />
-        <h3 class="mt-2">{card.title}</h3>
-        <p class="text-sm">{card.description}</p>
+        <div class="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-mto_red_light to-mto_blue_light" />
+        <div class="absolute inset-[2px] rounded-2xl bg-mto_dark_gray p-3">
+          <img
+            src={card.image}
+            alt={`Card ${card.id} Image`}
+            class="w-full h-44 object-cover rounded-2xl"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">{card.title}</h3>
+            <p class="text-xs text-gray-600 h-auto">{card.description}</p>
+          </div>
+        </div>
       </div>
     ))
   }
@@ -108,7 +116,7 @@ const cards = [
     width: 100%;
     max-width: 800px;
     height: 300px;
-    perspective: 1000px; /* Add this line */
+    perspective: 1000px;
   }
   .slider-card {
     position: absolute;
