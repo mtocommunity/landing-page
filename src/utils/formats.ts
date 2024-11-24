@@ -39,3 +39,12 @@ export function formatDate3(date: Date): string {
 
   return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)}. de ${year}`;
 }
+
+// utils/formatDate.ts
+export const formatTimeOnly = (date: Date) => {
+  return date.toLocaleTimeString('es-PE', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  });
+};

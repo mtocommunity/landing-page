@@ -3,7 +3,7 @@ import Layout from "../../layouts/event/index.astro";
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Agenda from "../../components/events/organism/Agenda.astro";
 import Speaker from "../../components/events/molecule/Speaker.astro";
-import TeamEvent from "../../components/landing/molecule/team_event/index.astro";
+import Schedule from "../../components/events/molecule/schedule/index.astro";
 
 import { MTOTransparentBackground } from "../../assets";
 
@@ -77,10 +77,10 @@ const projects = [
 <Layout {...props}>
   <div class="text-white">
     <CustomNavBar fixed full client:load>
-      <a href="#what-is">Sobre la Expoferia</a>
+      <a href="#about">Sobre la Expoferia</a>
       <a href="#projects">Proyectos</a>
-      <a href="#agenda">Agenda</a>
-      <a href="#expositores">Expositores</a>
+      <a href="#schedule">Cronograma</a>
+      <a href="#exhibitors">Expositores</a>
     </CustomNavBar>
 
     <!-- Principal -->
@@ -160,6 +160,7 @@ const projects = [
       <div></div>
     </section>
     <section
+      id="projects"
       class="min-h-screen flex flex-col items-center justify-start text-center"
     >
       <div class="container mx-auto px-4">
@@ -184,8 +185,64 @@ const projects = [
       </div>
     </section>
     <section
+      id="schedule"
       class="min-h-screen flex flex-col items-center justify-start text-center mt-40"
     >
+      <div id="bg-box" class="">
+        <div id="bg-red"></div>
+      </div>
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl mb-8 font-main_sans">Cronograma</h2>
+
+        <Schedule
+          event={{
+            date: {
+              start: new Date("2024-11-25T14:00:00Z"),
+              end: new Date("2024-11-25T18:00:00Z"),
+            },
+            name: "Proyectos Expoferia 2024",
+            description:
+              "Todos los proyectos presentados en la expoferia estarán disponibles para el público, brindando la oportunidad de explorar, interacturar y conocer en detalle cada propuesta durante este horario. ¡No te lo pierdas!",
+            imageUrl: "https://cdn.mtocommunity.com/landing-security-team.webp",
+          }}
+        />
+        <Schedule
+          event={{
+            date: {
+              start: new Date("2024-11-25T14:30:00Z"),
+              end: new Date("2024-11-25T15:30:00Z"),
+            },
+            name: "Trivia Técnica",
+            description:
+              "Pon a prueba tus conocimientos en sistemas e ingeniería con preguntas técnicas diseñadas para desafiarte. ¡Compite con otros asistentes y demuestra quién sabe más!",
+            imageUrl: "https://cdn.mtocommunity.com/landing-security-team.webp",
+          }}
+        />
+        <Schedule
+          event={{
+            date: {
+              start: new Date("2024-11-25T15:45:00Z"),
+              end: new Date("2024-11-25T16:45:00Z"),
+            },
+            name: "Ruleta de la Suerte",
+            description:
+              "Gira la ruleta y enfrenta el reto que te toque: desde preguntas de cultura general hasta acertijos y premios. ¡La suerte decidirá tu destino!",
+            imageUrl: "https://cdn.mtocommunity.com/landing-security-team.webp",
+          }}
+        />
+        <Schedule
+          event={{
+            date: {
+              start: new Date("2024-11-25T17:00:00Z"),
+              end: new Date("2024-11-25T18:00:00Z"),
+            },
+            name: "Torneo de Pac-Man",
+            description:
+              "Demuestra tus habilidades en el clásico Pac-Man. Compite por el mejor puntaje y conviértete en el campeón del torneo. ¡Diversión garantizada para todos!",
+            imageUrl: "https://cdn.mtocommunity.com/landing-security-team.webp",
+          }}
+        />
+      </div>
     </section>
   </div>
 </Layout>
