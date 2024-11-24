@@ -40,11 +40,11 @@ export function formatDate3(date: Date): string {
   return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)}. de ${year}`;
 }
 
-// utils/formatDate.ts
 export const formatTimeOnly = (date: Date) => {
-  return date.toLocaleTimeString('es-PE', {
+  return new Intl.DateTimeFormat('es-PE', {
     hour: '2-digit',
     minute: '2-digit',
-    hour12: true
-  });
+    hour12: true,
+    timeZone: 'America/Lima'
+  }).format(date);
 };
