@@ -57,7 +57,73 @@
   filter: blur(5rem);
 }
 
+.emoji {
+  margin: 4px 0;
+}
 
+.joystick {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  width: 55px;
+  height: 55px;
+}
+
+.star-struck {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+}
+
+.lentes {
+  position: absolute;
+  top: 43%;
+  left: 21%;
+  width: 80px;
+  height: 80px;
+}
+
+.dado {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 75px;
+  height: 75px;
+}
+
+.happy {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  width: 70px;
+  height: 70px;
+}
+
+.smiling {
+  position: absolute;
+  top: 17%;
+  right: 6%;
+  width: 50px;
+  height: 50px;
+}
+
+.video-game {
+  position: absolute;
+  top: 43%;
+  right: 10%;
+  width: 110px;
+  height: 110px;
+}
+
+.lengua {
+  position: absolute;
+  top: 63%;
+  right: 20%;
+  width: 95px;
+  height: 95px;
+}
 
 @media (min-width: 768px) {
   #bg-box {

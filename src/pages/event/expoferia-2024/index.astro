@@ -7,6 +7,9 @@ import ProjectCard from "../../../components/events/molecule/project/index.astro
 import Exhibitor from "../../../components/events/molecule/exhibitor/index.astro";
 import Slider from "../../../components/events/molecule/slider/index.astro";
 import expoferiaData from "./data.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import TextBorder from "../../../components/events/molecule/textBorder/index.astro";
 import "./style.css";
 
 const { props, projects, exhibitors, schedules } = expoferiaData;
@@ -30,12 +33,78 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
         <div class="bg-red w-full"></div>
       </div>
       <div class="flex flex-col items-center w-full">
-        <h2 class="font-main_sans text-5xl font-bold text-white mb-6">
-          EXPOFERIA
-        </h2>
-        <h3 class="font-main_sans font-bold text-5xl text-mto_red_dark mb-16">
-          2024
-        </h3>
+        <div class="flex items-center justify-center w-full mb-6">
+          <!-- Emojis on the left -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/joystick.png"
+              class="emoji joystick hidden md:block lg:block xl:block"
+              alt="Emoji 1"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/star-struck.png"
+              class="emoji star-struck hidden md:block lg:block xl:block"
+              alt="Emoji 2"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/lentes.png"
+              class="emoji lentes hidden md:block lg:block xl:block"
+              alt="Emoji 3"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/dado.png"
+              class="emoji dado hidden md:block lg:block xl:block"
+              alt="Emoji 4"
+            />
+          </div>
+
+          <!-- Text -->
+          <div class="flex flex-col items-center">
+            <h2 class="flex font-main_sans items-center font-bold text-black">
+              <span class="text-5xl text-white">E</span>
+              <FontAwesomeIcon
+                icon={faXTwitter}
+                className="text-5xl w-10 text-white"
+              />
+              <span class="text-5xl text-white">PO</span>
+            </h2>
+            <div
+              class="relative text-mto_red_light text-5xl font-main_sans font-bold z-10"
+            >
+              <h2 class="relative z-20">FERIA</h2>
+              <TextBorder
+                title="FERIA"
+                color="red"
+                className="text-transparent top-0 absolute scale-125 z-10"
+              />
+            </div>
+            <h3 class="text-white font-main_sans font-bold text-5xl">2024</h3>
+          </div>
+
+          <!-- Emojis on the right -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/happy.png"
+              class="emoji happy hidden md:block lg:block xl:block"
+              alt="Emoji 5"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/smiling.png"
+              class="emoji smiling hidden md:block lg:block xl:block"
+              alt="Emoji 6"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/video-game.png"
+              class="emoji video-game hidden md:block lg:block xl:block"
+              alt="Emoji 7"
+            />
+            <img
+              src="https://cdn.mtocommunity.com/events/expoferia-2024/emojis/lengua.png"
+              class="emoji lengua hidden md:block lg:block xl:block"
+              alt="Emoji 8"
+            />
+          </div>
+        </div>
         <div class="flex gap-4 h-[5vh] items-center mt-4">
           <MTOTransparentBackground className="h-full scale-125" />
           <span class="text-2xl font-main_sans mr-7 ml-5">X</span>
@@ -45,7 +114,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
           />
         </div>
         <svg
-          class="absolute bottom-16 w-72 h-36 text-mto_red_dark"
+          class="absolute bottom-8 w-72 h-36 text-mto_red_dark"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 84 72"
           fill="none"
@@ -100,7 +169,9 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
         <p class="text-sm pt-3">
           Entre las actividades destacadas de esta edición, encontrarás:
         </p>
-        <div class="w-full flex justify-center items-center">
+        <div
+          class="w-full flex justify-center items-center overflow-y-hidden overflow-x-hidden"
+        >
           <Slider />
         </div>
       </div>
@@ -111,10 +182,12 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
       class="min-h-screen flex flex-col items-center justify-start text-center overflow-x-hidden mb-20"
     >
       <div class="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
-        <h2 class="text-3xl mb-20 font-main_sans lg:text-4xl">Proyectos</h2>
+        <h2 class="text-3xl mb-20 font-main_sans md:mt-10 lg:text-4xl">
+          Proyectos
+        </h2>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center justify-items-center w-full"
+          class="grid grid-cols-1 mb-10 md:mb-10 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center justify-items-center w-full"
         >
           {
             projects.map((project, index) => (
@@ -140,7 +213,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
         <div class="bg-red w-full"></div>
       </div>
       <div class="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
-        <h2 class="text-3xl mb-8 font-main_sans">Cronograma</h2>
+        <h2 class="text-3xl mb-14 font-main_sans lg:text-4xl">Cronograma</h2>
 
         <div class="flex flex-col items-center">
           {
@@ -164,7 +237,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
     <!-- Exhibitors -->
     <section
       id="exhibitors"
-      class="min-h-screen flex flex-col items-center justify-start text-center mt-40 overflow-x-hidden"
+      class="min-h-screen flex flex-col items-center justify-start text-center mt-40 overflow-x-hidden mb-20 md:mb-20"
     >
       <div class="bg-box relative w-full h-full">
         <div class="bg-red2 w-full"></div>
@@ -173,8 +246,10 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
       <div
         class="flex flex-col items-center px-8 space-y-6 w-full md:px-16 lg:px-24 xl:px-32"
       >
-        <h2 class="text-2xl mb-8 font-main_sans">EXPOSITORES</h2>
-        <div class="grid grid-cols-2 gap-16 w-full">
+        <h2 class="text-3xl mb-14 font-main_sans lg:text-4xl">EXPOSITORES</h2>
+        <div
+          class="grid grid-cols-2 md:mb-20 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-16 w-full"
+        >
           {
             exhibitors.map((exhibitor) => (
               <Exhibitor

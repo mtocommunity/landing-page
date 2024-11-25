@@ -84,110 +84,12 @@
       "presenters": [
         "Luis Ventura"
       ]
-    },
-    {
-      "id": 6,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 7,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 8,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 9,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 10,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 11,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
-    },
-    {
-      "id": 12,
-      "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
-      "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
-      ],
-      "presenters": [
-        "Luis Ventura"
-      ]
     }
   ],
   "exhibitors": [
     {
       "photo": "https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg",
-      "name": "Jorge Conteras",
+      "name": "Jorge Contreras",
       "linkedin": "https://www.linkedin.com/in/jorgito-contreras/",
       "instagram": "https://www.instagram.com/jrg_code/",
       "github": "https://github.com/jorgitooCoDe"
@@ -207,8 +109,64 @@
       "github": "https://github.com/aarondfv"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg",
-      "name": "John Doe",
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "github": "https://github.com/johndoe"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/janluvi-burga.webp",
+      "name": "Janluvi Burga",
       "linkedin": "https://linkedin.com/in/johndoe",
       "instagram": "https://instagram.com/johndoe",
       "github": "https://github.com/johndoe"
