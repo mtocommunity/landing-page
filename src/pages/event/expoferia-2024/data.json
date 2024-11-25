@@ -204,8 +204,8 @@
   "schedules": [
     {
       "date": {
-        "start": "2024-11-25T09:00:00Z",
-        "end": "2024-11-25T13:00:00Z"
+        "start": "2024-11-25T14:00:00Z",
+        "end": "2024-11-25T18:00:00Z"
       },
       "name": "Proyectos Expoferia 2024",
       "description": "Todos los proyectos de la expoferia estarán disponibles en este horario, brindando la oportunidad de explorar, interacturar y conocer en detalle cada propuesta. ¡No te lo pierdas!",
@@ -213,8 +213,8 @@
     },
     {
       "date": {
-        "start": "2024-11-25T09:30:00Z",
-        "end": "2024-11-25T10:30:00Z"
+        "start": "2024-11-25T14:30:00Z",
+        "end": "2024-11-25T15:30:00Z"
       },
       "name": "Trivia Técnica",
       "description": "Pon a prueba tus conocimientos en sistemas e ingeniería con preguntas técnicas diseñadas para desafiarte. ¡Compite con otros asistentes y demuestra quién sabe más!",
@@ -222,8 +222,8 @@
     },
     {
       "date": {
-        "start": "2024-11-25T10:45:00Z",
-        "end": "2024-11-25T11:45:00Z"
+        "start": "2024-11-25T15:45:00Z",
+        "end": "2024-11-25T16:45:00Z"
       },
       "name": "Ruleta de la Suerte",
       "description": "Gira la ruleta y enfrenta el reto que te toque: desde preguntas de cultura general hasta acertijos y premios. ¡La suerte decidirá tu destino!",
@@ -231,8 +231,8 @@
     },
     {
       "date": {
-        "start": "2024-11-25T12:00:00Z",
-        "end": "2024-11-25T13:00:00Z"
+        "start": "2024-11-25T17:00:00Z",
+        "end": "2024-11-25T18:00:00Z"
       },
       "name": "Torneo de Pac-Man",
       "description": "Demuestra tus habilidades en el clásico Pac-Man. Compite por el mejor puntaje y conviértete en el campeón del torneo. ¡Diversión garantizada para todos!",
