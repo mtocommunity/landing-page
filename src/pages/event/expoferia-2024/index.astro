@@ -16,7 +16,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
 ---
 
 <Layout {...props}>
-  <div class="text-white overflow-x-hidden">
+  <div class="text-white overflow-x-hidden select-none">
     <CustomNavBar fixed full client:load>
       <a href="#about">Sobre la Expoferia</a>
       <a href="#projects">Proyectos</a>
@@ -181,6 +181,10 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
       id="projects"
       class="min-h-screen flex flex-col items-center justify-start text-center overflow-x-hidden mb-20"
     >
+      <div class="bg-box relative w-full h-full">
+        <div class="bg-red3 w-full"></div>
+        <div class="bg-blue w-full"></div>
+      </div>
       <div class="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
         <h2 class="text-3xl mb-20 font-main_sans md:mt-10 lg:text-4xl">
           Proyectos
@@ -210,7 +214,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
       class="min-h-screen flex flex-col items-center justify-start text-center mt-40 overflow-x-hidden"
     >
       <div class="bg-box w-full">
-        <div class="bg-red w-full"></div>
+        <div class="bg-red4 w-full"></div>
       </div>
       <div class="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
         <h2 class="text-3xl mb-14 font-main_sans lg:text-4xl">Cronograma</h2>

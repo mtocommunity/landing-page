@@ -34,12 +34,35 @@
 
 .bg-red2 {
   content: "";
-  width: 40%;
-  height: 30%;
+  width: 30%;
+  height: 40%;
   background-color: rgba(228, 20, 118, 0.4);
-  top: 50%;
+  top: 60%;
   left: 5%;
   transform: translateY(-50%);
+  z-index: -10;
+  position: absolute;
+}
+
+.bg-red3 {
+  content: "";
+  width: 30%;
+  height: 40%;
+  background-color: rgba(228, 20, 118, 0.4);
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: -10;
+  position: absolute;
+}
+
+.bg-red4 {
+  content: "";
+  width: 80%;
+  height: 100%;
+  background-color: rgba(228, 20, 118, 0.2);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -10;
   position: absolute;
 }
@@ -50,6 +73,7 @@
   height: 30%;
   @apply bg-mto_blue;
   transform: translateY(-50%);
+  top: 60%;
   bottom: 0;
   right: 5%;
   z-index: -12;
@@ -126,7 +150,85 @@
 }
 
 @media (min-width: 768px) {
-  #bg-box {
+  .bg-box {
     filter: blur(9.5rem);
   }
+
+}
+
+@media (max-width: 767px) {
+  .bg-red {
+    width: 80%;
+    height: 50%;
+  }
+
+  .bg-red2 {
+    top: 60%;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .bg-red2 {
+    top: 35%;
+  }
+
+  .bg-red3 {
+    top: 45%;
+  }
+
+  .bg-red4 {
+    top: 75%;
+  }
+
+  .bg-blue {
+    top: 90%;
+    right: 20%;
+  }
+
+  .bg-blue2 {
+    top: 70%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .bg-red {
+    width: 30%;
+    height: 50%;
+    filter: blur(4rem);
+  }
+
+  .bg-blue {
+    top: 50%;
+    left: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red2 {
+    top: 50%;
+    left: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-blue2 {
+    top: 50%;
+    right: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red3 {
+    top: 30%;
+    right: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red4 {
+    top: 70%;
+    width: 30%;
+    left: 50%;
+    filter: blur(9rem);
+  }
+
+
 }

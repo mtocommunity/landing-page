@@ -1,13 +1,15 @@
 ---
+// Define the Props interface
 export interface Props {
   image: string;
   title: string;
   description: string;
-  technologies: string[];
+  technologies: { name: string; img?: string }[];
   presenters: string[];
   id: string;
 }
 
+// Destructure the props
 const { image, title, description, technologies, presenters, id } = Astro.props;
 ---
 
@@ -32,13 +34,28 @@ const { image, title, description, technologies, presenters, id } = Astro.props;
 
       <!-- Back face -->
       <div
-        class="back absolute w-full h-full rounded-lg p-4 flex flex-col text-left pl-8"
+        class="bg-mto_dark_gray back absolute w-full h-full rounded-lg p-4 flex flex-col text-left pl-8"
       >
-        <h4 class="text-lg font-semibold mb-2 text-left">Tecnologías</h4>
+        <h4 class="text-lg font-semibold mb-2 text-left text-mto_red_light">
+          Tecnologías
+        </h4>
         <ul class="list-disc list-inside mb-4 text-left">
-          {technologies.map((tech) => <li>{tech}</li>)}
+          {
+            technologies.map((tech) =>
+              tech.img ? (
+                <li class="flex items-center space-x-2">
+                  <img src={tech.img} class="w-6 h-6 mb-1" />
+                  <span>{tech.name}</span>
+                </li>
+              ) : (
+                <li>{tech.name}</li>
+              ),
+            )
+          }
         </ul>
-        <h4 class="text-lg font-semibold mb-2 text-left">Expositores</h4>
+        <h4 class="text-lg font-semibold mb-2 text-left text-mto_red_light">
+          Expositores
+        </h4>
         <ul class="list-disc list-inside text-left">
           {presenters.map((presenter) => <li>{presenter}</li>)}
         </ul>

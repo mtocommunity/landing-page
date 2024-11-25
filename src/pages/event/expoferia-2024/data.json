@@ -11,9 +11,15 @@
       "title": "Programando un Humano",
       "description": "Consiste en darle instrucciones a una persona para que realice tareas específicas",
       "technologies": [
-        "Algoritmos",
-        "Lógica Computacional",
-        "Programación Desconectada"
+        {
+          "name": "Algoritmos"
+        },
+        {
+          "name": "Lógica computacional"
+        },
+        {
+          "name": "Programación desconectada"
+        }
       ],
       "presenters": [
         "Daniel Mendoza",
@@ -26,8 +32,14 @@
       "title": "Rock Paper Scissors",
       "description": "Una mano robótica que juega piedra, papel o tijera",
       "technologies": [
-        "Arduino",
-        "Python"
+        {
+          "name": "Arduino",
+          "img": "https://cdn.mtocommunity.com/languages-icons/c-plusplus.png"
+        },
+        {
+          "name": "Python",
+          "img": "https://cdn.mtocommunity.com/languages-icons/python.png"
+        }
       ],
       "presenters": [
         "Jaime López",
@@ -44,9 +56,14 @@
       "title": "Wireless Jukebox",
       "description": "Consiste en construir un tocadiscos con tecnología RFID para identificar y reproducir canciones",
       "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
+        {
+          "name": "Arduino",
+          "img": "https://cdn.mtocommunity.com/languages-icons/c-plusplus.png"
+        },
+        {
+          "name": "Python",
+          "img": "https://cdn.mtocommunity.com/languages-icons/python.png"
+        }
       ],
       "presenters": [
         "Jaime López",
@@ -61,11 +78,16 @@
       "id": 4,
       "image": "/path/to/image2.jpg",
       "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente",
       "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
+        {
+          "name": "Arduino",
+          "img": "https://cdn.mtocommunity.com/languages-icons/arduino.png"
+        },
+        {
+          "name": "Python",
+          "img": "https://cdn.mtocommunity.com/languages-icons/python.png"
+        }
       ],
       "presenters": [
         "Luis Ventura"
@@ -74,15 +96,22 @@
     {
       "id": 5,
       "image": "/path/to/image2.jpg",
-      "title": "Arquitectura Many To One",
-      "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente.",
+      "title": "ARP Spoofing",
+      "description": "La actividad consiste en realizar una demostración de cómo se efectúan los ataques de ARP Spoofing y visualización del flujo e importancia de las conexiones HTTP vs HTTPS",
       "technologies": [
-        "Arduino",
-        "Node.js",
-        "REST API"
+        {
+          "name": "Python",
+          "img": "https://cdn.mtocommunity.com/languages-icons/python.png"
+        },
+        {
+          "name": "Bash",
+          "img": "https://cdn.mtocommunity.com/languages-icons/bash.png"
+        }
       ],
       "presenters": [
-        "Luis Ventura"
+        "Junior Delgado",
+        "Abner Cubas",
+        "Briggitte Martínez"
       ]
     }
   ],
