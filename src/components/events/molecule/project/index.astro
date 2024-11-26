@@ -1,0 +1,103 @@
+---
+// Define the Props interface
+export interface Props {
+  image: string;
+  title: string;
+  description: string;
+  technologies: { name: string; img?: string }[];
+  presenters: string[];
+  id: string;
+}
+
+// Destructure the props
+const { image, title, description, technologies, presenters, id } = Astro.props;
+---
+
+<div class="w-72 h-96">
+  <div
+    id={`card-${id}`}
+    class="card relative w-full h-full cursor-pointer shadow-custom-cyan rounded-lg border-mto_blue_light bg-mto_blue_dark"
+  >
+    <div id={`card-inner-${id}`} class="card-inner relative w-full h-full">
+      <!-- Front face -->
+      <div
+        class="front absolute w-full h-full bg-mto_dark_gray rounded-lg p-4 flex flex-col items-center"
+      >
+        <img
+          src={image}
+          alt={title}
+          class="w-full h-56 object-cover rounded-md mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2 text-white">{title}</h3>
+        <p class="text-gray-700">{description}</p>
+      </div>
+
+      <!-- Back face -->
+      <div
+        class="bg-mto_dark_gray back absolute w-full h-full rounded-lg p-4 flex flex-col text-left pl-8"
+      >
+        <h4 class="text-lg font-semibold mb-2 text-left text-mto_red_light">
+          Tecnologías
+        </h4>
+        <ul class="list-disc list-inside mb-4 text-left">
+          {
+            technologies.map((tech) =>
+              tech.img ? (
+                <li class="flex items-center space-x-2">
+                  <img src={tech.img} class="w-6 h-6 mb-1" />
+                  <span>{tech.name}</span>
+                </li>
+              ) : (
+                <li>{tech.name}</li>
+              )
+            )
+          }
+        </ul>
+        <h4 class="text-lg font-semibold mb-2 text-left text-mto_red_light">
+          Expositores
+        </h4>
+        <ul class="list-disc list-inside text-left">
+          {presenters.map((presenter) => <li>{presenter}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+</style>
+
+<script define:vars={{ id }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const card = document.getElementById(`card-${id}`);
+    const cardInner = document.getElementById(`card-inner-${id}`);
+
+    if (card && cardInner) {
+      card.addEventListener("click", () => {
+        cardInner.classList.toggle("flipped");
+      });
+    }
+  });
+</script>

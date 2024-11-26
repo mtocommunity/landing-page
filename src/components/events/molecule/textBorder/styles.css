@@ -1,3 +1,7 @@
 .text-border-purple {
   -webkit-text-stroke: 1px rgb(102 32 185);
 }
+
+.text-border-red {
+  -webkit-text-stroke: 1px #EC458D;
+}

@@ -1,10 +1,10 @@
 export type EventAgendaItem =
   | string
   | {
-      date: Date;
-      title: string;
-      description: string;
-    };
+    date: Date;
+    title: string;
+    description: string;
+  };
 
 export type EventAgendaDay = {
   date: Date;
@@ -15,3 +15,16 @@ export type EventAgendaDay = {
 export type EventAgenda = {
   days: EventAgendaDay[];
 };
+
+export interface EventDate {
+  start: Date;
+  end: Date;
+}
+
+export interface ExpoEvent {
+  date: EventDate;
+  name: string;
+  description: string;
+  imageUrl: string;
+  link?: string;
+}
