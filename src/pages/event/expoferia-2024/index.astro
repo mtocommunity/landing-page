@@ -16,7 +16,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
 ---
 
 <Layout {...props}>
-  <div class="text-white overflow-x-hidden select-none">
+  <div class="text-white overflow-x-hidden">
     <CustomNavBar fixed full client:load>
       <a href="#about">Sobre la Expoferia</a>
       <a href="#projects">Proyectos</a>
@@ -33,7 +33,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
         <div class="bg-red w-full"></div>
       </div>
       <div class="flex flex-col items-center w-full">
-        <div class="flex items-center justify-center w-full mb-6">
+        <div class="flex items-center justify-center w-full mb-6 select-none">
           <!-- Emojis on the left -->
           <div class="flex flex-col items-center">
             <img
