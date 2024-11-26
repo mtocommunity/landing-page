@@ -21,10 +21,7 @@
           "name": "Programación desconectada"
         }
       ],
-      "presenters": [
-        "Daniel Mendoza",
-        "Ismael Sanchez"
-      ]
+      "presenters": ["Daniel Mendoza", "Ismael Sanchez"]
     },
     {
       "id": 2,
@@ -81,17 +78,19 @@
       "description": "Se explicará cómo los distintos servicios en la nube trabajan juntos para mantener la plataforma de la comunidad operativa y eficiente",
       "technologies": [
         {
-          "name": "Arduino",
-          "img": "https://cdn.mtocommunity.com/languages-icons/arduino.png"
+          "name": "Typescript",
+          "img": "https://cdn.mtocommunity.com/languages-icons/ts.png"
         },
         {
-          "name": "Python",
-          "img": "https://cdn.mtocommunity.com/languages-icons/python.png"
+          "name": "HTML",
+          "img": "https://cdn.mtocommunity.com/languages-icons/html.png"
+        },
+        {
+          "name": "Markdown",
+          "img": "https://cdn.mtocommunity.com/languages-icons/md.png"
         }
       ],
-      "presenters": [
-        "Luis Ventura"
-      ]
+      "presenters": ["Luis Ventura"]
     },
     {
       "id": 5,
@@ -108,11 +107,7 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/bash.png"
         }
       ],
-      "presenters": [
-        "Junior Delgado",
-        "Abner Cubas",
-        "Briggitte Martínez"
-      ]
+      "presenters": ["Junior Delgado", "Abner Cubas", "Briggitte Martínez"]
     },
     {
       "id": 6,
@@ -221,6 +216,34 @@
       "name": "Abner Cubas",
       "instagram": "https://www.instagram.com/abner_90r",
       "linkedin": "https://www.linkedin.com/in/abner-atlai-cubas-parra-176a7329a/"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "name": "???"
     }
   ],
   "schedules": [
