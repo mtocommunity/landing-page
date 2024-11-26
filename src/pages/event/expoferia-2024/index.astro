@@ -255,17 +255,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
         <div
           class="grid grid-cols-2 md:mb-20 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-16 w-full"
         >
-          {
-            exhibitors.map((exhibitor) => (
-              <Exhibitor
-                photo={exhibitor.photo}
-                name={exhibitor.name}
-                linkedin={exhibitor.linkedin}
-                instagram={exhibitor.instagram}
-                github={exhibitor.github}
-              />
-            ))
-          }
+          {exhibitors.map((exhibitor) => <Exhibitor exhibitor={exhibitor} />)}
         </div>
       </div>
     </section>
