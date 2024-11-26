@@ -1,0 +1,78 @@
+---
+import { ExpoEvent } from "../../../../types";
+import { formatTimeOnly } from "../../../../utils";
+import Button from "../../../general/attoms/button";
+import { ButtonType } from "../../../general/attoms/button/types";
+
+interface Props {
+  event: ExpoEvent;
+  opacity?: number;
+}
+
+const { event, opacity = 100 } = Astro.props;
+---
+
+<div class="flex w-4/5 items-center group md:w-2/3 xl:w-1/2">
+  <div
+    class="hidden rounded-full aspect-square w-24 bg-mto_gray_light md:flex lg:w-48 my-8 outline outline-mto_gray_light group-hover:outline-mto_blue_dark transition-all"
+  >
+    <img
+      src={event.imageUrl}
+      class="w-full aspect-square object-cover rounded-full"
+    />
+  </div>
+  <div
+    class={`flex items-center relative opacity-${opacity} hover:opacity-100`}
+  >
+    <div
+      class="w-12 h-[.2rem] bg-mto_gray_light hidden transition-colors md:flex xl:w-16 group-hover:bg-mto_blue_dark"
+    >
+      <!-- Horizontal -->
+    </div>
+    <div
+      class="w-3 aspect-square bg-mto_red_light rounded-full absolute -right-1 group-hover:bg-mto_blue_dark"
+    >
+      <div
+        class="absolute w-5 aspect-square border border-mto_red_light rounded-full -left-1 -top-1 hidden md:block group-hover:border-mto_blue_dark xl:w-7 xl:-left-2 xl:-top-2"
+      >
+        <!-- Border 1 -->
+      </div>
+      <div
+        class="absolute w-7 aspect-square outline outline-1 outline-mto_blue_dark rounded-full -left-2 -top-2 scale-0 group-hover:scale-100 transition-transform duration-300 xl:w-11 xl:-left-4 xl:-top-4"
+      >
+        <!-- Border 2 -->
+      </div>
+    </div>
+    <div class="h-72 w-[.2rem] bg-mto_red_light ml-10">
+      <!-- Vertical -->
+    </div>
+  </div>
+  <div class="flex flex-col ml-8 py-8 md:ml-16 lg:ml-32 w-full">
+    <span class="text-white group-hover:text-mto_blue_dark text-sm">
+      {
+        event.date?.start && event.date?.end
+          ? `${formatTimeOnly(event.date.start)} - ${formatTimeOnly(event.date.end)}`
+          : "Upcoming"
+      }
+    </span>
+    <h3
+      class="text-xl font-bold transition-colors text-white group-hover:text-mto_blue_dark xl:text-2xl"
+    >
+      {event.name}
+    </h3>
+    <p class="text-left mt-5 text-gray-500 text-sm xl:text-base">
+      {event.description}
+    </p>
+    {
+      event.link && (
+        <Button
+          type={ButtonType.PRIMARY}
+          className="w-1/2 mt-4"
+          link={event.link}
+        >
+          Leer más
+        </Button>
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,234 @@
+.bg-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -30;
+  filter: blur(5rem);
+}
+
+.bg-red {
+  content: "";
+  width: 80%;
+  height: 50%;
+  background-color: rgba(228, 20, 118, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  position: absolute;
+}
+
+
+.bg-blue {
+  content: "";
+  width: 23%;
+  height: 50%;
+  @apply bg-mto_blue;
+  bottom: 0;
+  right: 5%;
+  z-index: -12;
+  position: absolute;
+  filter: blur(5rem);
+}
+
+
+.bg-red2 {
+  content: "";
+  width: 30%;
+  height: 40%;
+  background-color: rgba(228, 20, 118, 0.4);
+  top: 60%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: -10;
+  position: absolute;
+}
+
+.bg-red3 {
+  content: "";
+  width: 30%;
+  height: 40%;
+  background-color: rgba(228, 20, 118, 0.4);
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: -10;
+  position: absolute;
+}
+
+.bg-red4 {
+  content: "";
+  width: 80%;
+  height: 100%;
+  background-color: rgba(228, 20, 118, 0.2);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  position: absolute;
+}
+
+.bg-blue2 {
+  content: "";
+  width: 23%;
+  height: 30%;
+  @apply bg-mto_blue;
+  transform: translateY(-50%);
+  top: 60%;
+  bottom: 0;
+  right: 5%;
+  z-index: -12;
+  position: absolute;
+  filter: blur(5rem);
+}
+
+.emoji {
+  margin: 4px 0;
+}
+
+.joystick {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  width: 55px;
+  height: 55px;
+}
+
+.star-struck {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+}
+
+.lentes {
+  position: absolute;
+  top: 43%;
+  left: 21%;
+  width: 80px;
+  height: 80px;
+}
+
+.dado {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 75px;
+  height: 75px;
+}
+
+.happy {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  width: 70px;
+  height: 70px;
+}
+
+.smiling {
+  position: absolute;
+  top: 17%;
+  right: 6%;
+  width: 50px;
+  height: 50px;
+}
+
+.video-game {
+  position: absolute;
+  top: 43%;
+  right: 10%;
+  width: 110px;
+  height: 110px;
+}
+
+.lengua {
+  position: absolute;
+  top: 63%;
+  right: 20%;
+  width: 95px;
+  height: 95px;
+}
+
+@media (min-width: 768px) {
+  .bg-box {
+    filter: blur(9.5rem);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .bg-red {
+    width: 80%;
+    height: 50%;
+  }
+
+  .bg-red2 {
+    top: 60%;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .bg-red2 {
+    top: 35%;
+  }
+
+  .bg-red3 {
+    top: 45%;
+  }
+
+  .bg-red4 {
+    top: 75%;
+  }
+
+  .bg-blue {
+    top: 90%;
+    right: 20%;
+  }
+
+  .bg-blue2 {
+    top: 70%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .bg-red {
+    width: 30%;
+    height: 50%;
+    filter: blur(4rem);
+  }
+
+  .bg-blue {
+    top: 50%;
+    left: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red2 {
+    top: 50%;
+    left: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-blue2 {
+    top: 50%;
+    right: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red3 {
+    top: 30%;
+    right: 20%;
+    filter: blur(8rem);
+  }
+
+  .bg-red4 {
+    top: 70%;
+    width: 30%;
+    left: 50%;
+    filter: blur(9rem);
+  }
+
+
+}
