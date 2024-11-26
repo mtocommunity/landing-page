@@ -26,27 +26,21 @@ const { photo, name, linkedin, instagram, github } = Astro.props;
     {
       linkedin && (
         <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="text-blue-600 w-6 h-6"
-          />
+          <FontAwesomeIcon icon={faLinkedin} className="text-white w-6 h-6" />
         </a>
       )
     }
     {
       instagram && (
         <a href={instagram} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="text-pink-600 w-6 h-6"
-          />
+          <FontAwesomeIcon icon={faInstagram} className="text-white w-6 h-6" />
         </a>
       )
     }
     {
       github && (
         <a href={github} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} className="text-gray-800 w-6 h-6" />
+          <FontAwesomeIcon icon={faGithub} className="text-white w-6 h-6" />
         </a>
       )
     }
