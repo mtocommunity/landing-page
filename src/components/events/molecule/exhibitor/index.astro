@@ -6,7 +6,9 @@ import {
   faGithub,
   faYoutube,
   faXTwitter,
+  faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   exhibitor: {
@@ -17,11 +19,22 @@ interface Props {
     github?: string;
     youtube?: string;
     x?: string;
+    email?: string;
+    facebook?: string;
   };
 }
 
-const { photo, name, linkedin, instagram, github, youtube, x } =
-  Astro.props.exhibitor;
+const {
+  photo,
+  name,
+  linkedin,
+  instagram,
+  github,
+  youtube,
+  x,
+  email,
+  facebook,
+} = Astro.props.exhibitor;
 ---
 
 <div class="flex flex-col items-center">
@@ -75,6 +88,26 @@ const { photo, name, linkedin, instagram, github, youtube, x } =
         <a href={x} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon
             icon={faXTwitter}
+            className="text-gray-300 hover:text-white w-6 h-6"
+          />
+        </a>
+      )
+    }
+    {
+      email && (
+        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            className="text-gray-300 hover:text-white w-6 h-6"
+          />
+        </a>
+      )
+    }
+    {
+      facebook && (
+        <a href={facebook} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon
+            icon={faFacebookF}
             className="text-gray-300 hover:text-white w-6 h-6"
           />
         </a>
