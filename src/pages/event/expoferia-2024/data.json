@@ -120,13 +120,13 @@
     },
     {
       "id": 6,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
+      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/blackdog-fastfood.jpg",
       "title": "BlackDog FastFood",
       "description": "Un e-commerce para un restaurante, desarrollado en el curso Integrador I y refinado en el ciclo actual.",
       "technologies": [
         {
           "name": "Java Server Pages",
-          "img": ""
+          "img": "https://cdn.mtocommunity.com/languages-icons/java.png"
         },
         {
           "name": "Javascript",
@@ -134,34 +134,74 @@
         },
         {
           "name": "Apache POI",
-          "img": ""
+          "img": "https://cdn.mtocommunity.com/languages-icons/java.png"
         }
       ],
-      "presenters": []
+      "presenters": [
+        "Leonardo Aguinaga",
+        "Anderson Zapata"
+      ]
     },
     {
       "id": 7,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 28 de noviembre",
-      "technologies": [],
-      "presenters": []
+      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/reserva.png",
+      "title": "Reservar",
+      "description": "Aplicación web que permite reservar campos de fútbol y obtener disponibilidad de horarios de forma interactiva.",
+      "technologies": [
+        {
+          "name": "next.js",
+          "img": "https://cdn.mtocommunity.com/languages-icons/nextjs.png"
+        },
+        {
+          "name": "Laravel",
+          "img": "https://cdn.mtocommunity.com/languages-icons/laravel.png"
+        },
+        {
+          "name": "Php",
+          "img": "https://cdn.mtocommunity.com/languages-icons/php.png"
+        },
+        {
+          "name": "Redis",
+          "img": "https://cdn.mtocommunity.com/languages-icons/redis.png"
+        }
+      ],
+      "presenters": [
+        "Andy Azañero"
+      ]
     },
     {
       "id": 8,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 28 de noviembre",
-      "technologies": [],
-      "presenters": []
+      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/tacho-basura.png",
+      "title": "Tacho de Basura Automático",
+      "description": "Basurero inteligente con sensor ultrasónico (HC-SR04) para apertura automática, promoviendo higiene y evitando contacto directo.",
+      "technologies": [
+        {
+          "name": "Arduino",
+          "img": "https://cdn.mtocommunity.com/languages-icons/c-plusplus.png"
+        },
+        {
+          "name": "Circuitos Electronicos",
+          "img": ""
+        }
+      ],
+      "presenters": [
+        "José Mendoza"
+      ]
     },
     {
       "id": 9,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 28 de noviembre",
-      "technologies": [],
-      "presenters": []
+      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/caja-fuerte.jpg",
+      "title": "Caja Fuerte",
+      "description": "Sistema de seguridad con ayuda de un arduino y componentes",
+      "technologies": [
+        {
+          "name": "Arduino",
+          "img": "https://cdn.mtocommunity.com/languages-icons/c-plusplus.png"
+        }
+      ],
+      "presenters": [
+        "Arnold Cachay"
+      ]
     },
     {
       "id": 10,
@@ -197,14 +237,14 @@
       "github": "https://github.com/jorgitooCoDe"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg",
+      "photo": "https://cdn.mtocommunity.com/speaker/luis-bazan.jpg",
       "name": "Luis Bazán",
       "linkedin": "https://www.linkedin.com/in/luisbazandev/",
       "github": "https://github.com/luisBazanDev",
       "youtube": "https://www.youtube.com/@luisbazandev"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg",
+      "photo": "https://cdn.mtocommunity.com/speaker/junior-delgado.jpg",
       "name": "Junior Delgado",
       "linkedin": "https://www.linkedin.com/in/aarondfv/",
       "instagram": "https://www.instagram.com/stf_aaron/",
@@ -253,6 +293,33 @@
       "photo": "https://cdn.mtocommunity.com/speaker/anderson-zapata.jpg",
       "name": "Anderson Zapata",
       "instagram": "https://instagram.com/anderson_zpt"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/jose-mendoza.jpeg",
+      "name": "José Mendoza",
+      "instagram": "https://www.instagram.com/jose._.mendoza30",
+      "facebook": "https://www.facebook.com/josedavidmendoz"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/arnold-cachay.jpg",
+      "name": "Arnold Cachay",
+      "facebook": "https://www.facebook.com/arnold.cachay.79"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/andy-azanero.jpg",
+      "name": "Andy Azañero"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/jaime-lopez.jpg",
+      "name": "Jaime López",
+      "instagram": "https://www.instagram.com/uskrat04/"
+    },
+    {
+      "photo": "https://cdn.mtocommunity.com/speaker/juan-romero.jpg",
+      "name": "Juan Romero",
+      "linkedin": "https://www.linkedin.com/in/juan-bladimir-romero-collazos/",
+      "github": "https://github.com/IngSystemCix",
+      "youtube": "https://www.youtube.com/@IngSystemCix"
     },
     {
       "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
