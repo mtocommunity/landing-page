@@ -205,9 +205,9 @@
     },
     {
       "id": 10,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 29 de noviembre",
+      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/recipiente-basura.jpg",
+      "title": "Recipiente de basura",
+      "description": "Un basurero automatizado que se abre automáticamente y permite incorporar funciones adicionales como clasificación de residuos.",
       "technologies": [],
       "presenters": []
     },
