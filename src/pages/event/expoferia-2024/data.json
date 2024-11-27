@@ -21,7 +21,10 @@
           "name": "Programación desconectada"
         }
       ],
-      "presenters": ["Daniel Mendoza", "Ismael Sanchez"]
+      "presenters": [
+        "Daniel Mendoza",
+        "Ismael Sanchez"
+      ]
     },
     {
       "id": 2,
@@ -90,7 +93,9 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/md.png"
         }
       ],
-      "presenters": ["Luis Ventura"]
+      "presenters": [
+        "Luis Ventura"
+      ]
     },
     {
       "id": 5,
@@ -107,14 +112,31 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/bash.png"
         }
       ],
-      "presenters": ["Junior Delgado", "Abner Cubas", "Briggitte Martínez"]
+      "presenters": [
+        "Junior Delgado",
+        "Abner Cubas",
+        "Briggitte Martínez"
+      ]
     },
     {
       "id": 6,
       "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 28 de noviembre",
-      "technologies": [],
+      "title": "BlackDog FastFood",
+      "description": "Un e-commerce para un restaurante, desarrollado en el curso Integrador I y refinado en el ciclo actual.",
+      "technologies": [
+        {
+          "name": "Java Server Pages",
+          "img": ""
+        },
+        {
+          "name": "Javascript",
+          "img": "https://cdn.mtocommunity.com/languages-icons/js.png"
+        },
+        {
+          "name": "Apache POI",
+          "img": ""
+        }
+      ],
       "presenters": []
     },
     {
@@ -218,16 +240,19 @@
       "linkedin": "https://www.linkedin.com/in/abner-atlai-cubas-parra-176a7329a/"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
+      "photo": "https://cdn.mtocommunity.com/speaker/anderson-samame.jpg",
+      "name": "Anderson Samame",
+      "email": "andersoneffio5@gmail.com"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
+      "photo": "https://cdn.mtocommunity.com/speaker/leonardo-aguinaga.jpg",
+      "name": "Leonardo Aguinaga",
+      "instagram": "https://instagram.com/leoaguinaga05"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
+      "photo": "https://cdn.mtocommunity.com/speaker/anderson-zapata.jpg",
+      "name": "Anderson Zapata",
+      "instagram": "https://instagram.com/anderson_zpt"
     },
     {
       "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
