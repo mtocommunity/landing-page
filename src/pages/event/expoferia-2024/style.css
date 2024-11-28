@@ -18,7 +18,6 @@
   position: absolute;
 }
 
-
 .bg-blue {
   content: "";
   width: 23%;
@@ -30,7 +29,6 @@
   position: absolute;
   filter: blur(5rem);
 }
-
 
 .bg-red2 {
   content: "";
@@ -153,7 +151,6 @@
   .bg-box {
     filter: blur(9.5rem);
   }
-
 }
 
 @media (max-width: 767px) {
@@ -168,7 +165,6 @@
 }
 
 @media (max-width: 1023px) {
-
   .bg-red2 {
     top: 35%;
   }
@@ -189,7 +185,6 @@
   .bg-blue2 {
     top: 70%;
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -229,6 +224,24 @@
     left: 50%;
     filter: blur(9rem);
   }
+}
 
+#indicator-arrow {
+  animation: bounce 2s infinite;
+}
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
