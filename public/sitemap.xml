@@ -49,4 +49,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://mtocommunity.com/event/expoferia-2024/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
 </urlset>
