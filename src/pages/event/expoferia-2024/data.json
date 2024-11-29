@@ -192,22 +192,6 @@
       "description": "Un basurero automatizado que se abre automáticamente y permite incorporar funciones adicionales como clasificación de residuos.",
       "technologies": [],
       "presenters": []
-    },
-    {
-      "id": 11,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 29 de noviembre",
-      "technologies": [],
-      "presenters": []
-    },
-    {
-      "id": 12,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 29 de noviembre",
-      "technologies": [],
-      "presenters": []
     }
   ],
   "exhibitors": [
@@ -308,18 +292,6 @@
       "name": "Luis Ventura",
       "instagram": "https://www.instagram.com/unit.lu",
       "github": "https://github.com/unitlu"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
     }
   ],
   "schedules": [
