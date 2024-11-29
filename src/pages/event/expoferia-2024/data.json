@@ -21,10 +21,7 @@
           "name": "Programación desconectada"
         }
       ],
-      "presenters": [
-        "Daniel Mendoza",
-        "Ismael Sanchez"
-      ]
+      "presenters": ["Daniel Mendoza", "Ismael Sanchez"]
     },
     {
       "id": 2,
@@ -93,9 +90,7 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/md.png"
         }
       ],
-      "presenters": [
-        "Luis Ventura"
-      ]
+      "presenters": ["Luis Ventura"]
     },
     {
       "id": 5,
@@ -112,11 +107,7 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/bash.png"
         }
       ],
-      "presenters": [
-        "Junior Delgado",
-        "Abner Cubas",
-        "Briggitte Martínez"
-      ]
+      "presenters": ["Junior Delgado", "Abner Cubas", "Briggitte Martínez"]
     },
     {
       "id": 6,
@@ -137,10 +128,7 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/java.png"
         }
       ],
-      "presenters": [
-        "Leonardo Aguinaga",
-        "Anderson Zapata"
-      ]
+      "presenters": ["Leonardo Aguinaga", "Anderson Zapata"]
     },
     {
       "id": 7,
@@ -165,9 +153,7 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/redis.png"
         }
       ],
-      "presenters": [
-        "Andy Azañero"
-      ]
+      "presenters": ["Andy Azañero"]
     },
     {
       "id": 8,
@@ -184,9 +170,7 @@
           "img": ""
         }
       ],
-      "presenters": [
-        "José Mendoza"
-      ]
+      "presenters": ["José Mendoza"]
     },
     {
       "id": 9,
@@ -199,31 +183,13 @@
           "img": "https://cdn.mtocommunity.com/languages-icons/c-plusplus.png"
         }
       ],
-      "presenters": [
-        "Arnold Cachay"
-      ]
+      "presenters": ["Arnold Cachay"]
     },
     {
       "id": 10,
       "image": "https://cdn.mtocommunity.com/events/expoferia-2024/recipiente-basura.jpg",
       "title": "Recipiente de basura",
       "description": "Un basurero automatizado que se abre automáticamente y permite incorporar funciones adicionales como clasificación de residuos.",
-      "technologies": [],
-      "presenters": []
-    },
-    {
-      "id": 11,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 29 de noviembre",
-      "technologies": [],
-      "presenters": []
-    },
-    {
-      "id": 12,
-      "image": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "title": "????",
-      "description": "Este evento será revelado el jueves 29 de noviembre",
       "technologies": [],
       "presenters": []
     }
@@ -322,20 +288,10 @@
       "youtube": "https://www.youtube.com/@IngSystemCix"
     },
     {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
-    },
-    {
-      "photo": "https://cdn.mtocommunity.com/events/expoferia-2024/helper-helper-icon.png",
-      "name": "???"
+      "photo": "https://cdn.mtocommunity.com/speaker/luis-ventura.jpg",
+      "name": "Luis Ventura",
+      "instagram": "https://www.instagram.com/unit.lu",
+      "github": "https://github.com/unitlu"
     }
   ],
   "schedules": [
