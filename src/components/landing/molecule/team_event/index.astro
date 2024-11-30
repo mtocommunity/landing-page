@@ -10,6 +10,8 @@ interface Props {
 }
 
 const { event, opacity = 100 } = Astro.props;
+
+import "./styles.css";
 ---
 
 <div class="flex w-4/5 items-center group md:w-2/3 xl:w-1/2">
@@ -56,7 +58,7 @@ const { event, opacity = 100 } = Astro.props;
     >
       {event.name}
     </h3>
-    <p class="text-pretty text-sm xl:text-base">{event.description}</p>
+    <p class="text-pretty text-sm xl:text-base" set:html={event.description} />
     {
       event.link && (
         <Button
