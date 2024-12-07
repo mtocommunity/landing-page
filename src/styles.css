@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .markdown {
   h1 {
     @apply text-3xl font-bold mt-4 mb-3;
