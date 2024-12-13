@@ -60,6 +60,12 @@ const Footer: React.FC = () => {
             Redes Sociales
           </span>
           <a
+            href="https://whatsapp.mtocommunity.com/"
+            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+          >
+            Whatsapp
+          </a>
+          <a
             href="https://www.facebook.com/mtocommunity"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
@@ -76,12 +82,6 @@ const Footer: React.FC = () => {
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             YouTube
-          </a>
-          <a
-            href="https://www.twitch.tv/mtocommunity"
-            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
-          >
-            Twitch
           </a>
           <a
             href="https://www.tiktok.com/@mtocommunity"
