@@ -29,38 +29,30 @@ type Props = {
 const { href, type, other_tab = true } = Astro.props;
 
 let icon = faLink;
-let background = "black";
-let color = "white"; // white or black
 
 switch (type) {
   case "facebook":
     icon = faFacebookF;
-    background = "#1877F2";
     break;
 
   case "github":
     icon = faGithub;
-    background = "#000000";
     break;
 
   case "instagram":
     icon = faInstagram;
-    background = "#E1306C";
     break;
 
   case "linkedin":
     icon = faLinkedin;
-    background = "#0077B5";
     break;
 
   case "x":
     icon = faXTwitter;
-    background = "#000000";
     break;
 
   case "youtube":
     icon = faYoutube;
-    background = "#FF0000";
     break;
 }
 ---
