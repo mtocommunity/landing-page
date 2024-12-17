@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "../../attoms/button";
-import { ButtonType } from "../../attoms/button/types";
 
 const Footer: React.FC = () => {
   return (
