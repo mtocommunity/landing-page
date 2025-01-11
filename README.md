@@ -1,6 +1,6 @@
 # Landing page
 
-A lading page of the ManyToOne Community
+A landing page of the ManyToOne Community
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](./LICENSE)
 
