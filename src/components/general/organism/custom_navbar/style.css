@@ -25,7 +25,8 @@
 
 .nav-desktop a:hover::before {
   content: "";
-  @apply h-[.2rem] w-[calc(100%-2.5rem)] bg-white absolute bottom-1 left-[1.25rem];
+  @apply h-[.05rem] w-[calc(100%-2.5rem)] absolute bottom-1 left-[1.25rem];
+  background: linear-gradient(to right, transparent, cyan 50%, transparent);
   animation: sliceIn 0.2s ease-in-out;
 }
 
@@ -33,6 +34,7 @@
   0% {
     width: 0;
   }
+
   100% {
     width: calc(100% - 2.5rem);
   }
