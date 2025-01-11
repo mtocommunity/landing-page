@@ -18,7 +18,7 @@
 }
 
 .link {
-  @apply text-black;
+  @apply text-white;
 }
 
 .nav {
