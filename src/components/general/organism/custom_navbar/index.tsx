@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { MTOTransparentBackground } from "../../../../assets";
+import { ButtonType } from "../../../general/attoms/button/types";
+import Button from "../../../general/attoms/button";
 
 import "./style.css";
 
@@ -34,9 +36,16 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
         <div className="text-white lg:hidden ml-auto" onClick={handleToggle}>
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest w-full">
+        <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
           {children}
         </nav>
+        <Button
+          type={ButtonType.LINK}
+          link="https://discord.mtocommunity.com/"
+          className="ml-4 font-onest text-xs px-6 py-2 border-2 rounded-full border-cyan-700 bg-transparent transition-colors"
+        >
+          Contáctanos
+        </Button>
       </header>
       <div
         className={`nav-mobile flex fixed w-full bg-mto_gray text-mto_blue_light z-20 flex-col items-center justify-center text-xl lg:hidden ${!toggle ? "active" : ""}`}
