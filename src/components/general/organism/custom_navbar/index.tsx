@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import { MTOTransparentBackground } from "../../../../assets";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Button from "../../../general/attoms/button";
@@ -42,9 +42,9 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
         <Button
           type={ButtonType.LINK}
           link="https://discord.mtocommunity.com/"
-          className="ml-4 font-onest text-xs px-6 py-2 border-2 rounded-full border-cyan-700 bg-transparent transition-colors"
+          className="hidden lg:flex ml-4 font-onest text-xs px-6 py-2 border-2 rounded-full border-cyan-700 bg-transparent transition-transform duration-300 hover:scale-110 hover:text-white"
         >
-          Contáctanos
+          Contáctanos <FontAwesomeIcon icon={faArrowRight} className="ml-2 mt-0.5" />
         </Button>
       </header>
       <div
