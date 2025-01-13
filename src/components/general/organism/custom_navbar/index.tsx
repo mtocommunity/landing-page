@@ -6,6 +6,7 @@ import { ButtonType } from "../../../general/attoms/button/types";
 import Button from "../../../general/attoms/button";
 
 import "./style.css";
+import React from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -23,6 +24,10 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !toggle);
   }, [toggle]);
+
+  const handleLinkClick = () => {
+    setToggle(true);
+  };
 
   const renderButton = (additionalClasses = "") => (
     <Button
@@ -47,8 +52,8 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
             </span>
           )}
         </a>
-        <div className="text-white lg:hidden ml-auto" onClick={handleToggle}>
-          <FontAwesomeIcon icon={toggle ? faBars : faTimes} />
+        <div className="text-white lg:hidden text-2xl ml-auto" onClick={handleToggle}>
+          <FontAwesomeIcon icon={toggle ? faBars : faTimes} className="" />
         </div>
         <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
           {children}
@@ -56,9 +61,12 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
         {renderButton("hidden lg:flex ml-4")}
       </header>
       <div
-        className={`nav-mobile min-h-screen flex fixed w-full h-full bg-mto_gray text-mto_blue_light z-20 flex-col items-center justify-center text-xl lg:hidden ${!toggle ? "active" : ""}`}
+        className={`nav-mobile min-h-screen flex fixed w-full h-full bg-mto_dark_gray text-white z-20 flex-col items-center justify-center text-xl lg:hidden ${!toggle ? "active" : ""}`}
+        onClick={handleLinkClick}
       >
-        {children}
+        {React.Children.map(children, (child, index) => (
+          React.cloneElement(child as React.ReactElement<any>, { key: index, className: "mb-4" })
+        ))}
         {renderButton("mt-4")}
       </div>
     </>
