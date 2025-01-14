@@ -14,47 +14,27 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
   id="home"
 >
   <div
-    class="flex h-full justify-center lg:justify-between lg:px-60 lg:items-center"
+    class="flex flex-col items-center justify-center text-white gap-4 lg:gap-6"
   >
-    <div
-      class="flex flex-col items-center justify-between text-white lg:justify-center lg:gap-2"
+    <h1 class="text-4xl text-center font-bold lg:text-6xl font-main_sans">
+      MANY TO ONE
+    </h1>
+    <p class="2xl:text-lg font-lora text-center">
+      La <span class="text-mto_red font-bold xl:text-xl font-lora">NUEVA</span>
+      comunidad tecnológica<br />de Ingeniería de Sistemas de la UTP Chiclayo.
+    </p>
+    <Button
+      type={ButtonType.PRIMARY}
+      link="https://discord.mtocommunity.com/"
+      className="mt-4"
     >
-      <div class="flex flex-col gap-2">
-        <h1 class="text-3xl text-center font-bold lg:text-4xl font-main_sans">
-          MANY TO ONE
-        </h1>
-        <p class="2xl:text-lg">
-          La <span class="text-mto_red font-bold xl:text-xl">NUEVA</span> comunidad
-          tecnológica<br />de Ingeniería de Sistemas de la UTP Chiclayo.
-        </p>
-      </div>
-      <div class="flex justify-between w-full">
-        <Button
-          type={ButtonType.PRIMARY}
-          link="https://discord.mtocommunity.com/">Únete ahora</Button
-        >
-        <Button type={ButtonType.SECONDARY} link="#about-us"
-          >Más información</Button
-        >
-      </div>
-    </div>
-  </div>
-  <div class="hidden lg:flex justify-between">
-    <!-- Social / discord -->
-    <dir class="w-1/2 text-white pl-60 text-3xl xl:w-2/5">
+      Únete ahora
+    </Button>
+    <Button type={ButtonType.SECONDARY} link="#about-us" className="mt-4">
+      Más información
+    </Button>
+    <div class="mt-8">
       <Social />
-    </dir>
-    <a
-      class="bg-gradient-to-r from-mto_gray_light to-discord_blurple text-white flex gap-2 p-3 opacity-90 transition-opacity duration-300 hover:opacity-100 h-20 rounded-lg mr-16"
-      href="https://discord.mtocommunity.com/"
-    >
-      <div class="text-4xl flex items-center">
-        <FontAwesomeIcon icon={faDiscord} />
-      </div>
-      <div class="flex flex-col font-bold">
-        <p>Únete a nuestro</p>
-        <p>Servidor de discord</p>
-      </div>
-    </a>
+    </div>
   </div>
 </div>
