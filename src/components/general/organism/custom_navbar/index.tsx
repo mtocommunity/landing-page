@@ -53,7 +53,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
           )}
         </a>
         <div className="text-white lg:hidden text-2xl ml-auto" onClick={handleToggle}>
-          <FontAwesomeIcon icon={toggle ? faBars : faTimes} className="" />
+          <FontAwesomeIcon icon={toggle ? faBars : faTimes} />
         </div>
         <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
           {children}

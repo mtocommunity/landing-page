@@ -20,16 +20,13 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
       class="flex flex-col items-center justify-between text-white lg:justify-center lg:gap-2"
     >
       <div class="flex flex-col gap-2">
-        <h1 class="text-3xl font-bold lg:text-4xl font-main_sans">
+        <h1 class="text-3xl text-center font-bold lg:text-4xl font-main_sans">
           MANY TO ONE
         </h1>
         <p class="2xl:text-lg">
           La <span class="text-mto_red font-bold xl:text-xl">NUEVA</span> comunidad
           tecnológica<br />de Ingeniería de Sistemas de la UTP Chiclayo.
         </p>
-      </div>
-      <div class="w-2/5 lg:hidden min-h-[60dvh] justify-center flex flex-col">
-        <TeamsCloud client:load />
       </div>
       <div class="flex justify-between w-full">
         <Button
@@ -40,11 +37,6 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
           >Más información</Button
         >
       </div>
-    </div>
-    <div
-      class="hidden lg:flex h-28 xl:h-40 2xl:h-52 aspect-square text-white items-center"
-    >
-      <TeamsCloud client:load />
     </div>
   </div>
   <div class="hidden lg:flex justify-between">
