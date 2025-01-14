@@ -33,7 +33,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
     <Button
       type={ButtonType.LINK}
       link="https://discord.mtocommunity.com/"
-      className={`font-onest text-xs px-6 py-2 border-2 rounded-full border-cyan-700 bg-transparent transition-transform duration-300 hover:scale-110 hover:text-white ${additionalClasses}`}
+      className={`lg:flex ${additionalClasses}`}
     >
       Contáctanos <FontAwesomeIcon icon={faArrowRight} className="ml-2 mt-0.5" />
     </Button>
