@@ -42,7 +42,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
   return (
     <>
       <header
-        className={`flex items-center w-full h-14${fixed ? " fixed" : ""} top-0 px-4 transition-colors z-50 lg:bg-transparent lg:w-[95%] lg:mx-auto lg:top-6`}
+        className={`flex items-center w-full h-14${fixed ? " fixed" : ""} top-0 px-4 transition-colors z-50 lg:bg-transparent lg:w-[100%] lg:mx-auto lg:top-6`}
       >
         <a className={`h-full flex items-center ${!toggle ? "hidden" : ""}`} href="/">
           <MTOTransparentBackground className="h-full lg:h-[150%] aspect-square" />
@@ -56,9 +56,11 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
           <FontAwesomeIcon icon={toggle ? faBars : faTimes} />
         </div>
         <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
-          {children}
+          <div className="flex justify-center items-center w-full h-full">
+            {children}
+          </div>
         </nav>
-        {renderButton("hidden lg:flex ml-4")}
+        {renderButton("hidden lg:flex")}
       </header>
       <div
         className={`nav-mobile min-h-screen flex fixed w-full h-full bg-mto_dark_gray text-white z-20 flex-col items-center justify-center text-xl lg:hidden ${!toggle ? "active" : ""}`}
