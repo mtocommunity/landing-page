@@ -6,7 +6,7 @@
   background: linear-gradient(to right, #e41476, #e41476, #ec458d);
   background-size: 200% auto;
   background-position: left;
-  @apply px-5 py-3 text-white font-semibold;
+  @apply px-5 py-3 text-white font-semibold rounded-3xl font-onest;
 }
 
 .disabled {
@@ -18,7 +18,7 @@
 }
 
 .link {
-  @apply text-white;
+  @apply text-white font-onest text-xs px-6 py-3 border-2 rounded-full border-cyan-700 bg-transparent transition-transform duration-300 hover:scale-110 hover:text-white;
 }
 
 .nav {

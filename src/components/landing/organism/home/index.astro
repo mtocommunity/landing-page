@@ -1,16 +1,15 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Social from "../../../general/molecule/social";
-import TeamsCloud from "../../molecule/teams_cloud";
-
-import "./style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import "./style.css";
 ---
 
 <div
-  class="flex flex-col w-full min-h-[calc(100dvh-3.5rem)] pb-14 pt-10 lg:pt-36 lg:justify-between 2xl:pt-[17rem]"
+  class="flex flex-col w-full min-h-[calc(100dvh-3.5rem)] pb-14 pt-10 lg:pt-36 lg:justify-center 2xl:pt-[17rem] items-center justify-center scroll-mt-14"
   id="home"
 >
   <div
@@ -28,12 +27,18 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
       link="https://discord.mtocommunity.com/"
       className="mt-4"
     >
-      Únete ahora
+      <FontAwesomeIcon icon={faDiscord} className="mr-2" />
+      ¡Quiero unirme!
     </Button>
-    <Button type={ButtonType.SECONDARY} link="#about-us" className="mt-4">
+    <Button
+      type={ButtonType.LINK}
+      link="#about-us"
+      className="font-semibold mt-4 text-sm"
+    >
       Más información
+      <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
     </Button>
-    <div class="mt-8">
+    <div class="w-3/4 mt-8">
       <Social />
     </div>
   </div>
