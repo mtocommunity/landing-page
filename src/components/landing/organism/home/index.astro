@@ -13,31 +13,32 @@ import "./style.css";
   id="home"
 >
   <div
-    class="flex flex-col items-center justify-center text-white gap-4 lg:gap-6"
+    class="flex flex-col items-center justify-center text-white gap-6 lg:gap-8"
   >
     <h1 class="text-4xl text-center font-bold lg:text-6xl font-main_sans">
       MANY TO ONE
     </h1>
     <p class="2xl:text-lg font-lora text-center">
-      La <span class="text-mto_red font-bold xl:text-xl font-lora">NUEVA</span>
+      La <span class="text-mto_red xl:text-xl font-bold">NUEVA</span>
       comunidad tecnológica<br />de Ingeniería de Sistemas de la UTP Chiclayo.
     </p>
-    <Button
-      type={ButtonType.PRIMARY}
-      link="https://discord.mtocommunity.com/"
-      className="mt-4"
-    >
-      <FontAwesomeIcon icon={faDiscord} className="mr-2" />
-      ¡Quiero unirme!
-    </Button>
-    <Button
-      type={ButtonType.LINK}
-      link="#about-us"
-      className="font-semibold mt-4 text-sm"
-    >
-      Más información
-      <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-    </Button>
+    <div class="flex flex-col gap-4 xl:flex-row xl:gap-6 mt-4">
+      <Button
+        type={ButtonType.PRIMARY}
+        link="https://discord.mtocommunity.com/"
+      >
+        <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base" />
+        ¡Quiero unirme!
+      </Button>
+      <Button
+        type={ButtonType.LINK}
+        link="#about-us"
+        className="font-semibold text-sm"
+      >
+        Más información
+        <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-base" />
+      </Button>
+    </div>
     <div class="w-3/4 mt-8">
       <Social />
     </div>
