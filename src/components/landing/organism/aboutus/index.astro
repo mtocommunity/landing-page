@@ -1,29 +1,29 @@
 ---
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { wave2 } from "../../../../assets/svgs";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import Button from "../../../general/attoms/button";
+import { ButtonType } from "../../../general/attoms/button/types";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 ---
 
-<div
-  class="w-full flex flex-col min-h-screen justify-between -z-40 lg:min-h-[120dvh]"
-  id="about-us"
->
+<div class="w-full flex flex-col min-h-screen justify-between" id="about-us">
   <div
     class="flex flex-col h-max gap-14 lg:justify-center lg:p-16 lg:flex-row-reverse xl:pt-32 2xl:pt-64 lg:gap-48"
   >
-    <div class="mt-10 text-white mx-auto z-50 lg:mx-0 lg:w-1/2 2xl:w-1/3">
+    <div
+      class="mt-10 text-white mx-auto z-50 lg:mx-0 lg:w-1/2 2xl:w-1/3 text-center"
+    >
       <h2
-        class="font-bold text-5xl text-center lg:text-right lg:text-6xl 2xl:text-7xl"
+        class="font-onest text-sm text-light-blue tracking-[0.5em] text-mto_blue"
       >
-        About Us
+        NOSOTROS
       </h2>
       <h3
-        class="mt-4 text-center text-base lg:text-xl 2xl:text-2xl lg:text-right"
+        class="mt-4 font-extrabold font-main_sans text-xl lg:text-2xl 2xl:text-2xl"
       >
-        ¿Por qué <span class="font-bold">Many To One</span>?
+        ¿POR QUÉ MANY TO ONE?
       </h3>
       <p
-        class="text-xs mx-10 mt-5 text-pretty lg:text-balance lg:text-right lg:mx-0 lg:text-base"
+        class="font-lora text-xs mx-10 mt-5 text-pretty lg:text-balance lg:mx-0 lg:text-base opacity-30"
       >
         En MTO Community, sabemos que crecer es más fácil cuando no lo haces
         solo. Aprendemos juntos, apoyándonos entre muchos para que cada uno de
@@ -32,6 +32,15 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
         ¿quién mejor que nosotros para saber lo que necesitamos, no crees? Únete
         y seamos parte del cambio.
       </p>
+      <div class="mt-10">
+        <Button
+          type={ButtonType.PRIMARY}
+          link="https://discord.mtocommunity.com/"
+        >
+          <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base" />
+          ¡Quiero unirme!
+        </Button>
+      </div>
     </div>
   </div>
 </div>
