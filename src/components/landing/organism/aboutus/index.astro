@@ -5,7 +5,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 ---
 
 <div
-  class="w-full flex flex-col bg-gradient-to-b from-mto_dark_gray to-mto_red_dark min-h-[80dvh] justify-between -z-40 lg:min-h-[120dvh]"
+  class="w-full flex flex-col min-h-screen justify-between -z-40 lg:min-h-[120dvh]"
   id="about-us"
 >
   <div
@@ -17,7 +17,9 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
       >
         About Us
       </h2>
-      <h3 class="mt-4 text-center text-base lg:text-xl 2xl:text-2xl lg:text-right">
+      <h3
+        class="mt-4 text-center text-base lg:text-xl 2xl:text-2xl lg:text-right"
+      >
         ¿Por qué <span class="font-bold">Many To One</span>?
       </h3>
       <p
@@ -31,19 +33,5 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
         y seamos parte del cambio.
       </p>
     </div>
-    <div class="flex flex-col gap-2 items-center">
-      <div class="text-white text-[7rem] lg:text-[8rem] 2xl:text-[10rem]">
-        <FontAwesomeIcon icon={faUsers} />
-      </div>
-      <div class="flex flex-col text-white items-center">
-        <span class="font-main_sans lg:text-2xl 2xl:text-4xl font-bold"
-          >{"< Many To One />"}</span
-        >
-        <span class="lg:text-lg 2xl:text-2xl">Community</span>
-      </div>
-    </div>
-  </div>
-  <div class="w-full">
-    <img src={wave2.src} alt="wave2.svg" />
   </div>
 </div>
