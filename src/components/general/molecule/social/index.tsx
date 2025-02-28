@@ -15,44 +15,74 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Social() {
   return (
-    <div className="flex justify-between w-full items-center px-0 py-2 opacity-40">
-      <a href="https://www.instagram.com/mtocommunity" className="icon" target="_blank">
+    <div className="flex justify-between w-full items-center">
+      <a
+        href="https://www.instagram.com/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faInstagram} />
       </a>
 
-      <a href="https://www.linkedin.com/mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://www.linkedin.com/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
 
-      <a href="https://www.tiktok.com/@mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://www.tiktok.com/@mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faTiktok} />
       </a>
 
-      <a href="https://www.facebook.com/mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://www.facebook.com/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faFacebookSquare} />
       </a>
 
-      <a href="https://www.youtube.com/@mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://www.youtube.com/@mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faYoutube} />
       </a>
 
-      <a href="https://github.com/mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://github.com/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faGithub} />
       </a>
 
-      <a href="https://www.twitch.tv/mtocommunity" className="icon" target="_blank">
+      <a
+        href="https://www.twitch.tv/mtocommunity"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faTwitch} />
       </a>
 
-      <a href="https://whatsapp.mtocommunity.com/" className="icon" target="_blank">
+      <a
+        href="https://whatsapp.mtocommunity.com/"
+        className="icon"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faWhatsapp} />
       </a>
 
       <a href="https://x.com/mtocommunity" className="icon" target="_blank">
         <FontAwesomeIcon icon={faXTwitter} />
       </a>
-
-
     </div>
   );
 }
