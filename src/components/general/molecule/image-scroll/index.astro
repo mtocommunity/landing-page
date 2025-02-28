@@ -1,0 +1,19 @@
+---
+import "./style.css";
+
+type Props = {
+  images: string[];
+};
+
+const { images } = Astro.props;
+---
+
+<ul class="image-scroll flex flex-row overflow-x-hidden min-h-[20dvw]">
+  {
+    images.map((image, index) => (
+      <li style={`--i:${index + 1}`}>
+        <img src={image} alt={`image-${index}`} />
+      </li>
+    ))
+  }
+</ul>

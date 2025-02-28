@@ -1,8 +1,10 @@
 ---
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import Button from "../../../general/attoms/button";
+
+import ImageScroll from "../../../general/molecule/image-scroll/index.astro";
 ---
 
 <div class="w-full flex flex-col min-h-screen justify-between" id="about-us">
@@ -41,6 +43,26 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
           <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-4" />
           ¡Quiero unirme!
         </Button>
+      </div>
+      <div class="w-[95dvw] h-[100%] items-center mt-10 left-[2.5dvw] absolute">
+        <ImageScroll
+          images={[
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
+            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
+          ]}
+        />
       </div>
     </div>
   </div>
