@@ -3,11 +3,13 @@
   overflow: hidden;
   top: 0;
   max-height: fit-content;
+  z-index: -20;
   @apply pt-0 opacity-0 transition-all;
 }
 
 .active {
   height: 100%;
+  z-index: 20;
   @apply pb-8 gap-8 pt-14 opacity-100;
 }
 

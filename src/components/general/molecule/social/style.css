@@ -1,5 +1,5 @@
 .icon {
-  @apply w-5 aspect-square opacity-80 transition-colors lg:text-xl 2xl:text-3xl;
+  @apply w-4 aspect-square opacity-40 transition-colors lg:text-xl 2xl:text-3xl cursor-pointer;
 }
 
 .icon:hover {
