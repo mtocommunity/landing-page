@@ -7,7 +7,7 @@ import Button from "../../../general/attoms/button";
 import ImageScroll from "../../../general/molecule/image-scroll/index.astro";
 ---
 
-<div class="w-full flex flex-col min-h-screen justify-between" id="about-us">
+<div class="w-full flex flex-col min-h-screen gap-24" id="about-us">
   <div
     class="flex flex-col h-max gap-14 lg:justify-center lg:p-16 lg:flex-row-reverse xl:pt-32 2xl:pt-64 lg:gap-48"
   >
@@ -44,26 +44,19 @@ import ImageScroll from "../../../general/molecule/image-scroll/index.astro";
           ¡Quiero unirme!
         </Button>
       </div>
-      <div class="w-[95dvw] h-[100%] items-center mt-10 left-[2.5dvw] absolute">
-        <ImageScroll
-          images={[
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg",
-            "https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg",
-          ]}
-        />
-      </div>
     </div>
+  </div>
+  <div class="w-full items-center px-4">
+    <ImageScroll
+      images={[
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-01.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-02.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-03.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-04.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-05.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-06.webp",
+        "https://cdn.mtocommunity.com/hero-about-photos/photo-07.webp",
+      ]}
+    />
   </div>
 </div>
