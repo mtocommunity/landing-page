@@ -30,6 +30,7 @@
 
 .bg-grid-container {
   mask-image: radial-gradient(circle, black 0%, transparent 100%);
+  @apply w-full aspect-square -top-[10%] lg:-top-2/3 lg:w-2/3;
 }
 
 .action-button:hover {
