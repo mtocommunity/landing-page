@@ -8,7 +8,8 @@ type Props = {
 const { images } = Astro.props;
 ---
 
-<ul class="image-scroll flex flex-row overflow-x-hidden min-h-[20dvw]">
+<ul class="image-scroll overflow-x-hidden w-full flex flex-col">
+  <div class="w-1/3 lg:w-1/4 aspect-[4/3] -z-30"></div>
   {
     images.map((image, index) => (
       <li style={`--i:${index + 1}`}>
