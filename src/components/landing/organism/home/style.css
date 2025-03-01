@@ -17,9 +17,9 @@
 }
 
 .bg-grid {
-  background-image: linear-gradient(to right, transparent 49px, #ccc 50px),
-    linear-gradient(to bottom, transparent 49px, #ccc 50px);
-  background-size: 50px 50px;
+  background-image: linear-gradient(to right, transparent 79px, #ccc 80px),
+    linear-gradient(to bottom, transparent 79px, #ccc 80px);
+  background-size: 80px 80px;
   background-position:
     0 0,
     0 0;

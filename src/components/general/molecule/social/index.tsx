@@ -25,7 +25,7 @@ function Social() {
       </a>
 
       <a
-        href="https://www.linkedin.com/mtocommunity"
+        href="https://www.linkedin.com/company/mtocommunity/"
         className="icon"
         target="_blank"
       >
