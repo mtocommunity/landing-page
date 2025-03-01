@@ -91,7 +91,7 @@ const { image, title, description, technologies, presenters, id } = Astro.props;
   }
 </style>
 
-<script define:vars={{ id }}>
+<script is:inline define:vars={{ id }}>
   document.addEventListener("DOMContentLoaded", () => {
     const card = document.getElementById(`card-${id}`);
     const cardInner = document.getElementById(`card-inner-${id}`);
