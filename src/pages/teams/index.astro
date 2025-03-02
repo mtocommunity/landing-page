@@ -9,6 +9,7 @@ import {
   faNetworkWired,
   faRobot,
 } from "@fortawesome/free-solid-svg-icons";
+import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
 ---
 
 <Layout title="Equipos - MTO Community">
@@ -94,46 +95,52 @@ import {
           </div>
         </div>
       </li>
-      <li class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row">
-        <img
-          src="https://cdn.mtocommunity.com/landing-os-team.webp"
-          alt="https://cdn.mtocommunity.com/landing-os-team.webp"
-          class="w-full rounded-xl grayscale"
-        />
+      <li
+        class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row-reverse lg:justify-center"
+      >
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-os-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-os-team.webp"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
         <div
-          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full"
+          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
         >
           <div
             class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_gray/10 from-black p-10 h-full rounded-xl"
           >
-            <FontAwesomeIcon
-              icon={faLaptopCode}
-              className="w-[5rem] text-[5rem]"
-            />
+            <FontAwesomeIcon icon={faLinux} className="w-[5rem] text-[5rem]" />
             <span class="text-center"
-              >OS-TEAM<br />(Inactivo temporalmente)</span
+              >OS-TEAM<br /><span class="lg:text-xs"
+                >(Inactivo temporalmente)</span
+              ></span
             >
           </div>
         </div>
       </li>
-      <li class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row">
-        <img
-          src="https://cdn.mtocommunity.com/landing-security-team.webp"
-          alt="https://cdn.mtocommunity.com/landing-security-team.webp"
-          class="w-full rounded-xl grayscale"
-        />
+      <li
+        class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row lg:justify-center"
+      >
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-security-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-security-team.webp"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
         <div
-          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full"
+          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
         >
           <div
             class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_gray/10 from-black p-10 h-full rounded-xl"
           >
-            <FontAwesomeIcon
-              icon={faLaptopCode}
-              className="w-[5rem] text-[5rem]"
-            />
+            <FontAwesomeIcon icon={faRedhat} className="w-[5rem] text-[5rem]" />
             <span class="text-center"
-              >SEC-TEAM<br />(Inactivo temporalmente)</span
+              >SEC-TEAM<br /><span class="lg:text-xs"
+                >(Inactivo temporalmente)</span
+              ></span
             >
           </div>
         </div>
