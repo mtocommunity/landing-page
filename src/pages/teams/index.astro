@@ -10,6 +10,7 @@ import {
   faRobot,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
+import TeamCard from "../../components/landing/molecule/team_card";
 ---
 
 <Layout title="Equipos - MTO Community">
@@ -40,19 +41,7 @@ import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
             class="h-full w-full object-cover"
           />
         </div>
-        <div
-          class="bg-gradient-to-tr from-mto_red from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
-        >
-          <div
-            class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_red/10 from-black p-10 h-full rounded-xl"
-          >
-            <FontAwesomeIcon
-              icon={faLaptopCode}
-              className="w-[5rem] text-[5rem]"
-            />
-            <span>DEV-TEAM</span>
-          </div>
-        </div>
+        <TeamCard team="dev" className="lg:w-auto lg:h-[35vh]" client:load />
       </li>
       <li
         class="flex flex-col w-full gap-4 lg:flex-row-reverse lg:justify-center"
@@ -64,16 +53,8 @@ import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
             class="h-full w-full object-cover"
           />
         </div>
-        <div
-          class="bg-gradient-to-tr from-mto_blue from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
-        >
-          <div
-            class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_blue/10 from-black p-10 h-full rounded-xl"
-          >
-            <FontAwesomeIcon icon={faRobot} className="w-[5rem] text-[5rem]" />
-            <span>IOT-TEAM</span>
-          </div>
-        </div>
+
+        <TeamCard team="iot" className="lg:w-auto lg:h-[35vh]" client:load />
       </li>
       <li class="flex flex-col w-full gap-4 lg:flex-row lg:justify-center">
         <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
@@ -83,19 +64,8 @@ import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
             class="h-full w-full object-cover"
           />
         </div>
-        <div
-          class="bg-gradient-to-tr from-mto_red from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
-        >
-          <div
-            class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_red/10 from-black p-10 h-full rounded-xl"
-          >
-            <FontAwesomeIcon
-              icon={faNetworkWired}
-              className="w-[5rem] text-[5rem]"
-            />
-            <span>NET-TEAM</span>
-          </div>
-        </div>
+
+        <TeamCard team="net" className="lg:w-auto lg:h-[35vh]" client:load />
       </li>
       <li
         class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row-reverse lg:justify-center"
@@ -107,20 +77,8 @@ import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
             class="h-full w-full object-cover grayscale"
           />
         </div>
-        <div
-          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
-        >
-          <div
-            class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_gray/10 from-black p-10 h-full rounded-xl"
-          >
-            <FontAwesomeIcon icon={faLinux} className="w-[5rem] text-[5rem]" />
-            <span class="text-center"
-              >OS-TEAM<br /><span class="lg:text-xs 2xl:text-sm"
-                >(Inactivo temporalmente)</span
-              ></span
-            >
-          </div>
-        </div>
+
+        <TeamCard team="os" className="lg:w-auto lg:h-[35vh]" client:load />
       </li>
       <li
         class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row lg:justify-center"
@@ -132,20 +90,8 @@ import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
             class="h-full w-full object-cover grayscale"
           />
         </div>
-        <div
-          class="bg-gradient-to-tr from-mto_gray from-70% to-mto_dark_gray p-[2px] rounded-xl w-full lg:w-auto lg:h-[35vh] lg:aspect-square"
-        >
-          <div
-            class="bg-black flex flex-col items-center justify-center bg-gradient-to-br to-mto_gray/10 from-black p-10 h-full rounded-xl"
-          >
-            <FontAwesomeIcon icon={faRedhat} className="w-[5rem] text-[5rem]" />
-            <span class="text-center"
-              >SEC-TEAM<br /><span class="lg:text-xs 2xl:text-sm"
-                >(Inactivo temporalmente)</span
-              ></span
-            >
-          </div>
-        </div>
+
+        <TeamCard team="sec" className="lg:w-auto lg:h-[35vh]" client:load />
       </li>
     </ul>
   </main>
