@@ -36,8 +36,8 @@ const teamDescription = {
   dev: "Nuestro equipo de desarrollo se enfoca en el desarrollo web y de software. Aquí puedes aprender sobre programación, frameworks modernos, y buenas prácticas de desarrollo.",
   iot: "El equipo de Internet de las Cosas se encarga de gestionar proyectos de robótica, los cuales son interactivos, creativos e innovadores.",
   net: "El equipo de redes se centra en todo lo relacionado con redes y comunicaciones. Trabajan en la configuración y gestión de redes, así como en la resolución de problemas de conectividad.",
-  os: "Este equipo está dedicado a sistemas operativos y administración de sistemas. Se especializan en el manejo de diferentes sistemas operativos,  configuración y administración.",
-  sec: "Nuestro equipo de ciberseguridad trabaja en la protección de sistemas y datos contra amenazas y ataques. Aquí aprenderás sobre seguridad informática, análisis de vulnerabilidades y mejores prácticas de protección.",
+  os: "Dedicado a sistemas operativos y administración de sistemas. Se especializan en el manejo de diferentes sistemas operativos,  configuración y administración.",
+  sec: "Trabaja en la protección de sistemas y datos contra amenazas y ataques. Aquí aprenderás sobre seguridad informática, análisis de vulnerabilidades y mejores prácticas de protección.",
 };
 
 function TeamCard({ team, className }: TeamCardProps) {
