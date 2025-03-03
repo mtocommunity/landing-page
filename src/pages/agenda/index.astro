@@ -10,9 +10,9 @@ import "../../styles.css";
 import "./_style.css";
 ---
 
-<Layout title="Equipos - MTO Community">
+<Layout title="Agenda - MTO Community">
   <main
-    class="flex flex-col w-vw overflow-x-hidden min-h-dvh items-center pb-24"
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24"
   >
     <div class="absolute opacity-25 -z-20 bg-grid-container">
       <div class="bg-grid"></div>
@@ -32,13 +32,15 @@ import "./_style.css";
 
     <Agenda client:only />
 
-    <div class="flex flex-col justify-center items-center min-h-dvh relative">
+    <div
+      class="flex flex-col justify-center items-center min-h-dvh relative w-full"
+    >
       <div
-        class="absolute top-50 h-96 w-full opacity-25 -z-20 bg-grid-container-contact_us"
+        class="absolute top-50 h-96 w-full opacity-25 -z-20 bg-grid-container-discord"
       >
         <div class="bg-grid"></div>
       </div>
-      <div class="bg-color-contact_us"></div>
+      <div class="bg-color-discord"></div>
       <div class="flex flex-col gap-4 text-white items-center">
         <h2 class="font-main_sans font-bold">
           ¡No te pierdad ni un solo evento!

@@ -15,7 +15,7 @@
   @apply w-full h-[70dvh];
 }
 
-.bg-grid-container-contact_us {
+.bg-grid-container-discord {
   mask-image: linear-gradient(
     to bottom,
     transparent 10%,
@@ -24,7 +24,7 @@
   );
 }
 
-.bg-color-contact_us {
+.bg-color-discord {
   content: "";
   position: absolute;
   width: 100%;
