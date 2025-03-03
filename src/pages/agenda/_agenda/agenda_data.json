@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "events": [
+      {
+        "link": "",
+        "dates": [
+          {
+            "title": "",
+            "link": "",
+            "link_title": "",
+            "date": "",
+            "items": [""]
+          }
+        ]
+      }
+    ]
+  },
+  "iot": {},
+  "net": {},
+  "os": {},
+  "sec": {}
+}
