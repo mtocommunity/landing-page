@@ -37,14 +37,14 @@ export function formatDate3(date: Date): string {
 
   const [day, month, year] = format.split(" ");
 
-  return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)}. de ${year}`;
+  return `${day} de ${month.charAt(0).toUpperCase() + month.slice(1)}. del ${year}`;
 }
 
 export const formatTimeOnly = (date: Date) => {
-  return new Intl.DateTimeFormat('es-PE', {
-    hour: '2-digit',
-    minute: '2-digit',
+  return new Intl.DateTimeFormat("es-PE", {
+    hour: "2-digit",
+    minute: "2-digit",
     hour12: true,
-    timeZone: 'America/Lima'
+    timeZone: "America/Lima",
   }).format(date);
 };
