@@ -84,7 +84,7 @@ function Agenda() {
             📎 Muy pronto más
           </div>
         </div>
-        {data.events.map((event, index) => (
+        {data.events.map((event) => (
           <div className="flex gap-4">
             <div className="flex flex-col items-center min-h-28">
               <div className="w-4 h-4 rounded-full bg-mto_red"></div>
@@ -114,7 +114,7 @@ function Agenda() {
                 </div>
               )}
               {event.dates &&
-                event.dates?.map((date, index) => (
+                event.dates?.map((date) => (
                   <div className="flex flex-col p-4 bg-white/5 rounded-lg">
                     <div className="flex gap-2 items-end font-lora">
                       <h4 className="font-bold">{date.title}</h4>
