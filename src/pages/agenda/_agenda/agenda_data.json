@@ -2,21 +2,259 @@
   "dev": {
     "events": [
       {
-        "link": "",
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico",
+        "description": {
+          "content": "En este evento organizado por UTP Chiclayo en colaboración con MTO Community presentamos junto al <a class=\"link\" href=\"/team/sec\">Sec-Team</a> una demostración de ataques de red.",
+          "link": "/event/expoferia-2024",
+          "link_title": "Ver web"
+        },
         "dates": [
           {
-            "title": "",
-            "link": "",
-            "link_title": "",
-            "date": "",
-            "items": [""]
+            "title": "Día 1",
+            "date": "2024-10-09T05:00:00Z",
+            "items": [
+              "Introducción a la Gestión de Versiones",
+              "¿Qué es Git?",
+              "Instalación y Configuración",
+              "Primeros Pasos con Git",
+              "Ejercicio Práctico",
+              "Preguntas y Respuestas"
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-10-16T05:00:00Z",
+            "items": [
+              "Introducción a GitHub",
+              "Colaboración en Proyectos",
+              "Ramas en Git",
+              "Ejercicio Práctico",
+              "Conclusiones y Recursos Adicionales",
+              "Cierre del Seminario"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico",
+        "description": {
+          "content": "En este evento organizado por UTP Chiclayo en colaboración con MTO Community presentamos junto al <a class=\"link\" href=\"/team/sec\">Sec-Team</a> una demostración de ataques de red.",
+          "link": "/event/expoferia-2024",
+          "link_title": "Ver web"
+        },
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-10-09T05:00:00Z",
+            "items": [
+              "Introducción a la Gestión de Versiones",
+              "¿Qué es Git?",
+              "Instalación y Configuración",
+              "Primeros Pasos con Git",
+              "Ejercicio Práctico",
+              "Preguntas y Respuestas"
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-10-16T05:00:00Z",
+            "items": [
+              "Introducción a GitHub",
+              "Colaboración en Proyectos",
+              "Ramas en Git",
+              "Ejercicio Práctico",
+              "Conclusiones y Recursos Adicionales",
+              "Cierre del Seminario"
+            ]
           }
         ]
       }
     ]
   },
-  "iot": {},
-  "net": {},
-  "os": {},
-  "sec": {}
+  "iot": {
+    "events": [
+      {
+        "name": "Seminario de robótica básica",
+        "link": "/event/iot-seminario-robotica-basica",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Componentes básicos de electrónica con Arduino",
+              "Arduino IDE.",
+              "Principios de programación con Arduino IDE."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "Conexión y programación con Arduino."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 2.",
+              "Ejercicios prácticos.",
+              "Conexión y programación de servomotores con Arduino."
+            ]
+          },
+          {
+            "title": "Día 4",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 3.",
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "net": {
+    "events": [
+      {
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Componentes básicos de electrónica con Arduino",
+              "Arduino IDE.",
+              "Principios de programación con Arduino IDE."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "Conexión y programación con Arduino."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 2.",
+              "Ejercicios prácticos.",
+              "Conexión y programación de servomotores con Arduino."
+            ]
+          },
+          {
+            "title": "Día 4",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 3.",
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "os": {
+    "events": [
+      {
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Componentes básicos de electrónica con Arduino",
+              "Arduino IDE.",
+              "Principios de programación con Arduino IDE."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "Conexión y programación con Arduino."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 2.",
+              "Ejercicios prácticos.",
+              "Conexión y programación de servomotores con Arduino."
+            ]
+          },
+          {
+            "title": "Día 4",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 3.",
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sec": {
+    "events": [
+      {
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Componentes básicos de electrónica con Arduino",
+              "Arduino IDE.",
+              "Principios de programación con Arduino IDE."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "Conexión y programación con Arduino."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 2.",
+              "Ejercicios prácticos.",
+              "Conexión y programación de servomotores con Arduino."
+            ]
+          },
+          {
+            "title": "Día 4",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 3.",
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

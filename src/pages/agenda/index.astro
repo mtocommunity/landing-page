@@ -1,6 +1,9 @@
 ---
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import Layout from "../../layouts/landing/index.astro";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
 import Agenda from "./_agenda";
 
 import "../../styles.css";
@@ -27,6 +30,41 @@ import "./_style.css";
       </p>
     </div>
 
-    <Agenda client:load />
+    <Agenda client:only />
+
+    <div class="flex flex-col justify-center items-center min-h-dvh relative">
+      <div
+        class="absolute top-50 h-96 w-full opacity-25 -z-20 bg-grid-container-contact_us"
+      >
+        <div class="bg-grid"></div>
+      </div>
+      <div class="bg-color-contact_us"></div>
+      <div class="flex flex-col gap-4 text-white items-center">
+        <h2 class="font-main_sans font-bold">
+          ¡No te pierdad ni un solo evento!
+        </h2>
+        <p class="w-2/3 text-center">
+          Aquí encontrarás todas las exposiciones, talleres y actividades que
+          organiza nuestra comunidad. Mantente al tanto de nuestras fechas clave
+          y asegura tu participación en cada evento. ¡Explora, aprende y
+          conéctate con la comunidad!
+        </p>
+        <div class="flex gap-14">
+          <Button
+            type={ButtonType.PRIMARY}
+            link="https://discord.mtocommunity.com/"
+            className="flex items-center"
+          >
+            <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-5" />
+            ¡Quiero unirme!
+          </Button>
+          <a
+            href=""
+            class="px-5 py-3 text-white font-semibold rounded-3xl font-onest border-mto_blue border-[1px] bg-mto_dark_gray"
+            >Todos los recursos →</a
+          >
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
