@@ -1,0 +1,32 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Layout from "../../layouts/landing/index.astro";
+import Agenda from "./_agenda";
+
+import "../../styles.css";
+import "./_style.css";
+---
+
+<Layout title="Equipos - MTO Community">
+  <main
+    class="flex flex-col w-vw overflow-x-hidden min-h-dvh items-center pb-24"
+  >
+    <div class="absolute opacity-25 -z-20 bg-grid-container">
+      <div class="bg-grid"></div>
+    </div>
+    <div
+      class="bg-gradient-to-bl from-mto_dark_gray via-mto_red/20 from-0% to-mto_dark_gray to-40% aspect-square -z-30 absolute left-0 top-0 h-[100dvh] w-full"
+    >
+    </div>
+    <div class="flex flex-col gap-4 items-center text-white pt-24">
+      <h1 class="text-3xl font-main_sans font-bold">Agenda de MTO</h1>
+      <p class="px-4 lg:w-1/2 text-center font-lora">
+        Mantente al día con nuestra programación y no te pierdas ninguna
+        oportunidad de aprender, crecer y conectar con personas apasionadas como
+        tú.
+      </p>
+    </div>
+
+    <Agenda client:load />
+  </main>
+</Layout>
