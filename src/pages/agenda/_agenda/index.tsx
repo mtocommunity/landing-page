@@ -36,7 +36,7 @@ function Agenda() {
   };
 
   return (
-    <div className="w-full min-h-dvh flex flex-col items-center px-4 mt-14 lg:w-2/3 2xl:w-1/2">
+    <div className="w-full min-h-[100dvh] flex flex-col items-center px-4 mt-14 lg:w-2/3 2xl:w-1/2">
       <div className="w-full flex p-2 bg-gray-600/50 justify-between">
         <button
           className={`team-button ${team === "dev" ? "team-button-active" : ""}`}
