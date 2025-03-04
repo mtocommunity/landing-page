@@ -9,16 +9,26 @@ interface LeaderCardProps {
 }
 
 const LeaderCard: React.FC<LeaderCardProps> = ({ photo, name, role, link }) => {
+  const parts = role
+    .split("")
+    .map((char, i) => (
+      <span style={{ transform: `rotate(${i * 8}deg)` }}>{char}</span>
+    ));
+
   return (
     <a
       href={link}
-      className="block w-auto rounded-md overflow-hidden transform hover:scale-105 team-card-shadow"
+      className="w-auto rounded-md transform hover:scale-105 flex flex-col"
     >
-      <img src={photo} className="h-80 object-cover aspect-[3/4]" alt={photo} />
-      <div className="w-auto p-4 bg-mto_gray text-white">
-        <h3 className="text-xl font-semibold mb-1">{name}</h3>
-        <p className="text-gray-400 text-sm">{role}</p>
-      </div>
+      <div className="text-rotate">{parts}</div>
+      <img
+        src={photo}
+        className="w-60 object-cover aspect-square rounded-full"
+        alt={photo}
+      />
+      <span className="w-min text-nowrap mx-auto mt-2 py-2 px-4 rounded-2xl bg-mto_gray">
+        {name}
+      </span>
     </a>
   );
 };
