@@ -6,10 +6,23 @@ interface LeaderCardProps {
   name: string;
   role: string;
   link: string;
+  easter_egg?: string;
 }
 
-const LeaderCard: React.FC<LeaderCardProps> = ({ photo, name, role, link }) => {
+const LeaderCard: React.FC<LeaderCardProps> = ({
+  photo,
+  name,
+  role,
+  link,
+  easter_egg,
+}) => {
   const parts = role
+    .split("")
+    .map((char, i) => (
+      <span style={{ transform: `rotate(${i * 8}deg)` }}>{char}</span>
+    ));
+
+  const partsEasterEgg = (easter_egg ?? role)
     .split("")
     .map((char, i) => (
       <span style={{ transform: `rotate(${i * 8}deg)` }}>{char}</span>
@@ -18,9 +31,18 @@ const LeaderCard: React.FC<LeaderCardProps> = ({ photo, name, role, link }) => {
   return (
     <a
       href={link}
-      className="w-auto rounded-md transform hover:scale-105 flex flex-col"
+      className="w-auto rounded-md transform hover:scale-105 flex flex-col group transition-transform"
     >
-      <div className="text-rotate">{parts}</div>
+      {easter_egg ? (
+        <>
+          <div className="text-rotate group-hover:hidden">{parts}</div>
+          <div className="text-rotate hidden group-hover:block">
+            {partsEasterEgg}
+          </div>
+        </>
+      ) : (
+        <div className="text-rotate">{parts}</div>
+      )}
       <img
         src={photo}
         className="w-60 object-cover aspect-square rounded-full"
