@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "verbatimModuleSyntax": false,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "types": ["vite/client"]
   }
 }

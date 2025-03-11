@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/landing/index.astro";
+
+import "../../styles.css";
+import "./_style.css";
+import TeamCard from "../../components/landing/molecule/team_card";
+---
+
+<Layout title="Equipos - MTO Community">
+  <main
+    class="flex flex-col w-vw overflow-x-hidden min-h-dvh items-center pb-24"
+  >
+    <div class="absolute opacity-25 -z-20 bg-grid-container">
+      <div class="bg-grid"></div>
+    </div>
+    <div
+      class="bg-gradient-to-br from-mto_dark_gray via-mto_blue/20 from-0% to-mto_dark_gray to-40% aspect-square -z-30 absolute left-0 top-0 h-[100dvh] w-full"
+    >
+    </div>
+    <div class="flex flex-col pt-32 items-center">
+      <h1 class="text-white text-2xl font-main_sans font-bold lg:text-3xl">
+        Nuestros Equipos
+      </h1>
+      <p class="text-gray-400 font-lora lg:text-sm">
+        ¡Explora, conecta y crece junto a nosotros!
+      </p>
+    </div>
+    <ul class="flex flex-col text-white w-full px-8 gap-8 mt-10">
+      <li class="flex flex-col w-full gap-4 lg:flex-row lg:justify-center">
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-dev-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-dev-team.webp"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <TeamCard team="dev" className="lg:w-auto lg:h-[35vh]" client:load />
+      </li>
+      <li
+        class="flex flex-col w-full gap-4 lg:flex-row-reverse lg:justify-center"
+      >
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-iot-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-iot-team.webp"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <TeamCard team="iot" className="lg:w-auto lg:h-[35vh]" client:load />
+      </li>
+      <li class="flex flex-col w-full gap-4 lg:flex-row lg:justify-center">
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-net-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-net-team.webp"
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <TeamCard team="net" className="lg:w-auto lg:h-[35vh]" client:load />
+      </li>
+      <li
+        class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row-reverse lg:justify-center"
+      >
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-os-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-os-team.webp"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
+
+        <TeamCard team="os" className="lg:w-auto lg:h-[35vh]" client:load />
+      </li>
+      <li
+        class="flex flex-col w-full gap-4 text-gray-400 lg:flex-row lg:justify-center"
+      >
+        <div class="w-full rounded-xl aspect-[2/1] lg:h-[35vh] lg:w-auto">
+          <img
+            src="https://cdn.mtocommunity.com/landing-security-team.webp"
+            alt="https://cdn.mtocommunity.com/landing-security-team.webp"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
+
+        <TeamCard team="sec" className="lg:w-auto lg:h-[35vh]" client:load />
+      </li>
+    </ul>
+  </main>
+</Layout>

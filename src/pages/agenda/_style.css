@@ -1,0 +1,36 @@
+.bg-grid {
+  background-image: linear-gradient(to right, transparent 79px, #ccc 80px),
+    linear-gradient(to bottom, transparent 79px, #ccc 80px);
+  background-size: 80px 80px;
+  background-position:
+    0 0,
+    0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.bg-grid-container {
+  mask-image: linear-gradient(black 0%, transparent 100%);
+  @apply w-full h-[70dvh];
+}
+
+.bg-grid-container-discord {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    black,
+    transparent 90%
+  );
+}
+
+.bg-color-discord {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 75dvh;
+  background: radial-gradient(#02c8ed, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black, transparent);
+  z-index: -10;
+  opacity: 30%;
+}

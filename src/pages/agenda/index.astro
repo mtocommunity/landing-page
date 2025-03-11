@@ -1,0 +1,74 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import Layout from "../../layouts/landing/index.astro";
+import Button from "../../components/general/attoms/button";
+import { ButtonType } from "../../components/general/attoms/button/types";
+import Agenda from "./_agenda";
+
+import "../../styles.css";
+import "./_style.css";
+---
+
+<Layout title="Agenda - MTO Community">
+  <main
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24"
+  >
+    <div class="absolute opacity-25 -z-20 bg-grid-container">
+      <div class="bg-grid"></div>
+    </div>
+    <div
+      class="bg-gradient-to-bl from-mto_dark_gray via-mto_red/20 from-0% to-mto_dark_gray to-40% aspect-square -z-30 absolute left-0 top-0 h-[100dvh] w-full"
+    >
+    </div>
+    <div class="flex flex-col gap-4 items-center text-white pt-32">
+      <h1 class="text-3xl font-main_sans font-bold">Agenda de MTO</h1>
+      <p class="px-4 lg:w-1/2 text-center font-lora">
+        Mantente al día con nuestra programación y no te pierdas ninguna
+        oportunidad de aprender, crecer y conectar con personas apasionadas como
+        tú.
+      </p>
+    </div>
+
+    <div class="w-full min-h-dvh flex flex-col items-center">
+      <Agenda client:only />
+    </div>
+
+    <div
+      class="flex flex-col justify-center items-center min-h-dvh relative w-full"
+    >
+      <div
+        class="absolute top-50 h-96 w-full opacity-25 -z-20 bg-grid-container-discord"
+      >
+        <div class="bg-grid"></div>
+      </div>
+      <div class="bg-color-discord"></div>
+      <div class="flex flex-col gap-4 text-white items-center">
+        <h2 class="font-main_sans font-bold">
+          ¡No te pierdad ni un solo evento!
+        </h2>
+        <p class="w-2/3 text-center">
+          Aquí encontrarás todas las exposiciones, talleres y actividades que
+          organiza nuestra comunidad. Mantente al tanto de nuestras fechas clave
+          y asegura tu participación en cada evento. ¡Explora, aprende y
+          conéctate con la comunidad!
+        </p>
+        <div class="flex gap-14">
+          <Button
+            type={ButtonType.PRIMARY}
+            link="https://discord.mtocommunity.com/"
+            className="flex items-center"
+          >
+            <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-5" />
+            ¡Quiero unirme!
+          </Button>
+          <a
+            href=""
+            class="px-5 py-3 text-white font-semibold rounded-3xl font-onest border-mto_blue border-[1px] bg-mto_dark_gray"
+            >Todos los recursos →</a
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,78 +1,82 @@
-import type { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faMinus, faPlus, faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./style.css";
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
+import {
+  faLaptopCode,
+  faNetworkWired,
+  faRobot,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 type TeamCardProps = {
-  image: string;
-  title: string;
-  description: string;
-  icon: IconProp;
-  extended?: boolean;
-  onClick?: () => void;
-  link?: string;
+  team: "dev" | "iot" | "net" | "os" | "sec";
+  className?: string;
 };
 
-function TeamCard({
-  image,
-  title,
-  description,
-  icon,
-  extended = false,
-  onClick,
-  link,
-}: TeamCardProps) {
+const icons = {
+  dev: faLaptopCode,
+  iot: faRobot,
+  net: faNetworkWired,
+  os: faLinux,
+  sec: faRedhat,
+};
+
+const colors = {
+  dev: "mto_red",
+  iot: "mto_blue",
+  net: "mto_red",
+  os: "mto_gray",
+  sec: "mto_gray",
+};
+
+const teamDescription = {
+  dev: "Nuestro equipo de desarrollo se enfoca en el desarrollo web y de software. Aquí puedes aprender sobre programación, frameworks modernos, y buenas prácticas de desarrollo.",
+  iot: "El equipo de Internet de las Cosas se encarga de gestionar proyectos de robótica, los cuales son interactivos, creativos e innovadores.",
+  net: "El equipo de redes se centra en todo lo relacionado con redes y comunicaciones. Trabajan en la configuración y gestión de redes, así como en la resolución de problemas de conectividad.",
+  os: "Dedicado a sistemas operativos y administración de sistemas. Se especializan en el manejo de diferentes sistemas operativos,  configuración y administración.",
+  sec: "Trabaja en la protección de sistemas y datos contra amenazas y ataques. Aquí aprenderás sobre seguridad informática, análisis de vulnerabilidades y mejores prácticas de protección.",
+};
+
+function TeamCard({ team, className }: TeamCardProps) {
+  const [reverse, setReverse] = useState(false);
+
+  const onClick = () => {
+    setReverse(!reverse);
+  };
+
   return (
     <div
-      className={`team-card ${extended ? "team-card-extend" : ""} team-card-shadow`}
+      className={`team-card cursor-pointer aspect-square bg-gradient-to-tr from-${colors[team]} from-70% to-mto_dark_gray p-[2px] rounded-xl w-full relative ${className} ${reverse ? "team-card-reverse" : ""}`}
+      onClick={onClick}
     >
-      <div className="flex-1 relative cursor-pointer" onClick={onClick}>
-        <div className="w-full">
-          <img src={image} alt={image} className={`team-card-img`} />
-        </div>
-        <div
-          className={`absolute top-0 w-full h-full flex justify-between px-4 transition-colors duration-500 ${
-            extended ? "bg-none" : "bg-black bg-opacity-50"
-          } lg:relative lg:flex-col lg:h-80 lg:items-center`}
-        >
-          <div
-            className={`flex gap-4 mt-[50px] -translate-y-1/2 transition-opacity h-min ${
-              extended ? "opacity-0" : "opacity-100"
-            } lg:flex-col lg:mt-36`}
-          >
-            <FontAwesomeIcon icon={icon} className="text-4xl" />
-            <h3 className="text-xl font-main_sans">{title}</h3>
-          </div>
-          <FontAwesomeIcon
-            icon={extended ? faMinus : faPlus}
-            className={`transition-all p-2 border-white border rounded-full text-sm duration-500 mt-4 lg:w-4 lg:h-4 lg:mb-4 z-20 ${
-              extended ? "bg-white text-black" : ""
-            }`}
-          />
-        </div>
+      <div
+        className={`bg-black flex flex-col items-center justify-center bg-gradient-to-br to-${colors[team]}/10 from-black rounded-xl absolute`}
+      >
+        <FontAwesomeIcon icon={icons[team]} className="w-[5rem] text-[5rem]" />
+        <span className="font-bold text-center">
+          {team.toUpperCase()}-TEAM
+          {["os", "sec"].indexOf(team) === -1 ? null : (
+            <>
+              <br />{" "}
+              <span className="lg:text-xs 2xl:text-sm">
+                (Inactivo temporalmente)
+              </span>
+            </>
+          )}
+        </span>
       </div>
       <div
-        className={`flex flex-col items-center py-4 justify-between h-full bg-mto_dark_gray lg:absolute lg:bottom-16 lg:h-64 lg:transition-opacity lg:duration-500 lg:pb-0 ${
-          extended ? "lg:opacity-100" : "lg:opacity-0"
-        }`}
+        className={`bg-black flex flex-col gap-6 items-center justify-center bg-gradient-to-br to-${colors[team]}/10 from-black rounded-xl absolute reverse`}
       >
-        <div className="flex gap-3 h-1/3 items-end">
-          <FontAwesomeIcon icon={icon} className="text-5xl" />
-          <h3 className="text-3xl font-main_sans">{title}</h3>
-        </div>
-        <p className="text-base font-light px-4 text-center lg:px-16 xl:px-24">
-          {description}
+        <span className="font-bold">{team.toUpperCase()}-TEAM</span>
+        <p className="px-5 text-center lg:text-xs 2xl:text-sm">
+          {teamDescription[team]}
         </p>
-        <Button
-          type={ButtonType.PRIMARY}
-          link={link}
-          className="flex items-center gap-2 py-2 rounded-md"
-        >
-          <FontAwesomeIcon icon={faTerminal} />
-          <span>El equipo</span>
+        <Button type={ButtonType.PRIMARY} link={`/team/${team}`}>
+          Ver recursos
         </Button>
       </div>
     </div>

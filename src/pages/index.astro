@@ -2,7 +2,7 @@
 import Layout from "../layouts/landing/index.astro";
 import Home from "../components/landing/organism/home/index.astro";
 import AboutUs from "../components/landing/organism/aboutus/index.astro";
-import TeamsDisplay from "../components/landing/organism/teams_display";
+import Teams from "../components/landing/organism/teams/index.astro";
 import ContactUs from "../components/landing/organism/contact_us/index.astro";
 
 import "../styles.css";
@@ -10,14 +10,12 @@ import "../styles.css";
 
 <Layout title="ManyToOne Community">
   <div id="bg-box" class="">
-    <div id="bg-gray"></div>
-    <div id="bg-red"></div>
     <div id="bg-blue"></div>
   </div>
   <main class="flex flex-col w-vw overflow-x-hidden">
     <Home />
     <AboutUs />
-    <TeamsDisplay client:load />
+    <Teams />
     <ContactUs />
   </main>
 </Layout>

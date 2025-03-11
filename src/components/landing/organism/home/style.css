@@ -16,6 +16,23 @@
   transition: background-position 0.3s;
 }
 
+.bg-grid {
+  background-image: linear-gradient(to right, transparent 79px, #ccc 80px),
+    linear-gradient(to bottom, transparent 79px, #ccc 80px);
+  background-size: 80px 80px;
+  background-position:
+    0 0,
+    0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.bg-grid-container {
+  mask-image: radial-gradient(circle, black 0%, transparent 100%);
+  @apply w-full aspect-square -top-[10%] lg:-top-2/3 lg:w-2/3;
+}
+
 .action-button:hover {
   background-position-x: right;
 }

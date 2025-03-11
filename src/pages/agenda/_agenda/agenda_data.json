@@ -1,0 +1,145 @@
+{
+  "dev": {
+    "events": [
+      {
+        "name": "Seminario de Fundamentos de GitHub",
+        "link": "/event/dev-seminario-git-basico/",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-10-09T05:00:00Z",
+            "items": [
+              "Introducción a la Gestión de Versiones",
+              "¿Qué es Git?",
+              "Instalación y Configuración",
+              "Primeros Pasos con Git",
+              "Ejercicio Práctico",
+              "Preguntas y Respuestas"
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-10-16T05:00:00Z",
+            "items": [
+              "Introducción a GitHub",
+              "Colaboración en Proyectos",
+              "Ramas en Git",
+              "Ejercicio Práctico",
+              "Conclusiones y Recursos Adicionales",
+              "Cierre del Seminario"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "iot": {
+    "events": [
+      {
+        "name": "Expoferia 2024",
+        "link": "/event/expoferia-2024",
+        "description": {
+          "content": "En este evento organizado por UTP Chiclayo en colaboración con MTO Community presentamos 2 proyectos hechos por estudiantes de 2do ciclo de la carrera.",
+          "link": "/event/expoferia-2024",
+          "link_title": "Visitar Web"
+        }
+      },
+      {
+        "name": "Seminario de robótica básica",
+        "link": "/event/iot-seminario-robotica-basica",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-09-27T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Componentes básicos de electrónica con Arduino",
+              "Arduino IDE.",
+              "Principios de programación con Arduino IDE."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2024-10-04T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "Conexión y programación con Arduino."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2024-10-18T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 2.",
+              "Ejercicios prácticos.",
+              "Conexión y programación de servomotores con Arduino."
+            ]
+          },
+          {
+            "title": "Día 4",
+            "date": "2024-10-25T05:00:00Z",
+            "items": [
+              "Repaso del Seminario 3.",
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "net": {
+    "events": [
+      {
+        "name": "Expoferia 2024",
+        "link": "/event/expoferia-2024",
+        "description": {
+          "content": "En este evento organizado por UTP Chiclayo en colaboración con MTO Community presentamos junto al <a href=\"/team/sec\">Sec-Team</a> una demostración de ataques de red.",
+          "link": "/event/expoferia-2024",
+          "link_title": "Visitar Web"
+        }
+      },
+      {
+        "name": "Armado de cables Ethernet con conectores RJ45",
+        "link": "/event/net-seminario-redes-cableadas",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2024-10-23T05:00:00Z",
+            "items": [
+              "¿Qué es Auto-MDIX?",
+              "Armado de cables cruzados con conectores RJ45.",
+              "Armado de cables directos con conectores RJ45.",
+              "Testeo con probador de cables."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "os": {
+    "events": [
+      {
+        "name": "Instalación de Linux en una maquina virtual",
+        "description": {
+          "content": "Aprenderás a instalar Linux en una máquina virtual, abriéndote las posibilidades de probar el maravilloso mundo del open source y de instalaciones con un solo comando.",
+          "link": "",
+          "link_title": "Próximamente"
+        }
+      }
+    ]
+  },
+  "sec": {
+    "events": [
+      {
+        "name": "Expoferia 2024",
+        "link": "/event/dev-seminario-git-basico",
+        "description": {
+          "content": "En este evento organizado por UTP Chiclayo en colaboración con MTO Community presentamos junto al <a href=\"/team/net\">Net-Team</a> una demostración de ataques de red.",
+          "link": "/event/expoferia-2024",
+          "link_title": "Visitar Web"
+        }
+      }
+    ]
+  }
+}
