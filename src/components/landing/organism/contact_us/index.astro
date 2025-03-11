@@ -1,13 +1,28 @@
 ---
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./style.css";
 ---
 
-<div class="flex flex-col justify-between items-center min-h-dvh bg-gradient-to-b from-mto_dark_gray to bg-mto_blue text-white md:text-lg lg:text-2xl 2xl:4xl" id="contactus">
-  <div></div>
-  <div class="gap-2">
-    <FontAwesomeIcon icon={faEnvelope} />
-    <a href="mailto:contact@mtocommunity.com">contact@mtocommunity.com</a>
+<div
+  class="flex flex-col justify-center items-center min-h-dvh relative"
+  id="contactus"
+>
+  <div
+    class="absolute top-50 h-96 w-full opacity-25 -z-20 bg-grid-container-contact_us"
+  >
+    <div class="bg-grid"></div>
   </div>
- <div class="h-1 w-full bg-white"></div>
+  <div class="bg-color-contact_us"></div>
+  <div class="flex flex-col gap-4 text-white items-center">
+    <h2 class="font-main_sans font-bold">¡Estamos aquí para ayudarte!</h2>
+    <p class="w-2/3 text-center">
+      ¿Tienes preguntas, dudas o simplemente quieres ponerte en contacto con
+      nosotros? ¡No dudes en escribirnos! Estamos siempre disponibles para
+      escucharte y brindarte la mejor atención.
+    </p>
+    <a
+      href="mailto:contact@mtocommunity.com"
+      class="bg-mto_dark_gray border-mto_blue border-[1px] text-white rounded-2xl py-2 px-14 transition-colors hover:border-mto_blue_light hover:text-mto_blue_light"
+      >Contáctanos</a
+    >
+  </div>
 </div>

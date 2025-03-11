@@ -1,146 +1,168 @@
 ---
 import LeaderCard from "../../components/landing/molecule/leader_card";
 import Layout from "../../layouts/landing/index.astro";
+import "./_style.css";
 ---
 
 <Layout title="MTO Staff">
-  <div class="bg-gradient-to-t from-mto_red to-mto_dark_gray">
-    <main class="min-h-screen py-10 lg:py-16 text-white text-center">
-      <h2 class="text-3xl md:text-3xl lg:text-5xl font-bold mb-6">
-        Nuestro equipo
-      </h2>
-      <p class="max-w-sm sm:max-w-3xl lg:max-w-4xl mx-auto text-lg mb-10 py-3">
-        Nuestra comunidad está dirigida por un grupo de estudiantes
-        comprometidos con el crecimiento y el aprendizaje colectivo. Cada uno
-        aporta su experiencia y pasión en distintas áreas tecnológicas,
-        asegurando que cada miembro tenga una experiencia de aprendizaje
-        enriquecedora.
+  <main
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-gradient-to-tr from-mto_blue/10 lg:via-mto_dark_gray"
+  >
+    <div class="absolute opacity-25 -z-20 bg-grid-container">
+      <div class="bg-grid"></div>
+    </div>
+    <div
+      class="bg-gradient-to-bl from-mto_dark_gray via-mto_blue/20 from-0% to-mto_dark_gray to-40% aspect-square -z-30 absolute left-0 top-0 h-[100dvh] w-full"
+    >
+    </div>
+    <div class="flex flex-col pt-32 gap-4 items-center text-white">
+      <h1 class="text-3xl font-main_sans font-bold">Staff</h1>
+      <p class="px-4 lg:w-1/2 text-center font-lora">
+        Conoce al equipo que hace esto posible.<br /> Detrás de cada evento, iniciativa
+        y proyecto hay un equipo de personas comprometidas con crear un espacio donde
+        aprender, innovar y colaborar sea una experiencia increíble.
       </p>
+    </div>
 
-      <!-- Community leaders -->
-      <section class="py-0 text-white text-center">
-        <p
-          class="font-main_sans text-2xl mb-10 md:text-2xl lg:text-3xl lg:mb-10 lg:p-8"
-        >
-          Líderes de la Comunidad
-        </p>
-        <div
-          class="flex flex-wrap justify-center gap-8 px-8 justify-items-center lg:gap-x-16 mb-10"
-        >
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg"
-            name="Jorge Contreras"
-            role="Líder de la Comunidad"
-            link="https://linktr.ee/jorgecode"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg"
-            name="Luis Bazán"
-            role="Líder de la Comunidad"
-            link="https://github.com/luisBazanDev"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"
-            name="Junior Delgado"
-            role="Líder de la Comunidad"
-            link="https://github.com/aarondfv"
-          />
-        </div>
+    <!-- Community Leads -->
+    <p
+      class="font-main_sans text-2xl mb-10 md:text-2xl lg:text-3xl lg:mb-10 lg:p-8"
+    >
+      Líderes de la Comunidad
+    </p>
+    <div
+      class="flex flex-wrap justify-center gap-8 px-8 justify-items-center lg:gap-x-16 mb-10"
+    >
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg"
+        name="Jorge Contreras"
+        role="Líder de la Comunidad"
+        link="https://linktr.ee/jorgecode"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg"
+        name="Luis Bazán"
+        role="Líder de la Comunidad"
+        link="https://github.com/luisBazanDev"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"
+        name="Junior Delgado"
+        role="Líder de la Comunidad"
+        link="https://github.com/aarondfv"
+      />
+    </div>
 
-        <!-- Teams leaders -->
-        <p
-          class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
-        >
-          Líderes de Equipos
-        </p>
-        <div
-          class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-16 xl:gap-x-32"
-        >
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
-            name="Juan Romero"
-            role="Líder del Dev-Team"
-            link="https://linktr.ee/IngSystemCix"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
-            name="Víctor Tuñoque"
-            role="Líder del Dev-Team"
-            link="http://linkedin.com/in/víctor-vladimir-tuñoque-morante-6a89072a2"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
-            name="Abner Cubas"
-            role="Líder del Net-Team"
-            link="http://www.linkedin.com/in/abner-cubas-parra-176a7329a"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
-            name="Briggitte Martinez"
-            role="Líder del Net-Team"
-            link="http://www.linkedin.com/in/briggitte-martinez-isi"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-diego-bazan-sosa.jpg"
-            name="Diego Bazán"
-            role="Líder del OS-Team"
-            link="http://www.linkedin.com/in/diego-fabian-baz%C3%A1n-sosa-67423432b"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"
-            name="Junior Delgado"
-            role="Líder del Security-Team"
-            link="/staff"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
-            name="Eliana Cajusol"
-            role="Líder del IoT-Team"
-            link="https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
-            name="Jaime López"
-            role="Líder del IoT-Team"
-            link="/staff"
-          />
-        </div>
+    <!-- Teams leaders -->
+    <p
+      class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
+    >
+      Líderes de Equipos
+    </p>
+    <div
+      class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-16 xl:gap-x-32"
+    >
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
+        name="Juan Romero"
+        role="Líder del Dev-Team"
+        link="https://linktr.ee/IngSystemCix"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
+        name="Víctor Tuñoque"
+        role="Líder del Dev-Team"
+        link="http://linkedin.com/in/víctor-vladimir-tuñoque-morante-6a89072a2"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+        name="Abner Cubas"
+        role="Líder del Net-Team"
+        link="http://www.linkedin.com/in/abner-cubas-parra-176a7329a"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
+        name="Briggitte Martinez"
+        role="Líder del Net-Team"
+        link="http://www.linkedin.com/in/briggitte-martinez-isi"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+        name="Eliana Cajusol"
+        role="Líder del IoT-Team"
+        link="https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
+        name="Jaime López"
+        role="Líder del IoT-Team"
+        link="/staff"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-julian-acosta.jpeg"
+        name="Julián Acosta"
+        role="Sub-Líder del IoT-Team"
+        link="https://www.instagram.com/juliancacosta"
+      />
+    </div>
 
-        <!-- Teams leaders -->
-        <p
-          class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
-        >
-          Social Media Team
-        </p>
-        <div
-          class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-32 xl:gap-x-32"
-        >
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-matamitas.jpg"
-            name="Cristhoper Cueva"
-            role="Líder & Editor"
-            link="https://www.instagram.com/matamitas25/"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
-            name="Eliana Cajusol"
-            role="Guionistas & Realización"
-            link="https://www.instagram.com/naomi_cajusol/"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
-            name="Briggitte Martinez"
-            role="Imagen y Voz"
-            link="https://www.instagram.com/briggittemar_v"
-          />
-          <LeaderCard
-            photo="https://cdn.mtocommunity.com/staff-nn.jpg"
-            name="Moisés Ruiz"
-            role="CM de X"
-            link="/staff"
-          />
-        </div>
-      </section>
-    </main>
-  </div>
+    <!-- Social Media -->
+    <p
+      class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
+    >
+      Social Media Team
+    </p>
+    <div
+      class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-32 xl:gap-x-32"
+    >
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-matamitas.jpg"
+        name="Cristhoper Cueva"
+        role="Líder & Editor"
+        link="https://www.instagram.com/matamitas25/"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+        name="Eliana Cajusol"
+        role="Guionista & Realización"
+        link="https://www.instagram.com/naomi_cajusol/"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
+        name="Briggitte Martinez"
+        role="Imagen y Voz"
+        link="https://www.instagram.com/briggittemar_v"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-jaris-alday.png"
+        name="Jaris Alday"
+        role="Community Manager & Diseño"
+        link="https://www.instagram.com/taehyrthv"
+      />
+    </div>
+
+    <!-- Logistic Team -->
+    <p
+      class="text-xl md:text-2xl lg:text-3xl p-8 lg:gap-16 mb-6 font-main_sans"
+    >
+      Equipo de Logística
+    </p>
+    <div
+      class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-16 xl:gap-x-32"
+    >
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-daniel-mendoza.jpeg"
+        name="Daniel Mendoza"
+        role="Responsable de Logística"
+        link="https://www.instagram.com/da_mz21/"
+      />
+      <LeaderCard
+        photo="https://cdn.mtocommunity.com/staff-jorge-gil.jpeg"
+        name="Jorge Asencio"
+        role="Staff de Logística"
+        easter_egg="Gerente de asuntos sin importancia"
+        link="https://www.linkedin.com/in/jorge-ascencio-gil-450240337/"
+      />
+    </div>
+  </main>
 </Layout>

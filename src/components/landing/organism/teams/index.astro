@@ -1,0 +1,34 @@
+---
+import "./style.css";
+import TeamCard from "../../molecule/team_card";
+---
+
+<div
+  class="w-full min-h-dvh justify-between flex flex-col gap-10 pt-10 lg:pt-28"
+  id="teams"
+>
+  <div class="text-white w-full flex flex-col items-center gap-2">
+    <h3 class="text-mto_blue font-onest tracking-[1rem] text-sm">EQUIPOS</h3>
+    <h2 class="font-main_sans font-bold text-xl">CONÉCTATE Y COLABORA</h2>
+    <p class="text-slate-400 text-center px-2 font-lora lg:w-1/2">
+      Aquí encontrarás diversos grupos que trabajan en proyectos, comparten
+      conocimientos y fomentan el aprendizaje colaborativo. Ya seas un experto o
+      un principiante, hay un equipo para ti. ¡Explora, conecta y crece junto a
+      nosotros!
+    </p>
+  </div>
+  <ul
+    class="text-white grid grid-cols-1 gap-10 px-10 lg:grid-cols-3 lg:w-2/3 lg:mx-auto"
+  >
+    <TeamCard team="dev" client:load />
+    <TeamCard team="iot" client:load />
+    <TeamCard team="net" client:load />
+  </ul>
+  <div class="w-full flex justify-center py-2">
+    <a
+      href="/teams"
+      class="py-2 border-mto_blue border-[1px] text-white px-14 rounded-2xl hover:text-mto_blue_light transition-colors hover:border-mto_blue_light"
+      >Ver más</a
+    >
+  </div>
+</div>

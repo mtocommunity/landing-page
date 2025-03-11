@@ -1,0 +1,30 @@
+.team-button {
+  @apply text-gray-400 relative p-2 flex justify-center items-center gap-1 z-10 flex-1 transition-transform;
+}
+
+.team-button-active {
+  @apply text-white font-bold;
+}
+
+.team-button-active::before {
+  content: "";
+  @apply absolute bg-mto_red w-full h-full -z-10 rounded-md;
+  animation: activeButton 0.4s cubic-bezier(0.25, 1, 0.25, 1);
+}
+
+@keyframes activeButton {
+  0% {
+    transform: scaleX(0) scaleY(0);
+  }
+  50% {
+    transform: scaleX(0.5) scaleY(1);
+    @apply rounded-none;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.up-gradient {
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
