@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="flex justify-center py-4 bg-mto_gray w-full text-xs lg:text-base">
-        <span className="text-white">©2024 - Copyright 2024. Made with ♡</span>
+        <span className="text-white">©2025 - Copyright 2024. Made with ♡</span>
         <a href="https://mtocommunity.com/" className="text-mto_blue pl-1">
           ManyToOne
         </a>
