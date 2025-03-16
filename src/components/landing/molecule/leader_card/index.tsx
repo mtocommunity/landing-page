@@ -45,7 +45,7 @@ const LeaderCard: React.FC<LeaderCardProps> = ({
       )}
       <img
         src={photo}
-        className="w-60 object-cover aspect-square rounded-full"
+        className="w-60 object-cover aspect-square rounded-full z-10"
         alt={photo}
       />
       <span className="w-min text-nowrap mx-auto mt-2 py-2 px-4 rounded-2xl bg-mto_gray">
