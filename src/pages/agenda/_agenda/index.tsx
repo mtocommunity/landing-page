@@ -22,22 +22,28 @@ type AgendaEvent = {
 
 function Agenda() {
   let query = new URLSearchParams(window.location.search).get("team");
-  if (!query || !["dev", "iot", "net", "os", "sec"].includes(query)) {
-    query = "dev";
+  if (!query || !["dev", "iot", "net", "os", "sec", "mto"].includes(query)) {
+    query = "mto";
   }
 
-  const [team, setTeam] = useState<"dev" | "iot" | "net" | "os" | "sec">(
-    query as "dev" | "iot" | "net" | "os" | "sec"
-  );
+  const [team, setTeam] = useState<
+    "dev" | "iot" | "net" | "os" | "sec" | "mto"
+  >(query as "dev" | "iot" | "net" | "os" | "sec" | "mto");
   const data = agendaData[team] as { events: AgendaEvent[] };
 
-  const onClick = (newTeam: "dev" | "iot" | "net" | "os" | "sec") => {
+  const onClick = (newTeam: "dev" | "iot" | "net" | "os" | "sec" | "mto") => {
     setTeam(newTeam);
   };
 
   return (
     <div className="w-full min-h-[100dvh] flex flex-col items-center px-4 mt-14 lg:w-2/3 2xl:w-1/2">
       <div className="w-full flex p-2 bg-gray-600/50 justify-between">
+        <button
+          className={`team-button ${team === "mto" ? "team-button-active" : ""}`}
+          onClick={() => onClick("mto")}
+        >
+          <span>MTO</span>
+        </button>
         <button
           className={`team-button ${team === "dev" ? "team-button-active" : ""}`}
           onClick={() => onClick("dev")}
