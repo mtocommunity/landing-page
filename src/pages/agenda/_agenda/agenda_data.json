@@ -141,5 +141,30 @@
         }
       }
     ]
+  },
+  "mto": {
+    "events": [
+      {
+        "name": "404 NO MORE",
+        "link": "/event/mto-404-no-more",
+
+        "description": {
+          "content": "Una Charla virtual, donde dos profecionales nos exponen dificultades que se encontraron en sus trabajos y como lo superaron. Tanto Backend como Frontend.",
+          "link": "/event/mto-404-no-more",
+          "link_title": "Visitar página"
+        },
+        "dates": [
+          {
+            "title": "",
+            "date": "2025-04-11T05:00:00Z",
+            "items": [
+              "Charla de Backend",
+              "Charla de Frontend",
+              "Preguntas y Respuestas"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

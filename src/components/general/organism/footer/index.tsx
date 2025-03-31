@@ -1,3 +1,5 @@
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -25,31 +27,37 @@ const Footer: React.FC = () => {
             href="/#home"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
-            Home
+            Inicio
           </a>
           <a
             href="/#about-us"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
-            About Us
+            Nosotros
           </a>
           <a
-            href="/#contactus"
+            href="/teams"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
-            Contact Us
+            Equipos
           </a>
           <a
-            href="/#teams"
+            href="/agenda"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
-            Teams
+            Agenda
           </a>
           <a
             href="/staff"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
           >
             Staff
+          </a>
+          <a
+            href="/newsletter"
+            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+          >
+            Blog
           </a>
         </div>
 
@@ -60,30 +68,35 @@ const Footer: React.FC = () => {
           <a
             href="https://whatsapp.mtocommunity.com/"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             Whatsapp
           </a>
           <a
             href="https://www.facebook.com/mtocommunity"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             Facebook
           </a>
           <a
             href="https://www.instagram.com/mtocommunity"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             Instagram
           </a>
           <a
             href="https://www.youtube.com/@mtocommunity"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             YouTube
           </a>
           <a
             href="https://www.tiktok.com/@mtocommunity"
             className="text-white opacity-50 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
             TikTok
           </a>
@@ -96,14 +109,17 @@ const Footer: React.FC = () => {
           <a
             href="mailto:contact@mtocommunity.com"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors pl-3 md:pl-0"
+            target="_blank"
           >
             contact@mtocommunity.com
           </a>
           <a
-            href="https://wa.me/51935766085"
+            href="https://www.instagram.com/mtocommunity"
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            target="_blank"
           >
-            +51 935 766 085
+            <FontAwesomeIcon icon={faInstagram} className="mr-2 w-4" />
+            <span>| @mtocommunity</span>
           </a>
         </div>
 
@@ -129,7 +145,9 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="flex justify-center py-4 bg-mto_gray w-full text-xs lg:text-base">
-        <span className="text-white">©2024 - Copyright 2024. Made with ♡</span>
+        <span className="text-white">
+          ©2025 - Copyright 2024-2025. Made with ♡
+        </span>
         <a href="https://mtocommunity.com/" className="text-mto_blue pl-1">
           ManyToOne
         </a>
