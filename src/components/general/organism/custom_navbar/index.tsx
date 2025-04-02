@@ -35,7 +35,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
 
   const renderButton = (additionalClasses = "") => (
     <Button
-      type={ButtonType.LINK}
+      type={ButtonType.BORDER_BLUE}
       link="https://discord.mtocommunity.com/"
       className={`lg:flex ${additionalClasses}`}
     >
