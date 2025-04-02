@@ -40,3 +40,11 @@
 .nav:hover {
   @apply text-mto_blue_light;
 }
+
+.border_blue {
+  @apply text-mto_blue border-mto_blue border px-4 p-2 rounded-full;
+}
+
+.border_blue:hover {
+  @apply bg-mto_blue_dark text-white;
+}
