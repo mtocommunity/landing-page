@@ -91,6 +91,23 @@
   "net": {
     "events": [
       {
+        "name": "Modelo OSI vs. TCP/IP: Fundamentos y Simulación en Packet Tracer",
+        "link": "/event/net-seminario-modelo-osi-vs-tcp",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2025-04-08T05:00:00Z",
+            "items": [
+              "¿Qué es el modelo OSI?",
+              "Capas del modelo OSI",
+              "¿Qué es el modelo TCP/IP?",
+              "Capas del modelo TCP/IP",
+              "Modelo OSI vs. TCP/IP"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Expoferia 2024",
         "link": "/event/expoferia-2024",
         "description": {
@@ -156,7 +173,7 @@
         "dates": [
           {
             "title": "",
-            "date": "2025-04-11T05:00:00Z",
+            "date": "2025-04-25T05:00:00Z",
             "items": [
               "Charla de Backend",
               "Charla de Frontend",

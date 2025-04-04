@@ -9,7 +9,7 @@ import { landing_net } from "../../assets";
 import { ButtonType } from "../../components/general/attoms/button/types";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 import type { EventAgenda } from "../../types";
 
@@ -17,22 +17,23 @@ const agenda: EventAgenda = {
   days: [
     {
       title: "Día 1",
-      date: new Date("2024-10-23 GMT-0500"),
+      date: new Date("2025-04-08 GMT-0500"),
       items: [
-        "¿Qué es Auto-MDIX?",
-        "Armado de cables cruzados con conectores RJ45.",
-        "Armado de cables directos con conectores RJ45.",
-        "Testeo con probador de cables.",
+        "¿Qué es el modelo OSI?",
+        "Capas del modelo OSI",
+        "¿Qué es el modelo TCP/IP?",
+        "Capas del modelo TCP/IP",
+        "Modelo OSI vs. TCP/IP"
       ],
     },
   ],
 };
 
 const props = {
-  title: "NetTeam seminario Introducción a las Redes Cableadas",
+  title: "Modelo OSI vs TCP/IP",
   description:
-    "Sé parte de uno de los eventos a cargo del equipo de Net, aquí aprenderás los fundamentos de las redes cableadas.",
-  path: "events/net-seminario-redes-cableadas",
+    "Sé parte de uno de los eventos a cargo del equipo de Net, aquí aprenderás sobre el funcionamiento y estructura de las redes.",
+  path: "events/net-seminario-modelo-osi-vs-tcp",
 };
 ---
 
@@ -60,19 +61,19 @@ const props = {
       <div class="flex flex-col gap-32 items-center">
         <div class="w-3/4">
           <h1 class="text-2xl font-bold text-center pb-4">
-            Seminario de Introducción a las Redes Cableadas
+            Modelo OSI vs. TCP/IP: Fundamentos y Simulación en Packet Tracer
           </h1>
           <p class="text-sm text-center">
-            Este seminario está diseñado para proporcionar a los estudiantes una
-            comprensión más profunda del funcionamiento de las redes.
+            Explora y compara los modelos OSI y TCP/IP con simulaciones prácticas en Packet Tracer. ¡Aprende desde la base!
           </p>
         </div>
         <Button
-          type={ButtonType.DISABLED}
+          type={ButtonType.PRIMARY}
           className="w-2/3 flex gap-2 justify-center items-center"
+          link="https://netf1.mtocommunity.com/"
         >
-          <FontAwesomeIcon icon={faClock} className="w-4" />
-          <span>Inscripciones cerradas</span>
+          <FontAwesomeIcon icon={faClipboardCheck} className="w-3" />
+          <span>Inscríbete</span>
         </Button>
       </div>
     </main>
