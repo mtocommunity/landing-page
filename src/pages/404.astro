@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/landing/index.astro";
+import Button from "../components/general/attoms/button";
+
+import "../styles.css";
+import { ButtonType } from "../components/general/attoms/button/types";
+---
+
+<Layout title="ManyToOne Community">
+  <main
+    class="flex flex-col items-center justify-center w-vw min-h-dvh overflow-x-hidden bg-gradient-to-t from-mto_blue_dark/20 to-mto_dark_gray"
+  >
+    <h1 class="text-mto_red text-6xl font-main_sans font-bold">404</h1>
+    <h3 class="text-white text-4xl font-secondary_sans">
+      Página no encontrada
+    </h3>
+    <Button type={ButtonType.PRIMARY} className="mt-8" link="/">
+      Volver al inicio
+    </Button>
+  </main>
+</Layout>
