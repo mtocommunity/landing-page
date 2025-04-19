@@ -41,14 +41,6 @@ function Social() {
       </a>
 
       <a
-        href="https://www.facebook.com/mtocommunity"
-        className="icon"
-        target="_blank"
-      >
-        <FontAwesomeIcon icon={faFacebookSquare} />
-      </a>
-
-      <a
         href="https://www.youtube.com/@mtocommunity"
         className="icon"
         target="_blank"
