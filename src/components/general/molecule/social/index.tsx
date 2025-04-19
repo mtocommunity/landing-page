@@ -5,7 +5,6 @@ import {
   faYoutube,
   faTwitch,
   faTiktok,
-  faXTwitter,
   faGithub,
   faWhatsapp,
   faLinkedin,
@@ -70,10 +69,6 @@ function Social() {
         target="_blank"
       >
         <FontAwesomeIcon icon={faWhatsapp} />
-      </a>
-
-      <a href="https://x.com/mtocommunity" className="icon" target="_blank">
-        <FontAwesomeIcon icon={faXTwitter} />
       </a>
     </div>
   );
