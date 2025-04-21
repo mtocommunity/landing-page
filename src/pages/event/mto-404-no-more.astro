@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/event/index.astro";
+import Button from "../../components/general/attoms/button";
+import CustomNavBar from "../../components/general/organism/custom_navbar";
+import Agenda from "../../components/events/organism/Agenda.astro";
+import Speaker from "../../components/events/molecule/Speaker.astro";
+
+import { ButtonType } from "../../components/general/attoms/button/types";
+import { wave2 } from "../../assets/svgs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboard, faClock } from "@fortawesome/free-solid-svg-icons";
+
+import type { EventAgenda } from "../../types";
+
+const agenda: EventAgenda = {
+  days: [
+    {
+      title: "Frontend",
+      date: new Date("2024-10-09 GMT-0500"),
+      items: ["Ponencia llevada por Rodrigo Tejeda"],
+    },
+    {
+      title: "Backend",
+      date: new Date("2024-10-16 GMT-0500"),
+      items: ["Ponencia llevada por Jorge Rios"],
+    },
+  ],
+};
+
+const props = {
+  title: "Evento 404 No More",
+  description:
+    "¿Alguna vez pensaste que los errores solo le pasan a los principiantes? ¡Nada más lejos de la realidad! En este evento virtual, descubrirás de la mano de profesionales del desarrollo web, backend y frontend cómo los errores y dilemas tecnológicos son parte natural del crecimiento —incluso en entornos de producción— y cómo el ingenio y la resiliencia los convierten en oportunidades de aprendizaje.",
+  path: "event/mto-404-no-more",
+};
+---
+
+<Layout {...props}>
+  <div class="text-white">
+    <CustomNavBar fixed full client:load>
+      <a href="#agenda">Agenda</a>
+      <a href="#ponentes">Ponentes</a>
+    </CustomNavBar>
+
+    <!-- Principal -->
+    <main
+      id="home"
+      class="min-h-screen relative flex items-center justify-center"
+    >
+      <img
+        src="https://cdn.mtocommunity.com/landing-dev-team.webp"
+        alt="https://cdn.mtocommunity.com/landing-dev-team.webp"
+        class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden"
+      />
+      <div
+        class="absolute top-0 w-full h-full from-mto_gray to-mto_dark_gray bg-gradient-to-b -z-10 opacity-80"
+      >
+      </div>
+      <div class="flex flex-col gap-32 items-center">
+        <div class="w-3/4">
+          <h1 class="text-2xl font-bold text-center">404 No More</h1>
+          <p class="text-sm text-center">
+            ¿Alguna vez pensaste que los errores solo le pasan a los
+            principiantes? ¡Nada más lejos de la realidad! En este evento
+            virtual, descubrirás de la mano de profesionales del desarrollo web,
+            backend y frontend cómo los errores y dilemas tecnológicos son parte
+            natural del crecimiento —incluso en entornos de producción— y cómo
+            el ingenio y la resiliencia los convierten en oportunidades de
+            aprendizaje.
+          </p>
+        </div>
+        <Button
+          type={ButtonType.PRIMARY}
+          link="https://docs.google.com/forms/d/1IOVH1a7cP1JGPMt4wLbHHfy9dWqtrpneRUYOHCuUTsI"
+          className="w-2/3 flex gap-2 justify-center items-center"
+        >
+          <FontAwesomeIcon icon={faClipboard} className="w-4" />
+          <span>Inscríbete ahora</span>
+        </Button>
+      </div>
+    </main>
+
+    <!-- Agenda -->
+    <section
+      class="min-h-screen agenda-container bg-gradient-to-t from-mto_blue_dark to-mto_dark_gray pt-16 flex flex-col xl:items-center justify-between"
+      id="agenda"
+    >
+      <h2 class="text-center text-white text-5xl font-bold mb-12 xl:w-2/3">
+        Agenda
+      </h2>
+
+      <Agenda agenda={agenda} className="bg-slate-300" />
+
+      <img
+        src={wave2.src}
+        alt={wave2.src}
+        class="w-full object-cover object-center aspect-[5/1] xl:aspect-[10/1]"
+      />
+    </section>
+    <!-- Ponentes-->
+    <div id="ponentes" class="bg-white pt-0">
+      <img
+        src={wave2.src}
+        alt={wave2.src}
+        class="w-full object-cover object-center rotate-180 aspect-[5/1] xl:aspect-[10/1]"
+      />
+      <div class="flex flex-col items-center gap-16">
+        <h2 class="text-5xl text-mto_gray font-bold">Ponentes</h2>
+        <div
+          class="flex flex-col items-center xl:flex-row xl:gap-8 pb-32 xl:w-2/3"
+        >
+          <!-- Ponentes -->
+
+          <Speaker
+            avatarUrl="https://cdn.mtocommunity.com/speaker/jorge-rios.webp"
+            name="Jorge Rios"
+            role="Senior Software Engineer"
+            links={[
+              "https://www.linkedin.com/in/jorgeriosa/",
+              "https://github.com/jotarios",
+            ]}
+          />
+          <Speaker
+            avatarUrl="https://cdn.mtocommunity.com/speaker/rodrigo-tejeda.webp"
+            name="Rodrigo Tejeda"
+            role="Freelance Frontend Developer"
+            links={[
+              "https://www.linkedin.com/in/juan-rodrigo-tejeda-riojas-2a50072a8",
+              "https://github.com/R0dri-Dev",
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
