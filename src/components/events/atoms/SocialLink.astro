@@ -5,7 +5,8 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type Props = {
   link: string;
@@ -13,13 +14,21 @@ type Props = {
 
 const { link } = Astro.props as Props;
 
-const social = link.split("/")[2];
-
 const icons = {
   "github.com": faGithub,
   "www.linkedin.com": faLinkedin,
   "instagram.com": faInstagram,
 };
+
+function getIcon(link: string): IconProp {
+  const domain = link.split("/")[2];
+
+  if (Object.keys(icons).indexOf(domain) !== -1) {
+    return icons[domain as keyof typeof icons] as IconProp;
+  }
+
+  return faLink;
+}
 ---
 
 <a
@@ -27,5 +36,5 @@ const icons = {
   target="_blank"
   class="text-white bg-mto_gray rounded-full p-2 aspect-square flex items-center justify-center"
 >
-  <FontAwesomeIcon icon={icons[social] ?? faLink} className="w-6" />
+  <FontAwesomeIcon icon={getIcon(link)} className="w-6" />
 </a>
