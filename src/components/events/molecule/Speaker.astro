@@ -1,18 +1,20 @@
 ---
+import Link from "../atoms/SocialLink.astro";
 type Props = {
   avatarUrl: string;
   name: string;
   role: string;
+  links?: string[];
 };
 
-const { avatarUrl, name, role } = Astro.props;
+const { avatarUrl, name, role, links } = Astro.props;
 ---
 
 <div class="w-2/3 relative flex flex-col items-center">
   <img
     src={avatarUrl}
     alt={avatarUrl.split("/").pop()}
-    class="rounded-full aspect-square object-cover w-2/3"
+    class="rounded-full aspect-square object-cover w-2/3 border-8 border-mto_gray bg-mto_gray"
   />
   <div
     class="bg-mto_gray text-white relative -top-8 w-full h-16 flex flex-col items-center justify-center"
@@ -20,4 +22,13 @@ const { avatarUrl, name, role } = Astro.props;
     <h3 class="text-xl font-bold">{name}</h3>
     <p class="text-sm">{role}</p>
   </div>
+  {
+    links && (
+      <div class="flex gap-4 mt-4">
+        {links.map((link) => (
+          <Link link={link} />
+        ))}
+      </div>
+    )
+  }
 </div>
