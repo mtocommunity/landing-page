@@ -8,44 +8,30 @@ import Speaker from "../../components/events/molecule/Speaker.astro";
 import { ButtonType } from "../../components/general/attoms/button/types";
 import { wave2 } from "../../assets/svgs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 
 import type { EventAgenda } from "../../types";
 
 const agenda: EventAgenda = {
   days: [
     {
-      title: "Día 1",
+      title: "Frontend",
       date: new Date("2024-10-09 GMT-0500"),
-      items: [
-        "Introducción a la Gestión de Versiones",
-        "¿Qué es Git?",
-        "Instalación y Configuración",
-        "Primeros Pasos con Git",
-        "Ejercicio Práctico",
-        "Preguntas y Respuestas",
-      ],
+      items: ["Ponencia llevada por Rodrigo Tejeda"],
     },
     {
-      title: "Día 2",
+      title: "Backend",
       date: new Date("2024-10-16 GMT-0500"),
-      items: [
-        "Introducción a GitHub",
-        "Colaboración en Proyectos",
-        "Ramas en Git",
-        "Ejercicio Práctico",
-        "Conclusiones y Recursos Adicionales",
-        "Cierre del Seminario",
-      ],
+      items: ["Ponencia llevada por Jorge Rios"],
     },
   ],
 };
 
 const props = {
-  title: "DevTeam seminario fundamentos de git",
+  title: "Evento 404 No More",
   description:
-    "Sé parte de uno de los eventos a cargo del equipo de Dev, aquí aprenderás los fundamentos de git para controlar las versiones de tus proyectos",
-  path: "event/dev-seminario-git-basico",
+    "¿Alguna vez pensaste que los errores solo le pasan a los principiantes? ¡Nada más lejos de la realidad! En este evento virtual, descubrirás de la mano de profesionales del desarrollo web, backend y frontend cómo los errores y dilemas tecnológicos son parte natural del crecimiento —incluso en entornos de producción— y cómo el ingenio y la resiliencia los convierten en oportunidades de aprendizaje.",
+  path: "event/mto-404-no-more",
 };
 ---
 
@@ -62,8 +48,8 @@ const props = {
       class="min-h-screen relative flex items-center justify-center"
     >
       <img
-        src="https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg"
-        alt="https://cdn.mtocommunity.com/events/thumbnail/dev-seminario-git-basico.jpg"
+        src="https://cdn.mtocommunity.com/landing-dev-team.webp"
+        alt="https://cdn.mtocommunity.com/landing-dev-team.webp"
         class="absolute top-0 object-cover w-full h-full blur-[1px] -z-20 overflow-hidden"
       />
       <div
@@ -72,27 +58,31 @@ const props = {
       </div>
       <div class="flex flex-col gap-32 items-center">
         <div class="w-3/4">
-          <h1 class="text-2xl font-bold text-center">
-            Seminario Fundamentos de Git
-          </h1>
+          <h1 class="text-2xl font-bold text-center">404 No More</h1>
           <p class="text-sm text-center">
-            En este seminario, obtendrás los conocimientos necesarios para
-            utilizar Git desde cero y aplicarlo en la gestión de tus proyectos.
+            ¿Alguna vez pensaste que los errores solo le pasan a los
+            principiantes? ¡Nada más lejos de la realidad! En este evento
+            virtual, descubrirás de la mano de profesionales del desarrollo web,
+            backend y frontend cómo los errores y dilemas tecnológicos son parte
+            natural del crecimiento —incluso en entornos de producción— y cómo
+            el ingenio y la resiliencia los convierten en oportunidades de
+            aprendizaje.
           </p>
         </div>
         <Button
-          type={ButtonType.DISABLED}
+          type={ButtonType.PRIMARY}
+          link="https://docs.google.com/forms/d/1IOVH1a7cP1JGPMt4wLbHHfy9dWqtrpneRUYOHCuUTsI"
           className="w-2/3 flex gap-2 justify-center items-center"
         >
-          <FontAwesomeIcon icon={faClock} className="w-4" />
-          <span>Inscripciones cerradas</span>
+          <FontAwesomeIcon icon={faClipboard} className="w-4" />
+          <span>Inscríbete ahora</span>
         </Button>
       </div>
     </main>
 
     <!-- Agenda -->
     <section
-      class="min-h-screen agenda-container bg-gradient-to-t from-mto_blue_dark to-mto_dark_gray pt-16 flex flex-col xl:items-center"
+      class="min-h-screen agenda-container bg-gradient-to-t from-mto_blue_dark to-mto_dark_gray pt-16 flex flex-col xl:items-center justify-between"
       id="agenda"
     >
       <h2 class="text-center text-white text-5xl font-bold mb-12 xl:w-2/3">
@@ -116,18 +106,28 @@ const props = {
       />
       <div class="flex flex-col items-center gap-16">
         <h2 class="text-5xl text-mto_gray font-bold">Ponentes</h2>
-        <div class="flex flex-col items-center xl:flex-row xl:gap-8 pb-32">
+        <div
+          class="flex flex-col items-center xl:flex-row xl:gap-8 pb-32 xl:w-2/3"
+        >
           <!-- Ponentes -->
 
           <Speaker
-            avatarUrl="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
-            name="Juan Romero"
-            role="Líder de Dev Team"
+            avatarUrl="https://cdn.mtocommunity.com/speaker/jorge-rios.webp"
+            name="Jorge Rios"
+            role="Senior Software Engineer"
+            links={[
+              "https://www.linkedin.com/in/jorgeriosa/",
+              "https://github.com/jotarios",
+            ]}
           />
           <Speaker
-            avatarUrl="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
-            name="Víctor Tuñoque"
-            role="Líder de Dev Team"
+            avatarUrl="https://cdn.mtocommunity.com/speaker/rodrigo-tejeda.webp"
+            name="Rodrigo Tejeda"
+            role="Freelance Frontend Developer"
+            links={[
+              "https://www.linkedin.com/in/juan-rodrigo-tejeda-riojas-2a50072a8",
+              "https://github.com/R0dri-Dev",
+            ]}
           />
         </div>
       </div>
