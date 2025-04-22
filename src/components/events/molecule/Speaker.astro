@@ -24,7 +24,7 @@ const { avatarUrl, name, role, links } = Astro.props;
   </div>
   {
     links && (
-      <div class="flex gap-4 mt-4">
+      <div class="flex gap-4 -mt-4 mb-8 lg:mb-0">
         {links.map((link) => (
           <Link link={link} />
         ))}
