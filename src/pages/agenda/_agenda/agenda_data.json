@@ -36,6 +36,46 @@
   "iot": {
     "events": [
       {
+        "name": "Seminario de robótica básica",
+        "link": "/event/iot-seminario-robotica-basica-2",
+        "dates": [
+          {
+            "title": "Día 1",
+            "date": "2025-04-28T05:00:00Z",
+            "items": [
+              "Introducción a IoT.",
+              "Arduino y su entorno de desarrollo.",
+              "Funciones básicas de Arduino.",
+              "Conceptos básicos de circuitos."
+            ]
+          },
+          {
+            "title": "Día 2",
+            "date": "2025-05-05T05:00:00Z",
+            "items": [
+              "Componentes básicos de electrónica.",
+              "Funciones de Arduino.",
+              "Consola serial.",
+              "Sensor LDR.",
+              "Ejercicios prácticos."
+            ]
+          },
+          {
+            "title": "Día 3",
+            "date": "2025-05-12T05:00:00Z",
+            "items": ["Sensor ultrasónico HC-SR04.", "Servomotor SG90."]
+          },
+          {
+            "title": "Día 4",
+            "date": "2025-05-19T05:00:00Z",
+            "items": [
+              "Ejercicios prácticos.",
+              "<span class=\"font-bold\">Ejercicio Reto:</span> Diseño y construcción de un robot."
+            ]
+          }
+        ]
+      },
+      {
         "name": "Expoferia 2024",
         "link": "/event/expoferia-2024",
         "description": {
