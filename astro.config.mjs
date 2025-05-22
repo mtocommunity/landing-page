@@ -14,4 +14,7 @@ export default defineConfig({
   integrations: [tailwind(), react(), mdx()],
   adapter: cloudflare(),
   output: "static",
+  redirects: {
+    "/program/dev": "/program/devs",
+  },
 });
