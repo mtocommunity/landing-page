@@ -8,71 +8,41 @@ import "./_style.css";
 
 <Layout title="MTO Devs Program">
   <main
-    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-gradient-to-bl from-mto_purple/20"
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_purple_dark"
   >
-    <div class="absolute opacity-25 -z-20 bg-grid-container">
-      <div class="bg-grid"></div>
-    </div>
     <div
-      class="flex flex-col min-h-dvh w-full justify-center items-center gap-12"
+      class="flex flex-col items-center w-full px-4 justify-center h-dvh pt-16"
     >
-      <div class="flex justify-center w-3/4">
-        <Image
-          class={"filter grayscale aspect-square object-cover rounded-md"}
-          src={"https://cdn.mtocommunity.com/temp/Gemini_Generated_Image_r6ly05r6ly05r6ly.png"}
-          alt="MTO Devs Program"
-          inferSize
-        />
-      </div>
-      <div class="flex flex-col gap-4 items-center text-white">
-        <h1 class="text-3xl font-main_sans font-bold">Devs Program</h1>
-        <p class="px-4 lg:w-1/2 text-center font-lora">
-          Aprende lo que te apasiona. Crea lo que imaginas.
-          <!-- Una experiencia formativa personalizada para estudiantes apasionados
-          por la tecnología. A través de sesiones dinámicas y un enfoque basado
-          en el autoaprendizaje, los participantes exploran temas que realmente
-          les interesan, desarrollan proyectos propios y mejoran sus habilidades
-          técnicas mientras crecen junto a una comunidad colaborativa. -->
-        </p>
-        <Button type={ButtonType.PRIMARY}>Postular ahora</Button>
-      </div>
-    </div>
-    <div class="flex w-full flex-col items-center gap-4">
-      <h3 class="text-2xl font-main_mono font-bold">
-        ¿Qué es MTO Devs Program?
-      </h3>
-      <p class="font-lora px-4 text-justify">
-        Una experiencia <span class="bg-mto_purple/80 px-1 font-bold"
-          >formativa personalizada</span
-        > para estudiantes apasionados por la tecnología. A través de sesiones dinámicas
-        y un enfoque basado en el <span
-          class="bg-mto_red_dark/80 px-1 font-bold">autoaprendizaje</span
-        >, los participantes exploran temas que realmente les interesan,
-        desarrollan proyectos propios y mejoran sus habilidades técnicas
-        mientras crecen junto a una <span class="bg-[#d8b4fe]/80 px-1 font-bold"
-          >comunidad colaborativa</span
-        >.
-      </p>
-    </div>
-    <div class="flex w-full flex-col items-center gap-4 px-4">
-      <div class="relative flex p-1 w-full">
-        <div
-          class="absolute top-0 left-0 bg-gradient-to-tr from-green-400 to-mto_dark_gray aspect-video w-full h-full -z-10 rounded-xl"
-        >
-        </div>
-        <div class="bg-mto_dark_gray p-2 flex flex-col gap-4 rounded-xl w-full">
-          <div class="w-full aspect-video">image</div>
-          <div class="flex-col gap-2">
-            <h5 class="text-green-400 font-bold text-2xl">Explorers</h5>
-            <ul class="text-sm">
-              <li>Descubren la programación desde cero.</li>
-              <li>Aprenden mediante la curiosidad.</li>
-              <li>Relacionan temas con sus intereses personales.</li>
-              <li>Desarrollan bases sólidas.</li>
-              <li>Se motivan creando cosas simples pero geniales.</li>
-            </ul>
+      <div class="flex flex-col w-full items-center gap-8">
+        <div class="w-full flex flex-col">
+          <div
+            class="bg-mto_purple/50 w-min text-nowrap px-2 rounded-full text-lg border-2 border-mto_purple"
+          >
+            MTO Devs Program
           </div>
+          <h1 class="text-5xl font-bold font-main_mono w-full">
+            POTENCIA TU <br />
+            <span
+              class="bg-gradient-to-t from-mto_red to-pink-400 bg-clip-text text-transparent"
+              >TALENTO</span
+            >
+          </h1>
         </div>
+        <p class="font-main_mono text-pretty">
+          Una experienciade aprendizaje personalizada para estudiantes
+          destacados con pasión por la tecnología. Impulsandolos a traves del
+          autoaprendizaje y desarrollo de proyectos propios
+        </p>
+        <Button type={ButtonType.PRIMARY} className="w-2/3"
+          >POSTULA AHORA</Button
+        >
+      </div>
+      <div class="w-full aspect-square">
+        <Image
+          inferSize
+          src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
+          alt={"Diagram"}
+        />
       </div>
     </div>
   </main>
