@@ -13,4 +13,5 @@ export default defineConfig({
   base: "",
   integrations: [tailwind(), react(), mdx()],
   adapter: cloudflare(),
+  output: "static",
 });
