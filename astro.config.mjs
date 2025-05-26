@@ -12,14 +12,5 @@ export default defineConfig({
   site: "https://mtocommunity.com",
   base: "",
   integrations: [tailwind(), react(), mdx()],
-  adapter: cloudflare({
-    routes: {
-      extend: {
-        include: {
-          pattern: "/*",
-        },
-      },
-    },
-  }),
-  output: "static",
+  adapter: cloudflare(),
 });
