@@ -3,46 +3,160 @@ import { Image } from "astro:assets";
 import Button from "../../../components/general/attoms/button";
 import { ButtonType } from "../../../components/general/attoms/button/types";
 import Layout from "../../../layouts/landing/index.astro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./_style.css";
+import { faPersonDotsFromLine } from "@fortawesome/free-solid-svg-icons";
+import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
+import { faPeopleLine } from "@fortawesome/free-solid-svg-icons";
+import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
 ---
 
 <Layout title="MTO Devs Program">
   <main
-    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_purple_dark"
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_dark_gray px-6"
   >
-    <div
-      class="flex flex-col items-center w-full px-4 justify-center h-dvh pt-16"
-    >
-      <div class="flex flex-col w-full items-center gap-8">
-        <div class="w-full flex flex-col">
-          <div
-            class="bg-mto_purple/50 w-min text-nowrap px-2 rounded-full text-lg border-2 border-mto_purple"
-          >
-            MTO Devs Program
-          </div>
-          <h1 class="text-5xl font-bold font-main_mono w-full">
-            POTENCIA TU <br />
-            <span
-              class="bg-gradient-to-t from-mto_red to-pink-400 bg-clip-text text-transparent"
-              >TALENTO</span
-            >
-          </h1>
+    <div class="w-full h-dvh flex flex-col justify-center">
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Potencia tu talento
         </div>
-        <p class="font-main_mono text-pretty">
+        <h1 class="text-4xl font-main_mono font-semibold">Devs Program</h1>
+        <p class="text-base text-justify mt-10">
           Una experienciade aprendizaje personalizada para estudiantes
           destacados con pasión por la tecnología. Impulsandolos a traves del
           autoaprendizaje y desarrollo de proyectos propios
         </p>
-        <Button type={ButtonType.PRIMARY} className="w-2/3"
-          >POSTULA AHORA</Button
+        <Button type={ButtonType.PRIMARY} className="py-2 rounded-lg mt-5"
+          >Postula ahora</Button
         >
       </div>
-      <div class="w-full aspect-square">
+      <div class="w-full aspect-square relative">
+        <div
+          class="w-full h-full bg-radial from-mto_red to-mto_dark_gray absolute top-0 left-0 z-20"
+        >
+        </div>
         <Image
           inferSize
           src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
           alt={"Diagram"}
         />
+      </div>
+    </div>
+    <div class="w-full flex flex-col justify-center">
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Impulsa tus estudios
+        </div>
+        <h1 class="text-xl font-main_mono font-semibold mt-2">
+          ¿En qué consiste?
+        </h1>
+        <p class="text-base text-pretty mt-10">
+          Consiste en una experiencia formativa centrada en el estudiante, donde
+          a través del autoaprendizaje, sesiones prácticas y trabajo en
+          comunidad, los participantes exploran temas tecnológicos que les
+          apasionan, desarrollan proyectos propios y potencian sus habilidades
+          técnicas en un entorno dinámico y colaborativo.
+          <br /><br />
+          Forma parte de <span
+            class="bg-gradient-to-r from-mto_red to-mto_red via-gray-400 bg-clip-text text-transparent font-bold"
+            >MTO DEV PROGRAM</span
+          >. Aprende lo que te apasiona, crea lo que te imagines
+        </p>
+      </div>
+      <div class="w-full aspect-square relative">
+        <Image
+          inferSize
+          src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+          alt={"People"}
+          class:list={"aspect-square object-cover grayscale rounded-xl mt-10"}
+        />
+      </div>
+    </div>
+    <div class="w-full flex flex-col justify-center">
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Dinámica de trabajo
+        </div>
+        <h1 class="text-2xl font-main_mono font-semibold mt-2">
+          ¿Por qué postular?
+        </h1>
+
+        <div class="flex flex-col gap-12 font-main_mono mt-12">
+          <div
+            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+          >
+            <div
+              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faPersonDotsFromLine} className="h-12" />
+            </div>
+            <h5 class="text-lg">Autoaprendizaje</h5>
+            <p class="w-4/5 text-pretty mt-4">
+              Explora temas a tu ritmo y con libertad. Aquí tú eliges qué
+              aprender y cómo hacerlo
+            </p>
+          </div>
+          <div
+            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+          >
+            <div
+              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faPersonChalkboard} className="h-12" />
+            </div>
+            <h5 class="text-lg">Mentoría</h5>
+            <p class="w-4/5 text-pretty mt-4">
+              Tendrás a un mentor que te guía, plantea retos y te ayuda a
+              encontrar respuestas sin darte todo hecho.
+            </p>
+          </div>
+          <div
+            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+          >
+            <div
+              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faPeopleLine} className="h-12" />
+            </div>
+            <h5 class="text-lg">Reuniones</h5>
+            <p class="w-4/5 text-pretty mt-4">
+              Sesiones presenciales para compartir avances y virtuales para
+              mantener el ritmo. Aprenderás en comunidad.
+            </p>
+          </div>
+          <div
+            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+          >
+            <div
+              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faBusinessTime} className="h-12" />
+            </div>
+            <h5 class="text-lg">Duración de los programa</h5>
+            <p class="w-4/5 text-pretty mt-4">
+              8 semanas para investigar, practicar y crecer profesionalmente con
+              apoyo constante.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col justify-center">
+        <div class="w-full flex flex-col">
+          <div
+            class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+          >
+            Requisitos
+          </div>
+          <h1 class="text-2xl font-main_mono font-semibold mt-2">
+            ¿Qué requisitos existen?
+          </h1>
+        </div>
       </div>
     </div>
   </main>
