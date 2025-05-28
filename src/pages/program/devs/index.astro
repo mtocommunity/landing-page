@@ -5,7 +5,13 @@ import { ButtonType } from "../../../components/general/attoms/button/types";
 import Layout from "../../../layouts/landing/index.astro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./_style.css";
-import { faPersonDotsFromLine } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheckToSlot,
+  faLaptop,
+  faPeopleGroup,
+  faPersonDotsFromLine,
+  faSchool,
+} from "@fortawesome/free-solid-svg-icons";
 import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
 import { faPeopleLine } from "@fortawesome/free-solid-svg-icons";
 import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
@@ -153,10 +159,56 @@ import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
           >
             Requisitos
           </div>
-          <h1 class="text-2xl font-main_mono font-semibold mt-2">
+          <h1 class="text-2xl font-main_mono font-semibold mt-4">
             ¿Qué requisitos existen?
           </h1>
         </div>
+        <ul class="flex flex-col font-onest gap-4 mt-12">
+          <li class="flex pb-4 border-b border-mto_gray_light">
+            <div
+              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+            >
+              <FontAwesomeIcon icon={faSchool} className={"h-6"} />
+            </div>
+            <div class="ml-4">
+              <span class="text-mto_grey text-sm">Requisito 1</span>
+              <h5 class="font-semibold">Ser estudiante de UTP</h5>
+            </div>
+          </li>
+          <li class="flex pb-4 border-b border-mto_gray_light">
+            <div
+              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+            >
+              <FontAwesomeIcon icon={faLaptop} className={"h-6"} />
+            </div>
+            <div class="ml-4">
+              <span class="text-mto_grey text-sm">Requisito 2</span>
+              <h5 class="font-semibold">Tener una laptop o PC con micrófono</h5>
+            </div>
+          </li>
+          <li class="flex pb-4 border-b border-mto_gray_light">
+            <div
+              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+            >
+              <FontAwesomeIcon icon={faPeopleGroup} className={"h-6"} />
+            </div>
+            <div class="ml-4">
+              <span class="text-mto_grey text-sm">Requisito 3</span>
+              <h5 class="font-semibold">Ganas de aprender en comunidad</h5>
+            </div>
+          </li>
+          <li class="flex pb-4 border-b border-mto_gray_light">
+            <div
+              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+            >
+              <FontAwesomeIcon icon={faCheckToSlot} className={"h-6"} />
+            </div>
+            <div class="ml-4">
+              <span class="text-mto_grey text-sm">Requisito 4</span>
+              <h5 class="font-semibold">Pasar la fase de selección</h5>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </main>
