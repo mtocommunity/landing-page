@@ -12,7 +12,7 @@ export default {
         mto_blue: "#02C8ED",
         mto_blue_light: "#4BD5F1",
         mto_blue_dark: "#2094AA",
-        mto_dark_gray: "#05090C",
+        mto_dark_gray: "#07090D",
         mto_grey: "#CDCDCD",
         mto_purple: "#6620B9",
         mto_purple_light: "#5865F2",
@@ -28,10 +28,11 @@ export default {
         lora: ["Lora", "serif"],
       },
       boxShadow: {
-        'custom-cyan': '4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)',
+        "custom-cyan":
+          "4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)",
       },
       borderColor: {
-        'gradient': 'linear-gradient(to right, #EC458D, #4BD5F1)',
+        gradient: "linear-gradient(to right, #EC458D, #4BD5F1)",
       },
     },
   },
