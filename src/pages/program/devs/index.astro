@@ -15,6 +15,7 @@ import {
 import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
 import { faPeopleLine } from "@fortawesome/free-solid-svg-icons";
 import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
+const formLink = "/program/devs";
 ---
 
 <Layout title="MTO Devs Program">
@@ -34,19 +35,18 @@ import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
           destacados con pasión por la tecnología. Impulsandolos a traves del
           autoaprendizaje y desarrollo de proyectos propios
         </p>
-        <Button type={ButtonType.PRIMARY} className="py-2 rounded-lg mt-5"
-          >Postula ahora</Button
+        <Button
+          type={ButtonType.PRIMARY}
+          className="py-2 rounded-lg mt-5 justify-center flex"
+          link={formLink}>Postula ahora</Button
         >
       </div>
-      <div class="w-full aspect-square relative">
-        <div
-          class="w-full h-full bg-radial from-mto_red to-mto_dark_gray absolute top-0 left-0 z-20"
-        >
-        </div>
+      <div class="w-full aspect-square relative bg-radial">
         <Image
           inferSize
           src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
           alt={"Diagram"}
+          class={""}
         />
       </div>
     </div>
@@ -82,7 +82,103 @@ import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
         />
       </div>
     </div>
-    <div class="w-full flex flex-col justify-center">
+    <div class="w-full flex flex-col justify-center mt-36">
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Programas
+        </div>
+        <h1 class="text-2xl font-main_mono font-semibold mt-2">
+          Programas para todas las etapas de tu carrera
+        </h1>
+        <p class="text-base text-pretty text-mto_grey mt-4">
+          Podrás formar parte del programas que mejor se adecue a tu nivel y
+          avance de aprendizaje.
+        </p>
+        <div class="flex flex-col gap-[1px]">
+          <div class="border-l-2 p-4 flex flex-col card-active card">
+            <div class="flex items-center gap-4">
+              <div class="aspect-square h-24">
+                <Image
+                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                  alt={"Devs Explorer"}
+                  inferSize
+                  class={"object-cover w-full h-full"}
+                />
+              </div>
+              <h4 class="font-bold text-xl font-main_mono">Devs Explorer</h4>
+            </div>
+            <div class="pt-4 hidden-content">
+              <p>
+                Estás empezando en el mundo de la programación y tienes muchas
+                preguntas. Aquí aprenderás lo esencial, descubrirás nuevas
+                herramientas y conectarás la tecnología con lo que más te gusta.
+                Lo importante es tu curiosidad.
+              </p>
+              <Button
+                type={ButtonType.PRIMARY}
+                className="py-2 rounded-lg mt-5 justify-center flex"
+                link={formLink}>Postula ahora</Button
+              >
+            </div>
+          </div>
+          <div class="border-l-2 p-4 flex flex-col card-inactive card">
+            <div class="flex items-center gap-4">
+              <div class="aspect-square h-24">
+                <Image
+                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                  alt={"Devs Explorer"}
+                  inferSize
+                  class={"object-cover w-full h-full"}
+                />
+              </div>
+              <h4 class="font-bold text-xl font-main_mono">Devs Pathfinder</h4>
+            </div>
+            <div class="pt-4 hidden-content">
+              <p>
+                Ya tienes algo de experiencia y quieres darle dirección a tu
+                aprendizaje. Este programa te ayudará a explorar tecnologías,
+                experimentar con ideas propias y definir un rumbo que se alinee
+                contigo.
+              </p>
+              <Button
+                type={ButtonType.PRIMARY}
+                className="py-2 rounded-lg mt-5 justify-center flex"
+                link={formLink}>Postula ahora</Button
+              >
+            </div>
+          </div>
+          <div class="border-l-2 p-4 flex flex-col card-inactive card">
+            <div class="flex items-center gap-4">
+              <div class="aspect-square h-24">
+                <Image
+                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                  alt={"Devs Explorer"}
+                  inferSize
+                  class={"object-cover w-full h-full"}
+                />
+              </div>
+              <h4 class="font-bold text-xl font-main_mono">Devs Insiders</h4>
+            </div>
+            <div class="pt-4 hidden-content">
+              <p>
+                Ya vienes recorriendo tu propio camino y buscas un espacio para
+                ir más allá. Aquí podrás profundizar en temas complejos, retarte
+                con nuevas perspectivas y crear soluciones distintas a partir de
+                lo que ya sabes.
+              </p>
+              <Button
+                type={ButtonType.PRIMARY}
+                className="py-2 rounded-lg mt-5 justify-center flex"
+                link={formLink}>Postula ahora</Button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex flex-col justify-center mt-36">
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -152,64 +248,93 @@ import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
           </div>
         </div>
       </div>
-      <div class="w-full flex flex-col justify-center">
-        <div class="w-full flex flex-col">
-          <div
-            class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
-          >
-            Requisitos
-          </div>
-          <h1 class="text-2xl font-main_mono font-semibold mt-4">
-            ¿Qué requisitos existen?
-          </h1>
+    </div>
+    <div class="w-full flex flex-col justify-center mt-24">
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Requisitos
         </div>
-        <ul class="flex flex-col font-onest gap-4 mt-12">
-          <li class="flex pb-4 border-b border-mto_gray_light">
-            <div
-              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
-            >
-              <FontAwesomeIcon icon={faSchool} className={"h-6"} />
-            </div>
-            <div class="ml-4">
-              <span class="text-mto_grey text-sm">Requisito 1</span>
-              <h5 class="font-semibold">Ser estudiante de UTP</h5>
-            </div>
-          </li>
-          <li class="flex pb-4 border-b border-mto_gray_light">
-            <div
-              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
-            >
-              <FontAwesomeIcon icon={faLaptop} className={"h-6"} />
-            </div>
-            <div class="ml-4">
-              <span class="text-mto_grey text-sm">Requisito 2</span>
-              <h5 class="font-semibold">Tener una laptop o PC con micrófono</h5>
-            </div>
-          </li>
-          <li class="flex pb-4 border-b border-mto_gray_light">
-            <div
-              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
-            >
-              <FontAwesomeIcon icon={faPeopleGroup} className={"h-6"} />
-            </div>
-            <div class="ml-4">
-              <span class="text-mto_grey text-sm">Requisito 3</span>
-              <h5 class="font-semibold">Ganas de aprender en comunidad</h5>
-            </div>
-          </li>
-          <li class="flex pb-4 border-b border-mto_gray_light">
-            <div
-              class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
-            >
-              <FontAwesomeIcon icon={faCheckToSlot} className={"h-6"} />
-            </div>
-            <div class="ml-4">
-              <span class="text-mto_grey text-sm">Requisito 4</span>
-              <h5 class="font-semibold">Pasar la fase de selección</h5>
-            </div>
-          </li>
-        </ul>
+        <h1 class="text-2xl font-main_mono font-semibold mt-4">
+          ¿Qué requisitos existen?
+        </h1>
       </div>
+      <ul class="flex flex-col font-onest gap-4 mt-12">
+        <li class="flex pb-4 border-b border-mto_gray_light">
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <FontAwesomeIcon icon={faSchool} className={"h-6"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 1</span>
+            <h5 class="font-semibold">Ser estudiante de UTP</h5>
+          </div>
+        </li>
+        <li class="flex pb-4 border-b border-mto_gray_light">
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <FontAwesomeIcon icon={faLaptop} className={"h-6"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 2</span>
+            <h5 class="font-semibold">Tener una laptop o PC con micrófono</h5>
+          </div>
+        </li>
+        <li class="flex pb-4 border-b border-mto_gray_light">
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <FontAwesomeIcon icon={faPeopleGroup} className={"h-6"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 3</span>
+            <h5 class="font-semibold">Ganas de aprender en comunidad</h5>
+          </div>
+        </li>
+        <li class="flex pb-4 border-b border-mto_gray_light">
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <FontAwesomeIcon icon={faCheckToSlot} className={"h-6"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 4</span>
+            <h5 class="font-semibold">Pasar la fase de selección</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="h-[75dvh] flex flex-col justify-center">
+      <div
+        class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono z-10"
+      >
+        Todo comienza con un click
+      </div>
+      <p
+        class="text-xl font-onest font-semibold text-center aspect-square bg-radial flex items-center -my-24"
+      >
+        Este puede ser el primer paso para<br />potenciar tu carrera profesional
+      </p>
+      <Button
+        type={ButtonType.PRIMARY}
+        className="py-2 px-24 w-min text-nowrap rounded-lg mt-5 justify-center flex mx-auto"
+        link={formLink}>Postula ahora</Button
+      >
     </div>
   </main>
+  <script>
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".card").forEach((c) => {
+          c.classList.remove("card-active");
+          c.classList.add("card-inactive");
+        });
+        card.classList.remove("card-inactive");
+        card.classList.add("card-active");
+      });
+    });
+  </script>
 </Layout>
