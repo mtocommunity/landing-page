@@ -1,3 +1,7 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
 .bg-grid {
   background-image: linear-gradient(to right, transparent 79px, #ccc 80px),
     linear-gradient(to bottom, transparent 79px, #ccc 80px);
@@ -13,4 +17,57 @@
 .bg-grid-container {
   mask-image: linear-gradient(black 0%, transparent 100%);
   @apply w-full h-[70dvh];
+}
+
+.card {
+  transition: all 0.5s cubic-bezier(0.87, 0, 0.07, 1);
+}
+
+.card-active {
+  @apply border-l-2 border-mto_red bg-mto_gray_light;
+}
+
+.card-inactive {
+  @apply border-l-2 border-mto_gray bg-mto_gray_light/30;
+}
+
+.card-inactive img {
+  @apply grayscale;
+}
+
+.card .hidden-content {
+  transition:
+    display 0.5s cubic-bezier(0.87, 0, 0.07, 1) allow-discrete,
+    height 0.5s cubic-bezier(0.87, 0, 0.07, 1);
+  overflow-y: hidden;
+}
+.card-active .hidden-content {
+  display: block;
+  opacity: 1;
+  height: max-content;
+  @apply pt-4;
+
+  @starting-style {
+    height: 0;
+    padding-top: 0;
+  }
+}
+
+.card-inactive .hidden-content {
+  display: none;
+  opacity: 0;
+  height: 0;
+  @apply pt-0;
+  @starting-style {
+    height: max-content;
+    padding-top: 1rem;
+  }
+}
+
+.bg-radial {
+  background: radial-gradient(
+    circle,
+    rgba(228, 20, 118, 0.3) 0%,
+    rgba(7, 9, 13, 1) 75%
+  );
 }
