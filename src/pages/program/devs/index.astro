@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import Button from "../../../components/general/attoms/button";
+import { ButtonType } from "../../../components/general/attoms/button/types";
+import Layout from "../../../layouts/landing/index.astro";
+import "./_style.css";
+---
+
+<Layout title="MTO Devs Program">
+  <main
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_purple_dark"
+  >
+    <div
+      class="flex flex-col items-center w-full px-4 justify-center h-dvh pt-16"
+    >
+      <div class="flex flex-col w-full items-center gap-8">
+        <div class="w-full flex flex-col">
+          <div
+            class="bg-mto_purple/50 w-min text-nowrap px-2 rounded-full text-lg border-2 border-mto_purple"
+          >
+            MTO Devs Program
+          </div>
+          <h1 class="text-5xl font-bold font-main_mono w-full">
+            POTENCIA TU <br />
+            <span
+              class="bg-gradient-to-t from-mto_red to-pink-400 bg-clip-text text-transparent"
+              >TALENTO</span
+            >
+          </h1>
+        </div>
+        <p class="font-main_mono text-pretty">
+          Una experienciade aprendizaje personalizada para estudiantes
+          destacados con pasión por la tecnología. Impulsandolos a traves del
+          autoaprendizaje y desarrollo de proyectos propios
+        </p>
+        <Button type={ButtonType.PRIMARY} className="w-2/3"
+          >POSTULA AHORA</Button
+        >
+      </div>
+      <div class="w-full aspect-square">
+        <Image
+          inferSize
+          src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
+          alt={"Diagram"}
+        />
+      </div>
+    </div>
+  </main>
+</Layout>

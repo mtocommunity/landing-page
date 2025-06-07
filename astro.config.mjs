@@ -10,8 +10,17 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://mtocommunity.com",
-  base: "",
   integrations: [tailwind(), react(), mdx()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    routes: {
+      extend: {
+        include: [
+          {
+            pattern: "/**",
+          },
+        ],
+      },
+    },
+  }),
   output: "static",
 });
