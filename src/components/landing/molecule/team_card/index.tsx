@@ -55,7 +55,7 @@ function TeamCard({ team, className }: TeamCardProps) {
       <div
         className={`bg-black flex flex-col items-center justify-center bg-gradient-to-br to-${colors[team]}/10 from-black rounded-xl absolute`}
       >
-        <Icon className="w-[5rem] text-[5rem]" />
+        <Icon className="w-[5rem] fill-white mb-4" />
 
         <span className="font-bold text-center">
           {team.toUpperCase()}-TEAM
