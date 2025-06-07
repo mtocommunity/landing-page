@@ -2,9 +2,9 @@ import "./style.css";
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 
-import { ReactComponent as LabtopCode } from "../../assets/icons/laptop-code.svg";
-import { ReactComponent as NetworkWired } from "../../assets/icons/network-wired.svg";
-import { ReactComponent as Robot } from "../../assets/icons/robot.svg";
+import { ReactComponent as LabtopCode } from "@assets/icons/laptop-code.svg";
+import { ReactComponent as NetworkWired } from "@assets/icons/network-wired.svg";
+import { ReactComponent as Robot } from "@assets/icons/robot.svg";
 import { ReactComponent as Redhat } from "@assets/icons/redhat.svg";
 import { ReactComponent as Linux } from "@assets/icons/linux.svg";
 import { useState } from "react";
