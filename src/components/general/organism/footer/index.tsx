@@ -1,8 +1,6 @@
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="grid grid-cols-1 bg-mto_dark_gray w-full py-8 px-4 md:px-20 md:gap-x-12 md:grid-cols-5">
@@ -118,7 +116,7 @@ const Footer: React.FC = () => {
             className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faInstagram} className="mr-2 w-4" />
+            <Instagram className="mr-2 w-4" />
             <span>| @mtocommunity</span>
           </a>
         </div>

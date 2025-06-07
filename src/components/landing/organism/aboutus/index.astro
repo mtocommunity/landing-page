@@ -1,7 +1,6 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ButtonType } from "../../../general/attoms/button/types";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { ReactComponent as Discord } from "@assets/icons/discord.svg";
 import Button from "../../../general/attoms/button";
 
 import ImageScroll from "../../../general/molecule/image-scroll/index.astro";
@@ -40,7 +39,7 @@ import ImageScroll from "../../../general/molecule/image-scroll/index.astro";
           link="https://discord.mtocommunity.com/"
           className="flex items-center"
         >
-          <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-4" />
+          <Discord className="mr-2 text-base w-4" />
           ¡Quiero unirme!
         </Button>
       </div>

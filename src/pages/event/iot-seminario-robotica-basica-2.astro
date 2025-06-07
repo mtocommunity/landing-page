@@ -7,8 +7,7 @@ import Speaker from "../../components/events/molecule/Speaker.astro";
 
 import { ButtonType } from "../../components/general/attoms/button/types";
 import { wave2 } from "../../assets/svgs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as Clock } from "@assets/icons/clock.svg";
 
 import type { EventAgenda } from "../../types";
 
@@ -91,12 +90,11 @@ const props = {
           </p>
         </div>
         <Button
-          type={ButtonType.PRIMARY}
+          type={ButtonType.DISABLED}
           className="w-2/3 flex gap-2 justify-center items-center"
-          link="https://forms.gle/pDknkpFNLP5Gmcpk7"
         >
-          <FontAwesomeIcon icon={faClipboard} className="w-4" />
-          <span>¡Inscríbete ahora!</span>
+          <Clock className="w-4" />
+          <span>Inscripciones cerradas</span>
         </Button>
       </div>
     </main>

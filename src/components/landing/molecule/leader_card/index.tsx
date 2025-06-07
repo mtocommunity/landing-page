@@ -1,5 +1,5 @@
-import React from "react";
 import "./style.css";
+import { FunctionalComponent } from "preact";
 
 interface LeaderCardProps {
   photo: string;
@@ -9,7 +9,7 @@ interface LeaderCardProps {
   easter_egg?: string;
 }
 
-const LeaderCard: React.FC<LeaderCardProps> = ({
+const LeaderCard: FunctionalComponent<LeaderCardProps> = ({
   photo,
   name,
   role,
