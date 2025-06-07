@@ -113,10 +113,10 @@ const Footer = () => {
           </a>
           <a
             href="https://www.instagram.com/mtocommunity"
-            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors flex"
             target="_blank"
           >
-            <Instagram className="mr-2 w-4" />
+            <Instagram className="mr-2 w-4 fill-white" />
             <span>| @mtocommunity</span>
           </a>
         </div>

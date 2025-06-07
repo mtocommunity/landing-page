@@ -3,7 +3,6 @@ import { ReactComponent as Github } from "@assets/icons/github.svg";
 import { ReactComponent as Linkedin } from "@assets/icons/linkedin.svg";
 import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
 import { ReactComponent as Link } from "@assets/icons/link.svg";
-import React from "react";
 
 type Props = {
   link: string;
@@ -11,25 +10,13 @@ type Props = {
 
 const { link } = Astro.props as Props;
 
-const icons = {
-  "github.com": Github,
-  "www.linkedin.com": Linkedin,
-  "instagram.com": Instagram,
+const keywords = {
+  github: ["github.com", "github.io"],
+  linkedin: ["linkedin.com", "www.linkedin.com"],
+  instagram: ["instagram.com", "www.instagram.com"],
 };
 
-function Icon({
-  link,
-}: {
-  link: string;
-}): React.FunctionComponent<{ link: string }> {
-  const domain = link.split("/")[2];
-
-  if (Object.keys(icons).indexOf(domain) !== -1) {
-    return icons[domain as keyof typeof icons] as React.FunctionComponent;
-  }
-
-  return Link as React.FunctionComponent;
-}
+const domain = link.split("/")[2];
 ---
 
 <a
@@ -37,5 +24,22 @@ function Icon({
   target="_blank"
   class="text-white bg-mto_gray rounded-full p-2 aspect-square flex items-center justify-center"
 >
-  <Icon link={link} />
+  {keywords.github.includes(domain) ? <Github class="w-5 fill-white" /> : null}
+  {
+    keywords.linkedin.includes(domain) ? (
+      <Linkedin class="w-5 fill-white" />
+    ) : null
+  }
+  {
+    keywords.instagram.includes(domain) ? (
+      <Instagram class="w-5 fill-white" />
+    ) : null
+  }
+  {
+    [...keywords.github, ...keywords.instagram, ...keywords.linkedin].includes(
+      domain
+    ) ? null : (
+      <Link class="w-5 fill-white" />
+    )
+  }
 </a>
