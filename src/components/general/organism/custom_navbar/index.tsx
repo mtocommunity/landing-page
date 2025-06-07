@@ -28,11 +28,14 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !toggle);
-    document.addEventListener("scroll", (e) => {
+    const handleScroll = (e: Event) => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
       setIsTop(scrollTop === 0);
-    });
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, [toggle]);
 
   const handleLinkClick = () => {
