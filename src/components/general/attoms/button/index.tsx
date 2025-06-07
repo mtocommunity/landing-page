@@ -3,7 +3,7 @@ import { ButtonType } from "./types";
 
 type ButtonProps = {
   type: ButtonType;
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactPortal | React.VNode;
   onClick?: () => void;
   link?: string;
   className?: string;

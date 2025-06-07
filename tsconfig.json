@@ -2,9 +2,10 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsxImportSource": "preact",
     "verbatimModuleSyntax": false,
     "strictNullChecks": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "esModuleInterop": true
   }
 }

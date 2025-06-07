@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as ArrowRight } from "@assets/assets/icons/arrow-right.svg";
+import { ReactComponent as Bars } from "@assets/icons/bars.svg";
+import { ReactComponent as Xmark } from "@assets/icons/xmark.svg";
 import { MTOTransparentBackground } from "../../../../assets";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Button from "../../../general/attoms/button";
@@ -13,7 +10,7 @@ import "./style.css";
 import React from "react";
 
 type Props = {
-  children: React.ReactNode;
+  children: React.ReactPortal | React.ReactNode;
   fixed: boolean;
   full?: boolean;
 };
@@ -39,8 +36,10 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
       link="https://discord.mtocommunity.com/"
       className={`lg:flex ${additionalClasses}`}
     >
-      Contáctanos{" "}
-      <FontAwesomeIcon icon={faArrowRight} className="ml-2 mt-0.5" />
+      <div>
+        <span>Contáctanos</span>
+        <ArrowRight className="ml-2 mt-0.5" />
+      </div>
     </Button>
   );
 
@@ -64,7 +63,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
           className="text-white lg:hidden text-2xl ml-auto"
           onClick={handleToggle}
         >
-          <FontAwesomeIcon icon={toggle ? faBars : faTimes} />
+          {toggle ? <Bars /> : <Xmark />}
         </div>
         <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
           <div className="flex justify-center items-center w-full h-full">
