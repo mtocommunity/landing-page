@@ -36,6 +36,11 @@ export default defineConfig({
   }),
   vite: {
     plugins: [svgr()],
+    resolve: {
+      alias: {
+        "@assets": new URL("./src/assets", import.meta.url).pathname,
+      },
+    },
   },
   output: "static",
   compressHTML: true,
