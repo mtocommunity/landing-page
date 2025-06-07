@@ -7,10 +7,12 @@ import mdx from "@astrojs/mdx";
 
 import cloudflare from "@astrojs/cloudflare";
 
+import MillionLint from "@million/lint";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://mtocommunity.com",
-  integrations: [tailwind(), react(), mdx()],
+  integrations: [tailwind(), react(), mdx(), MillionLint.astro()],
   adapter: cloudflare({
     routes: {
       extend: {
