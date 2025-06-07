@@ -20,6 +20,7 @@ type Props = {
 
 function CustomNavBar({ children, fixed = false, full }: Props) {
   const [toggle, setToggle] = useState(true);
+  const [isTop, setIsTop] = useState(true);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -27,6 +28,14 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !toggle);
+    const handleScroll = (e: Event) => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      setIsTop(scrollTop === 0);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, [toggle]);
 
   const handleLinkClick = () => {
@@ -47,7 +56,7 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
   return (
     <>
       <header
-        className={`flex items-center w-full h-14${fixed ? " fixed" : ""} top-0 px-4 transition-colors z-50 lg:bg-transparent lg:w-[100%] lg:mx-auto lg:top-6`}
+        className={`flex items-center w-full h-16 lg:h-24${fixed ? " fixed" : ""} bg-gradient-to-b ${isTop ? "bg-transparent" : "from-mto_dark_gray to-mto_dark_gray lg:from-mto_dark_gray lg:via-mto_dark_gray/90"} top-0 px-4 transition-colors z-50 lg:w-[100%] lg:mx-auto lg:pt-6 lg:pb-4`}
       >
         <a
           className={`h-full flex items-center ${!toggle ? "hidden" : ""}`}
