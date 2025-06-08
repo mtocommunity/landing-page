@@ -2,7 +2,7 @@ import "./style.css";
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 
-import { ReactComponent as LabtopCode } from "@assets/icons/laptop-code.svg";
+import { ReactComponent as LaptopCode } from "@assets/icons/laptop-code.svg";
 import { ReactComponent as NetworkWired } from "@assets/icons/network-wired.svg";
 import { ReactComponent as Robot } from "@assets/icons/robot.svg";
 import { ReactComponent as Redhat } from "@assets/icons/redhat.svg";
@@ -15,7 +15,7 @@ type TeamCardProps = {
 };
 
 const icons = {
-  dev: LabtopCode,
+  dev: LaptopCode,
   iot: Robot,
   net: NetworkWired,
   os: Linux,
