@@ -1,4 +1,3 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { Project } from "./general";
 
 export enum TeamType {
@@ -26,7 +25,7 @@ export type TeamLeader = {
 
 export interface TeamLayout {
   name: string;
-  teamIcon: IconDefinition;
+  teamIcon: React.FunctionComponent;
   description: string;
   projects: Project[];
   events: TeamEvent[];

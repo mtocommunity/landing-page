@@ -2,9 +2,8 @@
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Social from "../../../general/molecule/social";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { ReactComponent as ArrowRight } from "@assets/icons/arrow-right.svg";
+import { ReactComponent as Discord } from "@assets/icons/discord.svg";
 import "./style.css";
 ---
 
@@ -31,7 +30,7 @@ import "./style.css";
           link="https://discord.mtocommunity.com/"
           className="flex items-center"
         >
-          <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-5" />
+          <Discord className="mr-2 text-base w-5 fill-white" />
           ¡Quiero unirme!
         </Button>
         <Button
@@ -40,7 +39,7 @@ import "./style.css";
           className="font-semibold text-sm flex items-center"
         >
           Más información
-          <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-base w-5" />
+          <ArrowRight className="ml-2 text-base w-5 fill-mto_blue" />
         </Button>
       </div>
       <div class="w-3/4 mt-8 xl:w-3/4 lg:w-3/4 lg:mt-10">
