@@ -1,14 +1,11 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faFacebookF,
-  faGithub,
-  faInstagram,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
+import { ReactComponent as Youtube } from "@assets/icons/youtube.svg";
+import { ReactComponent as Github } from "@assets/icons/github.svg";
+import { ReactComponent as Ffacebook } from "@assets/icons/ffacebook.svg";
+import { ReactComponent as XTwitter } from "@assets/icons/xtwitter.svg";
+import { ReactComponent as Linkedin } from "@assets/icons/linkedin.svg";
+import { ReactComponent as Link } from "@assets/icons/link.svg";
 
 import "./style.css";
 
@@ -28,31 +25,31 @@ type Props = {
 
 const { href, type, other_tab = true } = Astro.props;
 
-let icon = faLink;
+let Icon = Link;
 
 switch (type) {
   case "facebook":
-    icon = faFacebookF;
+    Icon = Ffacebook;
     break;
 
   case "github":
-    icon = faGithub;
+    Icon = Github;
     break;
 
   case "instagram":
-    icon = faInstagram;
+    Icon = Instagram;
     break;
 
   case "linkedin":
-    icon = faLinkedin;
+    Icon = Linkedin;
     break;
 
   case "x":
-    icon = faXTwitter;
+    Icon = XTwitter;
     break;
 
   case "youtube":
-    icon = faYoutube;
+    Icon = Youtube;
     break;
 }
 ---
@@ -62,6 +59,6 @@ switch (type) {
   target={other_tab ? "_blank" : "_self"}
   class={`px-2 py-1 flex gap-2 brand-${type} items-center w-min`}
 >
-  <FontAwesomeIcon icon={icon} className="w-4" />
+  <Icon className="w-4" />
   <span>{type[0].toUpperCase() + type.slice(1).toLowerCase()}</span>
 </a>

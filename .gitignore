@@ -28,3 +28,4 @@ pnpm-debug.log*
 .pnpm-store/
 yarn.lock
 bun.lockb
+.million/

@@ -1,12 +1,8 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { ReactComponent as Github } from "@assets/icons/github.svg";
+import { ReactComponent as Linkedin } from "@assets/icons/linkedin.svg";
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
+import { ReactComponent as Link } from "@assets/icons/link.svg";
 
 type Props = {
   link: string;
@@ -14,21 +10,13 @@ type Props = {
 
 const { link } = Astro.props as Props;
 
-const icons = {
-  "github.com": faGithub,
-  "www.linkedin.com": faLinkedin,
-  "instagram.com": faInstagram,
+const keywords = {
+  github: ["github.com", "github.io"],
+  linkedin: ["linkedin.com", "www.linkedin.com"],
+  instagram: ["instagram.com", "www.instagram.com"],
 };
 
-function getIcon(link: string): IconProp {
-  const domain = link.split("/")[2];
-
-  if (Object.keys(icons).indexOf(domain) !== -1) {
-    return icons[domain as keyof typeof icons] as IconProp;
-  }
-
-  return faLink;
-}
+const domain = link.split("/")[2];
 ---
 
 <a
@@ -36,5 +24,22 @@ function getIcon(link: string): IconProp {
   target="_blank"
   class="text-white bg-mto_gray rounded-full p-2 aspect-square flex items-center justify-center"
 >
-  <FontAwesomeIcon icon={getIcon(link)} className="w-6" />
+  {keywords.github.includes(domain) ? <Github class="w-5 fill-white" /> : null}
+  {
+    keywords.linkedin.includes(domain) ? (
+      <Linkedin class="w-5 fill-white" />
+    ) : null
+  }
+  {
+    keywords.instagram.includes(domain) ? (
+      <Instagram class="w-5 fill-white" />
+    ) : null
+  }
+  {
+    [...keywords.github, ...keywords.instagram, ...keywords.linkedin].includes(
+      domain
+    ) ? null : (
+      <Link class="w-5 fill-white" />
+    )
+  }
 </a>
