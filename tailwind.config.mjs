@@ -1,3 +1,8 @@
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -28,10 +33,11 @@ export default {
         lora: ["Lora", "serif"],
       },
       boxShadow: {
-        'custom-cyan': '4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)',
+        "custom-cyan":
+          "4px 4px 6px -2px rgba(75, 213, 241, 0.5), -4px -4px 6px -2px rgba(75, 213, 241, 0.25)",
       },
       borderColor: {
-        'gradient': 'linear-gradient(to right, #EC458D, #4BD5F1)',
+        gradient: "linear-gradient(to right, #EC458D, #4BD5F1)",
       },
     },
   },
