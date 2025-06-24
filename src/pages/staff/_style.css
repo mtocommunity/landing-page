@@ -1,5 +1,11 @@
+/*!
+ * Copyright (c) 2025 ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 .bg-grid {
-  background-image: linear-gradient(to right, transparent 79px, #ccc 80px),
+  background-image:
+    linear-gradient(to right, transparent 79px, #ccc 80px),
     linear-gradient(to bottom, transparent 79px, #ccc 80px);
   background-size: 80px 80px;
   background-position:
