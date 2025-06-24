@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2025 ManyToOne Community
+ * File of ManyToOne Community
  * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
  */
 
