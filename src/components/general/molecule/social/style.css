@@ -1,5 +1,10 @@
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 .icon {
-  @apply w-4 aspect-square opacity-40 transition-colors lg:text-xl 2xl:text-3xl cursor-pointer;
+  @apply w-4 aspect-square opacity-40 transition-colors lg:w-6 2xl:w-8 cursor-pointer fill-white;
 }
 
 .icon:hover {

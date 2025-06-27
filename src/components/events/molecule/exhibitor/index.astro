@@ -1,14 +1,16 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faInstagram,
-  faGithub,
-  faYoutube,
-  faXTwitter,
-  faFacebookF,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
+import { ReactComponent as Youtube } from "@assets/icons/youtube.svg";
+import { ReactComponent as Github } from "@assets/icons/github.svg";
+import { ReactComponent as Ffacebook } from "@assets/icons/ffacebook.svg";
+import { ReactComponent as XTwitter } from "@assets/icons/xtwitter.svg";
+import { ReactComponent as Linkedin } from "@assets/icons/linkedin.svg";
+import { ReactComponent as Envelope } from "@assets/icons/envelope.svg";
 
 interface Props {
   exhibitor: {
@@ -46,70 +48,49 @@ const {
     {
       linkedin && (
         <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Linkedin className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       instagram && (
         <a href={instagram} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Instagram className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       github && (
         <a href={github} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Github className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       youtube && (
         <a href={youtube} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faYoutube}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Youtube className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       x && (
         <a href={x} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faXTwitter}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <XTwitter className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       email && (
         <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Envelope className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }
     {
       facebook && (
         <a href={facebook} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            icon={faFacebookF}
-            className="text-gray-300 hover:text-white w-6 h-6"
-          />
+          <Ffacebook className="fill-gray-300 hover:fill-white w-6 h-6" />
         </a>
       )
     }

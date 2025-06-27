@@ -1,11 +1,16 @@
 ---
-import { faRedhat } from "@fortawesome/free-brands-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as RedHat } from "../../assets/icons/redhat.svg";
 import Layout from "../../layouts/team/index.astro";
 import { TeamLayout } from "../../types";
 
 const teamProps: TeamLayout = {
   name: "Security-Team",
-  teamIcon: faRedhat,
+  teamIcon: RedHat,
   description: `Sumérgete en el apasionante mundo de la ciberseguridad. Aquí, convertirás tu interés por la seguridad informática en habilidades prácticas a través de proyectos de hacking ético y competencias desafiantes. Únete a nosotros y forma parte de una comunidad que trabaja por un mundo digital más seguro.`,
   projects: [],
   events: [

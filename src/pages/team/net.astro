@@ -1,11 +1,16 @@
 ---
-import { faNetworkWired } from "@fortawesome/free-solid-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as NetworkWired } from "../../assets/icons/network-wired.svg";
 import Layout from "../../layouts/team/index.astro";
 import { TeamLayout } from "../../types";
 
 const teamProps: TeamLayout = {
   name: "Net-Team",
-  teamIcon: faNetworkWired,
+  teamIcon: NetworkWired,
   description: `Somos un equipo apasionado por el mundo de las redes y la comunicación de
       datos. Exploramos, diseñamos y gestionamos redes que potencian la
       colaboración y el aprendizaje dentro de nuestra comunidad. Únete a

@@ -1,11 +1,16 @@
 ---
-import { faLinux } from "@fortawesome/free-brands-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as Linux } from "../../assets/icons/linux.svg";
 import Layout from "../../layouts/team/index.astro";
 import { TeamLayout } from "../../types";
 
 const teamProps: TeamLayout = {
   name: "OS-Team",
-  teamIcon: faLinux,
+  teamIcon: Linux,
   description: `Aquí, exploramos el fascinante mundo de los sistemas operativos, desde su
       arquitectura hasta su personalización. Nos dedicamos a desentrañar cómo
       funcionan, optimizarlos y crear entornos que maximicen su rendimiento.

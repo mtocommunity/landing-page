@@ -1,10 +1,15 @@
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 export type EventAgendaItem =
   | string
   | {
-    date: Date;
-    title: string;
-    description: string;
-  };
+      date: Date;
+      title: string;
+      description: string;
+    };
 
 export type EventAgendaDay = {
   date: Date;

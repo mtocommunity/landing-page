@@ -1,14 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
 
 import "./style.css";
 import Button from "../../../general/attoms/button";
 import { ButtonType } from "../../../general/attoms/button/types";
-import {
-  faLaptopCode,
-  faNetworkWired,
-  faRobot,
-} from "@fortawesome/free-solid-svg-icons";
-import { faLinux, faRedhat } from "@fortawesome/free-brands-svg-icons";
+
+import { ReactComponent as LaptopCode } from "@assets/icons/laptop-code.svg";
+import { ReactComponent as NetworkWired } from "@assets/icons/network-wired.svg";
+import { ReactComponent as Robot } from "@assets/icons/robot.svg";
+import { ReactComponent as Redhat } from "@assets/icons/redhat.svg";
+import { ReactComponent as Linux } from "@assets/icons/linux.svg";
 import { useState } from "react";
 
 type TeamCardProps = {
@@ -17,11 +20,11 @@ type TeamCardProps = {
 };
 
 const icons = {
-  dev: faLaptopCode,
-  iot: faRobot,
-  net: faNetworkWired,
-  os: faLinux,
-  sec: faRedhat,
+  dev: LaptopCode,
+  iot: Robot,
+  net: NetworkWired,
+  os: Linux,
+  sec: Redhat,
 };
 
 const colors = {
@@ -47,6 +50,8 @@ function TeamCard({ team, className }: TeamCardProps) {
     setReverse(!reverse);
   };
 
+  const Icon = icons[team];
+
   return (
     <div
       className={`team-card cursor-pointer aspect-square bg-gradient-to-tr from-${colors[team]} from-70% to-mto_dark_gray p-[2px] rounded-xl w-full relative ${className} ${reverse ? "team-card-reverse" : ""}`}
@@ -55,7 +60,8 @@ function TeamCard({ team, className }: TeamCardProps) {
       <div
         className={`bg-black flex flex-col items-center justify-center bg-gradient-to-br to-${colors[team]}/10 from-black rounded-xl absolute`}
       >
-        <FontAwesomeIcon icon={icons[team]} className="w-[5rem] text-[5rem]" />
+        <Icon className="w-[5rem] fill-white mb-4" />
+
         <span className="font-bold text-center">
           {team.toUpperCase()}-TEAM
           {["os", "sec"].indexOf(team) === -1 ? null : (

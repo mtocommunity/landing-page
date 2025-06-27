@@ -1,6 +1,10 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as Discord } from "@assets/icons/discord.svg";
 import Layout from "../../layouts/landing/index.astro";
 import Button from "../../components/general/attoms/button";
 import { ButtonType } from "../../components/general/attoms/button/types";
@@ -31,7 +35,7 @@ import "./_style.css";
     </div>
 
     <div class="w-full min-h-dvh flex flex-col items-center">
-      <Agenda client:only />
+      <Agenda client:only="preact" />
     </div>
 
     <div
@@ -59,7 +63,7 @@ import "./_style.css";
             link="https://discord.mtocommunity.com/"
             className="flex items-center"
           >
-            <FontAwesomeIcon icon={faDiscord} className="mr-2 text-base w-5" />
+            <Discord className="mr-2 text-base w-5 fill-white" />
             ¡Quiero unirme!
           </Button>
           <a

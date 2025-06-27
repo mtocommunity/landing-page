@@ -1,5 +1,10 @@
-import React from "react";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 import "./style.css";
+import { FunctionalComponent } from "preact";
 
 interface LeaderCardProps {
   photo: string;
@@ -9,7 +14,7 @@ interface LeaderCardProps {
   easter_egg?: string;
 }
 
-const LeaderCard: React.FC<LeaderCardProps> = ({
+const LeaderCard: FunctionalComponent<LeaderCardProps> = ({
   photo,
   name,
   role,
