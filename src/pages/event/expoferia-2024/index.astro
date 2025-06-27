@@ -1,4 +1,9 @@
 ---
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 import Layout from "../../../layouts/event/index.astro";
 import CustomNavBar from "../../../components/general/organism/custom_navbar";
 import Schedule from "../../../components/events/molecule/schedule/index.astro";
@@ -7,8 +12,7 @@ import ProjectCard from "../../../components/events/molecule/project/index.astro
 import Exhibitor from "../../../components/events/molecule/exhibitor/index.astro";
 import Slider from "../../../components/events/molecule/slider/index.astro";
 import expoferiaData from "./_data.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { ReactComponent as XTwitter } from "@assets/icons/xtwitter.svg";
 import TextBorder from "../../../components/events/molecule/textBorder/index.astro";
 import "./_style.css";
 
@@ -62,10 +66,7 @@ const { props, projects, exhibitors, schedules } = expoferiaData;
           <div class="flex flex-col items-center">
             <h2 class="flex font-main_sans items-center font-bold text-black">
               <span class="text-5xl text-white">E</span>
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="text-5xl w-10 text-white"
-              />
+              <XTwitter className="text-5xl w-10 fill-white" />
               <span class="text-5xl text-white">PO</span>
             </h2>
             <div class="relative text-5xl font-main_sans font-bold z-10">

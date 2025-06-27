@@ -1,16 +1,17 @@
-import "./style.css";
-import {
-  faFacebookSquare,
-  faInstagram,
-  faYoutube,
-  faTwitch,
-  faTiktok,
-  faGithub,
-  faWhatsapp,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./style.css";
+
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
+import { ReactComponent as Youtube } from "@assets/icons/youtube.svg";
+import { ReactComponent as Twitch } from "@assets/icons/twitch.svg";
+import { ReactComponent as Tiktok } from "@assets/icons/tiktok.svg";
+import { ReactComponent as Github } from "@assets/icons/github.svg";
+import { ReactComponent as Whatsapp } from "@assets/icons/whatsapp.svg";
+import { ReactComponent as Linkedin } from "@assets/icons/linkedin.svg";
 
 function Social() {
   return (
@@ -20,7 +21,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faInstagram} />
+        <Instagram />
       </a>
 
       <a
@@ -28,7 +29,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faLinkedin} />
+        <Linkedin />
       </a>
 
       <a
@@ -36,7 +37,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faTiktok} />
+        <Tiktok />
       </a>
 
       <a
@@ -44,7 +45,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faYoutube} />
+        <Youtube />
       </a>
 
       <a
@@ -52,7 +53,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faGithub} />
+        <Github />
       </a>
 
       <a
@@ -60,7 +61,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faTwitch} />
+        <Twitch />
       </a>
 
       <a
@@ -68,7 +69,7 @@ function Social() {
         className="icon"
         target="_blank"
       >
-        <FontAwesomeIcon icon={faWhatsapp} />
+        <Whatsapp />
       </a>
     </div>
   );

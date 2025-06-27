@@ -1,11 +1,16 @@
 ---
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import { ReactComponent as Robot } from "../../assets/icons/robot.svg";
 import Layout from "../../layouts/team/index.astro";
 import { TeamLayout } from "../../types";
 
 const teamProps: TeamLayout = {
   name: "IoT-Team",
-  teamIcon: faRobot,
+  teamIcon: Robot,
   description: `Aquí, transformamos la curiosidad en innovación, explorando el fascinante
       mundo del Internet de las Cosas. Creamos prototipos que no solo son
       útiles, sino también divertidos, llevando la tecnología al siguiente

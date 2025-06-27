@@ -1,10 +1,12 @@
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as ArrowRight } from "@assets/icons/arrow-right.svg";
+import { ReactComponent as Bars } from "@assets/icons/bars.svg";
+import { ReactComponent as Xmark } from "@assets/icons/xmark.svg";
 import { MTOTransparentBackground } from "../../../../assets";
 import { ButtonType } from "../../../general/attoms/button/types";
 import Button from "../../../general/attoms/button";
@@ -20,6 +22,7 @@ type Props = {
 
 function CustomNavBar({ children, fixed = false, full }: Props) {
   const [toggle, setToggle] = useState(true);
+  const [isTop, setIsTop] = useState(true);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -27,6 +30,14 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !toggle);
+    const handleScroll = (e: Event) => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      setIsTop(scrollTop === 0);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, [toggle]);
 
   const handleLinkClick = () => {
@@ -37,17 +48,23 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
     <Button
       type={ButtonType.BORDER_BLUE}
       link="https://discord.mtocommunity.com/"
-      className={`lg:flex ${additionalClasses}`}
+      className={`lg:flex ${additionalClasses} flex`}
     >
-      Contáctanos{" "}
-      <FontAwesomeIcon icon={faArrowRight} className="ml-2 mt-0.5" />
+      <span>Contáctanos</span>
+      <ArrowRight className="ml-2 mt-0.5 w-5 fill-mto_blue" />
     </Button>
   );
 
   return (
     <>
       <header
-        className={`flex items-center w-full h-14${fixed ? " fixed" : ""} top-0 px-4 transition-colors z-50 lg:bg-transparent lg:w-[100%] lg:mx-auto lg:top-6`}
+        className={`flex items-center w-full h-16 lg:h-24${
+          fixed ? " fixed" : ""
+        } bg-gradient-to-b ${
+          isTop
+            ? "bg-transparent"
+            : "from-mto_dark_gray to-mto_dark_gray lg:from-mto_dark_gray lg:via-mto_dark_gray/90"
+        } top-0 px-4 transition-colors z-50 lg:w-[100%] lg:mx-auto lg:pt-6 lg:pb-4`}
       >
         <a
           className={`h-full flex items-center ${!toggle ? "hidden" : ""}`}
@@ -64,7 +81,11 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
           className="text-white lg:hidden text-2xl ml-auto"
           onClick={handleToggle}
         >
-          <FontAwesomeIcon icon={toggle ? faBars : faTimes} />
+          {toggle ? (
+            <Bars class="w-5 fill-white" />
+          ) : (
+            <Xmark class="w-5 fill-white" />
+          )}
         </div>
         <nav className="nav-desktop hidden lg:flex justify-center items-center font-onest flex-1">
           <div className="flex justify-center items-center w-full h-full">
@@ -74,7 +95,9 @@ function CustomNavBar({ children, fixed = false, full }: Props) {
         {renderButton("hidden lg:flex")}
       </header>
       <div
-        className={`nav-mobile min-h-screen flex fixed w-full h-full bg-mto_dark_gray text-white flex-col items-center justify-center text-xl lg:hidden ${!toggle ? "active" : ""}`}
+        className={`nav-mobile min-h-screen flex fixed w-full h-full bg-mto_dark_gray text-white flex-col items-center justify-center text-xl lg:hidden ${
+          !toggle ? "active" : ""
+        }`}
         onClick={handleLinkClick}
       >
         {React.Children.map(children, (child, index) =>

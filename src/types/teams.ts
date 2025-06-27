@@ -1,4 +1,8 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 import { Project } from "./general";
 
 export enum TeamType {
@@ -26,7 +30,7 @@ export type TeamLeader = {
 
 export interface TeamLayout {
   name: string;
-  teamIcon: IconDefinition;
+  teamIcon: React.FunctionComponent;
   description: string;
   projects: Project[];
   events: TeamEvent[];

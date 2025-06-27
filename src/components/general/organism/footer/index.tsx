@@ -1,8 +1,11 @@
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
 
-const Footer: React.FC = () => {
+import { ReactComponent as Instagram } from "@assets/icons/instagram.svg";
+
+const Footer = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="grid grid-cols-1 bg-mto_dark_gray w-full py-8 px-4 md:px-20 md:gap-x-12 md:grid-cols-5">
@@ -115,10 +118,10 @@ const Footer: React.FC = () => {
           </a>
           <a
             href="https://www.instagram.com/mtocommunity"
-            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors"
+            className="text-white opacity-50 mb-2 hover:text-mto_red_light transition-colors flex"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faInstagram} className="mr-2 w-4" />
+            <Instagram className="mr-2 w-4 fill-white" />
             <span>| @mtocommunity</span>
           </a>
         </div>
