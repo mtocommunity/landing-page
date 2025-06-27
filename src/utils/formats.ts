@@ -1,3 +1,8 @@
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
 export function formatDate(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
     weekday: "short",
