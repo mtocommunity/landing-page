@@ -17,14 +17,16 @@ import { ReactComponent as Laptop } from "@assets/icons/laptop.svg";
 import { ReactComponent as School } from "@assets/icons/school.svg";
 import { ReactComponent as PeopleGroup } from "@assets/icons/people-group.svg";
 import { ReactComponent as PersonDotsFromLine } from "@assets/icons/person-dots-from-line.svg";
-const formLink = "/program/devs";
+const formLink = "";
 ---
 
 <Layout title="MTO Devs Program">
   <main
-    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_dark_gray px-6"
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_dark_gray px-6 xl:px-20 2xl:px-32"
   >
-    <div class="w-full h-dvh flex flex-col justify-center">
+    <div
+      class="w-full h-dvh flex flex-col justify-center xl:flex-row xl:items-center xl:gap-20 2xl:w-3/4"
+    >
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -52,7 +54,9 @@ const formLink = "/program/devs";
         />
       </div>
     </div>
-    <div class="w-full flex flex-col justify-center">
+    <div
+      class="w-full flex flex-col justify-center xl:flex-row-reverse xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
+    >
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -84,7 +88,9 @@ const formLink = "/program/devs";
         />
       </div>
     </div>
-    <div class="w-full flex flex-col justify-center mt-36">
+    <div
+      class="w-full flex flex-col justify-center mt-36 xl:flex-row xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
+    >
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -92,96 +98,98 @@ const formLink = "/program/devs";
           Programas
         </div>
         <h1 class="text-2xl font-main_mono font-semibold mt-2">
-          Programas para todas las etapas de tu carrera
+          Programas para todas <br /> las etapas de tu carrera
         </h1>
         <p class="text-base text-pretty text-mto_grey mt-4">
           Podrás formar parte del programas que mejor se adecue a tu nivel y
           avance de aprendizaje.
         </p>
-        <div class="flex flex-col gap-[1px] mt-10">
-          <div class="border-l-2 p-4 flex flex-col card-active card">
-            <div class="flex items-center gap-4">
-              <div class="aspect-square h-24">
-                <Image
-                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
-                  alt={"Devs Explorer"}
-                  inferSize
-                  class={"object-cover w-full h-full"}
-                />
-              </div>
-              <h4 class="font-bold text-xl font-main_mono">Devs Explorer</h4>
+      </div>
+      <div
+        class="flex flex-col gap-[1px] mt-10 xl:mt-0 xl:w-full cursor-pointer"
+      >
+        <div class="border-l-2 p-4 flex flex-col card-active card">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
             </div>
-            <div class="pt-4 hidden-content">
-              <p>
-                Estás empezando en el mundo de la programación y tienes muchas
-                preguntas. Aquí aprenderás lo esencial, descubrirás nuevas
-                herramientas y conectarás la tecnología con lo que más te gusta.
-                Lo importante es tu curiosidad.
-              </p>
-              <Button
-                type={ButtonType.DISABLED}
-                className="py-2 rounded-lg mt-5 justify-center flex"
-                link={formLink}>Postulaciones pronto</Button
-              >
-            </div>
+            <h4 class="font-bold text-xl font-main_mono">Devs Explorer</h4>
           </div>
-          <!-- Temporal hidden -->
-          <div class="border-l-2 p-4 flex flex-col card-inactive card hidden">
-            <div class="flex items-center gap-4">
-              <div class="aspect-square h-24">
-                <Image
-                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
-                  alt={"Devs Explorer"}
-                  inferSize
-                  class={"object-cover w-full h-full"}
-                />
-              </div>
-              <h4 class="font-bold text-xl font-main_mono">Devs Pathfinder</h4>
-            </div>
-            <div class="pt-4 hidden-content">
-              <p>
-                Ya tienes algo de experiencia y quieres darle dirección a tu
-                aprendizaje. Este programa te ayudará a explorar tecnologías,
-                experimentar con ideas propias y definir un rumbo que se alinee
-                contigo.
-              </p>
-              <Button
-                type={ButtonType.DISABLED}
-                className="py-2 rounded-lg mt-5 justify-center flex"
-                link={formLink}>Postulaciones pronto</Button
-              >
-            </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Estás empezando en el mundo de la programación y tienes muchas
+              preguntas. Aquí aprenderás lo esencial, descubrirás nuevas
+              herramientas y conectarás la tecnología con lo que más te gusta.
+              Lo importante es tu curiosidad.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
           </div>
-          <div class="border-l-2 p-4 flex flex-col card-inactive card">
-            <div class="flex items-center gap-4">
-              <div class="aspect-square h-24">
-                <Image
-                  src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
-                  alt={"Devs Explorer"}
-                  inferSize
-                  class={"object-cover w-full h-full"}
-                />
-              </div>
-              <h4 class="font-bold text-xl font-main_mono">Devs Insiders</h4>
+        </div>
+        <!-- Temporal hidden -->
+        <div class="border-l-2 p-4 flex flex-col card-inactive card hidden">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
             </div>
-            <div class="pt-4 hidden-content">
-              <p>
-                Ya vienes recorriendo tu propio camino y buscas un espacio para
-                ir más allá. Aquí podrás profundizar en temas complejos, retarte
-                con nuevas perspectivas y crear soluciones distintas a partir de
-                lo que ya sabes.
-              </p>
-              <Button
-                type={ButtonType.DISABLED}
-                className="py-2 rounded-lg mt-5 justify-center flex"
-                link={formLink}>Postulaciones pronto</Button
-              >
+            <h4 class="font-bold text-xl font-main_mono">Devs Pathfinder</h4>
+          </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Ya tienes algo de experiencia y quieres darle dirección a tu
+              aprendizaje. Este programa te ayudará a explorar tecnologías,
+              experimentar con ideas propias y definir un rumbo que se alinee
+              contigo.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
+          </div>
+        </div>
+        <div class="border-l-2 p-4 flex flex-col card-inactive card">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
             </div>
+            <h4 class="font-bold text-xl font-main_mono">Devs Insiders</h4>
+          </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Ya vienes recorriendo tu propio camino y buscas un espacio para ir
+              más allá. Aquí podrás profundizar en temas complejos, retarte con
+              nuevas perspectivas y crear soluciones distintas a partir de lo
+              que ya sabes.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
           </div>
         </div>
       </div>
     </div>
-    <div class="w-full flex flex-col justify-center mt-36">
+    <div class="w-full flex flex-col justify-center mt-36 xl:mt-72 2xl:w-3/4">
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -192,9 +200,9 @@ const formLink = "/program/devs";
           ¿Por qué postular?
         </h1>
 
-        <div class="flex flex-col gap-12 font-main_mono mt-12">
+        <div class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row">
           <div
-            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
           >
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
@@ -208,7 +216,7 @@ const formLink = "/program/devs";
             </p>
           </div>
           <div
-            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
           >
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
@@ -222,7 +230,7 @@ const formLink = "/program/devs";
             </p>
           </div>
           <div
-            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
           >
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
@@ -236,7 +244,7 @@ const formLink = "/program/devs";
             </p>
           </div>
           <div
-            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12"
+            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
           >
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
@@ -252,7 +260,7 @@ const formLink = "/program/devs";
         </div>
       </div>
     </div>
-    <div class="w-full flex flex-col justify-center mt-24">
+    <div class="w-full flex flex-col justify-center mt-24 xl:mt-72 2xl:w-3/4">
       <div class="w-full flex flex-col">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
@@ -263,7 +271,7 @@ const formLink = "/program/devs";
           ¿Qué requisitos existen?
         </h1>
       </div>
-      <ul class="flex flex-col font-onest gap-4 mt-12">
+      <ul class="flex flex-col font-onest gap-4 mt-12 xl:grid xl:grid-cols-2">
         <li class="flex pb-4 border-b border-mto_gray_light">
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
@@ -310,7 +318,7 @@ const formLink = "/program/devs";
         </li>
       </ul>
     </div>
-    <div class="h-[75dvh] flex flex-col justify-center">
+    <div class="h-[75dvh] flex flex-col justify-center xl:mt-72">
       <div
         class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono z-10"
       >
