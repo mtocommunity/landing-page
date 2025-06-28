@@ -8,18 +8,15 @@ import { Image } from "astro:assets";
 import Button from "../../../components/general/attoms/button";
 import { ButtonType } from "../../../components/general/attoms/button/types";
 import Layout from "../../../layouts/landing/index.astro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./_style.css";
-import {
-  faCheckToSlot,
-  faLaptop,
-  faPeopleGroup,
-  faPersonDotsFromLine,
-  faSchool,
-} from "@fortawesome/free-solid-svg-icons";
-import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
-import { faPeopleLine } from "@fortawesome/free-solid-svg-icons";
-import { faBusinessTime } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as PersonChalkboard } from "@assets/icons/person-chalkboard.svg";
+import { ReactComponent as PeopleLine } from "@assets/icons/people-line.svg";
+import { ReactComponent as CheckToSlot } from "@assets/icons/check-to-slot.svg";
+import { ReactComponent as BusinessTime } from "@assets/icons/business-time.svg";
+import { ReactComponent as Laptop } from "@assets/icons/laptop.svg";
+import { ReactComponent as School } from "@assets/icons/school.svg";
+import { ReactComponent as PeopleGroup } from "@assets/icons/people-group.svg";
+import { ReactComponent as PersonDotsFromLine } from "@assets/icons/person-dots-from-line.svg";
 const formLink = "/program/devs";
 ---
 
@@ -101,7 +98,7 @@ const formLink = "/program/devs";
           Podrás formar parte del programas que mejor se adecue a tu nivel y
           avance de aprendizaje.
         </p>
-        <div class="flex flex-col gap-[1px]">
+        <div class="flex flex-col gap-[1px] mt-10">
           <div class="border-l-2 p-4 flex flex-col card-active card">
             <div class="flex items-center gap-4">
               <div class="aspect-square h-24">
@@ -201,7 +198,7 @@ const formLink = "/program/devs";
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
             >
-              <FontAwesomeIcon icon={faPersonDotsFromLine} className="h-12" />
+              <PersonDotsFromLine className="h-12 fill-white" />
             </div>
             <h5 class="text-lg">Autoaprendizaje</h5>
             <p class="w-4/5 text-pretty mt-4">
@@ -215,7 +212,7 @@ const formLink = "/program/devs";
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
             >
-              <FontAwesomeIcon icon={faPersonChalkboard} className="h-12" />
+              <PersonChalkboard className="h-12 fill-white" />
             </div>
             <h5 class="text-lg">Mentoría</h5>
             <p class="w-4/5 text-pretty mt-4">
@@ -229,7 +226,7 @@ const formLink = "/program/devs";
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
             >
-              <FontAwesomeIcon icon={faPeopleLine} className="h-12" />
+              <PeopleLine className="h-12 fill-white" />
             </div>
             <h5 class="text-lg">Reuniones</h5>
             <p class="w-4/5 text-pretty mt-4">
@@ -243,7 +240,7 @@ const formLink = "/program/devs";
             <div
               class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
             >
-              <FontAwesomeIcon icon={faBusinessTime} className="h-12" />
+              <BusinessTime className="h-12 fill-white" />
             </div>
             <h5 class="text-lg">Duración de los programa</h5>
             <p class="w-4/5 text-pretty mt-4">
@@ -270,7 +267,7 @@ const formLink = "/program/devs";
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
-            <FontAwesomeIcon icon={faSchool} className={"h-6"} />
+            <School className={"h-6 fill-white"} />
           </div>
           <div class="ml-4">
             <span class="text-mto_grey text-sm">Requisito 1</span>
@@ -281,7 +278,7 @@ const formLink = "/program/devs";
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
-            <FontAwesomeIcon icon={faLaptop} className={"h-6"} />
+            <Laptop className={"h-6 fill-white"} />
           </div>
           <div class="ml-4">
             <span class="text-mto_grey text-sm">Requisito 2</span>
@@ -292,7 +289,7 @@ const formLink = "/program/devs";
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
-            <FontAwesomeIcon icon={faPeopleGroup} className={"h-6"} />
+            <PeopleGroup className={"h-6 fill-white"} />
           </div>
           <div class="ml-4">
             <span class="text-mto_grey text-sm">Requisito 3</span>
@@ -303,7 +300,7 @@ const formLink = "/program/devs";
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
-            <FontAwesomeIcon icon={faCheckToSlot} className={"h-6"} />
+            <CheckToSlot className={"h-6 fill-white"} />
           </div>
           <div class="ml-4">
             <span class="text-mto_grey text-sm">Requisito 4</span>
