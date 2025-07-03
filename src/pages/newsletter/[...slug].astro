@@ -30,7 +30,7 @@ const { Content } = await newsletter.render();
 
 <NewsletterLayout
   author={{
-    name: newsletter.data.authors.map((author) => author.id).join(", "),
+    name: authors.map((author) => author?.data.name).join(", "),
   }}
   meta={{
     image: newsletter.data.thumbnail,
