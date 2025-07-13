@@ -1,0 +1,59 @@
+---
+title: ¿Por qué nosotros usamos R2 como servicio de almacenamiento?
+description: Te cuento cómo elegimos Cloudflare R2 como servicio de almacenamiento de objetos, para la página web de la comunidad.
+date: 2025-07-03
+tags: [mto]
+authors: [luis-bazan]
+---
+
+Primero que nada, te daré un poco de contexto. Cuando desarrollamos una página web, casi siempre queremos agregar contenido como imágenes, videos o archivos. Entonces surge la gran pregunta: ¿dónde los alojamos?.
+
+Cuando llegamos acá tenemos 2 opciones los alojamos en el mismo proyecto junto con el código fuente o los alojamos en un servicio separado al código fuente. Ambos tienen sus pros y contras
+
+### Opciones
+
+La primera opción es más simple y conveniente. Si usamos un sistema de control de versiones como Git, podemos llevar las imágenes a la par del código, lo que facilita el desarrollo local y permite trabajar sin conexión. Sin embargo, esto hace que el repositorio se vuelva pesado, ya que los archivos como imágenes o PDFs se tratan como binarios, y una vez agregados al historial, no se eliminan fácilmente. Esto complica mantener un repositorio limpio y liviano a largo plazo.
+
+La segunda opción, usar un servicio de almacenamiento externo, es más escalable. Nos permite mantener el proyecto ligero y separar el código del contenido. Como desventaja, las imágenes pueden cargar ligeramente más lento, ya que se alojan en otro dominio o subdominio, lo que implica operaciones extra como resolución DNS y establecimiento de conexión. Pero este impacto en el rendimiento se puede mitigar fácilmente con técnicas como caché, CDN o precarga.
+
+### ¿Por qué R2?
+
+Con esto claro, optar por un servicio externo es la mejor decisión si pensamos en escalabilidad, mantenimiento y buenas prácticas. Pero esto nos deja con una nueva pregunta: ¿cuál servicio elegir? en este punto si hacemos una búsqueda rápida en google encontramos algunos nombres conocidos como:
+
+- Google Filestore
+- Amazon S3
+- Cloudflare con R2, y otras opciones menos conocidas como DigitalOcean Spaces, IBM Cloud Object Storage, Dropbox, etc.
+
+Pero entonces ¿Cuál elegir? No hay una única respuesta correcta, pero sí hay respuestas según el contexto. En nuestro caso, elegimos Cloudflare R2 por encima de alternativas como S3 o Google Cloud Storage básicamente por conveniencia.
+
+Ya usábamos Cloudflare para gestionar el DNS y el firewall del sitio, así que integrar R2 fue sencillo. Además, Cloudflare cuenta con una red de distribución de contenido (CDN) excelente, con presencia en gran parte del mundo, lo que mejora la entrega de archivos sin esfuerzo adicional.
+
+Pero lo más importante fue el modelo de precios.
+Servicios como S3 cobran no solo por el almacenamiento, sino también por el tráfico de salida (datos que salen de S3 hacia internet), lo que puede encarecer mucho el uso si manejas archivos pesados.
+En cambio, Cloudflare R2 no cobra por el tráfico de salida, sino únicamente por la cantidad de datos almacenados y el número de solicitudes realizadas.
+Por ejemplo, almacenar 1 GB de archivos y servirlo 1000 veces al mes tendría este costo aproximado:
+
+<br />
+
+| Servicio      | Almacenamiento | Tráfico de salida | Solicitudes | Total estimado |
+| ------------- | -------------- | ----------------- | ----------- | -------------- |
+| Amazon S3     | $0.023         | $0.09             | $0.005      | $0.118         |
+| Cloudflare R2 | $ 0.015        | $0.00             | $0.004      | $0.019         |
+
+_Precios aproximados según tarifas públicas a julio de 2025._
+
+<br />
+
+Además, la capa gratuita de R2 cubre perfectamente las necesidades de nuestro proyecto, y en caso de escalar, sus costos siguen siendo mucho más accesibles.
+
+En resumen, elegimos R2 porque:
+
+- Ya trabajábamos con Cloudflare.
+- Tiene una excelente red CDN.
+- No cobra por salida de datos.
+- Tiene precios simples y bajos.
+- Su capa gratuita es suficiente para proyectos medianos.
+
+---
+
+Si estás construyendo una web con contenido multimedia, y especialmente si tu presupuesto es limitado, Cloudflare R2 es una opción que deberías considerar seriamente.

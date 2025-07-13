@@ -9,46 +9,375 @@ import Button from "../../../components/general/attoms/button";
 import { ButtonType } from "../../../components/general/attoms/button/types";
 import Layout from "../../../layouts/landing/index.astro";
 import "./_style.css";
+import { ReactComponent as PersonChalkboard } from "@assets/icons/person-chalkboard.svg";
+import { ReactComponent as PeopleLine } from "@assets/icons/people-line.svg";
+import { ReactComponent as CheckToSlot } from "@assets/icons/check-to-slot.svg";
+import { ReactComponent as BusinessTime } from "@assets/icons/business-time.svg";
+import { ReactComponent as Laptop } from "@assets/icons/laptop.svg";
+import { ReactComponent as School } from "@assets/icons/school.svg";
+import { ReactComponent as PeopleGroup } from "@assets/icons/people-group.svg";
+import { ReactComponent as PersonDotsFromLine } from "@assets/icons/person-dots-from-line.svg";
+const formLink = "";
 ---
 
 <Layout title="MTO Devs Program">
   <main
-    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_purple_dark"
+    class="flex flex-col w-full overflow-x-hidden min-h-dvh items-center pb-24 text-white bg-mto_dark_gray px-6 xl:px-20 2xl:px-32"
   >
     <div
-      class="flex flex-col items-center w-full px-4 justify-center h-dvh pt-16"
+      class="w-full h-dvh flex flex-col justify-center xl:flex-row xl:items-center xl:gap-20 2xl:w-3/4"
     >
-      <div class="flex flex-col w-full items-center gap-8">
-        <div class="w-full flex flex-col">
-          <div
-            class="bg-mto_purple/50 w-min text-nowrap px-2 rounded-full text-lg border-2 border-mto_purple"
-          >
-            MTO Devs Program
-          </div>
-          <h1 class="text-5xl font-bold font-main_mono w-full">
-            POTENCIA TU <br />
-            <span
-              class="bg-gradient-to-t from-mto_red to-pink-400 bg-clip-text text-transparent"
-              >TALENTO</span
-            >
-          </h1>
+      <div class="w-full flex flex-col">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono animate-on-scroll spawn-bottom"
+        >
+          Potencia tu talento
         </div>
-        <p class="font-main_mono text-pretty">
+        <h1
+          class="text-4xl font-main_mono font-semibold mt-2 animate-on-scroll spawn-bottom"
+        >
+          Devs Program
+        </h1>
+        <p class="text-base text-justify mt-10 animate-on-scroll spawn-bottom">
           Una experienciade aprendizaje personalizada para estudiantes
           destacados con pasión por la tecnología. Impulsandolos a traves del
           autoaprendizaje y desarrollo de proyectos propios
         </p>
-        <Button type={ButtonType.PRIMARY} className="w-2/3"
-          >POSTULA AHORA</Button
+        <Button
+          type={ButtonType.DISABLED}
+          className="py-2 rounded-lg mt-5 justify-center flex animate-on-scroll spawn-bottom"
+          link={formLink}>Postulaciones pronto</Button
         >
       </div>
-      <div class="w-full aspect-square">
+      <div class="w-full relative bg-radial bg-radian-animation">
         <Image
           inferSize
           src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
           alt={"Diagram"}
+          class={"aspect-square"}
         />
       </div>
     </div>
+    <div
+      class="w-full flex flex-col justify-center xl:flex-row-reverse xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
+    >
+      <div class="w-full flex flex-col animate-on-scroll spawn-right">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Impulsa tus estudios
+        </div>
+        <h1 class="text-xl font-main_mono font-semibold mt-2">
+          ¿En qué consiste?
+        </h1>
+        <p class="text-base text-pretty mt-10">
+          Consiste en una experiencia formativa centrada en el estudiante, donde
+          a través del autoaprendizaje, sesiones prácticas y trabajo en
+          comunidad, los participantes exploran temas tecnológicos que les
+          apasionan, desarrollan proyectos propios y potencian sus habilidades
+          técnicas en un entorno dinámico y colaborativo.
+          <br /><br />
+          Forma parte de <span
+            class="bg-gradient-to-r from-mto_red to-mto_red via-gray-400 bg-clip-text text-transparent font-bold"
+            >MTO DEV PROGRAM</span
+          >. Aprende lo que te apasiona, crea lo que te imagines
+        </p>
+      </div>
+      <div class="w-full aspect-square relative animate-on-scroll spawn-left">
+        <Image
+          inferSize
+          src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+          alt={"People"}
+          class:list={"aspect-square object-cover grayscale rounded-xl mt-10"}
+        />
+      </div>
+    </div>
+    <div
+      class="w-full flex flex-col justify-center mt-36 xl:flex-row xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
+    >
+      <div class="w-full flex flex-col animate-on-scroll spawn-right">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Programas
+        </div>
+        <h1 class="text-2xl font-main_mono font-semibold mt-2">
+          Programas para todas <br /> las etapas de tu carrera
+        </h1>
+        <p class="text-base text-pretty text-mto_grey mt-4">
+          Podrás formar parte del programas que mejor se adecue a tu nivel y
+          avance de aprendizaje.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-[1px] mt-10 xl:mt-0 xl:w-full cursor-pointer animate-on-scroll spawn-left"
+      >
+        <div class="border-l-2 p-4 flex flex-col card-active card">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/program/devs/devs-explorers_x0.50.webp"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
+            </div>
+            <h4 class="font-bold text-xl font-main_mono">Devs Explorer</h4>
+            <div class="w-3 h-3 bg-mto_red_dark pulse-diamond"></div>
+          </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Estás empezando en el mundo de la programación y tienes muchas
+              preguntas. Aquí aprenderás lo esencial, descubrirás nuevas
+              herramientas y conectarás la tecnología con lo que más te gusta.
+              Lo importante es tu curiosidad.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
+          </div>
+        </div>
+        <!-- Temporal hidden -->
+        <div class="border-l-2 p-4 flex flex-col card-inactive card hidden">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
+            </div>
+            <h4 class="font-bold text-xl font-main_mono">Devs Pathfinder</h4>
+            <div class="w-3 h-3 pulse-diamond bg-mto_red_dark"></div>
+          </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Ya tienes algo de experiencia y quieres darle dirección a tu
+              aprendizaje. Este programa te ayudará a explorar tecnologías,
+              experimentar con ideas propias y definir un rumbo que se alinee
+              contigo.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
+          </div>
+        </div>
+        <div class="border-l-2 p-4 flex flex-col card-inactive card">
+          <div class="flex items-center gap-4">
+            <div class="aspect-square h-24">
+              <Image
+                src={"https://cdn.mtocommunity.com/program/devs/devs-insiders.webp"}
+                alt={"Devs Explorer"}
+                inferSize
+                class={"object-cover w-full h-full"}
+              />
+            </div>
+            <h4 class="font-bold text-xl font-main_mono">Devs Insiders</h4>
+            <div class="w-3 h-3 bg-mto_red_dark pulse-diamond"></div>
+          </div>
+          <div class="pt-4 hidden-content">
+            <p>
+              Ya vienes recorriendo tu propio camino y buscas un espacio para ir
+              más allá. Aquí podrás profundizar en temas complejos, retarte con
+              nuevas perspectivas y crear soluciones distintas a partir de lo
+              que ya sabes.
+            </p>
+            <Button
+              type={ButtonType.DISABLED}
+              className="py-2 rounded-lg mt-5 justify-center flex"
+              link={formLink}>Postulaciones pronto</Button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex flex-col justify-center mt-36 xl:mt-72 2xl:w-3/4">
+      <div class="w-full flex flex-col animate-on-scroll spawn-left">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Dinámica de trabajo
+        </div>
+        <h1 class="text-2xl font-main_mono font-semibold mt-2">
+          ¿Por qué postular?
+        </h1>
+      </div>
+
+      <div
+        class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row animate-on-scroll spawn-bottom"
+      >
+        <div
+          class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
+          <div
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+          >
+            <PersonDotsFromLine className="h-12 fill-white" />
+          </div>
+          <h5 class="text-lg">Autoaprendizaje</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Explora temas a tu ritmo y con libertad. Aquí tú eliges qué aprender
+            y cómo hacerlo
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
+          <div
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+          >
+            <PersonChalkboard className="h-12 fill-white" />
+          </div>
+          <h5 class="text-lg">Mentoría</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Tendrás a un mentor que te guía, plantea retos y te ayuda a
+            encontrar respuestas sin darte todo hecho.
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
+          <div
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+          >
+            <PeopleLine className="h-12 fill-white" />
+          </div>
+          <h5 class="text-lg">Reuniones</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Sesiones presenciales para compartir avances y virtuales para
+            mantener el ritmo. Aprenderás en comunidad.
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
+          <div
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
+          >
+            <BusinessTime className="h-12 fill-white" />
+          </div>
+          <h5 class="text-lg">Duración de los programa</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            8 semanas para investigar, practicar y crecer profesionalmente con
+            apoyo constante.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex flex-col justify-center mt-24 xl:mt-72 2xl:w-3/4">
+      <div class="w-full flex flex-col animate-on-scroll spawn-left">
+        <div
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+        >
+          Requisitos
+        </div>
+        <h1 class="text-2xl font-main_mono font-semibold mt-4">
+          ¿Qué requisitos existen?
+        </h1>
+      </div>
+      <ul class="flex flex-col font-onest gap-4 mt-12 xl:grid xl:grid-cols-2">
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <School className={"h-6 fill-white"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 1</span>
+            <h5 class="font-semibold">Ser estudiante de UTP</h5>
+          </div>
+        </li>
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <Laptop className={"h-6 fill-white"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 2</span>
+            <h5 class="font-semibold">Tener una laptop o PC con micrófono</h5>
+          </div>
+        </li>
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <PeopleGroup className={"h-6 fill-white"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 3</span>
+            <h5 class="font-semibold">Ganas de aprender en comunidad</h5>
+          </div>
+        </li>
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
+          <div
+            class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
+          >
+            <CheckToSlot className={"h-6 fill-white"} />
+          </div>
+          <div class="ml-4">
+            <span class="text-mto_grey text-sm">Requisito 4</span>
+            <h5 class="font-semibold">Pasar la fase de selección</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="h-[75dvh] flex flex-col justify-center items-center xl:mt-72 relative"
+    >
+      <div class="bg-radial aspect-square h-full absolute -z-10"></div>
+      <div
+        class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono z-10 animate-on-scroll spawn-bottom"
+      >
+        Todo comienza con un click
+      </div>
+      <p
+        class="text-xl font-onest font-semibold text-center aspect-square flex items-center -my-24 animate-on-scroll spawn-bottom z-10"
+      >
+        Este puede ser el primer paso para<br />potenciar tu carrera profesional
+      </p>
+      <Button
+        type={ButtonType.DISABLED}
+        className="py-2 px-24 w-min text-nowrap rounded-lg mt-5 justify-center flex mx-auto animate-on-scroll spawn-bottom z-10"
+        link={formLink}>Postulaciones pronto</Button
+      >
+    </div>
   </main>
+  <script>
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".card").forEach((c) => {
+          c.classList.remove("card-active");
+          c.classList.add("card-inactive");
+        });
+        card.classList.remove("card-inactive");
+        card.classList.add("card-active");
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 </Layout>
