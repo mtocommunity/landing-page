@@ -51,10 +51,75 @@
   }
 }
 
+.spawn-left {
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.spawn-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.spawn-bottom {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.spawn-bottom.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.spawn-right {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.spawn-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .bg-radial {
+  z-index: 10;
+}
+
+.bg-radial::before {
   background: radial-gradient(
-    circle,
-    rgba(228, 20, 118, 0.3) 0%,
-    rgba(7, 9, 13, 1) 75%
-  );
+      circle,
+      rgba(228, 20, 118, 0.3) 0%,
+      rgba(7, 9, 13, 1) 75%
+    )
+    center no-repeat;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-radian-animation.bg-radial::before {
+  animation: bg-radial-pulse 7s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes bg-radial-pulse {
+  0% {
+    background-size: 0% 0%;
+    opacity: 1;
+  }
+  50% {
+    background-size: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
