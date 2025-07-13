@@ -29,35 +29,39 @@ const formLink = "";
     >
       <div class="w-full flex flex-col">
         <div
-          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
+          class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono animate-on-scroll spawn-bottom"
         >
           Potencia tu talento
         </div>
-        <h1 class="text-4xl font-main_mono font-semibold mt-2">Devs Program</h1>
-        <p class="text-base text-justify mt-10">
+        <h1
+          class="text-4xl font-main_mono font-semibold mt-2 animate-on-scroll spawn-bottom"
+        >
+          Devs Program
+        </h1>
+        <p class="text-base text-justify mt-10 animate-on-scroll spawn-bottom">
           Una experienciade aprendizaje personalizada para estudiantes
           destacados con pasión por la tecnología. Impulsandolos a traves del
           autoaprendizaje y desarrollo de proyectos propios
         </p>
         <Button
           type={ButtonType.DISABLED}
-          className="py-2 rounded-lg mt-5 justify-center flex"
+          className="py-2 rounded-lg mt-5 justify-center flex animate-on-scroll spawn-bottom"
           link={formLink}>Postulaciones pronto</Button
         >
       </div>
-      <div class="w-full aspect-square relative bg-radial">
+      <div class="w-full relative bg-radial bg-radian-animation">
         <Image
           inferSize
           src={"https://cdn.mtocommunity.com/temp/diagram1.png"}
           alt={"Diagram"}
-          class={""}
+          class={"aspect-square"}
         />
       </div>
     </div>
     <div
       class="w-full flex flex-col justify-center xl:flex-row-reverse xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
     >
-      <div class="w-full flex flex-col">
+      <div class="w-full flex flex-col animate-on-scroll spawn-right">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
         >
@@ -79,7 +83,7 @@ const formLink = "";
           >. Aprende lo que te apasiona, crea lo que te imagines
         </p>
       </div>
-      <div class="w-full aspect-square relative">
+      <div class="w-full aspect-square relative animate-on-scroll spawn-left">
         <Image
           inferSize
           src={"https://cdn.mtocommunity.com/events/thumbnail/iot-seminario-robotica-basica.jpg"}
@@ -91,7 +95,7 @@ const formLink = "";
     <div
       class="w-full flex flex-col justify-center mt-36 xl:flex-row xl:items-center xl:gap-20 xl:mt-72 2xl:w-3/4"
     >
-      <div class="w-full flex flex-col">
+      <div class="w-full flex flex-col animate-on-scroll spawn-right">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
         >
@@ -106,7 +110,7 @@ const formLink = "";
         </p>
       </div>
       <div
-        class="flex flex-col gap-[1px] mt-10 xl:mt-0 xl:w-full cursor-pointer"
+        class="flex flex-col gap-[1px] mt-10 xl:mt-0 xl:w-full cursor-pointer animate-on-scroll spawn-left"
       >
         <div class="border-l-2 p-4 flex flex-col card-active card">
           <div class="flex items-center gap-4">
@@ -190,7 +194,7 @@ const formLink = "";
       </div>
     </div>
     <div class="w-full flex flex-col justify-center mt-36 xl:mt-72 2xl:w-3/4">
-      <div class="w-full flex flex-col">
+      <div class="w-full flex flex-col animate-on-scroll spawn-left">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
         >
@@ -200,7 +204,9 @@ const formLink = "";
           ¿Por qué postular?
         </h1>
 
-        <div class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row">
+        <div
+          class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row animate-on-scroll spawn-bottom"
+        >
           <div
             class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
           >
@@ -261,7 +267,7 @@ const formLink = "";
       </div>
     </div>
     <div class="w-full flex flex-col justify-center mt-24 xl:mt-72 2xl:w-3/4">
-      <div class="w-full flex flex-col">
+      <div class="w-full flex flex-col animate-on-scroll spawn-left">
         <div
           class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono"
         >
@@ -272,7 +278,9 @@ const formLink = "";
         </h1>
       </div>
       <ul class="flex flex-col font-onest gap-4 mt-12 xl:grid xl:grid-cols-2">
-        <li class="flex pb-4 border-b border-mto_gray_light">
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
@@ -283,7 +291,9 @@ const formLink = "";
             <h5 class="font-semibold">Ser estudiante de UTP</h5>
           </div>
         </li>
-        <li class="flex pb-4 border-b border-mto_gray_light">
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
@@ -294,7 +304,9 @@ const formLink = "";
             <h5 class="font-semibold">Tener una laptop o PC con micrófono</h5>
           </div>
         </li>
-        <li class="flex pb-4 border-b border-mto_gray_light">
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
@@ -305,7 +317,9 @@ const formLink = "";
             <h5 class="font-semibold">Ganas de aprender en comunidad</h5>
           </div>
         </li>
-        <li class="flex pb-4 border-b border-mto_gray_light">
+        <li
+          class="flex pb-4 border-b border-mto_gray_light animate-on-scroll spawn-bottom"
+        >
           <div
             class="border-2 border-mto_red rounded-full aspect-square w-16 flex items-center justify-center bg-mto_red/30"
           >
@@ -318,20 +332,23 @@ const formLink = "";
         </li>
       </ul>
     </div>
-    <div class="h-[75dvh] flex flex-col justify-center xl:mt-72">
+    <div
+      class="h-[75dvh] flex flex-col justify-center items-center xl:mt-72 relative"
+    >
+      <div class="bg-radial aspect-square h-full absolute -z-10"></div>
       <div
-        class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono z-10"
+        class="border border-mto_red rounded-tr-full rounded-bl-full w-min px-4 text-sm text-nowrap bg-mto_red/30 font-main_mono z-10 animate-on-scroll spawn-bottom"
       >
         Todo comienza con un click
       </div>
       <p
-        class="text-xl font-onest font-semibold text-center aspect-square bg-radial flex items-center -my-24"
+        class="text-xl font-onest font-semibold text-center aspect-square flex items-center -my-24 animate-on-scroll spawn-bottom z-10"
       >
         Este puede ser el primer paso para<br />potenciar tu carrera profesional
       </p>
       <Button
         type={ButtonType.DISABLED}
-        className="py-2 px-24 w-min text-nowrap rounded-lg mt-5 justify-center flex mx-auto"
+        className="py-2 px-24 w-min text-nowrap rounded-lg mt-5 justify-center flex mx-auto animate-on-scroll spawn-bottom z-10"
         link={formLink}>Postulaciones pronto</Button
       >
     </div>
@@ -346,6 +363,18 @@ const formLink = "";
         card.classList.remove("card-inactive");
         card.classList.add("card-active");
       });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+      observer.observe(el);
     });
   </script>
 </Layout>
