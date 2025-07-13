@@ -202,6 +202,15 @@
   "mto": {
     "events": [
       {
+        "name": "MTO Devs Program 2025",
+        "link": "/program/devs",
+        "description": {
+          "content": "Una experienciade aprendizaje personalizada para estudiantes destacados con pasión por la tecnología. Impulsandolos a traves del autoaprendizaje y desarrollo de proyectos propios",
+          "link": "/program/devs",
+          "link_title": "Conocer Programas"
+        }
+      },
+      {
         "name": "404 NO MORE",
         "link": "/event/mto-404-no-more",
 
