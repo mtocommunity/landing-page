@@ -123,6 +123,7 @@ const formLink = "";
               />
             </div>
             <h4 class="font-bold text-xl font-main_mono">Devs Explorer</h4>
+            <div class="w-3 h-3 bg-mto_red_dark pulse-diamond"></div>
           </div>
           <div class="pt-4 hidden-content">
             <p>
@@ -150,6 +151,7 @@ const formLink = "";
               />
             </div>
             <h4 class="font-bold text-xl font-main_mono">Devs Pathfinder</h4>
+            <div class="w-3 h-3 pulse-diamond bg-mto_red_dark"></div>
           </div>
           <div class="pt-4 hidden-content">
             <p>
@@ -176,6 +178,7 @@ const formLink = "";
               />
             </div>
             <h4 class="font-bold text-xl font-main_mono">Devs Insiders</h4>
+            <div class="w-3 h-3 bg-mto_red_dark pulse-diamond"></div>
           </div>
           <div class="pt-4 hidden-content">
             <p>
@@ -203,66 +206,66 @@ const formLink = "";
         <h1 class="text-2xl font-main_mono font-semibold mt-2">
           ¿Por qué postular?
         </h1>
+      </div>
 
+      <div
+        class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row animate-on-scroll spawn-bottom"
+      >
         <div
-          class="flex flex-col gap-12 font-main_mono mt-12 xl:flex-row animate-on-scroll spawn-bottom"
+          class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
         >
           <div
-            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
           >
-            <div
-              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
-            >
-              <PersonDotsFromLine className="h-12 fill-white" />
-            </div>
-            <h5 class="text-lg">Autoaprendizaje</h5>
-            <p class="w-4/5 text-pretty mt-4">
-              Explora temas a tu ritmo y con libertad. Aquí tú eliges qué
-              aprender y cómo hacerlo
-            </p>
+            <PersonDotsFromLine className="h-12 fill-white" />
           </div>
+          <h5 class="text-lg">Autoaprendizaje</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Explora temas a tu ritmo y con libertad. Aquí tú eliges qué aprender
+            y cómo hacerlo
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
           <div
-            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
           >
-            <div
-              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
-            >
-              <PersonChalkboard className="h-12 fill-white" />
-            </div>
-            <h5 class="text-lg">Mentoría</h5>
-            <p class="w-4/5 text-pretty mt-4">
-              Tendrás a un mentor que te guía, plantea retos y te ayuda a
-              encontrar respuestas sin darte todo hecho.
-            </p>
+            <PersonChalkboard className="h-12 fill-white" />
           </div>
+          <h5 class="text-lg">Mentoría</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Tendrás a un mentor que te guía, plantea retos y te ayuda a
+            encontrar respuestas sin darte todo hecho.
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
           <div
-            class="w-full bg-gradient-to-l from-mto_red/30 to-mto_dark_gray border-r-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
           >
-            <div
-              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
-            >
-              <PeopleLine className="h-12 fill-white" />
-            </div>
-            <h5 class="text-lg">Reuniones</h5>
-            <p class="w-4/5 text-pretty mt-4">
-              Sesiones presenciales para compartir avances y virtuales para
-              mantener el ritmo. Aprenderás en comunidad.
-            </p>
+            <PeopleLine className="h-12 fill-white" />
           </div>
+          <h5 class="text-lg">Reuniones</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            Sesiones presenciales para compartir avances y virtuales para
+            mantener el ritmo. Aprenderás en comunidad.
+          </p>
+        </div>
+        <div
+          class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+        >
           <div
-            class="w-full bg-gradient-to-r from-mto_red/30 to-mto_dark_gray border-l-2 border-mto_red items-center flex flex-col relative pb-12 pt-16 mt-12 xl:border-x-0 xl:border-b-2 xl:bg-gradient-to-t"
+            class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
           >
-            <div
-              class="bg-mto_dark_gray border border-mto_red rounded-full aspect-square w-24 absolute -top-12 flex items-center justify-center"
-            >
-              <BusinessTime className="h-12 fill-white" />
-            </div>
-            <h5 class="text-lg">Duración de los programa</h5>
-            <p class="w-4/5 text-pretty mt-4">
-              8 semanas para investigar, practicar y crecer profesionalmente con
-              apoyo constante.
-            </p>
+            <BusinessTime className="h-12 fill-white" />
           </div>
+          <h5 class="text-lg">Duración de los programa</h5>
+          <p class="w-4/5 text-pretty mt-4">
+            8 semanas para investigar, practicar y crecer profesionalmente con
+            apoyo constante.
+          </p>
         </div>
       </div>
     </div>
