@@ -112,7 +112,7 @@
 }
 
 .bg-radian-animation.bg-radial::before {
-  animation: bg-radial-pulse 7s cubic-bezier(0.25, 1, 0.25, 1) infinite;
+  animation: bg-radial-pulse 7s ease-in-out infinite;
 }
 
 @keyframes bg-radial-pulse {
