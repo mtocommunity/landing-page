@@ -202,6 +202,15 @@
   "mto": {
     "events": [
       {
+        "name": "Hackathon 2025 | MTO Community x Mantaro",
+        "link": "https://hackathon.mtocommunity.com/",
+        "description": {
+          "content": "Una experiencia que abarca 48 horas las cuales pondrás en práctica tus habilidades como desarrollador, diseñador e incluso como emprendedor, es un espacio donde mentes inquietas se unen para transformar ideas en soluciones reales que mejoran el mundo.",
+          "link": "https://hackathon.mtocommunity.com/",
+          "link_title": "Conocer Hackathon"
+        }
+      },
+      {
         "name": "MTO Devs Program 2025",
         "link": "/program/devs",
         "description": {
