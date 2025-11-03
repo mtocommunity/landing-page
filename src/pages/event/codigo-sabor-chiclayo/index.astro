@@ -1,0 +1,332 @@
+---
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+import Layout from "../../../layouts/event/index.astro";
+import CustomNavBar from "../../../components/general/organism/custom_navbar";
+import "./index.css";
+
+const props = {
+  title: "Código con Sabor a Chiclayo",
+  description: "Evento en el Insight Observatory el 24/05/2025.",
+  path: "/codigo-chiclayo",
+};
+
+const sponsors = [
+  {
+    src: "https://cdn.mtocommunity.com/events/brands/uss-centro-de-informatica-logo-black.png",
+    alt: "USS - Centro de Informática",
+  },
+  {
+    src: "https://cdn.mtocommunity.com/events/brands/capitcix-logo-black.png",
+    alt: "Capitcix",
+  },
+  {
+    src: "https://cdn.mtocommunity.com/events/brands/magnate-barber-shop-logo-black.png",
+    alt: "Magnate Barber Shop",
+  },
+  {
+    src: "https://cdn.mtocommunity.com/events/brands/nortech-logo-black.png",
+    alt: "Nortech",
+  },
+  {
+    src: "https://cdn.mtocommunity.com/events/brands/rimdeca-logo-black.png",
+    alt: "Rimdeca",
+  },
+];
+const sponsorsLoop = [...sponsors, ...sponsors];
+---
+
+<Layout {...props}>
+  <div class="text-white antialiased">
+    <CustomNavBar fixed full client:load>
+      <a href="#home">Home</a>
+      <a href="#speaker">Ponente</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#ubication">Ubicación</a>
+    </CustomNavBar>
+
+    <div
+      class="min-h-[70vh] sm:min-h-[90vh] text-white font-sans relative overflow-hidden flex items-center justify-center pt-24 sm:pt-28 md:pt-32 lg:pt-36"
+      id="home"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-full from-mto_gray to-mto_dark_gray bg-gradient-to-b -z-10 opacity-80"
+      >
+      </div>
+
+      <img
+        src="https://cdn.mtocommunity.com/events/brands/caballo.png"
+        alt="Barco flotando"
+        class="hidden sm:block absolute left-[2%] bottom-[3.5rem] w-24 sm:w-28 md:w-36 lg:w-44 opacity-90 animate-boat-wave"
+      />
+      <img
+        src="https://cdn.mtocommunity.com/events/brands/caballo.png"
+        alt="Caballo flotando"
+        class="hidden sm:block absolute right-[2%] bottom-[3.5rem] w-24 sm:w-28 md:w-36 lg:w-44 opacity-90 scale-x-[-1] animate-boat-wave-reverse"
+      />
+
+      <div class="relative z-10 text-center w-full px-4 sm:px-6 lg:px-8">
+        <h1
+          class="opacity-0 font-extrabold text-mto_red_dark leading-none animate-slideInUp delay-300 text-[clamp(2rem,7vw,4.5rem)]"
+        >
+          CÓDIGO CON
+        </h1>
+        <h2
+          class="opacity-0 font-extrabold text-white leading-none mb-8 md:mb-12 animate-slideInUp delay-500 text-[clamp(2rem,7vw,4.5rem)]"
+        >
+          SABOR A CHICLAYO
+        </h2>
+        <div
+          class="opacity-0 flex flex-col md:flex-row justify-center items-center mt-10 gap-3 md:gap-4 animate-slideInUp delay-700"
+        >
+          <a
+            href="#speaker"
+            class="w-full sm:w-2/3 md:w-auto flex items-center justify-center gap-3 uppercase font-bold text-base md:text-lg tracking-wider px-5 md:px-6 py-3 rounded-full border-2 border-white hover:bg-white hover:text-mto_dark_gray transition-colors duration-300 group"
+          >
+            VER MÁS
+            <span
+              class="relative w-6 h-px bg-white block group-hover:bg-mto_dark_gray"
+            >
+              <span
+                class="absolute right-0 top-1/2 w-2 h-px bg-white -translate-y-1/2 rotate-45 origin-right group-hover:bg-mto_dark_gray"
+              ></span>
+              <span
+                class="absolute right-0 top-1/2 w-2 h-px bg-white -translate-y-1/2 -rotate-45 origin-right group-hover:bg-mto_dark_gray"
+              ></span>
+            </span>
+          </a>
+          <a
+            href="https://forms.gle/5VA664TC4oVJ5qXKA"
+            class="w-full sm:w-2/3 md:w-auto uppercase font-bold text-base md:text-lg tracking-wider px-5 md:px-6 py-3 rounded-full bg-mto_red_dark text-white hover:bg-mto_red_dark/80 transition-colors duration-300"
+          >
+            INSCRÍBETE
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-divider" id="about"></div>
+
+    <section
+      class="bg-white min-h-[75vh] text-black px-4 sm:px-6 lg:px-8 py-12 md:py-20 scroll-mt-24 sm:scroll-mt-28"
+      id="speaker"
+    >
+      <div
+        class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-6 order-2 md:order-1"
+        >
+          <div class="flex flex-col items-center justify-center gap-6">
+            <div
+              class="grid grid-cols-2 grid-rows-2 gap-6 sm:gap-8 mt-4 sm:mt-6"
+            >
+              <img
+                src="https://cdn.mtocommunity.com/events/brands/rappi.jpg"
+                alt="Rappi"
+                class="h-24 sm:h-20 md:h-28 object-contain opacity-0 translate-y-8 transition-all duration-700 delay-100 will-change-transform will-change-opacity reveal-on-scroll"
+              />
+              <img
+                src="https://cdn.mtocommunity.com/events/brands/belcorp.png"
+                alt="Belcorp"
+                class="h-24 sm:h-20 md:h-28 object-contain opacity-0 translate-y-8 transition-all duration-700 delay-200 will-change-transform will-change-opacity reveal-on-scroll"
+              />
+              <img
+                src="https://cdn.mtocommunity.com/events/brands/mecrado.png"
+                alt="Mercado Libre"
+                class="h-24 sm:h-20 md:h-28 object-contain opacity-0 translate-y-8 transition-all duration-700 delay-300 will-change-transform will-change-opacity reveal-on-scroll"
+              />
+              <img
+                src="https://cdn.mtocommunity.com/events/brands/minvi.jpg"
+                alt="Ministerio de Vivienda"
+                class="h-24 sm:h-20 md:h-28 object-contain opacity-0 translate-y-8 transition-all duration-700 delay-400 will-change-transform will-change-opacity reveal-on-scroll"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="opacity-0 translate-y-8 transition-all duration-700 delay-500 will-change-transform will-change-opacity reveal-on-scroll order-1 md:order-2"
+        >
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-mto_red_dark mb-3 sm:mb-4 text-center md:text-left"
+          >
+            Eswin Palacios
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+            Ingeniero de Sistemas con varios años de experiencia como
+            desarrollador y reclutador de talento, compartirá su enfoque
+            profesional y los caminos que ha ido descubriendo a lo largo de su
+            trayectoria. A través de su historia, busca inspirar a la próxima
+            generación de desarrolladores a seguir creciendo y alcanzar nuevas
+            metas en el ámbito tecnológico internacional.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+            Ha formado parte de empresas líderes en Latinoamérica como <strong
+              >Rappi</strong
+            >, <strong>Mercado Libre</strong> y <strong>Belcorp</strong>,
+            desempeñándose como <em>Tech Lead</em> y <em>Software Engineer</em>,
+            roles que le permitieron entender a fondo el impacto del talento
+            peruano en proyectos de alcance global.
+          </p>
+
+          <div class="bg-mto_red_dark/10 rounded-xl p-4 sm:p-5 mt-5 sm:mt-6">
+            <h4
+              class="font-semibold text-mto_red_dark text-base sm:text-lg mb-2"
+            >
+              🎯 Objetivo del evento
+            </h4>
+            <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+              Mostrar que el talento chiclayano puede trascender fronteras si se
+              combina <strong>esfuerzo, enfoque y estrategia</strong>. A través
+              de la experiencia de Eswin, los asistentes podrán descubrir cómo
+              abrirse camino en el mundo tecnológico internacional y potenciar
+              su carrera profesional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="sponsors"
+      class="bg-white text-black px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24 sm:scroll-mt-28"
+    >
+      <div class="max-w-screen-xl mx-auto">
+        <h2
+          class="text-center text-lg sm:text-xl md:text-2xl font-extrabold text-mto_red_dark mb-8 md:mb-10"
+        >
+          Gracias al apoyo de
+        </h2>
+
+        <div class="relative overflow-hidden logo-marquee">
+          <div class="logo-track flex items-center gap-8 sm:gap-12 md:gap-16">
+            {
+              sponsorsLoop.map(({ src, alt }) => (
+                <img
+                  src={src}
+                  alt={alt}
+                  class="h-8 sm:h-10 md:h-12 lg:h-14 object-contain opacity-80 hover:opacity-100 transition"
+                />
+              ))
+            }
+          </div>
+          <div
+            class="pointer-events-none absolute inset-y-0 left-0 w-6 sm:w-10 md:w-12 bg-gradient-to-r from-white to-transparent"
+          >
+          </div>
+          <div
+            class="pointer-events-none absolute inset-y-0 right-0 w-6 sm:w-10 md:w-12 bg-gradient-to-l from-white to-transparent"
+          >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="ubication"
+      class="bg-white text-black px-4 sm:px-6 lg:px-8 py-12 md:py-20 scroll-mt-24 sm:scroll-mt-28"
+    >
+      <div
+        class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start"
+      >
+        <div
+          class="opacity-0 translate-y-8 transition-all duration-700 delay-100 will-change-transform will-change-opacity reveal-on-scroll text-center md:text-left"
+        >
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-mto_red_dark mb-4 text-center md:text-left"
+          >
+            ¡Te esperamos!
+          </h2>
+
+          <div
+            class="space-y-5 text-sm sm:text-base text-gray-700 leading-relaxed"
+          >
+            <div>
+              <p class="font-semibold text-black mb-1">Ambiente</p>
+              <p>
+                Auditorio de la Escuela de Postgrado de la USS
+                <span class="block text-gray-600"
+                  >Elías Aguirre 933, Chiclayo</span
+                >
+              </p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-black mb-1">Fecha y hora</p>
+              <p>
+                <time datetime="2025-11-15T16:00-05:00"
+                  >15 de noviembre — 4:00 p. m.</time
+                >
+                <span class="text-gray-600"> Duración: 1 h 30 min</span>
+              </p>
+            </div>
+
+            <div
+              class="rounded-lg bg-mto_red_dark/10 border border-mto_red_dark/20 p-4"
+            >
+              <p class="font-medium">
+                🎁 Sorpresa al final del evento para quienes asistan
+                presencialmente.
+              </p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=El%C3%ADas+Aguirre+933%2C+Chiclayo"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-mto_red_dark text-mto_red_dark px-5 py-2 font-semibold hover:bg-mto_red_dark hover:text-white transition-colors"
+              >
+                Abrir en Google Maps
+              </a>
+              <a
+                href="https://forms.gle/5VA664TC4oVJ5qXKA"
+                class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-mto_red_dark bg-mto_red_dark text-white px-5 py-2 font-semibold hover:bg-mto_red_dark/80 hover:text-white transition-colors"
+              >
+                Inscribirme
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="opacity-0 translate-y-8 transition-all duration-700 delay-200 will-change-transform will-change-opacity reveal-on-scroll"
+        >
+          <div
+            class="rounded-xl overflow-hidden shadow-sm border border-gray-200"
+          >
+            <iframe
+              title="Ubicación del evento"
+              src="https://www.google.com/maps?q=El%C3%ADas+Aguirre+933,+Chiclayo&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10]"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    const revealEls = document.querySelectorAll(".reveal-on-scroll");
+    const revealOnScroll = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeInUp");
+          entry.target.classList.remove("opacity-0", "translate-y-8");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(revealOnScroll, {
+      threshold: 0.2,
+    });
+    revealEls.forEach((el) => observer.observe(el));
+  </script>
+</Layout>

@@ -1,0 +1,216 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes waveMove {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 400px;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+@keyframes waveDrift {
+  0%   { background-position-x: 0; }
+  100% { background-position-x: 600px; }
+}
+
+@keyframes waveDriftReverse {
+  0%   { background-position-x: 0; }
+  100% { background-position-x: -600px; }
+}
+
+@keyframes waveBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+
+.wave-divider {
+  position: relative;
+  width: 100%;
+  height: 64px;
+  overflow: hidden;
+  background: url('data:image/svg+xml;utf8,<svg width="600" height="64" viewBox="0 0 600 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 32 Q150 64 300 32 T600 32 V64 H0 V32 Z" fill="%23ffffff"/></svg>');
+  background-repeat: repeat-x;
+  background-size: 600px 64px;
+  animation: waveDrift 16s linear infinite;
+  will-change: background-position;
+}
+
+.wave-divider::before,
+.wave-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  bottom: 0;
+  background-repeat: repeat-x;
+  will-change: transform, background-position;
+  pointer-events: none;
+}
+
+.wave-divider::before {
+  height: 70px;
+  background-size: 800px 70px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="800" height="70" viewBox="0 0 800 70" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 35 Q200 70 400 35 T800 35 V70 H0 V35 Z" fill="%23ffffff" fill-opacity="0.7"/></svg>');
+  animation:
+    waveDrift 22s linear infinite,
+    waveBob 5.8s ease-in-out infinite;
+  transform: translateY(2px);
+    background-position-x: 0 !important;
+  background-repeat: repeat-x !important;
+}
+
+.wave-divider::after {
+  height: 76px;
+  background-size: 700px 76px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="700" height="76" viewBox="0 0 700 76" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 38 Q175 10 350 38 T700 38 V76 H0 V38 Z" fill="%23ffffff" fill-opacity="0.85"/></svg>');
+  animation:
+    waveDriftReverse 18s linear infinite,
+    waveBob 6.6s ease-in-out infinite;
+  transform: translateY(4px);
+  background-repeat: repeat-x !important;
+    background-position-x: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-divider,
+  .wave-divider::before,
+  .wave-divider::after {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes boatWave {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(6px, -6px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(0, -3px) rotate(1deg);
+  }
+  75% {
+    transform: translate(-6px, 4px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes boatWaveReverse {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-6px, -6px) rotate(2deg);
+  }
+  50% {
+    transform: translate(0, -3px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(6px, 4px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.animate-boat-wave {
+  animation: boatWave 8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-boat-wave-reverse {
+  animation: boatWaveReverse 8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes logo-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* la pista tiene 200% (2 sets) */
+}
+
+.logo-marquee {
+  /* Suaviza entrada y salida en bordes */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+  width: max-content;                  /* ancho según contenido */
+  animation: logo-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+/* Pausa en hover (accesible) */
+.logo-marquee:hover .logo-track { animation-play-state: paused; }
+
+/* Respeta reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; }
+}
+
+@keyframes logo-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* la pista tiene 200% (2 sets) */
+}
+
+.logo-track {
+  width: max-content;
+  animation: logo-scroll 22s linear infinite;
+  will-change: transform;
+}
