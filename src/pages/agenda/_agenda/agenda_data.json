@@ -202,6 +202,15 @@
   "mto": {
     "events": [
       {
+        "name": "Código con sabor a Chiclayo",
+        "link": "/event/codigo-sabor-chiclayo",
+        "description": {
+          "content": "Una charla inspiradora donde Eswin Palacios comparte cómo su enfoque, disciplina y pasión por la tecnología lo llevaron a construir una carrera internacional. A través de su experiencia, mostrará que el talento chiclayano puede trascender fronteras con esfuerzo, estrategia y visión profesional.",
+          "link": "/event/codigo-sabor-chiclayo",
+          "link_title": "Visitar Web"
+        }
+      },
+      {
         "name": "Hackathon 2025 | MTO Community x Mantaro",
         "link": "https://hackathon.mtocommunity.com/",
         "description": {
