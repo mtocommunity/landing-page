@@ -18,22 +18,27 @@ const sponsors = [
   {
     src: "https://cdn.mtocommunity.com/events/brands/uss-centro-de-informatica-logo-black.png",
     alt: "USS - Centro de Informática",
+    href: "https://www.uss.edu.pe/uss/",
   },
   {
     src: "https://cdn.mtocommunity.com/events/brands/capitcix-logo-black.png",
     alt: "Capitcix",
+    href: "http://www.capitcix.com.pe",
   },
   {
     src: "https://cdn.mtocommunity.com/events/brands/magnate-barber-shop-logo-black.png",
     alt: "Magnate Barber Shop",
+    href: "#",
   },
   {
     src: "https://cdn.mtocommunity.com/events/brands/nortech-logo-black.png",
     alt: "Nortech",
+    href: "https://www.facebook.com/Nortech.chiclayo",
   },
   {
     src: "https://cdn.mtocommunity.com/events/brands/rimdeca-logo-black.png",
     alt: "Rimdeca",
+    href: "https://www.facebook.com/rimdeca.deca",
   },
 ];
 const sponsorsLoop = [...sponsors, ...sponsors];
@@ -206,12 +211,14 @@ const sponsorsLoop = [...sponsors, ...sponsors];
         <div class="relative overflow-hidden logo-marquee">
           <div class="logo-track flex items-center gap-8 sm:gap-12 md:gap-16">
             {
-              sponsorsLoop.map(({ src, alt }) => (
-                <img
-                  src={src}
-                  alt={alt}
-                  class="h-8 sm:h-10 md:h-12 lg:h-14 object-contain opacity-80 hover:opacity-100 transition"
-                />
+              sponsorsLoop.map(({ src, alt, href }) => (
+                <a href={href} target="_blank" rel="noopener noreferrer" class="inline-block">
+                  <img
+                    src={src}
+                    alt={alt}
+                    class="h-8 sm:h-10 md:h-12 lg:h-14 object-contain opacity-80 hover:opacity-100 transition"
+                  />
+                </a>
               ))
             }
           </div>
