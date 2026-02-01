@@ -6,129 +6,145 @@
 
 import CustomNavBar from "../../components/general/organism/custom_navbar";
 import Footer from "../../components/general/organism/footer";
+import PausedCommunity from "../../components/general/organism/paused-community.astro";
 import "../../styles.css";
 
 interface Props {
-  meta: {
-    title?: string;
-    keywords?: string[];
-    url?: string;
-    description?: string;
-    image?: string;
-    type?: string;
-  };
-  author: {
-    name?: string;
-  };
+    meta: {
+        title?: string;
+        keywords?: string[];
+        url?: string;
+        description?: string;
+        image?: string;
+        type?: string;
+    };
+    author: {
+        name?: string;
+    };
 }
 
 const { meta, author } = Astro.props;
 
 if (!meta.title) {
-  meta.title = "ManyToOne Community";
+    meta.title = "ManyToOne Community";
 }
 
 if (!meta.keywords) {
-  meta.keywords =
-    "many to one, UTP, Chiclayo, Ingeniería de Sistemas, MTO, Comunidad".split(
-      ", "
-    );
+    meta.keywords =
+        "many to one, UTP, Chiclayo, Ingeniería de Sistemas, MTO, Comunidad".split(
+            ", ",
+        );
 }
 
 if (!meta.url) {
-  meta.url = "https://mtocommunity.com/";
+    meta.url = "https://mtocommunity.com/";
 }
 
 if (!meta.description) {
-  meta.description =
-    "La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo";
+    meta.description =
+        "La nueva comunidad tecnológica de Ingeniería de Sistemas de la UTP Chiclayo";
 }
 
 if (!meta.image) {
-  meta.image = "/android-chrome-512x512.png";
+    meta.image = "/android-chrome-512x512.png";
 }
 
 if (!meta.type) {
-  meta.image = "article";
+    meta.image = "article";
 }
 
 if (!author.name) {
-  author.name = "ManyToOne Community";
+    author.name = "ManyToOne Community";
 }
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/font/fonts.css" />
-    <title>{meta.title}</title>
-    <!-- Basic meta -->
-    <meta name="description" content={meta.description} />
-    <meta name="author" content={author.name} />
-    <meta name="keywords" content={meta.keywords.join(", ")} />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="robots" content="index, follow" />
-    <meta name="date" content={new Date().toISOString()} />
-    <!-- Twitter meta -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content={meta.url} />
-    <meta name="twitter:title" content={meta.title} />
-    <meta name="twitter:description" content={meta.description} />
-    <meta name="twitter:image" content={meta.image} />
-    <!-- OG meta -->
-    <meta property="og:title" content={meta.title} />
-    <meta property="og:type" content={meta.type} />
-    <meta property="og:url" content={meta.url} />
-    <meta property="og:description" content={meta.description} />
-    <meta property="og:image" content={meta.image} />
-    {
-      meta.type === "article" && (
-        <>
-          <meta property="article:author" content={author.name} />
-          <meta
-            property="article:published_time"
-            content={new Date().toISOString()}
-          />
-          {meta.keywords.map((keyword) => (
-            <meta property="article:tag" content={keyword} />
-          ))}
-        </>
-      )
-    }
-    {
-      meta.type === "profile" && (
-        <>
-          <meta
-            property="profile:first_name"
-            content={author.name.split(" ")[0]}
-          />
-          <meta
-            property="profile:last_name"
-            content={author.name.split(" ")[1]}
-          />
-          <meta property="profile:username" content={author.name} />
-        </>
-      )
-    }
-  </head>
-  <body class="w-full">
-    <div class="w-auto overflow-x-hidden">
-      <CustomNavBar fixed client:load>
-        <a href="/">Home</a>
-        <a href="/#about-us">Nosotros</a>
-        <a href="/teams">Equipos</a>
-        <a href="/agenda">Agenda</a>
-        <a href="/staff">Staff</a>
-        <a href="/newsletter">Blog</a>
-      </CustomNavBar>
-      <slot />
-      <Footer />
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="stylesheet" href="/font/fonts.css" />
+        <title>{meta.title}</title>
+        <!-- Basic meta -->
+        <meta name="description" content={meta.description} />
+        <meta name="author" content={author.name} />
+        <meta name="keywords" content={meta.keywords.join(", ")} />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="robots" content="index, follow" />
+        <meta name="date" content={new Date().toISOString()} />
+        <!-- Twitter meta -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={meta.url} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+        <!-- OG meta -->
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:url" content={meta.url} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+        {
+            meta.type === "article" && (
+                <>
+                    <meta property="article:author" content={author.name} />
+                    <meta
+                        property="article:published_time"
+                        content={new Date().toISOString()}
+                    />
+                    {meta.keywords.map((keyword) => (
+                        <meta property="article:tag" content={keyword} />
+                    ))}
+                </>
+            )
+        }
+        {
+            meta.type === "profile" && (
+                <>
+                    <meta
+                        property="profile:first_name"
+                        content={author.name.split(" ")[0]}
+                    />
+                    <meta
+                        property="profile:last_name"
+                        content={author.name.split(" ")[1]}
+                    />
+                    <meta property="profile:username" content={author.name} />
+                </>
+            )
+        }
+    </head>
+    <body class="w-full">
+        <PausedCommunity />
+        <div class="w-auto overflow-x-hidden">
+            <CustomNavBar fixed client:load>
+                <a href="/">Home</a>
+                <a href="/#about-us">Nosotros</a>
+                <a href="/teams">Equipos</a>
+                <a href="/agenda">Agenda</a>
+                <a href="/staff">Staff</a>
+                <a href="/newsletter">Blog</a>
+            </CustomNavBar>
+            <slot />
+            <Footer />
+        </div>
+    </body>
 </html>

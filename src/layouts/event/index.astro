@@ -5,11 +5,12 @@
  */
 
 import Footer from "../../components/general/organism/footer";
+import PausedCommunity from "../../components/general/organism/paused-community.astro";
 
 type Props = {
-  title: string;
-  description: string;
-  path: string;
+    title: string;
+    description: string;
+    path: string;
 };
 
 const { title, description, path } = Astro.props;
@@ -19,35 +20,50 @@ import "../../styles.css";
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>{title}</title>
-    <!-- Basic meta -->
-    <meta name="description" content={description} />
-    <meta name="author" content="ManyToOne Community" />
-    <meta
-      name="keywords"
-      content="ManyToOne, UTP, MTO, Ingeniería de Sistemas, Evento, Comunidad"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <!-- Twitter meta -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content={"https://mtocommunity.com/" + path} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/android-chrome-512x512.png" />
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdn.mtocommunity.com" />
-  </head>
-  <body class="bg-mto_dark_gray w-full">
-    <div class="w-auto">
-      <slot />
-      <Footer />
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>{title}</title>
+        <!-- Basic meta -->
+        <meta name="description" content={description} />
+        <meta name="author" content="ManyToOne Community" />
+        <meta
+            name="keywords"
+            content="ManyToOne, UTP, MTO, Ingeniería de Sistemas, Evento, Comunidad"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <!-- Twitter meta -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={"https://mtocommunity.com/" + path} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/android-chrome-512x512.png" />
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://cdn.mtocommunity.com" />
+    </head>
+    <body class="bg-mto_dark_gray w-full">
+        <PausedCommunity />
+        <div class="w-auto">
+            <slot />
+            <Footer />
+        </div>
+    </body>
 </html>
