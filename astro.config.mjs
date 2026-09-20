@@ -20,6 +20,9 @@ export default defineConfig({
     MillionLint.astro(),
     preact({ compat: true }),
   ],
+  image: {
+    domains: ["cdn.mtocommunity.com"]
+  },
   adapter: cloudflare({
     routes: {
       extend: {
