@@ -5,6 +5,7 @@
  */
 
 import LeaderCard from "../../components/landing/molecule/leader_card";
+import HistoricalStaffCard from "../../components/landing/molecule/HistoricalStaffCard.astro";
 import Layout from "../../layouts/landing/index.astro";
 import "./_style.css";
 ---
@@ -39,23 +40,10 @@ import "./_style.css";
       class="flex flex-wrap justify-center gap-8 px-8 justify-items-center lg:gap-x-16 mb-10"
     >
       <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg"
-        name="Jorge Contreras"
+        photo="https://cdn.mtocommunity.com/staff-julian-acosta.webp"
+        name="Julián Acosta"
         role="Líder de la Comunidad"
-        link="https://jorgecode.studio"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg"
-        name="Luis Bazán"
-        role="Líder de la Comunidad"
-        easter_egg="Líder de la Starship"
-        link="https://github.com/luisBazanDev"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"
-        name="Junior Delgado"
-        role="Líder de la Comunidad"
-        link="https://github.com/aarondfv"
+        link="https://www.instagram.com/juliancacosta"
       />
     </div>
 
@@ -68,48 +56,6 @@ import "./_style.css";
     <div
       class="lg:py-6 flex flex-wrap gap-y-8 gap-x-16 px-8 justify-items-center justify-center lg:gap-x-16 xl:gap-x-32"
     >
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
-        name="Juan Romero"
-        role="Líder del Dev-Team"
-        link="https://linktr.ee/IngSystemCix"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
-        name="Víctor Tuñoque"
-        role="Líder del Dev-Team"
-        link="http://linkedin.com/in/víctor-vladimir-tuñoque-morante-6a89072a2"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
-        name="Abner Cubas"
-        role="Líder del Net-Team"
-        link="http://www.linkedin.com/in/abner-cubas-parra-176a7329a"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
-        name="Briggitte Martinez"
-        role="Líder del Net-Team"
-        link="http://www.linkedin.com/in/briggitte-martinez-isi"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
-        name="Eliana Cajusol"
-        role="Líder del IoT-Team"
-        link="https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff_jaime_lopez.webp"
-        name="Jaime López"
-        role="Líder del IoT-Team"
-        link="/staff"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-julian-acosta.webp"
-        name="Julián Acosta"
-        role="Sub-Líder del IoT-Team"
-        link="https://www.instagram.com/juliancacosta"
-      />
     </div>
 
     <!-- Social Media -->
@@ -128,39 +74,15 @@ import "./_style.css";
         link="https://www.instagram.com/matamitas25/"
       />
       <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
-        name="Eliana Cajusol"
-        role="Guionista & Realización"
-        link="https://www.instagram.com/naomi_cajusol/"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
-        name="Briggitte Martinez"
-        role="Imagen & Voz"
-        link="https://www.instagram.com/briggittemar_v"
-      />
-      <LeaderCard
         photo="https://cdn.mtocommunity.com/staff-jaris-alday.png"
         name="Jaris Alday"
-        role="Community Manager & Diseño"
+        role="Embajadora de la Comunidad"
         link="https://www.instagram.com/taehyrthv"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-lenin-castaneda.jpg"
-        name="Lenin Castañeda"
-        role="Imagen & Voz"
-        link="https://www.linkedin.com/in/lenin-alexander-casta%C3%B1eda-aguilar-68a79b299/"
-      />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-wilder-cubas.webp"
-        name="Wilder Cubas"
-        role="Creativo & Edición"
-        link="https://www.instagram.com/w.m.c.h.lu"
       />
       <LeaderCard
         photo="https://cdn.mtocommunity.com/staff-joselin-bances.webp"
         name="Joselin Bances"
-        role="Creativo & Diseño"
+        role="Imagen de la Comunidad"
         easter_egg="Reprobó IVU pero shh..."
         link="https://www.instagram.com/josi30_b.a"
       />
@@ -195,12 +117,78 @@ import "./_style.css";
         easter_egg="Gerente de asuntos sin importancia"
         link="https://www.linkedin.com/in/jorge-ascencio-gil-450240337/"
       />
-      <LeaderCard
-        photo="https://cdn.mtocommunity.com/staff-paul-campos.webp"
-        name="Paul Campos"
-        role="Responsable de Logística"
-        link="https://www.linkedin.com/in/akidev"
-      />
     </div>
+
+    <!-- Historical Staff -->
+    <section class="mt-16 w-full px-8 flex flex-col items-center">
+      <h2 class="text-xl md:text-2xl lg:text-3xl mb-3 font-main_sans">
+        Staff histórico
+      </h2>
+      <p class="mb-8 max-w-2xl text-center font-lora text-white/70">
+        Personas que también formaron parte de la historia de nuestra comunidad.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-luis-bazan-rios.jpg"
+          name="Luis Bazán"
+          link="http://instagram.com/luis.brios"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-junior-delgado-flores.jpg"
+          name="Junior Delgado"
+          link="https://github.com/aarondfv"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-jorge-contreras-delgado.jpg"
+          name="Jorge Contreras"
+          link="https://jorgecode.studio"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-juan-romero.jpg"
+          name="Juan Romero"
+          link="https://linktr.ee/IngSystemCix"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-eliana-cajusol.jpg"
+          name="Eliana Cajusol"
+          link="https://www.linkedin.com/in/eliana-cajusol-acosta-b64a3027b"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-abner-cubas-parra.jpg"
+          name="Abner Cubas"
+          link="http://www.linkedin.com/in/abner-cubas-parra-176a7329a"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-victor-tunoque.png"
+          name="Víctor Tuñoque"
+          link="https://www.linkedin.com/in/víctor-vladimir-tuñoque-morante-6a89072a2"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-jaime-lopez.jpg"
+          name="Jaime López"
+          link="#"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-briggitte-martinez-vidaurre.jpg"
+          name="Briggitte Martinez"
+          link="https://www.instagram.com/briggittemar_v"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-lenin-castaneda.jpg"
+          name="Lenin Castañeda"
+          link="https://www.linkedin.com/in/lenin-alexander-casta%C3%B1eda-aguilar-68a79b299/"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-wilder-cubas.webp"
+          name="Wilder Cubas"
+          link="https://www.instagram.com/w.m.c.h.lu"
+        />
+        <HistoricalStaffCard
+          photo="https://cdn.mtocommunity.com/staff-paul-campos.webp"
+          name="Paul Campos"
+          link="https://www.linkedin.com/in/akidev"
+        />
+      </div>
+    </section>
   </main>
 </Layout>
