@@ -1,0 +1,30 @@
+---
+/*!
+ * File of ManyToOne Community
+ * Licensed under the GPL-3.0 or later License: https://github.com/mtocommunity/landing-page/blob/master/LICENSE.md
+ */
+
+interface Props {
+  name: string;
+  photo: string;
+  link: string;
+}
+
+const { name, photo, link } = Astro.props;
+---
+
+<a
+  href={link}
+  class="flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] py-2 pl-2 pr-5 transition-colors hover:bg-white/[0.08]"
+>
+  <img
+    src={photo}
+    class="h-14 w-14 rounded-full object-cover ring-2 ring-white/15"
+    alt={name}
+    loading="lazy"
+    decoding="async"
+  />
+  <span class="font-main_sans text-sm font-medium text-white md:text-base">
+    {name}
+  </span>
+</a>
