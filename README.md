@@ -10,10 +10,10 @@ A landing page of ManyToOne Community
 
 ## Screenshots
 
-![screenshot-1](https://cdn.mtocommunity.com/mto-landing-page-screenshots/screenshot-1.webp)
-![screenshot-2](https://cdn.mtocommunity.com/mto-landing-page-screenshots/screenshot-2.webp)
-![screenshot-3](https://cdn.mtocommunity.com/mto-landing-page-screenshots/screenshot-3.webp)
-![screenshot-4](https://cdn.mtocommunity.com/mto-landing-page-screenshots/screenshot-4.webp)
+![screenshot-1](./assets/screenshot-1.webp)
+![screenshot-2](./assets/screenshot-2.webp)
+![screenshot-3](./assets/screenshot-3.webp)
+![screenshot-4](./assets/screenshot-4.webp)
 
 # Contributors
 
